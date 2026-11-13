@@ -16,7 +16,7 @@ Autor 13.11 wieczorem: „na razie wszystko zaplanuj, a pracę wznowisz jutro”
 ## Kolejność pracy
 1. **Tor A (mechaniki-a)**
    - naprawić 2 czerwone testy, zrobić część 6 i brakujące notatki funkcji (tym samym agentem);
-   - wprowadzić odpowiedzi autora na pytania toru A (zob. [[Do decyzji]]);
+   - wprowadzić odpowiedzi autora: otwarcie z wagą 1,0; Scrooge w święta zamknięty z dopłatą; urlop 10%; debet bez zmian (zob. [[Do decyzji]]); potem pomiary botów od nowa;
    - pytest + ruff, przegląd zmian;
    - push gałęzi i **PR bez scalania** (scala autor);
    - notatka w `Funkcje/` dla każdej przerobionej funkcji, wpis w Dzienniku [[WSPOLPRACA]], sprawy do [[Do decyzji]].
