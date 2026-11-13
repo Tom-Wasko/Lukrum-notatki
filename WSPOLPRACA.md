@@ -47,4 +47,5 @@ Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechaniki]`.
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR). Najnowsze na górze. -->
+- 13.11 [mechaniki]: gałąź `wnetrza-dane` – dane bywalców i dymków przy ladzie (`gra/dane/wnetrza/`), bez silnika. Pauza do 14.11, plan w [[Plan na 14.11]].
 - 13.11 [mechaniki]: założone repozytorium notatek, ten plik i [[Wygląd]]. Tor A nowych mechanik jest w toku na gałęzi `mechaniki-a`.
