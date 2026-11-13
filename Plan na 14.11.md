@@ -9,13 +9,14 @@ Autor 13.11 wieczorem: „na razie wszystko zaplanuj, a pracę wznowisz jutro”
 ## Stan na pauzę
 | Co | Gdzie | Stan |
 |---|---|---|
-| Tor A nowych mechanik | gałąź `mechaniki-a` (worktree `_robocze/mechaniki-a`), raport `_robocze/mechaniki-a-raport/raport.md` | agent zatrzymany po bieżącym kroku, commit WIP, **bez PR** |
+| Tor A nowych mechanik | gałąź `mechaniki-a` (worktree `_robocze/mechaniki-a`), raport `_robocze/mechaniki-a-raport/raport.md` | commit WIP cf281e8, bez push. Zrobione części 1–5, 7, 8. **Brak części 6** (katalogi udogodnień, wyposażenia, szkoleń, mediów) i notatek o pomyłkach i katalogach. Pełny pytest: **2 testy czerwone** (`test_zamowienia_ponad_saldo`, `test_zuzycie_zasobow_na_klienta`) |
 | Dane wnętrz | gałąź `wnetrza-dane` (commit 03dc12b, wypchnięta), `gra/dane/wnetrza/` | `bywalcy.yaml` (7 postaci) i `dymki.yaml` (42 dymki, 4 rodzaje). Brak silnika |
 | Wygląd | [[Wygląd]], podglądy 1 i 2 | decyzje spisane. Paleta, kroje i ikony nieustalone |
 
 ## Kolejność pracy
 1. **Tor A (mechaniki-a)**
-   - przeczytać sekcję „Stan na pauzę” w raporcie i dokończyć brakujące punkty tym samym agentem;
+   - naprawić 2 czerwone testy, zrobić część 6 i brakujące notatki funkcji (tym samym agentem);
+   - wprowadzić odpowiedzi autora na pytania toru A (zob. [[Do decyzji]]);
    - pytest + ruff, przegląd zmian;
    - push gałęzi i **PR bez scalania** (scala autor);
    - notatka w `Funkcje/` dla każdej przerobionej funkcji, wpis w Dzienniku [[WSPOLPRACA]], sprawy do [[Do decyzji]].
@@ -29,7 +30,13 @@ Autor 13.11 wieczorem: „na razie wszystko zaplanuj, a pracę wznowisz jutro”
    - endpoint API w nowym pliku (`api/wnetrza.py`);
    - testy w `testy/wnetrza/`;
    - **nie ruszać plików zmienionych na `mechaniki-a`**, bez rysowania frontu;
-   - dymki `szkic: true` (propozycje) silnik pomija do decyzji autora.
+   - propozycje: 2–3 odpowiedzi z prawdziwym skutkiem (przychód, koszt, opinia, ryzyko kontroli, kandydat), najwyżej jedna na kilka rund;
+   - WOS: silnik pokazuje tylko `sprawdzone: true`.
+2a. **Teksty dymków (Opus, sam)**
+   - sprawdzić każdą zaczepkę WOS w źródłach (ISAP, gov.pl), poprawić, dopisać źródło; lista do zatwierdzenia przez autora;
+   - dopisać prawdziwe cytaty z lektur w domenie publicznej (bez Gombrowicza), zostawić humor;
+   - rozpisać skutki propozycji (do `zalozenia.yaml` albo `dymki.yaml`, z `zrodlo`).
+2b. **Zdarzenia z lektur w parkach**: nowe historie w `dane/zdarzenia/parki.yaml`. Ten plik jest zmieniony na `mechaniki-a`, więc robimy to **po scaleniu toru A** albo na tej gałęzi.
 3. **Granica z mapą**
    - uzgodnić w [[WSPOLPRACA]] format listy miejsc i `otworzWnetrze(idMiejsca)`;
    - dopisać, że zdarzenia z parków (`dane/zdarzenia/parki.yaml`) pokazuje mapa w parkach;

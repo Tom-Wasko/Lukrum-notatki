@@ -28,10 +28,19 @@ Podglądy (pliki HTML) są w `../_robocze/wyglad/` u autora. Jeśli chcesz je zo
 - **Rola wnętrza kebaba: A + C.** Lada z gośćmi to podstawa: bywalcy i goście komentują w dymkach, a decyzje są
   przypięte do przedmiotów (menu → ceny, kuchnia → jakość, zaplecze → ludzie, biurko → finanse). Klient
   z propozycją (C) pojawia się od czasu do czasu jako dodatek.
-- **Losowe zdarzenia zostają w parkach** (autor: „random eventy zostaw w parkach”). Moje odczytanie: zdarzenia
-  miejskie pojawiają się na mapie w parkach (Ogród Saski, Park Ludowy…), a nie przy ladzie. *Do potwierdzenia.*
+- **Losowe zdarzenia zostają w parkach** (potwierdzone 13.11). Zdarzenia z `dane/zdarzenia/parki.yaml` zostają
+  i **pokazuje je mapa w parkach** (Ogród Saski, Park Ludowy…). Przy ladzie są tylko plotki o nich i od czasu do czasu
+  klient z propozycją. **Dopisujemy zdarzenia z lektur** (np. „bal” jak u Dulskiej, kulig, pojedynek na słowa).
 - **Wejście do środka bez animacji:** klikasz i jesteś w środku. Długie przejście znudziłoby się w późniejszych
   rundach. Wyjście tak samo szybkie („Wróć na mapę”).
+
+## Dymki i bywalcy (decyzje 13.11 wieczorem)
+- **Ton bywalców:** po swojemu i z humorem (jak w pierwszej wersji `dymki.yaml`) **oraz** z prawdziwymi cytatami z lektur
+  w domenie publicznej. Gombrowicz (Józio) bez cytatów, tylko aluzje.
+- **Zaczepki WOS:** Claude sprawdza każdy przepis w źródłach (ISAP, gov.pl), poprawia tekst i dopisuje źródło. Autor
+  zatwierdza (`sprawdzone: true`). Silnik pokazuje tylko zatwierdzone.
+- **Klient z propozycją:** 2–3 odpowiedzi z **prawdziwym skutkiem** w liczbach (jednorazowy przychód, koszt, opinia,
+  ryzyko kontroli, nowy kandydat). Najwyżej jedna propozycja na kilka rund.
 
 ## Do ustalenia później
 - Paleta kolorów (jasna i ciemna) i kroje pisma.
