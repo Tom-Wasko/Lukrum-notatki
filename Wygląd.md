@@ -18,6 +18,10 @@ Podglądy (pliki HTML) są w `../_robocze/wyglad/` u autora. Jeśli chcesz je zo
 | Co mówią klienci | Cztery rodzaje dymków: **opinie o cenie i smaku**, **plotki z miasta** (zapowiedzi zdarzeń), **propozycje i kłopoty** (z wyborem odpowiedzi), **zaczepki WOS** (paragon, prawa konsumenta, podatki). **Każdy rodzaj da się włączać i wyłączać**: mistrz gry w ustawieniach (np. pod lekcję), a gracz u siebie |
 | Wnętrza bez klientów | **Zależnie od budynku**: bank i urzędy mają okienko z urzędnikiem (gracz jest klientem, postać mówi w dymku i daje karty z opcjami), a hurtownia i podobne mają przekrój z klikalnymi miejscami (regały, wózek). Wszędzie są **lekkie animacje** (wejście postaci, para z kuchni, zegar, migające neony), wyłączane przy `prefers-reduced-motion` |
 | Rozwój wnętrza | **Widać kupione rzeczy**: nowy rożen, krzesła, neon nad wejściem. Brud, kolejka i tłok też są widoczne. Wnętrze pokazuje stan firmy |
+| Pracownicy we wnętrzu | **Widoczni jako postacie** na swoich miejscach (lada, kuchnia). **Nastrój i zmęczenie widać na twarzy.** Kliknięcie otwiera kartę pracownika (umowa, grafik, szkolenia) |
+| Wujek | **Zdjęcie na ścianie** przy dawnym barze (kliknięcie pokazuje jego listy) i **wizyty osobiście** przy ladzie w ważnych momentach („Za moich czasów…”) |
+| Dźwięk | **Lekkie dźwięki, domyślnie włączone** (dzwonek nad drzwiami, skwierczenie, gwar, stempel w urzędzie). Łatwy przycisk wyciszenia. Mistrz gry może wyciszyć dźwięk całej klasie |
+| Pora dnia | **Zgodna z prawdziwą godziną**: za oknem rano jasno, wieczorem ciemno, w porze obiadowej więcej ludzi. Niezależna od trybu jasny/ciemny |
 | Inspiracja | Gry z obsługą klientów przy ladzie (np. „Good Pizza, Great Pizza”). **Bierzemy tylko pomysł:** klient przy ladzie mówi w dymku. Postacie, grafika i nazwy są nasze i lubelskie |
 
 ## W toku (podglądy 2)
