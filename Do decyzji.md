@@ -4,7 +4,7 @@
 Pełna lista z propozycjami: `../_robocze/etap1/podobienstwa.md`. Nazwy i teksty czyści etap 1. Czekają:
 - [ ] wzory karty wyników i ich stałe (zadowolenie pracowników i klientów, rozwój firmy)
 - [ ] stałe modelu popytu i reklamy
-- [ ] liczby w katalogach (udogodnienia, wyposażenie, szkolenia, pakiety stanowisk, kandydaci)
+- [x] (14.11: ceny pod rozgrywkę, przeliczyć od zera – zob. niżej) liczby w katalogach (udogodnienia, wyposażenie, szkolenia, pakiety stanowisk, kandydaci)
 - [ ] harmonogram odblokowania zakładek i limit dań
 - [ ] kapitał startowy 40 000 zł
 - [ ] nazwy w kodzie (usluga, zasob, prowadzacy)
@@ -17,20 +17,20 @@ Pełna lista z propozycjami: `../_robocze/etap1/podobienstwa.md`. Nazwy i teksty
 
 ### Zaczepki WOS do zatwierdzenia (sprawdził Claude 14.11, `dymki.yaml`, commit c816a6e)
 Zatwierdzenie = zmiana `sprawdzone: false` na `true` przy danej zaczepce (albo „zatwierdzam N” w rozmowie). Gra pokazuje tylko zatwierdzone.
-- [ ] 1. Paragon (Józio): kasa musi wydać paragon bez proszenia; e-paragon za zgodą klienta. **ustawa o VAT, art. 111 ust. 3a pkt 1** (wcześniej był zły punkt)
-- [ ] 2. Alergeny (Zagłoba): 14 alergenów z listy UE także przy jedzeniu bez opakowania. **rozp. (UE) 1169/2011, art. 44 ust. 1 lit. a, zał. II**. Usunięte „w menu albo na tablicy”, bo forma zależy od przepisów krajowych
-- [ ] 3. Cena z VAT (Rzecki): cena dla klienta zawsze brutto. **ustawa z 9.05.2014 o informowaniu o cenach, art. 3 ust. 1 pkt 1** (numer punktu do potwierdzenia w ISAP)
-- [ ] 4. Reklamacja (gość): 14 dni na odpowiedź, milczenie = przyjęcie. **ustawa o prawach konsumenta, art. 7a** (wcześniej „Kodeks cywilny”)
-- [ ] 5. Praca 16-latka (Józio): tylko lekkie prace, badanie lekarskie, w wakacje 7 h dziennie i 35 h tygodniowo, bez nadgodzin i nocy. **KP art. 200¹, 200², 201, 203**
-- [ ] 6. Monitoring (Judym): informacja 2 tygodnie przed uruchomieniem, cel, oznaczenie terenu. **KP art. 22², RODO art. 13**
-- [ ] 7. Płatność kartą (gość): obowiązek płatności bezgotówkowej od 2022, kasa połączona z terminalem od 2025. **Prawo przedsiębiorców, art. 19a** (wcześniej „obowiązek od 2025”, poprawione). Zakres do potwierdzenia
-- [ ] 8. „Na zeszyt” (Papkin): przerobione na odroczoną płatność. Ryzyko po stronie sprzedawcy, sprzedaż i tak na kasie. **KC art. 535, ustawa o VAT art. 111**. Najsłabiej udokumentowana; można ją też usunąć
+- [x] 1. Paragon (Józio): kasa musi wydać paragon bez proszenia; e-paragon za zgodą klienta. **ustawa o VAT, art. 111 ust. 3a pkt 1** (wcześniej był zły punkt)
+- [x] 2. Alergeny (Zagłoba): 14 alergenów z listy UE także przy jedzeniu bez opakowania. **rozp. (UE) 1169/2011, art. 44 ust. 1 lit. a, zał. II**. Usunięte „w menu albo na tablicy”, bo forma zależy od przepisów krajowych
+- [x] 3. Cena z VAT (Rzecki): cena dla klienta zawsze brutto. **ustawa z 9.05.2014 o informowaniu o cenach, art. 3 ust. 1 pkt 1** (numer punktu do potwierdzenia w ISAP)
+- [x] 4. Reklamacja (gość): 14 dni na odpowiedź, milczenie = przyjęcie. **ustawa o prawach konsumenta, art. 7a** (wcześniej „Kodeks cywilny”)
+- [x] 5. Praca 16-latka (Józio): tylko lekkie prace, badanie lekarskie, w wakacje 7 h dziennie i 35 h tygodniowo, bez nadgodzin i nocy. **KP art. 200¹, 200², 201, 203**
+- [x] 6. Monitoring (Judym): informacja 2 tygodnie przed uruchomieniem, cel, oznaczenie terenu. **KP art. 22², RODO art. 13**
+- [x] 7. Płatność kartą (gość): obowiązek płatności bezgotówkowej od 2022, kasa połączona z terminalem od 2025. **Prawo przedsiębiorców, art. 19a** (wcześniej „obowiązek od 2025”, poprawione). Zakres do potwierdzenia
+- [x] 8. „Na zeszyt” (Papkin): przerobione na odroczoną płatność. Ryzyko po stronie sprzedawcy, sprzedaż i tak na kasie. **KC art. 535, ustawa o VAT art. 111**. Najsłabiej udokumentowana; można ją też usunąć
 
 ### Cytaty z lektur do sprawdzenia (`cytat: true`, porównać z Wolnymi Lekturami)
-- [ ] Dulska: „Na to mamy cztery ściany i sufit, aby brudy swoje prać w domu”
-- [ ] Zagłoba: „Mości panowie! gdybym zaczął wszystko szczegółowie opowiadać, tedy i dziesięciu nocy by nie starczyło”
-- [ ] Zagłoba: „Zdechnę ja i pchły moje!”
-- [ ] Papkin: „Jeśli nie chcesz mojej zguby, krokodyla daj mi, luby” (w źródłach też „kup mi”)
+- [x] (sprawdzone z Wolnymi Lekturami 14.11) Dulska: „Na to mamy cztery ściany i sufit, aby brudy swoje prać w domu”
+- [x] (sprawdzone 14.11) Zagłoba: „Mości panowie! gdybym zaczął wszystko szczegółowie opowiadać, tedy i dziesięciu nocy by nie starczyło”
+- [x] (sprawdzone 14.11) Zagłoba: „Zdechnę ja i pchły moje!”
+- [x] (sprawdzone 14.11: „daj mi”, w oryginale „Krrokodyla”) Papkin: „Jeśli nie chcesz mojej zguby, krokodyla daj mi, luby” (w źródłach też „kup mi”)
 - Rzecki: tylko aluzja do Napoleonów (`cytat: false`). Judym: cytat niepewny w brzmieniu, nie wstawiony
 
 ## Tor A (`mechaniki-a`, raport `_robocze/mechaniki-a-raport/raport.md`)
@@ -39,29 +39,33 @@ Rozstrzygnięte 13.11 wieczorem, do wprowadzenia 14.11:
 - [x] debet: włączenie za darmo, płaci się za użycie; bez zgody alarm i blokada (jak teraz)
 - [x] Scrooge w tygodniu ze świętem: zamknięte, dokumenty przechodzą na następny tydzień z dopłatą (zamiast ryzyka 50%)
 - [x] urlop 10% na umowie o pracę
-- [ ] (otwarte) czy zlecenie ma być jeszcze mniej zadowalające (teraz −0,02); czy biura mają mieć dodatkowe różnice
+- [x] zlecenie: zadowolenie −0,04 i kontrola PIP (14.11)
+- [ ] czy biura mają mieć dodatkowe różnice
 
 Wprowadzone 14.11, PR #2 (https://github.com/Tom-Wasko/Lukrum/pull/2, scala autor). Przegląd PR robi agent Fable (`_robocze/przeglad-a-fable.md`). Otwarte po wprowadzeniu:
-- [ ] czy dopłata 3 zł za dokument przeniesiony po święcie wystarcza, żeby Scrooge nie był zawsze najlepszym biurem
-- [ ] boty kupują tylko tyle wyposażenia, ile ma ich strategia, więc nowe pozycje mało na nie działają: zostawić czy dać im zakupy
+- [x] (6 zł, 14.11) czy dopłata 3 zł za dokument przeniesiony po święcie wystarcza, żeby Scrooge nie był zawsze najlepszym biurem
+- [x] (zostaje, 14.11) boty kupują tylko tyle wyposażenia, ile ma ich strategia, więc nowe pozycje mało na nie działają: zostawić czy dać im zakupy
 - [x] „Gazeta Pana Cogito” i „Radio Tichy” zostają kanałami drukarni i Fali Koziołka (14.11); banki i giełda w jednej kamienicy, firmy przy Zana w jednym biurowcu (spis: „Mapa – elementy”)
 
 Poprawki po przeglądzie Fable wprowadzone 14.11 (commit 1d8b921, PR #2). Otwarte po nich:
 - [x] zlecenie: ryzyko kontroli PIP, gdy zleceniobiorca pracuje jak etatowiec, i mniej zadowolenia (14.11)
 - [x] zmiana biura rachunkowego: jednorazowa opłata (14.11)
-- [ ] Scrooge: limit pakietu liczony co tydzień, nie co miesiąc
-- [ ] Asteroida 328 zawsze gorsza od J.K.Ś.: jaką ma mieć przewagę
-- [ ] Józef K.: da się obejść opóźnienie zmiany pakietu
-- [ ] pensja za okres wypowiedzenia przy wyprowadzce: zła kolumna KPiR i brak ZUS
-- [ ] pomyłka przy pustym magazynie nic nie kosztuje
+- [x] Scrooge: dopłata 6 zł za dokument przeniesiony po święcie (14.11, mechaniki-b)
+- [x] Asteroida 328: bez limitu dokumentów (14.11, mechaniki-b)
+- [ ] Asteroida bez limitu: pakiety M i L nie mają już sensu (zawsze wygrywa S). Czym je różnić albo usunąć?
+- [x] Józef K.: obejścia zamknięte (14.11, mechaniki-b)
+- [x] pensja za okres wypowiedzenia: kolumna wynagrodzeń i ZUS pracodawcy (14.11, mechaniki-b)
+- [x] pomyłka przy pustym magazynie kosztuje klienta (14.11, mechaniki-b)
+- [ ] panel i instrukcja nie pokazują jeszcze kontroli PIP, opłaty za zmianę biura ani przejęcia debetu
 - [x] zmiana banku z otwartym debetem: najpierw spłata albo przejęcie przez nowy bank za opłatą (14.11)
 - [x] pomyłki: zostaje 5,2% / 2,8%, ocena po teście gotowego LUKRUM (14.11)
 
 ## Symulowany pozew REVAS (Fable 14.11, `_robocze/pozew-revas-fable.md`)
 - [x] nazwy własne i logotypy prawdziwych firm zostają (np. IKEA, Pewex), decyzja autora 14.11
-- [ ] katalogi z liczbami z REVAS (main: banki, biura, media, pakiety, kandydaci; PR #2: udogodnienia, wyposażenie, oceny szkoleń) zastąpić własnymi
+- [x] katalogi: ceny mają zmuszać do myślenia („czy na pewno ★★★ zamiast ★, skoro tyle droższe”), czyli priorytet ma rozgrywka, a nie odwzorowanie rynku; podatki i przepisy zostają prawdziwe (14.11). Do zrobienia: przeliczyć katalogi od zera tak, żeby każdy poziom był wyborem z kosztem
 - [ ] stałe modelu wspólne z REVAS (main 45, PR #2 22) przeliczyć od zera, martwe usunąć
-- [ ] harmonogram odblokowań i nazwy „Karta wyników”, „Lista błędów”, „Wyślij decyzje” zmienić
+- [x] nazwy ekranów w duchu mapy, ale bez zgadywania: np. „Kurier rankingowy” (zamiast Karty wyników), „Notes błędów księgowej” (Lista błędów), „Nadaj decyzje na poczcie” (Wyślij decyzje) (14.11)
+- [ ] harmonogram odblokowań zmienić
 - [ ] folder `revas_26` i regulamin platformy: rozmowa z prawnikiem
 
 ## Podgląd 4 (Fable 14.11, `_robocze/wyglad/podglad4.html`)
@@ -69,8 +73,8 @@ Poprawki po przeglądzie Fable wprowadzone 14.11 (commit 1d8b921, PR #2). Otwart
 - [x] (zostaje, 14.11) style dekoru i grupy: PRL → turyści, imprezowicze; nowoczesny → biurowi, podróżni; studencki → studenci, uczniowie, imprezowicze; rodzinny → rodziny, uczniowie
 - [x] sklep meblowy: wózek i kasa z paragonem; sklep jest osobną „strefą” (miejscem na mapie z własnym wnętrzem), jak lokal czy bank (14.11)
 - [x] wszystkie jakości w grze mają 1, 2 albo 3 gwiazdki, więc zestaw ★★★ wchodzi do danych (14.11)
-- [ ] czy działka po otwarciu ma własne wnętrze
-- [ ] ceny dekoru (przykład: 900–3 200 zł) i próg „dobrze trafiony” (przykład: od 40% klientów strefy)
+- [x] działka po budowie: pawilon z własnym wnętrzem (14.11)
+- [x] ceny dekoru 900–3 200 zł i próg 40% zostają jako założenie, z pomiarem zwrotu (ok. 8–12 tygodni) (14.11)
 - [ ] czy klikalne miejsca są dość spokojne i czy pasują postacie
 
 ## Wnętrza i testy (decyzje 14.11)
@@ -81,4 +85,4 @@ Poprawki po przeglądzie Fable wprowadzone 14.11 (commit 1d8b921, PR #2). Otwart
 
 ## Inne
 - [x] położenie sanepidu i agencji reklamowej na mapie: sanepid w Śródmieściu (ul. Karłowicza), agencja w biurowcach przy Zana (Rury); park handlowy na Węglinie to dwa sklepy obok siebie (14.11)
-- [ ] lekcje: ile rund na żywo, ile między lekcjami
+- [x] lekcje: mieszane – pierwsze 2–3 rundy na żywo na lekcji, dalej między lekcjami (np. 2 w tygodniu, zamyka MG) (14.11)

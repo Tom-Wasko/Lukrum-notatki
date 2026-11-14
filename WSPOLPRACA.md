@@ -90,7 +90,8 @@ Nowy budynek dziś musi mieć pole w kratce swojej strefy (np. `sanepid: [15, 7]
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR). Najnowsze na górze. -->
-- 14.11 [mechaniki]: PR #4 w main (ddb885c): zespoły budynków (kamienica bankowa, biurowiec przy Zana). Spis [[Mapa – elementy]]. W toku: gałąź `mechaniki-b` (biura, bank przy debecie, PIP przy zleceniu, kadry) i `wnetrza-dane` część 2 (WOS zatwierdzone, cytaty, wskazówki propozycji, zestaw ★★★).
+- 14.11 [mechaniki]: PR #5 w main (00fef41): biura, zmiana banku z debetem, kontrola PIP przy zleceniu, kadry, pomyłki; wnętrza (dymki, propozycje ze wskazówkami, plotki w tej samej rundzie, zestaw ★★★). Gałęzie `mechaniki-b` i `wnetrza-dane` zamknięte.
+- 14.11 [mechaniki]: PR #4 w main (ddb885c): zespoły budynków (kamienica bankowa, biurowiec przy Zana). Spis [[Mapa – elementy]].
 - 14.11 [mechaniki]: PR #2 (tor A) scalony. PR #3 `wspolne-mapa` w main: pola miejsc i stref, sanepid, wspólne zmienne CSS z paletą wysokiej widoczności, fonty lokalnie, `lukrum.js`, grafiki z podglądu 4. Start dla [mapa] wyżej.
 - 14.11 [mechaniki]: PR #2 poprawiony po przeglądzie (1d8b921): debet od salda końca tygodnia, pomyłki, punkty firmy bezczynnej, okres próbny, własne katalogi. `wnetrza-dane`: silnik dymków i propozycji (0779722).
 - 14.11 [mechaniki]: podgląd 4 wnętrz (`_robocze/wyglad/podglad4.html`, grafiki SVG w `_robocze/wyglad/grafiki/`). **Do uzgodnienia z [mapa]:** do wspólnych zmiennych CSS dochodzą `--font-gruby` (gruby krój: szyld, nagłówki, ceny) i kolory grafik `--g-*` (skóra, drewno, metal). Propozycja: `grafiki/zmienne.css`.
