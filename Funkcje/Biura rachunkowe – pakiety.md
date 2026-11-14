@@ -19,7 +19,7 @@ i drogie.
 |---|---|
 | J.K.Ś. | dokładne i uczciwe, z ubezpieczeniem OC, kadry do czterech osób w cenie (życzenie autora) |
 | Józef K. | tanie, ale wszystko trwa: zmiana pakietu wchodzi dopiero po dwóch tygodniach; bez OC, ryzyko błędu 4% |
-| Scrooge | najtańsze; w tygodniach ze świętem zamknięte, wtedy ryzyko błędu 50%; bez OC |
+| Scrooge | najtańsze; w tygodniu ze świętem zamknięte: dokumenty czekają na następny tydzień z dopłatą 3 zł za dokument; bez OC |
 | Asteroida 328 | dokładne i drogie, nigdy się nie myli, OC, kadry do sześciu osób w cenie |
 
 - Pomyłka biura w deklaracji kosztuje mandat. Biuro z OC oddaje go w tym samym tygodniu.

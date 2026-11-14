@@ -13,7 +13,7 @@ odejść od razu. Nie ma odpraw: zwolniony pracuje do końca wypowiedzenia i dos
 - **Okres wypowiedzenia** (w tygodniach gry): do 3 miesięcy pracy – 1 tydzień (okres próbny, art. 34 KP), do 6 miesięcy –
   2 tygodnie, od 6 miesięcy – 4 tygodnie (miesiąc), od 3 lat – 13 tygodni (art. 36 KP). Liczy się staż u tego pracodawcy.
   Obowiązuje w obie strony: kiedy firma zwalnia i kiedy pracownik składa wypowiedzenie.
-- **Umowa o pracę:** ZUS pracodawcy, 5% czasu to płatny urlop (w prawdziwym życiu 26 dni w roku, art. 154 KP, czyli ok. 10%; w grze połowa), więc pracownik daje
+- **Umowa o pracę:** ZUS pracodawcy, 10% czasu to płatny urlop (26 dni w roku, art. 154 KP), więc pracownik daje
   mniej godzin za tę samą pensję. **Zlecenie:** niższe składki, bez urlopu i bez wypowiedzenia, ale niższe
   zadowolenie. Student na zleceniu – bez składek. Staż i kontrakt B2B jak dotąd.
 - **Rekrutacja:** ogłoszenie na pracuj.pl kosztuje 400 zł, agencja pracy i headhunter liczą opłatę jako część pensji

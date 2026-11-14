@@ -14,7 +14,7 @@ się podwójnie. Wyjątkowa gra (np. bardzo hojny socjal dla załogi) może dać
   zapas gotówki). Składnik ma tabelę progów: między progami punkty rosną po prostu liniowo.
 - Tydzień 1, „Wielkie otwarcie”, nie ma jeszcze sprzedaży. Punkty dostaje się za przygotowanie: lokal, menu, ekipa,
   zaopatrzenie i rezerwa w kasie (razem 1000).
-- Ranking = suma punktów z tygodni z wagami. Otwarcie waży mało, a kolejne tygodnie coraz więcej (od 1 do 2).
+- Ranking = suma punktów z tygodni z wagami. Otwarcie waży tyle co zwykły tydzień (1,0), a kolejne tygodnie coraz więcej (od 1 do 2).
   Wynik gry (skala 0–1000) to suma ważona podzielona przez sumę wag.
 - Zadowolenie gości i zespołu liczą proste wzory punktowe (jakość dania, cena, kolejki, braki dań, pensje, sprzęt,
   przepracowanie). Później zastąpią je gwiazdki gości i nastrój zespołu.
