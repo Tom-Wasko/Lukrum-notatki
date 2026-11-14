@@ -42,6 +42,21 @@ Podglądy (pliki HTML) są w `../_robocze/wyglad/` u autora. Jeśli chcesz je zo
 - **Klient z propozycją:** 2–3 odpowiedzi z **prawdziwym skutkiem** w liczbach (jednorazowy przychód, koszt, opinia,
   ryzyko kontroli, nowy kandydat). Najwyżej jedna propozycja na kilka rund.
 
+## Decyzje po podglądzie 3 (14.11)
+- Paleta: **Bar mleczny i Pewex**, gracz wybiera jedną z nich (każda w wersji jasnej i ciemnej).
+- Fonty: zostają chude litery (Oswald + PT Sans), a w niektórych miejscach grube (szyld, nagłówki). Grubego fontu nie wybrano: w podglądzie 4 będą do porównania Alfa Slab One i Rubik Mono One.
+- W lokalu wyróżnione są miejsca, które da się kliknąć.
+- Pasek z lewej pokazuje same ikony i rozwija się do pełnych nazw.
+- Jest kilka wnętrz kebabów: różne typy lokali oraz stany „działka w budowie”, „niewyposażony” i „wyposażony”.
+- Dymki ludzi pokazują się dopiero po najechaniu na postać.
+- Nowa funkcja **dekorowanie lokalu**:
+  - Każdy styl trafia do innych grup klientów. Gdy pasuje do klientów strefy, daje mały plus do opinii i popytu (uczy segmentacji).
+  - Elementy: ściany i podłoga, szyld i neon, dodatki (Lublin, postacie), meble i oświetlenie.
+  - **Nie podpisujemy, z jakiej lektury są postacie i inne odniesienia.**
+  - Dekor kupuje się w **sklepie meblowym** na mapie (wejście do sklepu, jak w inne budynki).
+  - Dekor kupuje się raz i zostaje, nie starzeje się.
+- Następny krok: podgląd 4 (grafiki może zrobić Fable) i notatka `Funkcje/Dekorowanie lokalu.md`.
+
 ## Do ustalenia później
 - Paleta kolorów (jasna i ciemna) i kroje pisma.
 - Ikony (styl kreski).
