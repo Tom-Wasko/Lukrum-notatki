@@ -46,6 +46,13 @@ Wprowadzone 14.11, PR #2 (https://github.com/Tom-Wasko/Lukrum/pull/2, scala auto
 - [ ] boty kupują tylko tyle wyposażenia, ile ma ich strategia, więc nowe pozycje mało na nie działają: zostawić czy dać im zakupy
 - [ ] „Gazeta Pana Cogito” i „Radio Tichy” są kanałami istniejących agencji, a nie osobnymi agencjami: czy tak ma zostać
 
+## Symulowany pozew REVAS (Fable 14.11, `_robocze/pozew-revas-fable.md`)
+- [x] nazwy własne i logotypy prawdziwych firm zostają (np. IKEA, Pewex), decyzja autora 14.11
+- [ ] katalogi z liczbami z REVAS (main: banki, biura, media, pakiety, kandydaci; PR #2: udogodnienia, wyposażenie, oceny szkoleń) zastąpić własnymi
+- [ ] stałe modelu wspólne z REVAS (main 45, PR #2 22) przeliczyć od zera, martwe usunąć
+- [ ] harmonogram odblokowań i nazwy „Karta wyników”, „Lista błędów”, „Wyślij decyzje” zmienić
+- [ ] folder `revas_26` i regulamin platformy: rozmowa z prawnikiem
+
 ## Inne
 - [ ] położenie sanepidu i agencji reklamowej na mapie
 - [ ] lekcje: ile rund na żywo, ile między lekcjami
