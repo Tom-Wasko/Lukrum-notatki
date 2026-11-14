@@ -1,0 +1,281 @@
+kontekst,strategia,rund,firm,poziom,strefa,kapital,rywale,dane,ziarno,wariant,karta,dochod,gotowka,majatek,pierwszy_plus,alarmy,miejsce,lokale,czas_s,strefy_lokali
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1000,bank:Ziemia Obiecana,678.7,39745.58,78945.74,106228.43,3,0,3,1,5.06,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1000,bank:Wokulski i S-ka,678.7,39745.58,78945.74,106228.43,3,0,3,1,5.08,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1000,bank:Kmicic,678.3,39584.73,78784.61,106067.3,3,0,3,1,5.09,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1000,baza,678.7,39745.58,78945.74,106228.43,3,0,3,1,5.11,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1000,bank:Soplicowo,680.2,40442.07,79642.11,106924.8,3,0,3,1,5.01,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1000,bank:Oszczędności Rzeckiego,678.4,39616.72,78816.6,106099.29,3,0,3,1,5.04,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1000,bank:Solaris,678.7,39745.58,78945.74,106228.43,3,0,3,1,5.05,centrum
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1000,baza,603.3,36938.42,81387.7,94646.52,3,0,6,1,5.12,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1000,bank:Kmicic,602.9,36795.64,81245.64,94504.46,3,0,6,1,4.95,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1000,bank:Wokulski i S-ka,603.3,36938.42,81387.7,94646.52,3,0,6,1,5.0,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1000,bank:Ziemia Obiecana,603.3,36938.42,81387.7,94646.52,3,0,6,1,4.99,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1000,bank:Oszczędności Rzeckiego,603.0,36827.8,81277.8,94536.62,3,0,6,1,5.02,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1000,bank:Soplicowo,604.8,37557.53,82007.69,95266.51,3,0,6,1,5.01,felin
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1000,baza,693.7,30072.23,64873.15,120821.07,4,0,4,1,4.96,centrum
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1000,bank:Solaris,603.3,36938.42,81387.7,94646.52,3,0,6,1,5.04,felin
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1000,bank:Kmicic,693.4,29891.01,64690.65,120638.57,4,0,4,1,4.97,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1000,bank:Wokulski i S-ka,693.7,30072.23,64873.15,120821.07,4,0,4,1,4.95,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1000,bank:Ziemia Obiecana,693.7,30072.23,64873.15,120821.07,4,0,4,1,5.02,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1000,bank:Oszczędności Rzeckiego,693.5,29923.51,64723.15,120671.07,4,0,4,1,4.98,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1000,bank:Soplicowo,694.8,30853.32,65653.12,121601.04,4,0,4,1,4.97,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1000,bank:Solaris,693.7,30072.23,64873.15,120821.07,4,0,4,1,4.96,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1000,baza,547.7,-9930.11,29870.63,57151.14,5,0,6,1,5.1,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1000,bank:Kmicic,543.4,-8090.39,31709.44,58934.05,5,0,6,1,5.14,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1000,bank:Wokulski i S-ka,547.7,-9930.11,29870.63,57151.14,5,0,6,1,5.24,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1000,bank:Ziemia Obiecana,547.7,-9930.11,29870.63,57151.14,5,0,6,1,5.15,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1000,bank:Oszczędności Rzeckiego,546.0,-10013.2,29785.97,56991.48,5,0,6,1,5.2,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1000,bank:Soplicowo,549.3,-9285.03,30514.32,57983.23,5,0,6,1,5.2,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1000,bank:Solaris,547.7,-9930.11,29870.63,57151.14,5,0,6,1,5.19,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1000,baza,676.6,38443.07,77641.94,101031.58,4,0,3,1,4.97,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1000,bank:Kmicic,676.3,38287.77,77488.36,100878.0,4,0,3,1,5.0,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1000,bank:Wokulski i S-ka,676.6,38443.07,77641.94,101031.58,4,0,3,1,4.98,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1000,bank:Ziemia Obiecana,676.6,38443.07,77641.94,101031.58,4,0,3,1,5.0,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1000,bank:Oszczędności Rzeckiego,676.4,38319.93,77520.52,100910.16,4,0,3,1,4.9,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1000,bank:Soplicowo,678.2,39117.91,78318.66,101708.3,4,0,3,1,4.93,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1000,bank:Solaris,676.6,38443.07,77641.94,101031.58,4,0,3,1,4.93,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1001,baza,766.9,66059.77,104058.29,142307.84,3,0,1,1,4.93,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1001,bank:Kmicic,766.4,65858.9,103858.14,142107.69,3,0,1,1,4.99,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1001,bank:Wokulski i S-ka,766.9,66059.77,104058.29,142307.84,3,0,1,1,5.0,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1001,bank:Ziemia Obiecana,766.9,66059.77,104058.29,142307.84,3,0,1,1,5.0,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1001,bank:Oszczędności Rzeckiego,766.5,65891.89,103891.13,142140.68,3,0,1,1,5.0,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1001,bank:Soplicowo,768.5,66915.17,104916.57,143166.12,3,0,1,1,4.89,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1001,bank:Solaris,766.9,66059.77,104058.29,142307.84,3,0,1,1,4.9,dworzec
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1001,baza,615.8,47218.45,91218.37,105565.35,3,0,5,1,4.95,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1001,bank:Kmicic,615.4,47067.37,91067.01,105413.99,3,0,5,1,4.97,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1001,bank:Wokulski i S-ka,615.8,47218.45,91218.37,105565.35,3,0,5,1,5.09,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1001,bank:Ziemia Obiecana,615.8,47218.45,91218.37,105565.35,3,0,5,1,5.16,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1001,bank:Oszczędności Rzeckiego,615.5,47099.21,91098.85,105445.83,3,0,5,1,5.14,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1001,bank:Soplicowo,617.2,47875.41,91875.21,106222.19,3,0,5,1,5.13,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1001,bank:Solaris,615.8,47218.45,91218.37,105565.35,3,0,5,1,5.06,czechow
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1001,baza,670.2,30921.48,56070.9,109099.61,3,0,3,1,5.0,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1001,bank:Kmicic,669.8,30743.91,55891.05,108920.64,3,0,3,1,5.0,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1001,bank:Wokulski i S-ka,670.2,30921.48,56070.9,109099.61,3,0,3,1,5.02,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1001,bank:Ziemia Obiecana,670.2,30921.48,56070.9,109099.61,3,0,3,1,4.95,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1001,bank:Oszczędności Rzeckiego,669.9,30776.07,55923.21,108952.8,3,0,3,1,4.94,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1001,bank:Soplicowo,671.2,31685.68,56839.98,109857.87,3,0,3,1,4.98,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1001,bank:Solaris,670.2,30921.48,56070.9,109099.61,3,0,3,1,4.95,stare_miasto
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1001,baza,727.9,32027.44,70427.94,121295.12,5,0,2,1,5.02,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1001,bank:Kmicic,721.8,30837.97,69238.98,121518.2,5,0,2,1,5.04,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1001,bank:Wokulski i S-ka,727.9,32044.36,70444.86,121312.04,5,0,2,1,5.05,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1001,bank:Ziemia Obiecana,727.9,32027.44,70427.94,121295.12,5,0,2,1,5.03,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1001,bank:Oszczędności Rzeckiego,721.8,30820.49,69221.5,121500.72,5,0,2,1,5.04,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1001,bank:Soplicowo,729.8,33041.95,71442.33,122301.31,5,0,2,1,5.04,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1001,bank:Solaris,721.9,30902.4,69301.69,121580.91,5,0,2,1,5.08,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1001,baza,775.9,69823.79,107723.54,141628.34,3,0,1,1,4.96,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1001,bank:Kmicic,775.6,69624.44,107524.91,141429.71,3,0,1,1,4.95,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1001,bank:Wokulski i S-ka,775.9,69823.79,107723.54,141628.34,3,0,1,1,4.98,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1001,bank:Ziemia Obiecana,775.9,69823.79,107723.54,141628.34,3,0,1,1,5.02,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1001,bank:Oszczędności Rzeckiego,775.7,69656.26,107556.73,141461.53,3,0,1,1,4.99,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1001,bank:Soplicowo,777.5,70677.09,108577.72,142482.52,3,0,1,1,5.01,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1001,bank:Solaris,775.9,69823.79,107723.54,141628.34,3,0,1,1,5.02,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1002,bank:Kmicic,732.4,55517.27,93166.7,131275.88,5,0,1,1,5.05,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1002,baza,732.8,55704.58,93355.29,131464.47,5,0,1,1,5.11,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1002,bank:Wokulski i S-ka,732.8,55704.58,93355.29,131464.47,5,0,1,1,4.99,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1002,bank:Ziemia Obiecana,732.8,55704.58,93355.29,131464.47,5,0,1,1,4.96,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1002,bank:Oszczędności Rzeckiego,732.5,55549.6,93199.03,131308.21,5,0,1,1,5.02,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1002,bank:Soplicowo,728.0,51626.33,88577.28,127159.78,5,0,2,1,5.03,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1002,bank:Solaris,732.8,55704.58,93355.29,131464.47,5,0,1,1,4.96,dworzec
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1002,baza,612.9,41587.26,86037.34,98533.62,3,0,5,1,5.02,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1002,bank:Kmicic,612.5,41448.51,85897.31,98393.59,3,0,5,1,5.05,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1002,bank:Wokulski i S-ka,612.9,41587.26,86037.34,98533.62,3,0,5,1,5.07,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1002,bank:Ziemia Obiecana,612.9,41587.26,86037.34,98533.62,3,0,5,1,4.95,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1002,bank:Oszczędności Rzeckiego,612.6,41480.67,85929.47,98425.75,3,0,5,1,4.96,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1002,bank:Soplicowo,614.4,42188.91,86639.49,99135.77,3,0,5,1,4.97,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1002,bank:Solaris,612.9,41587.26,86037.34,98533.62,3,0,5,1,5.0,felin
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1002,baza,625.0,20747.17,46966.66,101038.85,4,0,5,1,4.91,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1002,bank:Kmicic,624.7,20579.18,46795.39,100869.34,4,0,5,1,4.93,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1002,bank:Wokulski i S-ka,625.0,20747.17,46966.66,101038.85,4,0,5,1,4.94,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1002,bank:Ziemia Obiecana,625.0,20747.17,46966.66,101038.85,4,0,5,1,5.0,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1002,bank:Oszczędności Rzeckiego,624.7,20611.51,46827.72,100901.67,4,0,5,1,4.92,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1002,bank:Soplicowo,634.5,21848.46,48114.07,101845.31,4,0,5,1,4.92,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1002,bank:Solaris,625.0,20747.17,46966.66,101038.85,4,0,5,1,4.94,stare_miasto
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1002,baza,607.2,-5165.89,30581.9,78811.4,6,0,5,1,5.07,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1002,bank:Kmicic,600.4,-7751.44,34621.33,83085.02,6,0,5,1,5.03,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1002,bank:Wokulski i S-ka,604.1,-5687.59,31012.5,80957.47,6,1,5,1,5.05,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1002,bank:Ziemia Obiecana,607.2,-5165.89,30581.9,78811.4,6,0,5,1,5.04,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1002,bank:Oszczędności Rzeckiego,603.6,-5959.99,30738.82,80684.23,6,1,5,1,5.09,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1002,bank:Soplicowo,605.8,-4708.59,31991.38,81936.28,6,1,5,1,4.97,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1002,bank:Solaris,603.7,-5919.39,30781.08,80726.05,6,0,5,1,5.0,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1002,baza,733.7,44702.79,81452.2,116681.33,4,0,1,1,4.9,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1002,bank:Kmicic,733.4,44526.39,81276.52,116505.65,4,0,1,1,4.96,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1002,bank:Wokulski i S-ka,733.7,44702.79,81452.2,116681.33,4,0,1,1,4.94,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1002,bank:Ziemia Obiecana,733.7,44702.79,81452.2,116681.33,4,0,1,1,4.96,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1002,bank:Oszczędności Rzeckiego,733.4,44558.72,81308.85,116537.98,4,0,1,1,4.97,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1002,bank:Soplicowo,735.2,45463.87,82214.16,117443.29,4,0,1,1,4.99,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1002,bank:Solaris,733.7,44702.79,81452.2,116681.33,4,0,1,1,4.89,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1003,baza,639.1,31864.97,70164.95,95194.73,4,0,4,1,4.86,akademickie
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1003,bank:Kmicic,638.8,31717.98,70017.68,95047.46,4,0,4,1,4.86,akademickie
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1003,bank:Wokulski i S-ka,639.1,31864.97,70164.95,95194.73,4,0,4,1,4.91,akademickie
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1003,bank:Ziemia Obiecana,639.1,31864.97,70164.95,95194.73,4,0,4,1,4.88,akademickie
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1003,bank:Oszczędności Rzeckiego,638.8,31750.31,70050.01,95079.79,4,0,4,1,4.89,akademickie
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1003,bank:Soplicowo,640.6,32501.7,70801.56,95831.34,4,0,4,1,4.91,akademickie
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1003,bank:Solaris,639.1,31864.97,70164.95,95194.73,4,0,4,1,4.94,akademickie
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1003,baza,524.1,22988.64,63688.1,78453.0,5,0,6,1,4.96,lsm_czuby
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1003,bank:Kmicic,523.7,22859.9,63559.08,78323.98,5,0,6,1,4.95,lsm_czuby
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1003,bank:Wokulski i S-ka,524.1,22988.64,63688.1,78453.0,5,0,6,1,4.95,lsm_czuby
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1003,bank:Ziemia Obiecana,524.1,22988.64,63688.1,78453.0,5,0,6,1,5.01,lsm_czuby
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1003,bank:Oszczędności Rzeckiego,523.8,22892.06,63591.24,78356.14,5,0,6,1,4.98,lsm_czuby
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1003,bank:Soplicowo,525.7,23552.04,64252.38,79017.28,5,0,6,1,4.95,lsm_czuby
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1003,bank:Solaris,524.1,22988.64,63688.1,78453.0,5,0,6,1,4.95,lsm_czuby
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1003,baza,650.0,27025.53,64325.45,101611.63,4,0,5,1,4.95,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1003,bank:Kmicic,649.7,26866.55,64167.19,101453.37,4,0,5,1,4.87,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1003,bank:Wokulski i S-ka,650.0,27025.53,64325.45,101611.63,4,0,5,1,4.87,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1003,bank:Ziemia Obiecana,650.0,27025.53,64325.45,101611.63,4,0,5,1,4.9,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1003,bank:Oszczędności Rzeckiego,649.8,26899.22,64199.86,101486.04,4,0,5,1,4.94,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1003,bank:Soplicowo,653.2,27381.79,64682.09,102454.79,4,0,5,1,4.92,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1003,bank:Solaris,650.0,27025.53,64325.45,101611.63,4,0,5,1,4.91,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1003,baza,552.7,-9847.8,27080.45,62824.98,5,0,6,1,4.95,akademickie
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1003,bank:Kmicic,552.3,-10020.28,26906.69,62652.98,5,0,6,1,4.97,akademickie
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1003,bank:Wokulski i S-ka,552.7,-9847.8,27080.45,62824.98,5,0,6,1,4.89,akademickie
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1003,bank:Ziemia Obiecana,552.7,-9847.8,27080.45,62824.98,5,0,6,1,4.89,akademickie
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1003,bank:Oszczędności Rzeckiego,552.4,-9979.61,26947.36,62693.65,5,0,6,1,4.9,akademickie
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1003,bank:Soplicowo,551.6,-9878.17,26926.95,62835.22,5,0,6,1,4.93,akademickie
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1003,bank:Solaris,552.7,-9847.8,27080.45,62824.98,5,0,6,1,4.94,akademickie
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1003,baza,628.6,29714.77,68014.04,87949.95,4,0,5,1,4.89,akademickie
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1003,bank:Kmicic,628.2,29576.42,67876.41,87812.32,4,0,5,1,4.9,akademickie
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1003,bank:Wokulski i S-ka,628.6,29714.77,68014.04,87949.95,4,0,5,1,4.97,akademickie
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1003,bank:Ziemia Obiecana,628.6,29714.77,68014.04,87949.95,4,0,5,1,4.88,akademickie
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1003,bank:Oszczędności Rzeckiego,628.3,29608.59,67908.58,87844.49,4,0,5,1,4.86,akademickie
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1003,bank:Soplicowo,639.2,29901.54,68201.49,89162.38,4,0,4,1,4.85,akademickie
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1003,bank:Solaris,628.6,29714.77,68014.04,87949.95,4,0,5,1,4.9,akademickie
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1004,baza,744.9,56228.54,93827.35,131981.37,3,0,1,1,4.91,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1004,bank:Kmicic,744.5,56037.11,93636.64,131790.66,3,0,1,1,4.9,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1004,bank:Wokulski i S-ka,744.9,56228.54,93827.35,131981.37,3,0,1,1,4.91,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1004,bank:Ziemia Obiecana,744.9,56228.54,93827.35,131981.37,3,0,1,1,4.95,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1004,bank:Oszczędności Rzeckiego,744.6,56070.27,93669.8,131823.82,3,0,1,1,4.87,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1004,bank:Soplicowo,746.4,57050.42,94650.11,132804.13,3,0,1,1,4.88,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1004,bank:Solaris,744.9,56228.54,93827.35,131981.37,3,0,1,1,4.9,dworzec
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1004,baza,530.2,20232.87,60833.54,75117.62,3,0,6,1,4.98,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1004,bank:Kmicic,529.8,20102.18,60701.57,74985.65,3,0,6,1,4.97,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1004,bank:Wokulski i S-ka,530.2,20232.87,60833.54,75117.62,3,0,6,1,4.98,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1004,bank:Ziemia Obiecana,530.2,20232.87,60833.54,75117.62,3,0,6,1,5.01,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1004,bank:Oszczędności Rzeckiego,529.9,20134.17,60733.56,75017.64,3,0,6,1,5.02,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1004,bank:Soplicowo,531.8,20806.05,61405.6,75689.68,3,0,6,1,4.98,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1004,bank:Solaris,530.2,20232.87,60833.54,75117.62,3,0,6,1,5.04,czechow
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1004,baza,635.9,34623.33,59323.27,110980.27,3,0,5,1,4.93,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1004,bank:Kmicic,635.6,34443.68,59144.34,110801.34,3,0,5,1,4.98,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1004,bank:Wokulski i S-ka,635.9,34623.33,59323.27,110980.27,3,0,5,1,4.88,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1004,bank:Ziemia Obiecana,635.9,34623.33,59323.27,110980.27,3,0,5,1,4.9,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1004,bank:Oszczędności Rzeckiego,635.7,34476.86,59177.52,110834.52,3,0,5,1,4.93,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1004,bank:Soplicowo,659.9,39996.16,64696.48,116615.15,3,0,5,1,4.97,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1004,bank:Solaris,635.9,34623.33,59323.27,110980.27,3,0,5,1,4.92,stare_miasto
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1004,baza,719.9,29870.35,67371.79,119219.39,5,0,2,1,5.06,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1004,bank:Kmicic,719.6,29663.41,67163.57,119011.17,5,0,2,1,5.03,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1004,bank:Wokulski i S-ka,719.9,29878.28,67379.72,119227.32,5,0,2,1,5.08,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1004,bank:Ziemia Obiecana,719.9,29870.35,67371.79,119219.39,5,0,2,1,5.02,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1004,bank:Oszczędności Rzeckiego,719.6,29671.95,67172.11,119019.71,5,0,2,1,5.08,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1004,bank:Soplicowo,721.5,30828.33,68327.65,120175.25,5,0,1,1,5.06,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1004,bank:Solaris,719.9,29806.92,67308.36,119155.96,5,0,2,1,5.06,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1004,baza,755.4,58090.64,95440.62,129888.13,3,0,1,1,4.93,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1004,bank:Kmicic,755.1,57898.57,95248.27,129695.78,3,0,1,1,4.91,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1004,bank:Wokulski i S-ka,755.4,58090.64,95440.62,129888.13,3,0,1,1,4.91,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1004,bank:Ziemia Obiecana,755.4,58090.64,95440.62,129888.13,3,0,1,1,4.95,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1004,bank:Oszczędności Rzeckiego,755.1,57930.73,95280.43,129727.94,3,0,1,1,4.92,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1004,bank:Soplicowo,757.0,58914.13,96262.99,130710.5,3,0,1,1,4.93,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1004,bank:Solaris,755.4,58090.64,95440.62,129888.13,3,0,1,1,4.94,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1005,baza,763.9,64516.11,103466.88,142289.8,3,0,1,1,5.03,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1005,bank:Kmicic,763.6,64318.23,103267.72,142090.64,3,0,1,1,4.97,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1005,bank:Wokulski i S-ka,763.9,64516.11,103466.88,142289.8,3,0,1,1,5.0,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1005,bank:Ziemia Obiecana,763.9,64516.11,103466.88,142289.8,3,0,1,1,4.97,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1005,bank:Oszczędności Rzeckiego,763.6,64350.22,103299.71,142122.63,3,0,1,1,5.0,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1005,bank:Soplicowo,765.4,65361.32,104309.97,143132.89,3,0,1,1,4.94,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1005,bank:Solaris,763.9,64516.11,103466.88,142289.8,3,0,1,1,4.95,dworzec
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1005,baza,620.0,45296.5,89146.32,103667.83,3,0,4,1,4.98,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1005,bank:Kmicic,619.6,45148.59,88998.13,103519.64,3,0,4,1,5.05,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1005,bank:Wokulski i S-ka,620.0,45296.5,89146.32,103667.83,3,0,4,1,5.0,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1005,bank:Ziemia Obiecana,620.0,45296.5,89146.32,103667.83,3,0,4,1,5.0,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1005,bank:Oszczędności Rzeckiego,619.7,45180.42,89029.96,103551.47,3,0,4,1,4.98,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1005,bank:Soplicowo,621.5,45939.53,89790.23,104311.74,3,0,4,1,5.01,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1005,bank:Solaris,620.0,45296.5,89146.32,103667.83,3,0,4,1,5.0,czechow
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1005,baza,588.3,8054.07,33598.18,78277.94,4,0,6,1,4.98,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1005,bank:Kmicic,588.0,7890.93,33434.76,78115.4,4,0,6,1,4.95,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1005,bank:Wokulski i S-ka,588.3,8054.07,33598.18,78277.94,4,0,6,1,5.02,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1005,bank:Ziemia Obiecana,588.3,8054.07,33598.18,78277.94,4,0,6,1,4.91,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1005,bank:Oszczędności Rzeckiego,588.1,7925.43,33469.26,78149.9,4,0,6,1,4.92,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1005,bank:Soplicowo,586.9,7761.02,33557.53,77921.29,4,0,6,1,4.89,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1005,bank:Solaris,588.3,8054.07,33598.18,78277.94,4,0,6,1,4.98,stare_miasto
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1005,baza,586.8,-3704.86,35210.46,79117.78,6,0,6,1,5.05,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1005,bank:Kmicic,588.6,-6204.84,38761.4,82956.16,6,1,6,1,5.09,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1005,bank:Wokulski i S-ka,586.9,-4775.93,34173.91,80993.82,6,1,6,1,5.07,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1005,bank:Ziemia Obiecana,586.8,-3704.86,35210.46,79117.78,6,0,6,1,5.1,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1005,bank:Oszczędności Rzeckiego,458.7,-50373.89,0.0,26137.99,6,7,6,1,4.99,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1005,bank:Soplicowo,557.8,-14006.91,24942.85,70922.56,6,2,6,1,5.0,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1005,bank:Solaris,586.1,-5145.77,33803.45,80623.36,6,0,6,1,5.01,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1005,baza,774.6,65482.43,104432.32,138783.65,3,0,1,1,4.97,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1005,bank:Kmicic,774.1,65287.17,104236.78,138588.11,3,0,1,1,4.95,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1005,bank:Wokulski i S-ka,774.6,65482.43,104432.32,138783.65,3,0,1,1,4.94,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1005,bank:Ziemia Obiecana,774.6,65482.43,104432.32,138783.65,3,0,1,1,4.93,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1005,bank:Oszczędności Rzeckiego,774.2,65319.33,104268.94,138620.27,3,0,1,1,4.98,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1005,bank:Soplicowo,776.2,66319.96,105268.73,139620.06,3,0,1,1,4.92,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1005,bank:Solaris,774.6,65482.43,104432.32,138783.65,3,0,1,1,4.95,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1006,baza,571.1,6549.07,41749.13,68717.54,5,0,6,1,4.91,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1006,bank:Kmicic,570.7,6415.66,41615.44,68583.85,5,0,6,1,4.93,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1006,bank:Wokulski i S-ka,571.1,6549.07,41749.13,68717.54,5,0,6,1,4.89,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1006,bank:Ziemia Obiecana,571.1,6549.07,41749.13,68717.54,5,0,6,1,4.9,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1006,bank:Oszczędności Rzeckiego,570.8,6448.33,41648.11,68616.52,5,0,6,1,4.92,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1006,bank:Soplicowo,576.5,6927.45,42128.55,69110.97,5,0,5,1,4.95,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1006,bank:Solaris,571.1,6549.07,41749.13,68717.54,5,0,6,1,4.96,centrum
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1006,baza,615.9,40863.76,84362.64,96907.07,3,0,5,1,5.01,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1006,bank:Kmicic,615.5,40720.21,84219.81,96764.24,3,0,5,1,5.04,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1006,bank:Wokulski i S-ka,615.9,40863.76,84362.64,96907.07,3,0,5,1,5.02,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1006,bank:Ziemia Obiecana,615.9,40863.76,84362.64,96907.07,3,0,5,1,5.01,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1006,bank:Oszczędności Rzeckiego,615.6,40753.2,84252.8,96797.23,3,0,5,1,5.05,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1006,bank:Soplicowo,617.5,41490.05,84990.81,97535.24,3,0,4,1,5.02,felin
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1006,bank:Solaris,615.9,40863.76,84362.64,96907.07,3,0,5,1,5.07,felin
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1006,baza,596.6,5927.71,37862.29,93162.0,3,1,6,1,4.88,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1006,bank:Kmicic,589.1,5162.93,37013.68,93214.0,3,1,6,1,4.87,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1006,bank:Wokulski i S-ka,596.6,5939.23,37873.81,93173.52,3,1,6,1,4.88,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1006,bank:Ziemia Obiecana,596.6,5927.71,37862.29,93162.0,3,1,6,1,4.92,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1006,bank:Oszczędności Rzeckiego,589.2,5165.83,37016.58,93216.9,3,1,6,1,4.89,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1006,bank:Soplicowo,601.0,6643.57,38648.91,93868.47,3,1,6,1,4.89,centrum
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1006,bank:Solaris,596.2,4455.39,35964.76,93977.57,3,0,6,1,4.89,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1006,baza,511.4,-11244.54,24605.33,54341.0,5,0,6,1,5.03,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1006,bank:Kmicic,511.0,-11416.68,24432.91,54168.58,5,0,6,1,4.99,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1006,bank:Wokulski i S-ka,511.4,-11244.54,24605.33,54341.0,5,0,6,1,4.99,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1006,bank:Ziemia Obiecana,511.4,-11244.54,24605.33,54341.0,5,0,6,1,4.99,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1006,bank:Oszczędności Rzeckiego,511.1,-11376.01,24473.58,54209.25,5,0,6,1,5.01,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1006,bank:Soplicowo,512.9,-10493.79,25355.96,55091.63,5,0,6,1,4.99,centrum
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1006,bank:Solaris,511.4,-11244.54,24605.33,54341.0,5,0,6,1,4.99,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1006,baza,557.6,5270.63,40570.57,62158.72,5,0,6,1,4.93,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1006,bank:Kmicic,557.2,5142.77,40442.43,62030.58,5,0,6,1,4.97,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1006,bank:Wokulski i S-ka,557.6,5270.63,40570.57,62158.72,5,0,6,1,4.91,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1006,bank:Ziemia Obiecana,557.6,5270.63,40570.57,62158.72,5,0,6,1,4.91,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1006,bank:Oszczędności Rzeckiego,557.3,5176.27,40475.93,62064.08,5,0,6,1,4.91,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1006,bank:Soplicowo,559.1,5827.58,41128.4,62716.55,5,0,6,1,4.92,centrum
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1006,bank:Solaris,557.6,5270.63,40570.57,62158.72,5,0,6,1,4.87,centrum
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1007,baza,766.1,64214.47,102814.88,141577.68,3,0,1,1,4.91,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1007,bank:Kmicic,765.8,64017.78,102617.91,141380.71,3,0,1,1,4.91,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1007,bank:Wokulski i S-ka,766.1,64214.47,102814.88,141577.68,3,0,1,1,4.92,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1007,bank:Ziemia Obiecana,766.1,64214.47,102814.88,141577.68,3,0,1,1,4.91,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1007,bank:Oszczędności Rzeckiego,765.8,64050.77,102650.9,141413.7,3,0,1,1,4.91,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1007,bank:Soplicowo,767.5,65056.79,103657.08,142419.88,3,0,1,1,4.89,dworzec
+zrownowazony/12r/6f/sredni,zrownowazony,12,6,sredni,,0,,,1007,bank:Solaris,766.1,64214.47,102814.88,141577.68,3,0,1,1,4.95,dworzec
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1007,baza,615.4,41214.62,84015.87,98515.81,3,0,4,1,5.0,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1007,bank:Kmicic,615.0,41070.19,83868.16,98368.1,3,0,4,1,5.05,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1007,bank:Wokulski i S-ka,615.4,41214.62,84015.87,98515.81,3,0,4,1,5.01,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1007,bank:Ziemia Obiecana,615.4,41214.62,84015.87,98515.81,3,0,4,1,5.05,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1007,bank:Oszczędności Rzeckiego,615.1,41103.01,83900.98,98400.92,3,0,4,1,4.99,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1007,bank:Soplicowo,617.0,41843.35,84642.48,99142.42,3,0,4,1,4.95,czechow
+tani/12r/6f/sredni,tani,12,6,sredni,,0,,,1007,bank:Solaris,615.4,41214.62,84015.87,98515.81,3,0,4,1,4.94,czechow
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1007,baza,596.3,13039.16,36569.04,90144.24,4,0,6,1,4.89,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1007,bank:Kmicic,596.0,12890.01,36419.61,89995.69,4,0,6,1,4.87,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1007,bank:Wokulski i S-ka,596.3,13048.59,36578.47,90153.67,4,0,6,1,4.9,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1007,bank:Ziemia Obiecana,596.3,13039.16,36569.04,90144.24,4,0,6,1,4.9,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1007,bank:Oszczędności Rzeckiego,598.0,14253.46,38204.51,89091.5,4,1,5,1,4.94,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1007,bank:Soplicowo,602.3,14739.27,38634.43,90125.06,4,1,5,1,4.89,stare_miasto
+premium/12r/6f/sredni,premium,12,6,sredni,,0,,,1007,bank:Solaris,596.2,12970.73,36500.61,90075.81,4,0,6,1,4.87,stare_miasto
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1007,baza,660.5,16875.8,54975.45,100637.42,7,0,4,1,5.0,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1007,bank:Kmicic,647.2,13558.79,57108.12,103588.37,8,0,4,1,5.05,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1007,bank:Wokulski i S-ka,655.3,13844.9,51995.16,103948.46,8,1,4,1,5.03,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1007,bank:Ziemia Obiecana,660.5,16875.8,54975.45,100637.42,7,0,4,1,5.04,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1007,bank:Oszczędności Rzeckiego,654.9,13609.41,51760.39,103713.69,8,1,4,1,5.02,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1007,bank:Soplicowo,656.7,14736.21,52887.76,104824.06,7,1,4,1,5.07,dworzec
+agresywny/12r/6f/sredni,agresywny,12,6,sredni,,0,,,1007,bank:Solaris,655.1,13659.66,51809.3,103762.6,8,0,4,1,5.01,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1007,baza,784.5,71401.17,110800.39,144513.63,3,0,1,1,4.92,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1007,bank:Kmicic,784.2,71202.73,110603.67,144316.91,3,0,1,1,4.87,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1007,bank:Wokulski i S-ka,784.5,71401.17,110800.39,144513.63,3,0,1,1,4.96,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1007,bank:Ziemia Obiecana,784.5,71401.17,110800.39,144513.63,3,0,1,1,4.91,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1007,bank:Oszczędności Rzeckiego,784.3,71234.56,110635.5,144348.74,3,0,1,1,4.93,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1007,bank:Soplicowo,785.9,72252.59,111652.69,145365.93,3,0,1,1,4.91,dworzec
+nasladowca/12r/6f/sredni,nasladowca,12,6,sredni,,0,,,1007,bank:Solaris,784.5,71401.17,110800.39,144513.63,3,0,1,1,4.94,dworzec

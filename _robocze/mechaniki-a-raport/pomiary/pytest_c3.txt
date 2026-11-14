@@ -1,0 +1,34 @@
+........................................................................ [ 12%]
+..............F......................................................... [ 24%]
+........................................................................ [ 36%]
+........................................................................ [ 49%]
+........................................................................ [ 61%]
+........................................................................ [ 73%]
+........................................................................ [ 85%]
+........................................................................ [ 98%]
+...........                                                              [100%]
+================================== FAILURES ===================================
+__________________________ test_kazda_marka_ma_ikone __________________________
+
+    def test_kazda_marka_ma_ikone():
+        nazwy, ikony = _nazwy(), _ikony()
+        assert len(nazwy) > 50 and {"Biedronka", "Kasjer", "Kucharz", "Soplicowo", "IKEA", "Pożar w kuchni"} <= set(nazwy)
+        brak = sorted(f"{n} ({skad})" for n, skad in nazwy.items() if n not in ikony)
+>       assert brak == [], "Bez ikony w ikony_marek.js:\n" + "\n".join(brak)
+E       AssertionError: Bez ikony w ikony_marek.js:
+E         Asteroida 328 (mapa/biura.yaml)
+E         J.K.Ś. (mapa/biura.yaml)
+E         Józef K. (mapa/biura.yaml)
+E         Scrooge (mapa/biura.yaml)
+E       assert ['Asteroida 3.../biura.yaml)'] == []
+E         
+E         Left contains 4 more items, first extra item: 'Asteroida 328 (mapa/biura.yaml)'
+E         Use -v to get more diff
+
+testy\aplikacja\test_ikony_marek.py:75: AssertionError
+=========================== short test summary info ===========================
+FAILED testy/aplikacja/test_ikony_marek.py::test_kazda_marka_ma_ikone - Asser...
+
+real	4m21.166s
+user	0m0.296s
+sys	0m0.546s

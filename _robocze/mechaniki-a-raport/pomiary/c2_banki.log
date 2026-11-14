@@ -1,0 +1,352 @@
+280 gier (5 kontekstów × 8 ziaren × 7), 4 procesów, limit 25.0 min → ..\..\mechaniki-a-raport\pomiary\c2_banki
+  1/280 zrownowazony/12r/6f/sredni z1000 bank:Ziemia Obiecana: karta 678.70 (5.1 s)
+  2/280 zrownowazony/12r/6f/sredni z1000 bank:Wokulski i S-ka: karta 678.70 (5.1 s)
+  3/280 zrownowazony/12r/6f/sredni z1000 bank:Kmicic: karta 678.30 (5.1 s)
+  4/280 zrownowazony/12r/6f/sredni z1000 baza: karta 678.70 (5.1 s)
+  5/280 zrownowazony/12r/6f/sredni z1000 bank:Soplicowo: karta 680.20 (5.0 s)
+  6/280 zrownowazony/12r/6f/sredni z1000 bank:Oszczędności Rzeckiego: karta 678.40 (5.0 s)
+  7/280 zrownowazony/12r/6f/sredni z1000 bank:Solaris: karta 678.70 (5.0 s)
+  8/280 tani/12r/6f/sredni z1000 baza: karta 603.30 (5.1 s)
+  9/280 tani/12r/6f/sredni z1000 bank:Kmicic: karta 602.90 (5.0 s)
+  10/280 tani/12r/6f/sredni z1000 bank:Wokulski i S-ka: karta 603.30 (5.0 s)
+  11/280 tani/12r/6f/sredni z1000 bank:Ziemia Obiecana: karta 603.30 (5.0 s)
+  12/280 tani/12r/6f/sredni z1000 bank:Oszczędności Rzeckiego: karta 603.00 (5.0 s)
+  13/280 tani/12r/6f/sredni z1000 bank:Soplicowo: karta 604.80 (5.0 s)
+  14/280 premium/12r/6f/sredni z1000 baza: karta 693.70 (5.0 s)
+  15/280 tani/12r/6f/sredni z1000 bank:Solaris: karta 603.30 (5.0 s)
+  16/280 premium/12r/6f/sredni z1000 bank:Kmicic: karta 693.40 (5.0 s)
+  17/280 premium/12r/6f/sredni z1000 bank:Wokulski i S-ka: karta 693.70 (5.0 s)
+  18/280 premium/12r/6f/sredni z1000 bank:Ziemia Obiecana: karta 693.70 (5.0 s)
+  19/280 premium/12r/6f/sredni z1000 bank:Oszczędności Rzeckiego: karta 693.50 (5.0 s)
+  20/280 premium/12r/6f/sredni z1000 bank:Soplicowo: karta 694.80 (5.0 s)
+  21/280 premium/12r/6f/sredni z1000 bank:Solaris: karta 693.70 (5.0 s)
+  22/280 agresywny/12r/6f/sredni z1000 baza: karta 547.70 (5.1 s)
+  23/280 agresywny/12r/6f/sredni z1000 bank:Kmicic: karta 543.40 (5.1 s)
+  24/280 agresywny/12r/6f/sredni z1000 bank:Wokulski i S-ka: karta 547.70 (5.2 s)
+  25/280 agresywny/12r/6f/sredni z1000 bank:Ziemia Obiecana: karta 547.70 (5.2 s)
+  26/280 agresywny/12r/6f/sredni z1000 bank:Oszczędności Rzeckiego: karta 546.00 (5.2 s)
+  27/280 agresywny/12r/6f/sredni z1000 bank:Soplicowo: karta 549.30 (5.2 s)
+  28/280 agresywny/12r/6f/sredni z1000 bank:Solaris: karta 547.70 (5.2 s)
+  29/280 nasladowca/12r/6f/sredni z1000 baza: karta 676.60 (5.0 s)
+  30/280 nasladowca/12r/6f/sredni z1000 bank:Kmicic: karta 676.30 (5.0 s)
+  31/280 nasladowca/12r/6f/sredni z1000 bank:Wokulski i S-ka: karta 676.60 (5.0 s)
+  32/280 nasladowca/12r/6f/sredni z1000 bank:Ziemia Obiecana: karta 676.60 (5.0 s)
+  33/280 nasladowca/12r/6f/sredni z1000 bank:Oszczędności Rzeckiego: karta 676.40 (4.9 s)
+  34/280 nasladowca/12r/6f/sredni z1000 bank:Soplicowo: karta 678.20 (4.9 s)
+  35/280 nasladowca/12r/6f/sredni z1000 bank:Solaris: karta 676.60 (4.9 s)
+  36/280 zrownowazony/12r/6f/sredni z1001 baza: karta 766.90 (4.9 s)
+  37/280 zrownowazony/12r/6f/sredni z1001 bank:Kmicic: karta 766.40 (5.0 s)
+  38/280 zrownowazony/12r/6f/sredni z1001 bank:Wokulski i S-ka: karta 766.90 (5.0 s)
+  39/280 zrownowazony/12r/6f/sredni z1001 bank:Ziemia Obiecana: karta 766.90 (5.0 s)
+  40/280 zrownowazony/12r/6f/sredni z1001 bank:Oszczędności Rzeckiego: karta 766.50 (5.0 s)
+  41/280 zrownowazony/12r/6f/sredni z1001 bank:Soplicowo: karta 768.50 (4.9 s)
+  42/280 zrownowazony/12r/6f/sredni z1001 bank:Solaris: karta 766.90 (4.9 s)
+  43/280 tani/12r/6f/sredni z1001 baza: karta 615.80 (5.0 s)
+  44/280 tani/12r/6f/sredni z1001 bank:Kmicic: karta 615.40 (5.0 s)
+  45/280 tani/12r/6f/sredni z1001 bank:Wokulski i S-ka: karta 615.80 (5.1 s)
+  46/280 tani/12r/6f/sredni z1001 bank:Ziemia Obiecana: karta 615.80 (5.2 s)
+  47/280 tani/12r/6f/sredni z1001 bank:Oszczędności Rzeckiego: karta 615.50 (5.1 s)
+  48/280 tani/12r/6f/sredni z1001 bank:Soplicowo: karta 617.20 (5.1 s)
+  49/280 tani/12r/6f/sredni z1001 bank:Solaris: karta 615.80 (5.1 s)
+  50/280 premium/12r/6f/sredni z1001 baza: karta 670.20 (5.0 s)
+  51/280 premium/12r/6f/sredni z1001 bank:Kmicic: karta 669.80 (5.0 s)
+  52/280 premium/12r/6f/sredni z1001 bank:Wokulski i S-ka: karta 670.20 (5.0 s)
+  53/280 premium/12r/6f/sredni z1001 bank:Ziemia Obiecana: karta 670.20 (5.0 s)
+  54/280 premium/12r/6f/sredni z1001 bank:Oszczędności Rzeckiego: karta 669.90 (4.9 s)
+  55/280 premium/12r/6f/sredni z1001 bank:Soplicowo: karta 671.20 (5.0 s)
+  56/280 premium/12r/6f/sredni z1001 bank:Solaris: karta 670.20 (5.0 s)
+  57/280 agresywny/12r/6f/sredni z1001 baza: karta 727.90 (5.0 s)
+  58/280 agresywny/12r/6f/sredni z1001 bank:Kmicic: karta 721.80 (5.0 s)
+  59/280 agresywny/12r/6f/sredni z1001 bank:Wokulski i S-ka: karta 727.90 (5.0 s)
+  60/280 agresywny/12r/6f/sredni z1001 bank:Ziemia Obiecana: karta 727.90 (5.0 s)
+  61/280 agresywny/12r/6f/sredni z1001 bank:Oszczędności Rzeckiego: karta 721.80 (5.0 s)
+  62/280 agresywny/12r/6f/sredni z1001 bank:Soplicowo: karta 729.80 (5.0 s)
+  63/280 agresywny/12r/6f/sredni z1001 bank:Solaris: karta 721.90 (5.1 s)
+  64/280 nasladowca/12r/6f/sredni z1001 baza: karta 775.90 (5.0 s)
+  65/280 nasladowca/12r/6f/sredni z1001 bank:Kmicic: karta 775.60 (5.0 s)
+  66/280 nasladowca/12r/6f/sredni z1001 bank:Wokulski i S-ka: karta 775.90 (5.0 s)
+  67/280 nasladowca/12r/6f/sredni z1001 bank:Ziemia Obiecana: karta 775.90 (5.0 s)
+  68/280 nasladowca/12r/6f/sredni z1001 bank:Oszczędności Rzeckiego: karta 775.70 (5.0 s)
+  69/280 nasladowca/12r/6f/sredni z1001 bank:Soplicowo: karta 777.50 (5.0 s)
+  70/280 nasladowca/12r/6f/sredni z1001 bank:Solaris: karta 775.90 (5.0 s)
+  71/280 zrownowazony/12r/6f/sredni z1002 bank:Kmicic: karta 732.40 (5.0 s)
+  72/280 zrownowazony/12r/6f/sredni z1002 baza: karta 732.80 (5.1 s)
+  73/280 zrownowazony/12r/6f/sredni z1002 bank:Wokulski i S-ka: karta 732.80 (5.0 s)
+  74/280 zrownowazony/12r/6f/sredni z1002 bank:Ziemia Obiecana: karta 732.80 (5.0 s)
+  75/280 zrownowazony/12r/6f/sredni z1002 bank:Oszczędności Rzeckiego: karta 732.50 (5.0 s)
+  76/280 zrownowazony/12r/6f/sredni z1002 bank:Soplicowo: karta 728.00 (5.0 s)
+  77/280 zrownowazony/12r/6f/sredni z1002 bank:Solaris: karta 732.80 (5.0 s)
+  78/280 tani/12r/6f/sredni z1002 baza: karta 612.90 (5.0 s)
+  79/280 tani/12r/6f/sredni z1002 bank:Kmicic: karta 612.50 (5.0 s)
+  80/280 tani/12r/6f/sredni z1002 bank:Wokulski i S-ka: karta 612.90 (5.1 s)
+  81/280 tani/12r/6f/sredni z1002 bank:Ziemia Obiecana: karta 612.90 (5.0 s)
+  82/280 tani/12r/6f/sredni z1002 bank:Oszczędności Rzeckiego: karta 612.60 (5.0 s)
+  83/280 tani/12r/6f/sredni z1002 bank:Soplicowo: karta 614.40 (5.0 s)
+  84/280 tani/12r/6f/sredni z1002 bank:Solaris: karta 612.90 (5.0 s)
+  85/280 premium/12r/6f/sredni z1002 baza: karta 625.00 (4.9 s)
+  86/280 premium/12r/6f/sredni z1002 bank:Kmicic: karta 624.70 (4.9 s)
+  87/280 premium/12r/6f/sredni z1002 bank:Wokulski i S-ka: karta 625.00 (4.9 s)
+  88/280 premium/12r/6f/sredni z1002 bank:Ziemia Obiecana: karta 625.00 (5.0 s)
+  89/280 premium/12r/6f/sredni z1002 bank:Oszczędności Rzeckiego: karta 624.70 (4.9 s)
+  90/280 premium/12r/6f/sredni z1002 bank:Soplicowo: karta 634.50 (4.9 s)
+  91/280 premium/12r/6f/sredni z1002 bank:Solaris: karta 625.00 (4.9 s)
+  92/280 agresywny/12r/6f/sredni z1002 baza: karta 607.20 (5.1 s)
+  93/280 agresywny/12r/6f/sredni z1002 bank:Kmicic: karta 600.40 (5.0 s)
+  94/280 agresywny/12r/6f/sredni z1002 bank:Wokulski i S-ka: karta 604.10 (5.0 s)
+  95/280 agresywny/12r/6f/sredni z1002 bank:Ziemia Obiecana: karta 607.20 (5.0 s)
+  96/280 agresywny/12r/6f/sredni z1002 bank:Oszczędności Rzeckiego: karta 603.60 (5.1 s)
+  97/280 agresywny/12r/6f/sredni z1002 bank:Soplicowo: karta 605.80 (5.0 s)
+  98/280 agresywny/12r/6f/sredni z1002 bank:Solaris: karta 603.70 (5.0 s)
+  99/280 nasladowca/12r/6f/sredni z1002 baza: karta 733.70 (4.9 s)
+  100/280 nasladowca/12r/6f/sredni z1002 bank:Kmicic: karta 733.40 (5.0 s)
+  101/280 nasladowca/12r/6f/sredni z1002 bank:Wokulski i S-ka: karta 733.70 (4.9 s)
+  102/280 nasladowca/12r/6f/sredni z1002 bank:Ziemia Obiecana: karta 733.70 (5.0 s)
+  103/280 nasladowca/12r/6f/sredni z1002 bank:Oszczędności Rzeckiego: karta 733.40 (5.0 s)
+  104/280 nasladowca/12r/6f/sredni z1002 bank:Soplicowo: karta 735.20 (5.0 s)
+  105/280 nasladowca/12r/6f/sredni z1002 bank:Solaris: karta 733.70 (4.9 s)
+  106/280 zrownowazony/12r/6f/sredni z1003 baza: karta 639.10 (4.9 s)
+  107/280 zrownowazony/12r/6f/sredni z1003 bank:Kmicic: karta 638.80 (4.9 s)
+  108/280 zrownowazony/12r/6f/sredni z1003 bank:Wokulski i S-ka: karta 639.10 (4.9 s)
+  109/280 zrownowazony/12r/6f/sredni z1003 bank:Ziemia Obiecana: karta 639.10 (4.9 s)
+  110/280 zrownowazony/12r/6f/sredni z1003 bank:Oszczędności Rzeckiego: karta 638.80 (4.9 s)
+  111/280 zrownowazony/12r/6f/sredni z1003 bank:Soplicowo: karta 640.60 (4.9 s)
+  112/280 zrownowazony/12r/6f/sredni z1003 bank:Solaris: karta 639.10 (4.9 s)
+  113/280 tani/12r/6f/sredni z1003 baza: karta 524.10 (5.0 s)
+  114/280 tani/12r/6f/sredni z1003 bank:Kmicic: karta 523.70 (5.0 s)
+  115/280 tani/12r/6f/sredni z1003 bank:Wokulski i S-ka: karta 524.10 (5.0 s)
+  116/280 tani/12r/6f/sredni z1003 bank:Ziemia Obiecana: karta 524.10 (5.0 s)
+  117/280 tani/12r/6f/sredni z1003 bank:Oszczędności Rzeckiego: karta 523.80 (5.0 s)
+  118/280 tani/12r/6f/sredni z1003 bank:Soplicowo: karta 525.70 (5.0 s)
+  119/280 tani/12r/6f/sredni z1003 bank:Solaris: karta 524.10 (5.0 s)
+  120/280 premium/12r/6f/sredni z1003 baza: karta 650.00 (5.0 s)
+  121/280 premium/12r/6f/sredni z1003 bank:Kmicic: karta 649.70 (4.9 s)
+  122/280 premium/12r/6f/sredni z1003 bank:Wokulski i S-ka: karta 650.00 (4.9 s)
+  123/280 premium/12r/6f/sredni z1003 bank:Ziemia Obiecana: karta 650.00 (4.9 s)
+  124/280 premium/12r/6f/sredni z1003 bank:Oszczędności Rzeckiego: karta 649.80 (4.9 s)
+  125/280 premium/12r/6f/sredni z1003 bank:Soplicowo: karta 653.20 (4.9 s)
+  126/280 premium/12r/6f/sredni z1003 bank:Solaris: karta 650.00 (4.9 s)
+  127/280 agresywny/12r/6f/sredni z1003 baza: karta 552.70 (5.0 s)
+  128/280 agresywny/12r/6f/sredni z1003 bank:Kmicic: karta 552.30 (5.0 s)
+  129/280 agresywny/12r/6f/sredni z1003 bank:Wokulski i S-ka: karta 552.70 (4.9 s)
+  130/280 agresywny/12r/6f/sredni z1003 bank:Ziemia Obiecana: karta 552.70 (4.9 s)
+  131/280 agresywny/12r/6f/sredni z1003 bank:Oszczędności Rzeckiego: karta 552.40 (4.9 s)
+  132/280 agresywny/12r/6f/sredni z1003 bank:Soplicowo: karta 551.60 (4.9 s)
+  133/280 agresywny/12r/6f/sredni z1003 bank:Solaris: karta 552.70 (4.9 s)
+  134/280 nasladowca/12r/6f/sredni z1003 baza: karta 628.60 (4.9 s)
+  135/280 nasladowca/12r/6f/sredni z1003 bank:Kmicic: karta 628.20 (4.9 s)
+  136/280 nasladowca/12r/6f/sredni z1003 bank:Wokulski i S-ka: karta 628.60 (5.0 s)
+  137/280 nasladowca/12r/6f/sredni z1003 bank:Ziemia Obiecana: karta 628.60 (4.9 s)
+  138/280 nasladowca/12r/6f/sredni z1003 bank:Oszczędności Rzeckiego: karta 628.30 (4.9 s)
+  139/280 nasladowca/12r/6f/sredni z1003 bank:Soplicowo: karta 639.20 (4.8 s)
+  140/280 nasladowca/12r/6f/sredni z1003 bank:Solaris: karta 628.60 (4.9 s)
+  141/280 zrownowazony/12r/6f/sredni z1004 baza: karta 744.90 (4.9 s)
+  142/280 zrownowazony/12r/6f/sredni z1004 bank:Kmicic: karta 744.50 (4.9 s)
+  143/280 zrownowazony/12r/6f/sredni z1004 bank:Wokulski i S-ka: karta 744.90 (4.9 s)
+  144/280 zrownowazony/12r/6f/sredni z1004 bank:Ziemia Obiecana: karta 744.90 (5.0 s)
+  145/280 zrownowazony/12r/6f/sredni z1004 bank:Oszczędności Rzeckiego: karta 744.60 (4.9 s)
+  146/280 zrownowazony/12r/6f/sredni z1004 bank:Soplicowo: karta 746.40 (4.9 s)
+  147/280 zrownowazony/12r/6f/sredni z1004 bank:Solaris: karta 744.90 (4.9 s)
+  148/280 tani/12r/6f/sredni z1004 baza: karta 530.20 (5.0 s)
+  149/280 tani/12r/6f/sredni z1004 bank:Kmicic: karta 529.80 (5.0 s)
+  150/280 tani/12r/6f/sredni z1004 bank:Wokulski i S-ka: karta 530.20 (5.0 s)
+  151/280 tani/12r/6f/sredni z1004 bank:Ziemia Obiecana: karta 530.20 (5.0 s)
+  152/280 tani/12r/6f/sredni z1004 bank:Oszczędności Rzeckiego: karta 529.90 (5.0 s)
+  153/280 tani/12r/6f/sredni z1004 bank:Soplicowo: karta 531.80 (5.0 s)
+  154/280 tani/12r/6f/sredni z1004 bank:Solaris: karta 530.20 (5.0 s)
+  155/280 premium/12r/6f/sredni z1004 baza: karta 635.90 (4.9 s)
+  156/280 premium/12r/6f/sredni z1004 bank:Kmicic: karta 635.60 (5.0 s)
+  157/280 premium/12r/6f/sredni z1004 bank:Wokulski i S-ka: karta 635.90 (4.9 s)
+  158/280 premium/12r/6f/sredni z1004 bank:Ziemia Obiecana: karta 635.90 (4.9 s)
+  159/280 premium/12r/6f/sredni z1004 bank:Oszczędności Rzeckiego: karta 635.70 (4.9 s)
+  160/280 premium/12r/6f/sredni z1004 bank:Soplicowo: karta 659.90 (5.0 s)
+  161/280 premium/12r/6f/sredni z1004 bank:Solaris: karta 635.90 (4.9 s)
+  162/280 agresywny/12r/6f/sredni z1004 baza: karta 719.90 (5.1 s)
+  163/280 agresywny/12r/6f/sredni z1004 bank:Kmicic: karta 719.60 (5.0 s)
+  164/280 agresywny/12r/6f/sredni z1004 bank:Wokulski i S-ka: karta 719.90 (5.1 s)
+  165/280 agresywny/12r/6f/sredni z1004 bank:Ziemia Obiecana: karta 719.90 (5.0 s)
+  166/280 agresywny/12r/6f/sredni z1004 bank:Oszczędności Rzeckiego: karta 719.60 (5.1 s)
+  167/280 agresywny/12r/6f/sredni z1004 bank:Soplicowo: karta 721.50 (5.1 s)
+  168/280 agresywny/12r/6f/sredni z1004 bank:Solaris: karta 719.90 (5.1 s)
+  169/280 nasladowca/12r/6f/sredni z1004 baza: karta 755.40 (4.9 s)
+  170/280 nasladowca/12r/6f/sredni z1004 bank:Kmicic: karta 755.10 (4.9 s)
+  171/280 nasladowca/12r/6f/sredni z1004 bank:Wokulski i S-ka: karta 755.40 (4.9 s)
+  172/280 nasladowca/12r/6f/sredni z1004 bank:Ziemia Obiecana: karta 755.40 (5.0 s)
+  173/280 nasladowca/12r/6f/sredni z1004 bank:Oszczędności Rzeckiego: karta 755.10 (4.9 s)
+  174/280 nasladowca/12r/6f/sredni z1004 bank:Soplicowo: karta 757.00 (4.9 s)
+  175/280 nasladowca/12r/6f/sredni z1004 bank:Solaris: karta 755.40 (4.9 s)
+  176/280 zrownowazony/12r/6f/sredni z1005 baza: karta 763.90 (5.0 s)
+  177/280 zrownowazony/12r/6f/sredni z1005 bank:Kmicic: karta 763.60 (5.0 s)
+  178/280 zrownowazony/12r/6f/sredni z1005 bank:Wokulski i S-ka: karta 763.90 (5.0 s)
+  179/280 zrownowazony/12r/6f/sredni z1005 bank:Ziemia Obiecana: karta 763.90 (5.0 s)
+  180/280 zrownowazony/12r/6f/sredni z1005 bank:Oszczędności Rzeckiego: karta 763.60 (5.0 s)
+  181/280 zrownowazony/12r/6f/sredni z1005 bank:Soplicowo: karta 765.40 (4.9 s)
+  182/280 zrownowazony/12r/6f/sredni z1005 bank:Solaris: karta 763.90 (5.0 s)
+  183/280 tani/12r/6f/sredni z1005 baza: karta 620.00 (5.0 s)
+  184/280 tani/12r/6f/sredni z1005 bank:Kmicic: karta 619.60 (5.0 s)
+  185/280 tani/12r/6f/sredni z1005 bank:Wokulski i S-ka: karta 620.00 (5.0 s)
+  186/280 tani/12r/6f/sredni z1005 bank:Ziemia Obiecana: karta 620.00 (5.0 s)
+  187/280 tani/12r/6f/sredni z1005 bank:Oszczędności Rzeckiego: karta 619.70 (5.0 s)
+  188/280 tani/12r/6f/sredni z1005 bank:Soplicowo: karta 621.50 (5.0 s)
+  189/280 tani/12r/6f/sredni z1005 bank:Solaris: karta 620.00 (5.0 s)
+  190/280 premium/12r/6f/sredni z1005 baza: karta 588.30 (5.0 s)
+  191/280 premium/12r/6f/sredni z1005 bank:Kmicic: karta 588.00 (5.0 s)
+  192/280 premium/12r/6f/sredni z1005 bank:Wokulski i S-ka: karta 588.30 (5.0 s)
+  193/280 premium/12r/6f/sredni z1005 bank:Ziemia Obiecana: karta 588.30 (4.9 s)
+  194/280 premium/12r/6f/sredni z1005 bank:Oszczędności Rzeckiego: karta 588.10 (4.9 s)
+  195/280 premium/12r/6f/sredni z1005 bank:Soplicowo: karta 586.90 (4.9 s)
+  196/280 premium/12r/6f/sredni z1005 bank:Solaris: karta 588.30 (5.0 s)
+  197/280 agresywny/12r/6f/sredni z1005 baza: karta 586.80 (5.0 s)
+  198/280 agresywny/12r/6f/sredni z1005 bank:Kmicic: karta 588.60 (5.1 s)
+  199/280 agresywny/12r/6f/sredni z1005 bank:Wokulski i S-ka: karta 586.90 (5.1 s)
+  200/280 agresywny/12r/6f/sredni z1005 bank:Ziemia Obiecana: karta 586.80 (5.1 s)
+  201/280 agresywny/12r/6f/sredni z1005 bank:Oszczędności Rzeckiego: karta 458.70 (5.0 s)
+  202/280 agresywny/12r/6f/sredni z1005 bank:Soplicowo: karta 557.80 (5.0 s)
+  203/280 agresywny/12r/6f/sredni z1005 bank:Solaris: karta 586.10 (5.0 s)
+  204/280 nasladowca/12r/6f/sredni z1005 baza: karta 774.60 (5.0 s)
+  205/280 nasladowca/12r/6f/sredni z1005 bank:Kmicic: karta 774.10 (5.0 s)
+  206/280 nasladowca/12r/6f/sredni z1005 bank:Wokulski i S-ka: karta 774.60 (4.9 s)
+  207/280 nasladowca/12r/6f/sredni z1005 bank:Ziemia Obiecana: karta 774.60 (4.9 s)
+  208/280 nasladowca/12r/6f/sredni z1005 bank:Oszczędności Rzeckiego: karta 774.20 (5.0 s)
+  209/280 nasladowca/12r/6f/sredni z1005 bank:Soplicowo: karta 776.20 (4.9 s)
+  210/280 nasladowca/12r/6f/sredni z1005 bank:Solaris: karta 774.60 (5.0 s)
+  211/280 zrownowazony/12r/6f/sredni z1006 baza: karta 571.10 (4.9 s)
+  212/280 zrownowazony/12r/6f/sredni z1006 bank:Kmicic: karta 570.70 (4.9 s)
+  213/280 zrownowazony/12r/6f/sredni z1006 bank:Wokulski i S-ka: karta 571.10 (4.9 s)
+  214/280 zrownowazony/12r/6f/sredni z1006 bank:Ziemia Obiecana: karta 571.10 (4.9 s)
+  215/280 zrownowazony/12r/6f/sredni z1006 bank:Oszczędności Rzeckiego: karta 570.80 (4.9 s)
+  216/280 zrownowazony/12r/6f/sredni z1006 bank:Soplicowo: karta 576.50 (5.0 s)
+  217/280 zrownowazony/12r/6f/sredni z1006 bank:Solaris: karta 571.10 (5.0 s)
+  218/280 tani/12r/6f/sredni z1006 baza: karta 615.90 (5.0 s)
+  219/280 tani/12r/6f/sredni z1006 bank:Kmicic: karta 615.50 (5.0 s)
+  220/280 tani/12r/6f/sredni z1006 bank:Wokulski i S-ka: karta 615.90 (5.0 s)
+  221/280 tani/12r/6f/sredni z1006 bank:Ziemia Obiecana: karta 615.90 (5.0 s)
+  222/280 tani/12r/6f/sredni z1006 bank:Oszczędności Rzeckiego: karta 615.60 (5.0 s)
+  223/280 tani/12r/6f/sredni z1006 bank:Soplicowo: karta 617.50 (5.0 s)
+  224/280 tani/12r/6f/sredni z1006 bank:Solaris: karta 615.90 (5.1 s)
+  225/280 premium/12r/6f/sredni z1006 baza: karta 596.60 (4.9 s)
+  226/280 premium/12r/6f/sredni z1006 bank:Kmicic: karta 589.10 (4.9 s)
+  227/280 premium/12r/6f/sredni z1006 bank:Wokulski i S-ka: karta 596.60 (4.9 s)
+  228/280 premium/12r/6f/sredni z1006 bank:Ziemia Obiecana: karta 596.60 (4.9 s)
+  229/280 premium/12r/6f/sredni z1006 bank:Oszczędności Rzeckiego: karta 589.20 (4.9 s)
+  230/280 premium/12r/6f/sredni z1006 bank:Soplicowo: karta 601.00 (4.9 s)
+  231/280 premium/12r/6f/sredni z1006 bank:Solaris: karta 596.20 (4.9 s)
+  232/280 agresywny/12r/6f/sredni z1006 baza: karta 511.40 (5.0 s)
+  233/280 agresywny/12r/6f/sredni z1006 bank:Kmicic: karta 511.00 (5.0 s)
+  234/280 agresywny/12r/6f/sredni z1006 bank:Wokulski i S-ka: karta 511.40 (5.0 s)
+  235/280 agresywny/12r/6f/sredni z1006 bank:Ziemia Obiecana: karta 511.40 (5.0 s)
+  236/280 agresywny/12r/6f/sredni z1006 bank:Oszczędności Rzeckiego: karta 511.10 (5.0 s)
+  237/280 agresywny/12r/6f/sredni z1006 bank:Soplicowo: karta 512.90 (5.0 s)
+  238/280 agresywny/12r/6f/sredni z1006 bank:Solaris: karta 511.40 (5.0 s)
+  239/280 nasladowca/12r/6f/sredni z1006 baza: karta 557.60 (4.9 s)
+  240/280 nasladowca/12r/6f/sredni z1006 bank:Kmicic: karta 557.20 (5.0 s)
+  241/280 nasladowca/12r/6f/sredni z1006 bank:Wokulski i S-ka: karta 557.60 (4.9 s)
+  242/280 nasladowca/12r/6f/sredni z1006 bank:Ziemia Obiecana: karta 557.60 (4.9 s)
+  243/280 nasladowca/12r/6f/sredni z1006 bank:Oszczędności Rzeckiego: karta 557.30 (4.9 s)
+  244/280 nasladowca/12r/6f/sredni z1006 bank:Soplicowo: karta 559.10 (4.9 s)
+  245/280 nasladowca/12r/6f/sredni z1006 bank:Solaris: karta 557.60 (4.9 s)
+  246/280 zrownowazony/12r/6f/sredni z1007 baza: karta 766.10 (4.9 s)
+  247/280 zrownowazony/12r/6f/sredni z1007 bank:Kmicic: karta 765.80 (4.9 s)
+  248/280 zrownowazony/12r/6f/sredni z1007 bank:Wokulski i S-ka: karta 766.10 (4.9 s)
+  249/280 zrownowazony/12r/6f/sredni z1007 bank:Ziemia Obiecana: karta 766.10 (4.9 s)
+  250/280 zrownowazony/12r/6f/sredni z1007 bank:Oszczędności Rzeckiego: karta 765.80 (4.9 s)
+  251/280 zrownowazony/12r/6f/sredni z1007 bank:Soplicowo: karta 767.50 (4.9 s)
+  252/280 zrownowazony/12r/6f/sredni z1007 bank:Solaris: karta 766.10 (5.0 s)
+  253/280 tani/12r/6f/sredni z1007 baza: karta 615.40 (5.0 s)
+  254/280 tani/12r/6f/sredni z1007 bank:Kmicic: karta 615.00 (5.0 s)
+  255/280 tani/12r/6f/sredni z1007 bank:Wokulski i S-ka: karta 615.40 (5.0 s)
+  256/280 tani/12r/6f/sredni z1007 bank:Ziemia Obiecana: karta 615.40 (5.0 s)
+  257/280 tani/12r/6f/sredni z1007 bank:Oszczędności Rzeckiego: karta 615.10 (5.0 s)
+  258/280 tani/12r/6f/sredni z1007 bank:Soplicowo: karta 617.00 (5.0 s)
+  259/280 tani/12r/6f/sredni z1007 bank:Solaris: karta 615.40 (4.9 s)
+  260/280 premium/12r/6f/sredni z1007 baza: karta 596.30 (4.9 s)
+  261/280 premium/12r/6f/sredni z1007 bank:Kmicic: karta 596.00 (4.9 s)
+  262/280 premium/12r/6f/sredni z1007 bank:Wokulski i S-ka: karta 596.30 (4.9 s)
+  263/280 premium/12r/6f/sredni z1007 bank:Ziemia Obiecana: karta 596.30 (4.9 s)
+  264/280 premium/12r/6f/sredni z1007 bank:Oszczędności Rzeckiego: karta 598.00 (4.9 s)
+  265/280 premium/12r/6f/sredni z1007 bank:Soplicowo: karta 602.30 (4.9 s)
+  266/280 premium/12r/6f/sredni z1007 bank:Solaris: karta 596.20 (4.9 s)
+  267/280 agresywny/12r/6f/sredni z1007 baza: karta 660.50 (5.0 s)
+  268/280 agresywny/12r/6f/sredni z1007 bank:Kmicic: karta 647.20 (5.0 s)
+  269/280 agresywny/12r/6f/sredni z1007 bank:Wokulski i S-ka: karta 655.30 (5.0 s)
+  270/280 agresywny/12r/6f/sredni z1007 bank:Ziemia Obiecana: karta 660.50 (5.0 s)
+  271/280 agresywny/12r/6f/sredni z1007 bank:Oszczędności Rzeckiego: karta 654.90 (5.0 s)
+  272/280 agresywny/12r/6f/sredni z1007 bank:Soplicowo: karta 656.70 (5.1 s)
+  273/280 agresywny/12r/6f/sredni z1007 bank:Solaris: karta 655.10 (5.0 s)
+  274/280 nasladowca/12r/6f/sredni z1007 baza: karta 784.50 (4.9 s)
+  275/280 nasladowca/12r/6f/sredni z1007 bank:Kmicic: karta 784.20 (4.9 s)
+  276/280 nasladowca/12r/6f/sredni z1007 bank:Wokulski i S-ka: karta 784.50 (5.0 s)
+  277/280 nasladowca/12r/6f/sredni z1007 bank:Ziemia Obiecana: karta 784.50 (4.9 s)
+  278/280 nasladowca/12r/6f/sredni z1007 bank:Oszczędności Rzeckiego: karta 784.30 (4.9 s)
+  279/280 nasladowca/12r/6f/sredni z1007 bank:Soplicowo: karta 785.90 (4.9 s)
+  280/280 nasladowca/12r/6f/sredni z1007 bank:Solaris: karta 784.50 (4.9 s)
+280 nowych gier w 5.9 min
+# Pomiar wariantów: c2_banki
+
+280 gier, 240 par, 5 kontekstów, czas gier 23 min (suma procesów). Karta = średni wynik działalności z rund 2..N. Ocena: „lepszy”/„gorszy” – ≥ 70% wygranych par i przedział bez zera; „szum” – reszta.
+
+## Wszystkie konteksty
+
+| wariant | pary | Δ karta (95%) | wygrane | Δ majątek zł (95%) | 1. plus: baza → wariant | alarmy | ocena |
+|---|---|---|---|---|---|---|---|
+| bank:Kmicic | 40 | -1.21 ± 0.86 | 2% | +186 ± 342 | 3.9 → 4.0 | 0.0 → 0.1 | gorszy |
+| bank:Oszczędności Rzeckiego | 40 | -4.01 ± 6.46 | 2% | -1 336 ± 2 686 | 3.9 → 4.0 | 0.0 → 0.3 | szum |
+| bank:Solaris | 40 | -0.40 ± 0.43 | 42% | +188 ± 199 | 3.9 → 4.0 | 0.0 → 0.0 | szum |
+| bank:Soplicowo | 40 | +1.56 ± 2.13 | 85% | +603 ± 625 | 3.9 → 3.9 | 0.0 → 0.1 | szum |
+| bank:Wokulski i S-ka | 40 | -0.21 ± 0.30 | 49% | +184 ± 216 | 3.9 → 4.0 | 0.0 → 0.1 | szum |
+| bank:Ziemia Obiecana | 40 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.9 → 3.9 | 0.0 → 0.0 | = baza |
+
+## agresywny/12r/6f/sredni
+
+| wariant | pary | Δ karta (95%) | wygrane | Δ majątek zł (95%) | 1. plus: baza → wariant | alarmy | ocena |
+|---|---|---|---|---|---|---|---|
+| bank:Kmicic | 8 | -3.73 ± 4.14 | 12% | +1 565 ± 1 594 | 5.5 → 5.6 | 0.0 → 0.1 | szum |
+| bank:Oszczędności Rzeckiego | 8 | -18.25 ± 37.16 | 0% | -6 056 ± 15 883 | 5.5 → 5.6 | 0.0 → 1.1 | szum |
+| bank:Solaris | 8 | -1.95 ± 2.18 | 25% | +846 ± 1 002 | 5.5 → 5.6 | 0.0 → 0.0 | szum |
+| bank:Soplicowo | 8 | -3.59 ± 8.75 | 50% | +334 ± 3 108 | 5.5 → 5.5 | 0.0 → 0.5 | szum |
+| bank:Wokulski i S-ka | 8 | -1.03 ± 1.68 | 44% | +920 ± 1 109 | 5.5 → 5.6 | 0.0 → 0.4 | szum |
+| bank:Ziemia Obiecana | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 5.5 → 5.5 | 0.0 → 0.0 | = baza |
+
+## nasladowca/12r/6f/sredni
+
+| wariant | pary | Δ karta (95%) | wygrane | Δ majątek zł (95%) | 1. plus: baza → wariant | alarmy | ocena |
+|---|---|---|---|---|---|---|---|
+| bank:Kmicic | 8 | -0.35 ± 0.06 | 0% | -172 ± 24 | 3.6 → 3.6 | 0.0 → 0.0 | gorszy |
+| bank:Oszczędności Rzeckiego | 8 | -0.28 ± 0.06 | 0% | -140 ± 24 | 3.6 → 3.6 | 0.0 → 0.0 | gorszy |
+| bank:Solaris | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.6 → 3.6 | 0.0 → 0.0 | = baza |
+| bank:Soplicowo | 8 | +2.68 ± 2.68 | 100% | +822 ± 158 | 3.6 → 3.6 | 0.0 → 0.0 | szum |
+| bank:Wokulski i S-ka | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.6 → 3.6 | 0.0 → 0.0 | = baza |
+| bank:Ziemia Obiecana | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.6 → 3.6 | 0.0 → 0.0 | = baza |
+
+## premium/12r/6f/sredni
+
+| wariant | pary | Δ karta (95%) | wygrane | Δ majątek zł (95%) | 1. plus: baza → wariant | alarmy | ocena |
+|---|---|---|---|---|---|---|---|
+| bank:Kmicic | 8 | -1.21 ± 2.12 | 0% | -141 ± 66 | 3.6 → 3.6 | 0.1 → 0.1 | szum |
+| bank:Oszczędności Rzeckiego | 8 | -0.89 ± 2.27 | 12% | -229 ± 284 | 3.6 → 3.6 | 0.1 → 0.2 | szum |
+| bank:Solaris | 8 | -0.06 ± 0.12 | 38% | +93 ± 245 | 3.6 → 3.6 | 0.1 → 0.0 | szum |
+| bank:Soplicowo | 8 | +5.97 ± 6.71 | 88% | +1 144 ± 1 562 | 3.6 → 3.6 | 0.1 → 0.2 | szum |
+| bank:Wokulski i S-ka | 8 | +0.00 ± 0.00 | 50% | +3 ± 4 | 3.6 → 3.6 | 0.1 → 0.1 | = baza |
+| bank:Ziemia Obiecana | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.6 → 3.6 | 0.1 → 0.1 | = baza |
+
+## tani/12r/6f/sredni
+
+| wariant | pary | Δ karta (95%) | wygrane | Δ majątek zł (95%) | 1. plus: baza → wariant | alarmy | ocena |
+|---|---|---|---|---|---|---|---|
+| bank:Kmicic | 8 | -0.40 ± 0.00 | 0% | -142 ± 7 | 3.2 → 3.2 | 0.0 → 0.0 | gorszy |
+| bank:Oszczędności Rzeckiego | 8 | -0.30 ± 0.00 | 0% | -109 ± 7 | 3.2 → 3.2 | 0.0 → 0.0 | gorszy |
+| bank:Solaris | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.2 → 3.2 | 0.0 → 0.0 | = baza |
+| bank:Soplicowo | 8 | +1.54 ± 0.06 | 100% | +614 ± 27 | 3.2 → 3.2 | 0.0 → 0.0 | lepszy |
+| bank:Wokulski i S-ka | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.2 → 3.2 | 0.0 → 0.0 | = baza |
+| bank:Ziemia Obiecana | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.2 → 3.2 | 0.0 → 0.0 | = baza |
+
+## zrownowazony/12r/6f/sredni
+
+| wariant | pary | Δ karta (95%) | wygrane | Δ majątek zł (95%) | 1. plus: baza → wariant | alarmy | ocena |
+|---|---|---|---|---|---|---|---|
+| bank:Kmicic | 8 | -0.38 ± 0.06 | 0% | -177 ± 22 | 3.6 → 3.6 | 0.0 → 0.0 | gorszy |
+| bank:Oszczędności Rzeckiego | 8 | -0.31 ± 0.03 | 0% | -145 ± 22 | 3.6 → 3.6 | 0.0 → 0.0 | gorszy |
+| bank:Solaris | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.6 → 3.6 | 0.0 → 0.0 | = baza |
+| bank:Soplicowo | 8 | +1.20 ± 2.33 | 88% | +99 ± 1 493 | 3.6 → 3.6 | 0.0 → 0.0 | szum |
+| bank:Wokulski i S-ka | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.6 → 3.6 | 0.0 → 0.0 | = baza |
+| bank:Ziemia Obiecana | 8 | +0.00 ± 0.00 | 50% | +0 ± 0 | 3.6 → 3.6 | 0.0 → 0.0 | = baza |
+

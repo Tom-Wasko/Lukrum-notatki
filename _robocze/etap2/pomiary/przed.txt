@@ -1,0 +1,57 @@
+== latwy, ziarno 7 (4.2 s)
+  zrownowazony  gotówka     67585  wynik    633  lokale 1  prac. 3  przeterm.   11091  sprzedaż/popyt 1519/2146
+  tani          gotówka     45346  wynik    446  lokale 1  prac. 2  przeterm.   13388  sprzedaż/popyt 950/2015
+  premium       gotówka     37131  wynik    523  lokale 1  prac. 3  przeterm.    4205  sprzedaż/popyt 1323/1966
+  agresywny     gotówka         0  wynik    368  lokale 1  prac. 3  przeterm.   51491  sprzedaż/popyt 1453/4872
+  nasladowca    gotówka     26379  wynik    462  lokale 1  prac. 2  przeterm.   17768  sprzedaż/popyt 745/2016
+== latwy, ziarno 11 (4.0 s)
+  zrownowazony  gotówka     64644  wynik    606  lokale 1  prac. 3  przeterm.   10387  sprzedaż/popyt 1462/2115
+  tani          gotówka     50488  wynik    461  lokale 1  prac. 2  przeterm.    9517  sprzedaż/popyt 989/2220
+  premium       gotówka     44433  wynik    601  lokale 1  prac. 4  przeterm.    6250  sprzedaż/popyt 1455/2058
+  agresywny     gotówka         0  wynik    510  lokale 1  prac. 3  przeterm.   60058  sprzedaż/popyt 1537/5266
+  nasladowca    gotówka     46764  wynik    580  lokale 1  prac. 4  przeterm.   13459  sprzedaż/popyt 1356/2324
+== latwy, ziarno 23 (3.9 s)
+  zrownowazony  gotówka     35586  wynik    515  lokale 1  prac. 2  przeterm.   17763  sprzedaż/popyt 807/1767
+  tani          gotówka     53507  wynik    477  lokale 1  prac. 2  przeterm.    7108  sprzedaż/popyt 993/2026
+  premium       gotówka     22747  wynik    458  lokale 1  prac. 3  przeterm.   11678  sprzedaż/popyt 1108/1682
+  agresywny     gotówka         0  wynik    419  lokale 1  prac. 3  przeterm.   70850  sprzedaż/popyt 1403/4507
+  nasladowca    gotówka     55040  wynik    586  lokale 1  prac. 3  przeterm.   16134  sprzedaż/popyt 1493/2786
+   średnia gotówka poziomu latwy: 36643
+== sredni, ziarno 7 (4.1 s)
+  zrownowazony  gotówka     89509  wynik    692  lokale 1  prac. 3  przeterm.    3780  sprzedaż/popyt 1664/2182
+  tani          gotówka     82547  wynik    609  lokale 1  prac. 3  przeterm.    3750  sprzedaż/popyt 1833/2031
+  premium       gotówka     60862  wynik    655  lokale 1  prac. 5  przeterm.    3031  sprzedaż/popyt 2090/2501
+  agresywny     gotówka     35523  wynik    555  lokale 1  prac. 3  przeterm.    4644  sprzedaż/popyt 1453/6508
+  nasladowca    gotówka     73397  wynik    656  lokale 1  prac. 3  przeterm.    4441  sprzedaż/popyt 1591/2600
+== sredni, ziarno 11 (4.1 s)
+  zrownowazony  gotówka     85372  wynik    690  lokale 1  prac. 3  przeterm.    4436  sprzedaż/popyt 1509/2152
+  tani          gotówka     88053  wynik    609  lokale 1  prac. 3  przeterm.    2074  sprzedaż/popyt 1871/2277
+  premium       gotówka     44787  wynik    604  lokale 1  prac. 5  przeterm.    3019  sprzedaż/popyt 2068/2546
+  agresywny     gotówka     49209  wynik    601  lokale 1  prac. 3  przeterm.    4023  sprzedaż/popyt 1568/6861
+  nasladowca    gotówka    101772  wynik    725  lokale 1  prac. 5  przeterm.    3454  sprzedaż/popyt 2284/2895
+== sredni, ziarno 23 (4.0 s)
+  zrownowazony  gotówka     57473  wynik    614  lokale 1  prac. 3  przeterm.   10582  sprzedaż/popyt 1289/2038
+  tani          gotówka     85834  wynik    580  lokale 1  prac. 3  przeterm.    3216  sprzedaż/popyt 1970/2849
+  premium       gotówka     52392  wynik    605  lokale 1  prac. 4  przeterm.    8417  sprzedaż/popyt 1801/2637
+  agresywny     gotówka     63495  wynik    650  lokale 1  prac. 3  przeterm.    3629  sprzedaż/popyt 1534/4970
+  nasladowca    gotówka     65195  wynik    637  lokale 1  prac. 3  przeterm.    4880  sprzedaż/popyt 1359/2904
+   średnia gotówka poziomu sredni: 69028
+== trudny, ziarno 7 (9.9 s)
+  zrownowazony  gotówka    121176  wynik    762  lokale 2  prac. 6  przeterm.    5559  sprzedaż/popyt 2781/2968
+  tani          gotówka     95843  wynik    636  lokale 1  prac. 3  przeterm.    3064  sprzedaż/popyt 1682/1835
+  premium       gotówka     48450  wynik    630  lokale 2  prac. 7  przeterm.   10980  sprzedaż/popyt 1857/2518
+  agresywny     gotówka     44483  wynik    651  lokale 2  prac. 8  przeterm.    5244  sprzedaż/popyt 3484/6475
+  nasladowca    gotówka     97149  wynik    738  lokale 2  prac. 6  przeterm.    4940  sprzedaż/popyt 2726/3074
+== trudny, ziarno 11 (10.0 s)
+  zrownowazony  gotówka    110551  wynik    754  lokale 2  prac. 6  przeterm.    7659  sprzedaż/popyt 2729/3119
+  tani          gotówka    104842  wynik    655  lokale 1  prac. 3  przeterm.    2307  sprzedaż/popyt 1732/2057
+  premium       gotówka     60135  wynik    647  lokale 1  prac. 5  przeterm.    3734  sprzedaż/popyt 1677/2041
+  agresywny     gotówka     73260  wynik    696  lokale 2  prac. 6  przeterm.    8205  sprzedaż/popyt 3129/6734
+  nasladowca    gotówka    112866  wynik    752  lokale 2  prac. 6  przeterm.    9086  sprzedaż/popyt 2003/2668
+== trudny, ziarno 23 (10.5 s)
+  zrownowazony  gotówka     57262  wynik    649  lokale 2  prac. 6  przeterm.   12813  sprzedaż/popyt 2360/3013
+  tani          gotówka    122432  wynik    675  lokale 2  prac. 6  przeterm.    6000  sprzedaż/popyt 3394/3799
+  premium       gotówka     44978  wynik    584  lokale 1  prac. 5  przeterm.    6652  sprzedaż/popyt 1624/2152
+  agresywny     gotówka     86155  wynik    724  lokale 2  prac. 8  przeterm.    8654  sprzedaż/popyt 3731/6658
+  nasladowca    gotówka     98141  wynik    723  lokale 2  prac. 5  przeterm.    9627  sprzedaż/popyt 2055/2586
+   średnia gotówka poziomu trudny: 85182

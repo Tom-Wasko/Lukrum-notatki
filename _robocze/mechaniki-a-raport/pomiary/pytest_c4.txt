@@ -1,0 +1,34 @@
+_______ test_wypowiedzenie_wyprowadzka_i_rozliczenie_ulepszen[przywroc] _______
+
+ulepszenia = 'przywroc'
+
+    @pytest.mark.parametrize("ulepszenia", ["zatrzymaj", "przywroc"])
+    def test_wypowiedzenie_wyprowadzka_i_rozliczenie_ulepszen(ulepszenia):
+        g, s, od = _przejecie("politechnika_2")   # lokal do urządzenia: adaptacja i stanowisko to nakłady najemcy
+        naklady = s.firmy["A"].lokale[0].naklady
+        assert naklady >= g.dane.lokale["politechnika_2"]["adaptacja"] and s.firmy["A"].stanowiska
+        k = _kandydat(s, 1)
+        s = _runda(g, A={"zatrudnij": [_z(k, next(st.nr for st in s.firmy["A"].stanowiska if not st.sprzet_wynajmujacego))]}, B={"wypowiedz": [{"id": "politechnika_2", "ulepszenia": ulepszenia}]})
+        r = od + 1
+        w = s.wyniki[r]["B"]["przejecia"]["wypowiedzenia"][0]
+        koniec = r + g.dane.mapa["zasady"]["wypowiedzenie_rund"] - 1
+        assert w["przyjete"] and w["najem_do"] == koniec and s.firmy["A"].lokale[0].najem_do == koniec
+        assert any(b["poziom"] == "czerwony" and str(koniec) in b["tekst"] for b in _bledy(s, r, "A"))
+        s = _runda(g, B={"wypowiedz": [{"id": "politechnika_2"}]})
+        assert "już wypowiedziany" in s.wyniki[r + 1]["B"]["przejecia"]["wypowiedzenia"][0]["powod"]
+        s = _do_rundy(g, koniec + 2)
+        assert s.firmy["A"].lokale == [] and s.firmy["A"].stanowiska == [] and s.firmy["A"].pracownicy == {}
+        (x,) = s.wyniki[koniec + 1]["A"]["przejecia"]["wyprowadzki"]
+        assert x["zwolnieni"] == [k["imie_nazwisko"]] and any(c["id"] == k["id"] for c in s.kandydaci)
+>       assert _kpir(s, koniec + 1, "A", f"Koszt zwolnienia {k['imie_nazwisko']}")
+E       AssertionError: assert []
+E        +  where [] = _kpir(StanGry(runda=9, firmy={'A': Firma(nazwa='A', bot=None, nazwa_wyswietlana='A', misja='', kolor='', gotowka_gr=27318497...025-11-01'], 'strefy': {'wszystkie': 0.6}, 'dania': {'kebab_box': 1.25}}]}, 'kampanie': {}, 'promocje': {}}}, wersja=1), (8 + 1), 'A', 'Koszt zwolnienia Kamil Frytkowski')
+
+testy\nieruchomosci\test_licytacje.py:141: AssertionError
+=========================== short test summary info ===========================
+FAILED testy/nieruchomosci/test_licytacje.py::test_wypowiedzenie_wyprowadzka_i_rozliczenie_ulepszen[zatrzymaj]
+FAILED testy/nieruchomosci/test_licytacje.py::test_wypowiedzenie_wyprowadzka_i_rozliczenie_ulepszen[przywroc]
+
+real	5m47.643s
+user	0m0.031s
+sys	0m0.094s

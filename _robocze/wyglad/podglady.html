@@ -1,0 +1,803 @@
+<meta charset="utf-8">
+<title>Wygląd LUKRUM</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600&family=Manrope:wght@600;800&family=Monoton&family=Nunito:wght@400;700&family=Oswald:wght@500;600&family=Patrick+Hand&family=Silkscreen&family=VT323&display=swap">
+<style>
+/* Układ: jedna kolumna pytań; przy każdym podglądy tej samej sceny w ramkach ekranów, wybory zbierają się w podsumowaniu na dole */
+:root{
+  --bg:#eef0ec; --surface:#ffffff; --fg:#1b1d1a; --muted:#596056; --line:#d5d9d0;
+  --accent:#b3261e; --accent-soft:#f7dfdc; --gold:#a57a12;
+  --f-head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --f-body:Inter,'Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#131512; --surface:#1c1f1b; --fg:#eceee8; --muted:#a2a99c; --line:#30352d;
+  --accent:#ee6b5f; --accent-soft:#3b2220; --gold:#e0b14a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131512; --surface:#1c1f1b; --fg:#eceee8; --muted:#a2a99c; --line:#30352d;
+  --accent:#ee6b5f; --accent-soft:#3b2220; --gold:#e0b14a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55}
+.wrap{max-width:1240px;margin:0 auto;padding-block:36px 120px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-head);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:18px;font-weight:600}
+.brew{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.wstep{display:grid;gap:14px;max-width:72ch;margin-bottom:44px}
+.wstep p{margin:0;color:var(--muted)}
+section.pyt{display:grid;gap:18px;padding-block:34px;border-top:1px solid var(--line)}
+section.pyt>header{display:grid;gap:6px;max-width:72ch}
+section.pyt>header p{margin:0;color:var(--muted)}
+.opcje{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr))}
+.opcje.male{grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))}
+.opcja{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  display:flex;flex-direction:column;min-width:0;transition:box-shadow .2s,border-color .2s}
+.opcja[data-wybrana="tak"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.podglad{position:relative;display:block;padding:0;border:0;background:#000;cursor:zoom-in;width:100%}
+.podglad svg{display:block;width:100%;height:auto}
+.podglad .lupa{position:absolute;right:10px;bottom:10px;font:600 12px var(--f-body);color:#fff;
+  background:rgba(0,0,0,.55);padding:4px 9px;border-radius:999px;opacity:.85}
+.podglad:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.opis{display:grid;gap:8px;padding:16px 18px 18px;flex:1;align-content:start}
+.opis p{margin:0;color:var(--muted);font-size:14.5px}
+.tytul{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent)}
+.wybierz{justify-self:start;margin-top:6px;font:600 14px var(--f-body);padding:9px 16px;border-radius:8px;cursor:pointer;
+  border:1.5px solid var(--fg);background:transparent;color:var(--fg)}
+.wybierz:hover{background:var(--fg);color:var(--bg)}
+.wybierz[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.wybierz:focus-visible,.zakl button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.paleta{display:flex;flex-wrap:wrap;gap:6px 12px;margin:2px 0 0;padding:0;list-style:none}
+.paleta li{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted)}
+.paleta i{width:16px;height:16px;border-radius:4px;border:1px solid rgba(0,0,0,.15);display:inline-block}
+
+/* demo okien */
+.zakl{display:flex;flex-wrap:wrap;gap:8px}
+.zakl button{font:600 14px var(--f-body);padding:9px 14px;border-radius:999px;border:1.5px solid var(--line);
+  background:var(--surface);color:var(--fg);cursor:pointer}
+.zakl button[aria-selected="true"]{border-color:var(--fg);background:var(--fg);color:var(--bg)}
+.zakl .pol{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-left:6px}
+.zakl button[aria-selected="true"] .pol{color:inherit;opacity:.8}
+.demo-opis{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between}
+.demo-opis p{margin:0;color:var(--muted);max-width:70ch}
+.demo{position:relative;aspect-ratio:640/448;max-width:900px;width:100%;overflow:hidden;border-radius:10px;
+  border:1px solid var(--line);background:#3d2b1f}
+.scena{position:absolute;inset:0;transition:transform .75s cubic-bezier(.6,0,.2,1),opacity .45s ease .25s}
+.scena svg{display:block;width:100%;height:100%}
+.demo.wewnatrz .scena{transform:scale(6);opacity:0;pointer-events:none}
+.punkt{position:absolute;width:11%;height:13%;transform:translate(-50%,-50%);border-radius:50%;cursor:pointer;
+  border:2.5px dashed #b23a2e;background:rgba(255,240,200,.18);animation:puls-p 1.8s ease-in-out infinite}
+.punkt span{position:absolute;left:50%;top:100%;transform:translateX(-50%);white-space:nowrap;font:700 12px Nunito,sans-serif;
+  background:#b23a2e;color:#fff;padding:2px 8px;border-radius:999px;margin-top:2px}
+.punkt:focus-visible{outline:3px solid #1b1d1a;outline-offset:2px}
+@keyframes puls-p{50%{transform:translate(-50%,-50%) scale(1.12)}}
+.wnetrze{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .45s ease .4s}
+.demo.wewnatrz .wnetrze{opacity:1;pointer-events:auto}
+.wnetrze>div:first-child svg{display:block;width:100%;height:100%}
+.wnetrze>div:first-child{position:absolute;inset:0}
+.okruszki{position:absolute;top:10px;left:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+  font:600 13px Nunito,sans-serif;color:#4a3423;background:rgba(253,246,227,.94);padding:5px 6px 5px 6px;border-radius:999px;
+  border:1.5px solid #4a3423;max-width:calc(100% - 20px)}
+.okruszki button{font:700 13px Nunito,sans-serif;border:0;background:#4a3423;color:#fdf6e3;padding:4px 10px;border-radius:999px;cursor:pointer}
+.okruszki span{padding-right:8px}
+.dymek{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);width:min(92%,440px);background:#fdf6e3;color:#4a3423;
+  border:1.5px solid #4a3423;border-radius:10px;padding:10px 14px;font:15px/1.4 Nunito,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.dymek b{font-family:'Patrick Hand',cursive;font-size:19px;font-weight:400;display:block}
+.strefa{cursor:pointer}
+.strefa .obrys{fill:rgba(255,255,255,0);stroke:none}
+.strefa:hover .obrys,.strefa:focus .obrys{fill:rgba(255,230,150,.22);stroke:#d9a531;stroke-width:3;stroke-dasharray:8 5}
+.strefa:focus{outline:none}
+.karta-boczna{position:absolute;top:12px;right:12px;bottom:12px;width:min(44%,300px);overflow:auto;transform:translateX(115%);
+  transition:transform .35s ease;background:#fdf6e3;color:#4a3423;border:1.5px solid #4a3423;border-radius:6px;
+  padding:16px 16px 14px;box-shadow:-6px 6px 0 rgba(0,0,0,.25);font-family:Nunito,sans-serif}
+.demo.karta .karta-boczna{transform:none}
+.karta-boczna h4{margin:0;font:400 28px/1.05 'Patrick Hand',cursive}
+.karta-boczna .adr{margin:2px 0 10px;font-size:13px;color:#7a5c3e}
+.karta-boczna dl{margin:0;display:grid;gap:6px;border-top:1.5px dashed #b99a6b;padding-top:10px}
+.karta-boczna dl div{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.karta-boczna dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.karta-boczna .przyc{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.karta-boczna .przyc button{font:400 17px 'Patrick Hand',cursive;padding:5px 12px;border-radius:8px;border:1.5px solid #4a3423;
+  background:#fdf6e3;color:#4a3423;cursor:pointer}
+.karta-boczna .przyc button:first-child{background:#d9a531}
+.karta-boczna .przyp{font-size:12px;color:#8a6a45;margin:12px 0 0}
+.zamknij{position:absolute;top:6px;right:8px;border:0;background:none;font:700 22px Nunito,sans-serif;color:#4a3423;cursor:pointer;line-height:1}
+.podpowiedz{margin:0;font-size:13.5px;color:var(--muted)}
+@media (max-width:600px){
+  .karta-boczna{top:auto;left:8px;right:8px;bottom:8px;width:auto;height:72%;transform:translateY(115%)}
+  .demo.karta .karta-boczna{transform:none}
+  .karta-boczna h4{font-size:22px}
+  .punkt span{font-size:10px}
+}
+
+/* podsumowanie */
+.podsum{display:grid;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;max-width:760px}
+.podsum ol{margin:0;padding-left:22px;display:grid;gap:4px}
+.podsum li b{font-weight:600}
+.podsum .brak{color:var(--muted);font-style:italic}
+.podsum label{font-weight:600;font-size:14px}
+.podsum textarea{width:100%;min-height:80px;font:15px var(--f-body);padding:10px 12px;border-radius:8px;border:1px solid var(--line);
+  background:var(--bg);color:var(--fg);resize:vertical;box-sizing:border-box}
+.podsum textarea:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+.podsum .rzad{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.podsum pre{margin:0;white-space:pre-wrap;font:13px/1.5 ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);
+  border-radius:8px;padding:12px;user-select:all}
+.status{font-size:13.5px;color:var(--muted)}
+
+/* powiększenie */
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(10,10,10,.86);display:grid;place-items:center;
+  padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lightbox svg{width:min(100%,1500px);height:auto;max-height:100%;display:block}
+.lightbox[hidden]{display:none}
+.lightbox p{position:absolute;top:max(12px,env(safe-area-inset-top,0px));left:0;right:0;text-align:center;margin:0;color:#ddd;font-size:13px}
+
+.puls{transform-box:fill-box;transform-origin:center;animation:puls 2s ease-out infinite}
+@keyframes puls{from{transform:scale(.6);opacity:.55}to{transform:scale(2.1);opacity:0}}
+.migaj{animation:migaj 1s steps(2,jump-none) infinite}
+@keyframes migaj{50%{opacity:0}}
+.mruga{animation:mruga 5s infinite}
+@keyframes mruga{0%,90%,100%{opacity:1}91%{opacity:.35}92%{opacity:1}94%{opacity:.5}95%{opacity:1}}
+.obrot{animation:obrot 1.4s linear infinite}
+@keyframes obrot{to{transform:translateX(10px)}}
+@media (prefers-reduced-motion: reduce){
+  .puls,.migaj,.mruga,.obrot,.punkt{animation:none}
+  .scena,.wnetrze,.karta-boczna{transition:none}
+}
+</style>
+
+<div class="wrap">
+  <div class="wstep">
+    <span class="brew">LUKRUM · etap 1½ · wygląd</span>
+    <h1>Jak ma wyglądać LUKRUM?</h1>
+    <p>Cztery pytania o wygląd. Każdy podgląd pokazuje tę samą scenę: mapę Lublina, twój kebab na Krakowskim Przedmieściu i kartę z decyzjami. Liczby, nazwy i teksty to przykłady, a mapa jest uproszczona. Kliknij podgląd, żeby go powiększyć.</p>
+    <p>W każdym pytaniu wybierz jedną opcję. Na dole skopiuj podsumowanie i wklej mi je w terminalu. Możesz dopisać uwagi, np. „plansza, ale z neonami z PRL”.</p>
+  </div>
+
+  <section class="pyt" id="charakter">
+    <header><span class="brew">Pytanie 1 z 4</span><h2>Ogólny charakter</h2>
+      <p>Cały wygląd jest nowy i nic nie bierze z obecnego panelu. Na górze jest pasek tygodnia i kasy, z prawej karta twojego kebaba, a na dole skróty.</p></header>
+    <div class="opcje" data-pyt="charakter"></div>
+  </section>
+
+  <section class="pyt" id="mapa">
+    <header><span class="brew">Pytanie 2 z 4</span><h2>Sposób rysowania mapy</h2>
+      <p>Wszystkie trzy mapy są w tych samych kolorach, żeby porównać tylko sposób rysowania. Docelowo kolory i kreska przyjdą z odpowiedzi na pytania 1 i 3.</p></header>
+    <div class="opcje male" data-pyt="mapa"></div>
+  </section>
+
+  <section class="pyt" id="kolory">
+    <header><span class="brew">Pytanie 3 z 4</span><h2>Paleta kolorów</h2>
+      <p>Ta sama płaska mapa w trzech paletach.</p></header>
+    <div class="opcje male" data-pyt="kolory"></div>
+  </section>
+
+  <section class="pyt" id="okna">
+    <header><span class="brew">Pytanie 4 z 4</span><h2>Co się dzieje po kliknięciu budynku</h2>
+      <p>Przełącz sposób i kliknij bank Soplicowo albo swój kebab na mapie poniżej.</p></header>
+    <div class="zakl" role="tablist" aria-label="Sposób otwierania budynków"></div>
+    <div class="demo-opis"><p id="trybOpis"></p><button class="wybierz" id="wybierzTryb" type="button" aria-pressed="false">Wybieram ten sposób</button></div>
+    <div class="demo karta-off" id="demo">
+      <div class="scena" id="scena"></div>
+      <aside class="karta-boczna" id="kartaBoczna" aria-live="polite"></aside>
+      <div class="wnetrze" id="wnetrze">
+        <div id="wnetrzeSvg"></div>
+        <div class="okruszki"><button type="button" id="wroc">← Mapa</button><span id="sciezka"></span></div>
+        <div class="dymek" id="dymek" hidden></div>
+      </div>
+    </div>
+    <p class="podpowiedz">Przyciski na kartach w podglądzie nic nie robią. Pokazują tylko, gdzie będą decyzje.</p>
+  </section>
+
+  <section class="pyt" id="podsumowanie">
+    <header><span class="brew">Na koniec</span><h2>Twoje wybory</h2></header>
+    <div class="podsum">
+      <ol id="lista"></ol>
+      <div style="display:grid;gap:6px"><label for="uwagi">Uwagi (opcjonalnie)</label>
+        <textarea id="uwagi" placeholder="Np. plansza, ale ciemniejsza; pixel art tylko w kasynie"></textarea></div>
+      <pre id="tekst"></pre>
+      <div class="rzad"><button class="wybierz" type="button" id="kopiuj" aria-pressed="false">Kopiuj do schowka</button><span class="status" id="status"></span></div>
+    </div>
+  </section>
+</div>
+
+<div class="lightbox" id="lightbox" hidden><p>Kliknij albo naciśnij Esc, żeby zamknąć</p><div id="lbTresc" style="display:contents"></div></div>
+
+<script>
+const F={hand:"'Patrick Hand','Comic Sans MS',cursive",nunito:"Nunito,'Segoe UI',sans-serif",mono:"'Courier Prime','Courier New',monospace",
+  osw:"Oswald,'Arial Narrow',sans-serif",neon:"Monoton,Impact,sans-serif",inter:"Inter,'Segoe UI',sans-serif",man:"Manrope,'Segoe UI',sans-serif",
+  silk:"Silkscreen,'Courier New',monospace",vt:"VT323,'Courier New',monospace",bric:"'Bricolage Grotesque','Segoe UI',sans-serif"};
+
+/* ---------- uproszczony plan Lublina (współrzędne mapy 640×448) ---------- */
+const PLAN={
+  dz:[
+    {n:'Czechów',p:[[250,24],[430,20],[446,128],[338,146],[246,118]],l:[330,72]},
+    {n:'Kalinowszczyzna',p:[[446,40],[600,52],[620,178],[490,196],[446,128]],l:[546,84]},
+    {n:'Śródmieście',p:[[246,118],[338,146],[446,128],[490,196],[466,250],[372,282],[248,262]],l:[300,134]},
+    {n:'Sławin',p:[[60,96],[246,118],[248,262],[70,250],[40,170]],l:[104,128]},
+    {n:'Czuby',p:[[70,250],[248,262],[372,282],[296,360],[130,392],[56,320]],l:[190,368]},
+    {n:'Dziesiąta',p:[[372,282],[466,250],[486,404],[300,412],[296,360]],l:[412,394]},
+    {n:'Bronowice',p:[[490,196],[620,178],[630,380],[486,404],[466,250]],l:[580,236]}
+  ],
+  rzeka:{s:[250,448],segs:[[300,400,360,350,400,286],[420,246,436,222,470,206],[520,186,580,166,640,156]]},
+  czechowka:{s:[40,140],segs:[[140,160,230,150,300,166],[350,176,400,196,452,212]]},
+  zalew:[230,446,80,26],
+  parki:[[250,168,24,14,'Ogród Saski',250,149],[430,316,28,16,'Park Ludowy',430,295]],
+  drogi:[
+    [[30,186],[150,206],[250,226],[330,236],[372,214]],
+    [[220,20],[290,104],[380,158]],
+    [[372,206],[384,120],[392,20]],
+    [[250,226],[180,282],[80,400]],
+    [[236,228],[250,320],[266,412]],
+    [[420,240],[540,276],[630,300]],
+    [[372,214],[420,240]]
+  ],
+  miejsca:[
+    {k:'sanepid',x:506,y:112,n:'Sanepid',lx:506,ly:127},
+    {k:'zamek',x:420,y:182,n:'Zamek',lx:452,ly:160,a:'start'},
+    {k:'umcs',x:130,y:186,n:'UMCS',lx:130,ly:201},
+    {k:'biuro',x:200,y:200,n:'J.K.Ś.',lx:200,ly:215},
+    {k:'brama',x:372,y:206,n:'Brama Krakowska',lx:386,ly:201,a:'start'},
+    {k:'kebab',x:316,y:236,n:'Twój kebab',lx:316,ly:252},
+    {k:'bank',x:262,y:262,n:'Soplicowo',lx:262,ly:277},
+    {k:'rywal',x:362,y:286,n:'Konkurencja',lx:362,ly:301},
+    {k:'hurt',x:548,y:306,n:'Hurtownia',lx:548,ly:321},
+    {k:'rywal',x:200,y:322,n:'Konkurencja',lx:200,ly:337},
+    {k:'arena',x:456,y:358,n:'Arena',lx:456,ly:375}
+  ]
+};
+const D={tydz:'Tydzień 3 z 4',kasa:'48 320 zł',wynik:'612 pkt',czas:'12:40',
+  rows:[['Goście w tygodniu','412'],['Ocena gości','4,2'],['Nastrój zespołu','71/100'],['Pomyłki w szczycie','6']],
+  btn:['Menu i ceny','Grafik','Zamówienia'],skroty:['Twój lokal','Bank','Hurtownia','Kadry'],
+  list:['„Za Gierka kolejka stała','do samego rogu. U ciebie','dziś o czternastej pusto.','Przemyśl ceny.”']};
+
+/* ---------- pomocnicze ---------- */
+const pts=p=>p.map(q=>q.map(v=>+v.toFixed(1)).join(',')).join(' ');
+const curveD=c=>'M'+c.s.join(' ')+c.segs.map(g=>' C'+g.join(' ')).join('');
+const lineD=l=>'M'+l.map(q=>q.join(' ')).join(' L');
+function shade(hex,f){const n=parseInt(hex.slice(1),16);let r=n>>16,g=n>>8&255,b=n&255;const t=f<0?0:255,p=Math.abs(f);
+  r=Math.round((t-r)*p+r);g=Math.round((t-g)*p+g);b=Math.round((t-b)*p+b);return '#'+((1<<24)|(r<<16)|(g<<8)|b).toString(16).slice(1);}
+function bez(c){const out=[c.s];let [x0,y0]=c.s;for(const [x1,y1,x2,y2,x3,y3] of c.segs){for(let i=1;i<=40;i++){const t=i/40,u=1-t;
+  out.push([u*u*u*x0+3*u*u*t*x1+3*u*t*t*x2+t*t*t*x3,u*u*u*y0+3*u*u*t*y1+3*u*t*t*y2+t*t*t*y3]);}x0=x3;y0=y3;}return out;}
+function distPoly(px,py,pl){let m=1e9;for(let i=1;i<pl.length;i++){const [ax,ay]=pl[i-1],[bx,by]=pl[i];const dx=bx-ax,dy=by-ay;
+  let t=((px-ax)*dx+(py-ay)*dy)/(dx*dx+dy*dy||1);t=Math.max(0,Math.min(1,t));const ex=ax+t*dx-px,ey=ay+t*dy-py;m=Math.min(m,ex*ex+ey*ey);}return Math.sqrt(m);}
+function inPoly(x,y,p){let c=false;for(let i=0,j=p.length-1;i<p.length;j=i++){const [xi,yi]=p[i],[xj,yj]=p[j];
+  if(((yi>y)!=(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi))c=!c;}return c;}
+const T=(x,y,t,a)=>`<text x="${x}" y="${y}" ${a}>${t}</text>`;
+const svg=(w,h,lab,inner)=>`<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${lab}">${inner}</svg>`;
+
+/* ---------- palety ---------- */
+const PAL_PLANSZA={paper:'#f0e4c6',dz:['#eadab0','#e5d3a3','#efe1bb','#e8d8ab','#ecdcb2','#e3d09f','#e9dbb3'],dzStroke:'#8a6a45',
+  water:'#7fb3cb',waterEdge:'#4f88a6',park:'#a3c06e',tree:'#5f8a3c',road:'#fbf5e4',roadEdge:'#b99a6b',ink:'#4a3423',halo:'#f0e4c6',
+  line:'#4a3423',wall:'#f6e7c1',wall2:'#e2cc9b',roof:'#b23a2e',red:'#c23b2c',cream:'#fdf6e3',gold:'#d9a531',green:'#6d8f45',
+  win:'#8fc2d6',rival:'#4d7ea8',brick:'#b5654a',dome:'#3f5b4a',dzLabel:'#8a6a45'};
+const PAL_LUB={paper:'#f4eedd',dz:['#efe3c2','#e9dcb6','#f2e7c8','#ebdfba','#efe2bf','#e6d8ae','#eee2c0'],dzStroke:'#c9a34a',
+  water:'#5f9cc4',waterEdge:'#3f7aa3',park:'#8fb867',tree:'#4f7f34',road:'#fffaf0',roadEdge:'#d4b56a',ink:'#3b2a1e',halo:'#f4eedd',
+  line:'#3b2a1e',wall:'#f8ecd0',wall2:'#e9d6a8',roof:'#b8242c',red:'#b8242c',cream:'#fffaf0',gold:'#d9a426',green:'#6b9a45',
+  win:'#9cc8e0',rival:'#4d7ea8',brick:'#b5654a',dome:'#3f5b4a',dzLabel:'#a07f3a',tlo:'#ddd5c0'};
+const PAL_KEB={paper:'#f7f0e1',dz:['#efd5a6','#e9c793','#f2dcb3','#ebcd9d','#f0d6aa','#e5c28d','#eed4a5'],dzStroke:'#b0733f',
+  water:'#9cc5c4',waterEdge:'#5f9493',park:'#8cc152',tree:'#4e8a2a',road:'#fffaf0',roadEdge:'#c08a52',ink:'#5a2e17',halo:'#f7f0e1',
+  line:'#5a2e17',wall:'#f6e3bf',wall2:'#e2b97f',roof:'#d1361f',red:'#d1361f',cream:'#fff8ea',gold:'#e09a2d',green:'#6aa84f',
+  win:'#cfe6c0',rival:'#8a4b25',brick:'#a3532a',dome:'#6aa84f',dzLabel:'#a0612f'};
+const PAL_NOC={paper:'#0f1526',dz:['#19223b','#1c2642','#172038','#1e2844','#1a233d','#18213a','#1d2741'],dzStroke:'#2d3a60',
+  water:'#0f3d5e',waterEdge:'#1f6a96',park:'#12301f',tree:'#1f5a36',road:'#27314e',roadEdge:'#3b4a78',ink:'#e8e4ff',halo:'#0f1526',
+  line:'#070b16',wall:'#2a3454',wall2:'#232c48',roof:'#ff4f8b',red:'#ff4f8b',cream:'#f6e9ff',gold:'#ffc857',green:'#3fd18a',
+  win:'#ffd36b',rival:'#3de0e6',brick:'#5b2e4a',dome:'#3de0e6',dzLabel:'#7d88b8'};
+
+/* ---------- warstwy wspólne ---------- */
+function warstwy(P,o={}){
+  let s='';
+  PLAN.dz.forEach((d,i)=>{
+    s+=`<polygon points="${pts(d.p)}" fill="${P.dz[i%P.dz.length]}" stroke="${P.dzStroke}" stroke-width="${o.dzW??1.4}"${o.dzDash?` stroke-dasharray="${o.dzDash}"`:''} stroke-linejoin="round"/>`;
+    if(o.hatch)s+=`<polygon points="${pts(d.p)}" fill="url(#${o.hatch})"/>`;
+  });
+  const [zx,zy,zrx,zry]=PLAN.zalew,ew=o.edgeW??2,rw=o.rzW??11,cw=o.czW??4;
+  s+=`<ellipse cx="${zx}" cy="${zy}" rx="${zrx}" ry="${zry}" fill="${P.water}" stroke="${P.waterEdge}" stroke-width="${ew}"/>`;
+  for(const [d,w] of [[curveD(PLAN.czechowka),cw],[curveD(PLAN.rzeka),rw]]){
+    if(ew>0)s+=`<path d="${d}" fill="none" stroke="${P.waterEdge}" stroke-width="${w+ew*2}" stroke-linecap="round"/>`;
+    s+=`<path d="${d}" fill="none" stroke="${P.water}" stroke-width="${w}" stroke-linecap="round"/>`;
+  }
+  PLAN.parki.forEach(([x,y,rx,ry])=>{
+    s+=`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${P.park}"${o.parkStroke?` stroke="${o.parkStroke}"`:''}/>`;
+    if(o.drzewa)[[-12,-3],[-2,-7],[10,-4],[-7,5],[6,5],[15,3]].forEach(([dx,dy])=>s+=`<circle cx="${x+dx*rx/26}" cy="${y+dy*ry/15}" r="3.6" fill="${P.tree}"/>`);
+  });
+  const w=o.drW??6,e=o.drEdge??2;
+  PLAN.drogi.forEach(l=>s+=`<path d="${lineD(l)}" fill="none" stroke="${P.roadEdge}" stroke-width="${w+e*2}" stroke-linecap="round" stroke-linejoin="round"/>`);
+  PLAN.drogi.forEach(l=>s+=`<path d="${lineD(l)}" fill="none" stroke="${P.road}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`);
+  return s;
+}
+
+/* ---------- budynki rysowane (plansza i mapy płaskie) ---------- */
+function budA(k,x,y,P){
+  const o=`stroke="${P.line}" stroke-width="1.4" stroke-linejoin="round"`;
+  const cien=r=>`<ellipse cx="0" cy="1.5" rx="${r}" ry="3.5" fill="#000" opacity=".16"/>`;
+  let g='';
+  const kebab=(markiza,szyld,flaga)=>{
+    let a=cien(22)+`<rect x="-18" y="-22" width="36" height="22" fill="${P.wall}" ${o}/>`+
+      `<rect x="-20" y="-31" width="40" height="10" fill="${P.line}" ${o}/>`+
+      `<text x="0" y="-23.2" font-family="${F.hand}" font-size="9" fill="${P.gold}" text-anchor="middle" letter-spacing="1.5">${szyld}</text>`;
+    for(let i=0;i<6;i++)a+=`<rect x="${-18+i*6}" y="-21" width="6" height="6" fill="${i%2?P.cream:markiza}"/>`;
+    a+=`<rect x="-18" y="-21" width="36" height="6" fill="none" ${o}/>`+
+      `<rect x="-13" y="-12" width="12" height="8" fill="${P.win}" ${o}/><rect x="4" y="-12" width="8" height="12" fill="${P.line}"/>`;
+    if(flaga)a+=`<line x1="17" y1="-31" x2="17" y2="-54" stroke="${P.line}" stroke-width="1.6"/>`+
+      `<path d="M17 -54 L36 -49 L17 -43 Z" fill="${P.red}" ${o}/>`+
+      `<text x="24" y="-46" font-family="${F.nunito}" font-weight="700" font-size="7" fill="${P.cream}" text-anchor="middle">TY</text>`;
+    return a;
+  };
+  switch(k){
+    case 'kebab':g=kebab(P.red,'KEBAB',true);break;
+    case 'rywal':g=`<g transform="scale(.78)">${kebab(P.rival,'BAR',false)}</g>`;break;
+    case 'bank':g=cien(18)+`<rect x="-18" y="-3" width="36" height="3" fill="${P.wall2}" ${o}/>`+
+      [-13,-6,1,8].map(cx=>`<rect x="${cx}" y="-21" width="5" height="18" fill="${P.cream}" ${o}/>`).join('')+
+      `<rect x="-17" y="-25" width="34" height="4" fill="${P.wall2}" ${o}/><path d="M-18 -25 L0 -36 L18 -25 Z" fill="${P.cream}" ${o}/>`+
+      `<circle cx="0" cy="-29" r="2.6" fill="${P.gold}"/>`;break;
+    case 'biuro':g=cien(13)+`<rect x="-10" y="-34" width="20" height="34" fill="${P.wall2}" ${o}/><rect x="-12" y="-37" width="24" height="4" fill="${P.roof}" ${o}/>`+
+      [[-6,-29],[2,-29],[-6,-21],[2,-21]].map(([wx,wy])=>`<rect x="${wx}" y="${wy}" width="4" height="5" fill="${P.win}"/>`).join('')+
+      `<rect x="-8" y="-13" width="16" height="5" fill="${P.gold}" ${o}/><rect x="-3" y="-7" width="6" height="7" fill="${P.line}"/>`;break;
+    case 'hurt':g=cien(25)+`<rect x="-22" y="-16" width="44" height="16" fill="${P.wall2}" ${o}/>`+
+      `<path d="M-22 -16 L-22 -25 L-11 -16 L-11 -25 L0 -16 L0 -25 L11 -16 L11 -25 L22 -16 Z" fill="${P.roof}" ${o}/>`+
+      `<rect x="-8" y="-11" width="16" height="11" fill="${P.line}" opacity=".85"/><path d="M-8 -7 H8 M-8 -3 H8" stroke="${P.wall2}" stroke-width="1"/>`;break;
+    case 'sanepid':g=cien(15)+`<rect x="-12" y="-18" width="24" height="18" fill="${P.wall}" ${o}/><path d="M-15 -17 L0 -29 L15 -17 Z" fill="${P.green}" ${o}/>`+
+      `<circle cx="-5" cy="-9" r="3.5" fill="${P.cream}" ${o}/><rect x="2" y="-11" width="6" height="11" fill="${P.line}"/>`;break;
+    case 'brama':g=cien(13)+`<rect x="-9" y="-34" width="18" height="34" fill="${P.brick}" ${o}/>`+
+      `<rect x="-7" y="-46" width="14" height="12" fill="${P.cream}" ${o}/><path d="M-7 -46 Q0 -60 7 -46 Z" fill="${P.dome}" ${o}/>`+
+      `<line x1="0" y1="-56" x2="0" y2="-64" stroke="${P.line}" stroke-width="1.4"/><circle cx="0" cy="-27" r="3.2" fill="${P.cream}" ${o}/>`+
+      `<path d="M-5 0 V-9 A5 5 0 0 1 5 -9 V0 Z" fill="${P.line}"/>`;break;
+    case 'zamek':g=cien(26)+`<rect x="-24" y="-18" width="34" height="18" fill="${P.cream}" ${o}/>`+
+      [-24,-18,-12,-6,0,6].map(cx=>`<rect x="${cx}" y="-22" width="4" height="4" fill="${P.cream}" ${o}/>`).join('')+
+      `<path d="M-11 0 V-8 A4 4 0 0 1 -3 -8 V0 Z" fill="${P.line}"/>`+
+      `<rect x="-20" y="-13" width="3" height="5" fill="${P.line}"/><rect x="3" y="-13" width="3" height="5" fill="${P.line}"/>`+
+      `<rect x="11" y="-34" width="14" height="34" fill="#cdb894" ${o}/>`+
+      [11,16,21].map(cx=>`<rect x="${cx}" y="-38" width="4" height="4" fill="#cdb894" ${o}/>`).join('');break;
+    case 'umcs':g=cien(21)+`<rect x="-20" y="-18" width="40" height="18" fill="${P.wall2}" ${o}/>`+
+      [-15,-8,-1,6,13].map(cx=>`<rect x="${cx}" y="-14" width="3" height="10" fill="${P.win}"/>`).join('')+
+      `<line x1="14" y1="-18" x2="14" y2="-30" stroke="${P.line}" stroke-width="1.3"/><path d="M14 -30 L24 -27 L14 -24 Z" fill="${P.green}"/>`;break;
+    case 'arena':g=cien(21)+`<ellipse cx="0" cy="-7" rx="20" ry="9" fill="${P.cream}" ${o}/><ellipse cx="0" cy="-7" rx="12" ry="5" fill="${P.green}" ${o}/>`;break;
+  }
+  return `<g transform="translate(${x},${y})">${g}</g>`;
+}
+function etykiety(P,font,size){
+  let s='';
+  PLAN.miejsca.forEach(m=>{const ty=m.k==='kebab';
+    s+=T(m.lx,m.ly,m.n,`font-family="${font}" font-size="${ty?size+2:size}" ${ty?`font-weight="700"`:''} fill="${ty?P.red:P.ink}" stroke="${P.halo}" stroke-width="3.2" paint-order="stroke" stroke-linejoin="round" text-anchor="${m.a||'middle'}"`);});
+  PLAN.parki.forEach(p=>s+=T(p[5],p[6],p[4],`font-family="${font}" font-size="${size-1}" fill="${P.green}" stroke="${P.halo}" stroke-width="3" paint-order="stroke" text-anchor="middle"`));
+  return s;
+}
+function mapaA(id,P,o={}){
+  let s='<defs>';
+  if(o.wobble)s+=`<filter id="${id}w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter>`;
+  if(o.grain)s+=`<filter id="${id}g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .29 0 0 0 0 .2 0 0 0 0 .12 0 0 0 .6 0"/></filter>`;
+  s+=`</defs><rect width="640" height="448" fill="${P.paper}"/>`;
+  s+=`<g${o.wobble?` filter="url(#${id}w)"`:''}>${warstwy(P,{dzDash:'6 4',drzewa:true})}</g>`;
+  PLAN.dz.forEach(d=>s+=T(d.l[0],d.l[1],d.n.toUpperCase(),`font-family="${o.font||F.hand}" font-size="12" letter-spacing="2.5" fill="${P.dzLabel}" text-anchor="middle" opacity=".9"`));
+  [...PLAN.miejsca].sort((a,b)=>a.y-b.y).forEach(m=>s+=budA(m.k,m.x,m.y,P));
+  s+=etykiety(P,o.font||F.hand,13);
+  if(o.kompas)s+=`<g transform="translate(600,46)"><circle r="16" fill="${P.cream}" stroke="${P.line}" stroke-width="1.2"/><path d="M0 -12 L4 0 L-4 0 Z" fill="${P.red}"/><path d="M0 12 L4 0 L-4 0 Z" fill="${P.paper}" stroke="${P.line}" stroke-width=".8"/>${T(0,-20,'N',`font-family="${F.hand}" font-size="12" fill="${P.ink}" text-anchor="middle"`)}</g>`;
+  if(o.skala)s+=`<g transform="translate(22,428)" font-family="${F.hand}" font-size="11" fill="${P.ink}"><path d="M0 0 H80 M0 -4 V4 M40 -3 V3 M80 -4 V4" stroke="${P.line}" stroke-width="1.5"/>${T(0,-8,'0',``)}${T(72,-8,'1 km',``)}</g>`;
+  if(o.zoom)s+=['+','−'].map((t,i)=>`<g transform="translate(612,${384+i*32})"><circle r="13" fill="${P.cream}" stroke="${P.line}" stroke-width="1.4"/>${T(0,6,t,`font-family="${F.hand}" font-size="20" fill="${P.ink}" text-anchor="middle"`)}</g>`).join('');
+  if(o.grain)s+=`<rect width="640" height="448" filter="url(#${id}g)" opacity=".3" pointer-events="none"/>`;
+  return s;
+}
+
+/* ---------- 1A: ilustrowana plansza ---------- */
+function ekranPlansza(id){
+  const P=PAL_PLANSZA;
+  let s=`<defs><clipPath id="${id}c"><rect width="640" height="448"/></clipPath></defs><rect width="960" height="540" fill="#3d2b1f"/>`;
+  s+=`<g transform="translate(0,44)" clip-path="url(#${id}c)">${mapaA(id,P,{wobble:true,grain:true,kompas:true,skala:true,zoom:true})}</g>`;
+  s+=T(20,32,'LUKRUM',`font-family="${F.hand}" font-size="28" fill="${P.gold}" letter-spacing="2"`);
+  [[156,D.tydz],[290,'Kasa '+D.kasa],[436,'Wynik '+D.wynik]].forEach(([x,t])=>s+=T(x,28,t,`font-family="${F.nunito}" font-size="14.5" fill="#f3e6c8"`));
+  s+=`<rect x="776" y="9" width="168" height="27" rx="13.5" fill="${P.red}"/>`+T(860,27.5,'Decyzje do '+D.czas,`font-family="${F.nunito}" font-weight="700" font-size="13.5" fill="${P.cream}" text-anchor="middle"`);
+  // karta
+  s+=`<g transform="rotate(-1.2 800 268)"><rect x="661" y="66" width="288" height="412" rx="3" fill="#000" opacity=".3"/>`+
+    `<rect x="656" y="60" width="288" height="412" rx="3" fill="${P.cream}" stroke="#cdb88a"/>`+
+    `<rect x="760" y="50" width="84" height="20" fill="#efe0a0" opacity=".8" transform="rotate(4 802 60)"/>`+
+    T(676,108,'Twój kebab',`font-family="${F.hand}" font-size="31" fill="${P.ink}"`)+
+    T(677,130,'Krakowskie Przedmieście 12',`font-family="${F.nunito}" font-size="13" fill="#7a5c3e"`)+
+    `<line x1="676" y1="146" x2="924" y2="146" stroke="#b99a6b" stroke-dasharray="5 4"/>`;
+  [176,206,236,266].forEach((y,i)=>{const [l,v]=D.rows[i];
+    s+=T(676,y,l,`font-family="${F.nunito}" font-size="14.5" fill="${P.ink}"`);
+    s+=T(924,y,i===1?`<tspan fill="${P.gold}">★★★★</tspan><tspan fill="#d8c79c">★</tspan> 4,2`:v,`font-family="${F.nunito}" font-weight="700" font-size="15" fill="${P.ink}" text-anchor="end"`);});
+  D.btn.forEach((t,i)=>{const x=676+i*85;s+=`<rect x="${x}" y="288" width="80" height="34" rx="8" fill="${i?P.cream:P.gold}" stroke="${P.ink}" stroke-width="1.5"/>`+
+    T(x+40,310,t,`font-family="${F.hand}" font-size="16" fill="${P.ink}" text-anchor="middle"`);});
+  s+=`<line x1="676" y1="340" x2="924" y2="340" stroke="#b99a6b" stroke-dasharray="5 4"/>`+
+    `<rect x="676" y="352" width="24" height="16" fill="${P.wall}" stroke="${P.ink}" stroke-width="1.3"/><path d="M676 352 L688 362 L700 352" fill="none" stroke="${P.ink}" stroke-width="1.3"/>`+
+    T(710,366,'List od wujka',`font-family="${F.hand}" font-size="19" fill="${P.red}"`);
+  D.list.forEach((l,i)=>s+=T(676,394+i*21,l,`font-family="${F.hand}" font-size="16.5" fill="${P.ink}"`));
+  s+='</g>';
+  // skróty
+  D.skroty.forEach((t,i)=>{const x=18+i*118,r=[-1.5,1,-.8,1.4][i];
+    s+=`<g transform="rotate(${r} ${x+52} 516)"><rect x="${x}" y="500" width="104" height="32" rx="4" fill="${P.wall}" stroke="#2a1d14"/><circle cx="${x+12}" cy="516" r="3" fill="#3d2b1f"/>`+
+      T(x+58,522,t,`font-family="${F.hand}" font-size="17" fill="${P.ink}" text-anchor="middle"`)+'</g>';});
+  s+=`<rect x="776" y="499" width="168" height="34" rx="17" fill="${P.gold}" stroke="#2a1d14"/>`+T(860,522,'Wyślij decyzje',`font-family="${F.hand}" font-size="19" fill="${P.ink}" text-anchor="middle"`);
+  return svg(960,540,'Podgląd: ilustrowana plansza',s);
+}
+
+/* ---------- 1B: retro PRL ---------- */
+function ekranPRL(id){
+  const P={paper:'#e4dfc9',dz:['#f1c98c','#e8b48c','#efd8a0','#dcc690','#ebc0a0','#e2d39c','#f2cf9c'],dzStroke:'#7a4a1e',
+    water:'#8fd0df',waterEdge:'#2f6f86',park:'#a9c98c',road:'#f2a33a',roadEdge:'#2b2b2b'};
+  let m=`<rect width="640" height="448" fill="${P.paper}"/>`+warstwy(P,{dzW:.8,dzDash:'2 3',hatch:id+'h',rzW:9,czW:3,edgeW:1.4,drW:4.5,drEdge:1.2,parkStroke:'#4f7a3a'});
+  const cw=640/6,rh=448/5;
+  for(let i=1;i<6;i++)m+=`<line x1="${i*cw}" y1="0" x2="${i*cw}" y2="448" stroke="#5a4a32" stroke-width=".6" opacity=".5"/>`;
+  for(let j=1;j<5;j++)m+=`<line x1="0" y1="${j*rh}" x2="640" y2="${j*rh}" stroke="#5a4a32" stroke-width=".6" opacity=".5"/>`;
+  'ABCDEF'.split('').forEach((c,i)=>m+=T(i*cw+cw/2,12,c,`font-family="${F.osw}" font-size="10" fill="#5a4a32" text-anchor="middle"`));
+  for(let j=0;j<5;j++)m+=T(6,j*rh+rh/2+4,j+1,`font-family="${F.osw}" font-size="10" fill="#5a4a32"`);
+  PLAN.dz.forEach(d=>m+=T(d.l[0],d.l[1],d.n.toUpperCase(),`font-family="${F.osw}" font-weight="500" font-size="10" letter-spacing="2.5" fill="#6b4a2b" text-anchor="middle"`));
+  const NUM={brama:1,zamek:2,bank:3,biuro:4,umcs:5,hurt:6,sanepid:7,arena:8};
+  PLAN.miejsca.forEach(p=>{
+    if(NUM[p.k])m+=`<circle cx="${p.x}" cy="${p.y-10}" r="9.5" fill="#1d1d1b" stroke="#f4efdc" stroke-width="1.5"/>`+T(p.x,p.y-6,NUM[p.k],`font-family="${F.osw}" font-weight="600" font-size="11" fill="#f4efdc" text-anchor="middle"`);
+    else{const ty=p.k==='kebab',w=ty?72:46,c=ty?'#ff5a4e':'#4fc3ff';
+      m+=`<g transform="translate(${p.x},${p.y})" class="${ty?'':'mruga'}"><line x1="0" y1="0" x2="0" y2="-8" stroke="#2b2b2b" stroke-width="2"/>`+
+        `<rect x="${-w/2}" y="-31" width="${w}" height="23" rx="3" fill="#24140f" stroke="${c}" stroke-width="1.4" filter="url(#${id}n)"/>`+
+        T(0,-14.5,ty?'KEBAB':'BAR',`font-family="${F.neon}" font-size="12.5" fill="${c}" text-anchor="middle" filter="url(#${id}n)"`)+'</g>';}
+  });
+  m+=`<g transform="translate(10,20)"><rect width="188" height="40" fill="#f5f0de" stroke="#2b2b2b" stroke-width="1.5"/><rect x="3" y="3" width="182" height="34" fill="none" stroke="#2b2b2b" stroke-width=".7"/>`+
+    T(94,17,'PLAN MIASTA',`font-family="${F.osw}" font-weight="500" font-size="10" letter-spacing="4" fill="#2b2b2b" text-anchor="middle"`)+
+    T(94,32,'LUBLIN · 1:15 000',`font-family="${F.osw}" font-weight="600" font-size="13.5" letter-spacing="1.5" fill="#2b2b2b" text-anchor="middle"`)+'</g>';
+  const leg=[['1','Brama Krakowska'],['2','Zamek Lubelski'],['3','Soplicowo (bank)'],['4','J.K.Ś. (biuro rach.)'],['5','UMCS'],['6','Hurtownia'],['7','Sanepid'],['8','Arena']];
+  m+=`<g transform="translate(480,316)"><rect width="152" height="126" fill="#f5f0de" stroke="#2b2b2b" stroke-width="1.2"/>`+
+    T(76,15,'OBJAŚNIENIA',`font-family="${F.osw}" font-weight="600" font-size="10" letter-spacing="3" fill="#2b2b2b" text-anchor="middle"`)+
+    leg.map(([n,t],i)=>T(10,31+i*12.2,`<tspan font-weight="600">${n}</tspan>  ${t}`,`font-family="${F.osw}" font-size="10" fill="#2b2b2b"`)).join('')+'</g>';
+  ['+','–'].forEach((t,i)=>m+=`<rect x="12" y="${370+i*34}" width="28" height="28" rx="3" fill="#1f4e79" stroke="#f4efdc" stroke-width="1.5"/>`+T(26,390+i*34,t,`font-family="${F.osw}" font-weight="600" font-size="17" fill="#fff" text-anchor="middle"`));
+
+  let s=`<defs><clipPath id="${id}c"><rect width="640" height="448"/></clipPath>
+    <pattern id="${id}h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b3d16" stroke-width="1" opacity=".22"/></pattern>
+    <pattern id="${id}t" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#e9f2ee"/><rect x="1" y="1" width="16" height="16" fill="#9fd3c4"/></pattern>
+    <filter id="${id}n" x="-40%" y="-80%" width="180%" height="260%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`;
+  s+=`<rect width="960" height="540" fill="#4a382c"/><g transform="translate(0,44)" clip-path="url(#${id}c)">${m}</g>`;
+  s+=`<rect width="960" height="44" fill="#231a16"/>`+T(18,32,'LUKRUM',`font-family="${F.neon}" font-size="24" fill="#ff5a4e" filter="url(#${id}n)"`);
+  [[214,'TYDZIEŃ 3 / 4'],[356,'KASA 48 320 ZŁ'],[506,'WYNIK 612 PKT']].forEach(([x,t])=>s+=T(x,28,t,`font-family="${F.osw}" font-weight="500" font-size="14" letter-spacing="1.5" fill="#f0e2c0"`));
+  s+=`<rect x="770" y="9" width="174" height="27" rx="3" fill="none" stroke="#4fc3ff" stroke-width="1.6" filter="url(#${id}n)"/>`+T(857,28,'DECYZJE DO 12:40',`font-family="${F.osw}" font-weight="500" font-size="13.5" letter-spacing="1.5" fill="#bfe9ff" text-anchor="middle"`);
+  // druk
+  s+=`<rect x="662" y="65" width="286" height="418" fill="#1a110c" opacity=".4"/><rect x="658" y="60" width="286" height="418" fill="#f2ead2"/>`+
+    T(674,88,'KARTA LOKALU GASTRONOMICZNEGO',`font-family="${F.mono}" font-weight="700" font-size="12.5" fill="#2b2b2b"`)+
+    T(674,106,'Nr 3/IV · Krakowskie Przedm. 12',`font-family="${F.mono}" font-size="11.5" fill="#2b2b2b"`)+
+    `<line x1="674" y1="116" x2="928" y2="116" stroke="#2b2b2b"/>`;
+  const pad=(l,v,n=32)=>l+' '+'.'.repeat(Math.max(2,n-l.length-v.length-2))+' '+v;
+  D.rows.forEach(([l,v],i)=>s+=T(674,142+i*24,pad(l,i===1?'4,2/5':v),`font-family="${F.mono}" font-size="12.5" fill="#2b2b2b" xml:space="preserve"`));
+  s+=`<g transform="translate(870,252) rotate(-13)" opacity=".75"><rect x="-54" y="-17" width="108" height="34" fill="none" stroke="#c0392b" stroke-width="2.4"/><rect x="-50" y="-13" width="100" height="26" fill="none" stroke="#c0392b" stroke-width="1"/>`+
+    T(0,5,'ZATWIERDZONO',`font-family="${F.osw}" font-weight="600" font-size="12" letter-spacing="1.5" fill="#c0392b" text-anchor="middle"`)+'</g>';
+  ['MENU I CENY','GRAFIK','ZAMÓWIENIA'].forEach((t,i)=>{const x=674+i*88;s+=`<rect x="${x}" y="284" width="82" height="30" fill="#e4ddc4" stroke="#1f3f6e" stroke-width="1.6"/>`+
+    T(x+41,304,t,`font-family="${F.mono}" font-weight="700" font-size="11" fill="#1f3f6e" text-anchor="middle"`);});
+  s+=`<line x1="674" y1="332" x2="928" y2="332" stroke="#2b2b2b" stroke-dasharray="2 3"/>`+T(674,350,'Dopisek wujka:',`font-family="${F.mono}" font-size="11.5" fill="#555"`);
+  s+=`<g transform="rotate(-2 800 400)">`+D.list.map((l,i)=>T(684,376+i*22,l,`font-family="${F.hand}" font-size="17" fill="#1f3f8e"`)).join('')+T(924,464,'— W.',`font-family="${F.hand}" font-size="17" fill="#1f3f8e" text-anchor="end"`)+'</g>';
+  // kafelki i emaliowane tabliczki
+  s+=`<rect y="492" width="960" height="48" fill="url(#${id}t)"/>`;
+  D.skroty.forEach((t,i)=>{const x=16+i*120;s+=`<rect x="${x}" y="500" width="110" height="32" rx="4" fill="#1f4e79"/><rect x="${x+3}" y="503" width="104" height="26" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/>`+
+    T(x+55,521,t.toUpperCase(),`font-family="${F.osw}" font-weight="500" font-size="12.5" letter-spacing="1" fill="#fff" text-anchor="middle"`);});
+  s+=`<rect x="774" y="500" width="170" height="32" rx="4" fill="#b3261e"/><rect x="777" y="503" width="164" height="26" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/>`+
+    T(859,521,'WYŚLIJ DECYZJE',`font-family="${F.osw}" font-weight="600" font-size="13" letter-spacing="1.5" fill="#fff" text-anchor="middle"`);
+  return svg(960,540,'Podgląd: retro PRL',s);
+}
+
+/* ---------- 1C: nowoczesna apka ---------- */
+const IKONY={
+  kebab:'M-5 -5 L5 -5 L0 6 Z M-3 -1 H3 M-1.5 2.5 H1.5',rywal:'M-5 -5 L5 -5 L0 6 Z M-3 -1 H3 M-1.5 2.5 H1.5',
+  bank:'M-6 -2 L0 -6 L6 -2 Z M-4.5 -1 V4 M-1.5 -1 V4 M1.5 -1 V4 M4.5 -1 V4 M-6 5.5 H6',
+  biuro:'M-6 -2.5 H6 V5.5 H-6 Z M-2.5 -2.5 V-5 H2.5 V-2.5 M-6 1 H6',
+  hurt:'M-6 -3 L0 -6 L6 -3 V4 L0 7 L-6 4 Z M-6 -3 L0 0 L6 -3 M0 0 V7',
+  sanepid:'M-4.5 -5 H4.5 V6 H-4.5 Z M-2 -6.5 H2 V-4 H-2 Z M-2.5 1 L-0.5 3 L3 -1',
+  brama:'M-3.5 6 V-2 L0 -7 L3.5 -2 V6 Z M-1.5 6 V2.5 A1.5 1.5 0 0 1 1.5 2.5 V6',
+  zamek:'M-6.5 6 V-4.5 H-4 V-2 H-1.5 V-4.5 H1.5 V-2 H4 V-4.5 H6.5 V6 Z M-1.5 6 V3 H1.5 V6',
+  umcs:'M-7 -2 L0 -5.5 L7 -2 L0 1.5 Z M-4 0 V3.5 Q0 6 4 3.5 V0',
+  arena:'M-6.5 0 A6.5 4 0 1 0 6.5 0 A6.5 4 0 1 0 -6.5 0 Z M-3.5 0 A3.5 2 0 1 0 3.5 0 A3.5 2 0 1 0 -3.5 0',
+  kadry:'M-5 6 Q-5 1 0 1 Q5 1 5 6 M0 -1 A3 3 0 1 0 0 -7 A3 3 0 1 0 0 -1'
+};
+const KOL_C={kebab:'#d23b30',rywal:'#8b93a1',bank:'#b8860b',biuro:'#6d5bd0',hurt:'#14857c',sanepid:'#2f9e44',brama:'#3b4252',zamek:'#3b4252',umcs:'#3b4252',arena:'#3b4252'};
+function ekranApka(id){
+  const P={paper:'#f2f3f5',dz:['#e7e9ed','#e9ebef','#e5e8ec','#e8eaee','#e6e9ed','#e9eaee','#e7e8ec'],dzStroke:'#ffffff',
+    water:'#a8d1f2',waterEdge:'#a8d1f2',park:'#cfe7d0',road:'#ffffff',roadEdge:'#d3d7de'};
+  let m=`<rect width="640" height="448" fill="${P.paper}"/>`+warstwy(P,{dzW:3,edgeW:0,drW:6,drEdge:1.2});
+  PLAN.dz.forEach(d=>m+=T(d.l[0],d.l[1],d.n.toUpperCase(),`font-family="${F.inter}" font-weight="600" font-size="9.5" letter-spacing="1.6" fill="#9aa1ad" text-anchor="middle"`));
+  PLAN.parki.forEach(p=>m+=T(p[5],p[6],p[4],`font-family="${F.inter}" font-size="10" fill="#3f8a4a" text-anchor="middle"`));
+  [...PLAN.miejsca].sort((a,b)=>a.y-b.y).forEach(p=>{
+    const c=KOL_C[p.k],ty=p.k==='kebab',sc=ty?1.3:(['brama','zamek','umcs','arena'].includes(p.k)?.85:1);
+    m+=`<g transform="translate(${p.x},${p.y})">${ty?`<circle class="puls" cx="0" cy="0" r="14" fill="${c}"/>`:''}<ellipse rx="5" ry="2" fill="#000" opacity=".18"/>`+
+      `<g transform="scale(${sc})"><path d="M0 0 C-3 -7 -11 -11 -11 -21 A11 11 0 1 1 11 -21 C11 -11 3 -7 0 0Z" fill="${c}" stroke="#fff" stroke-width="1.5"/>`+
+      `<g transform="translate(0,-21) scale(.85)" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${IKONY[p.k]}"/></g></g></g>`;
+    m+=T(p.lx,p.ly,p.n,`font-family="${F.inter}" font-weight="600" font-size="${ty?11.5:10.5}" fill="${ty?c:'#374151'}" stroke="#fff" stroke-width="3" paint-order="stroke" stroke-linejoin="round" text-anchor="${p.a||'middle'}"`);
+  });
+  m+=`<g filter="url(#${id}s)"><rect x="596" y="364" width="32" height="64" rx="8" fill="#fff"/></g><line x1="602" y1="396" x2="622" y2="396" stroke="#e5e7eb"/>`+
+    T(612,387,'+',`font-family="${F.inter}" font-size="18" fill="#374151" text-anchor="middle"`)+T(612,419,'−',`font-family="${F.inter}" font-size="18" fill="#374151" text-anchor="middle"`);
+  let s=`<defs><clipPath id="${id}c"><rect width="640" height="448"/></clipPath><filter id="${id}s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity=".14"/></filter></defs>`;
+  s+=`<rect width="960" height="540" fill="#f2f3f5"/><g transform="translate(0,44)" clip-path="url(#${id}c)">${m}</g>`;
+  s+=`<rect width="960" height="44" fill="#fff"/><line x1="0" y1="44" x2="960" y2="44" stroke="#e5e7eb"/>`+T(20,29,'LUKRUM',`font-family="${F.man}" font-weight="800" font-size="19" letter-spacing=".5" fill="#c2272d"`);
+  [[150,112,D.tydz],[272,100,D.kasa],[382,84,D.wynik]].forEach(([x,w,t])=>s+=`<rect x="${x}" y="8" width="${w}" height="28" rx="14" fill="#f1f2f4"/>`+T(x+w/2,27,t,`font-family="${F.inter}" font-weight="500" font-size="13" fill="#374151" text-anchor="middle"`));
+  s+=`<rect x="790" y="8" width="154" height="28" rx="14" fill="#fde8e6"/>`+T(867,27,'Decyzje do '+D.czas,`font-family="${F.inter}" font-weight="600" font-size="13" fill="#c2272d" text-anchor="middle"`);
+  s+=`<g filter="url(#${id}s)"><rect x="640" y="45" width="320" height="447" fill="#fff"/></g>`+
+    `<circle cx="676" cy="88" r="20" fill="#fde8e6"/><g transform="translate(676,88)" fill="none" stroke="#c2272d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${IKONY.kebab}"/></g>`+
+    T(706,86,'Twój kebab',`font-family="${F.man}" font-weight="800" font-size="20" fill="#111827"`)+T(706,105,'Krakowskie Przedmieście 12',`font-family="${F.inter}" font-size="12.5" fill="#6b7280"`)+
+    T(936,76,'×',`font-family="${F.inter}" font-size="20" fill="#9ca3af" text-anchor="middle"`);
+  const tiles=[['412','Goście w tygodniu'],['4,2 <tspan fill="#d4a017">★</tspan>','Ocena gości'],['71<tspan font-size="13" fill="#9ca3af">/100</tspan>','Nastrój zespołu'],['6','Pomyłki w szczycie']];
+  tiles.forEach(([v,l],i)=>{const x=656+(i%2)*148,y=128+Math.floor(i/2)*76;
+    s+=`<rect x="${x}" y="${y}" width="140" height="68" rx="12" fill="#f4f5f7"/>`+T(x+14,y+32,v,`font-family="${F.man}" font-weight="800" font-size="21" fill="#111827"`)+T(x+14,y+52,l,`font-family="${F.inter}" font-size="11.5" fill="#6b7280"`);});
+  s+=`<rect x="656" y="290" width="288" height="38" rx="19" fill="#c2272d"/>`+T(800,314,'Menu i ceny',`font-family="${F.inter}" font-weight="600" font-size="14" fill="#fff" text-anchor="middle"`);
+  ['Grafik zmian','Zamówienia'].forEach((t,i)=>{const x=656+i*148;s+=`<rect x="${x}" y="336" width="140" height="36" rx="18" fill="#fff" stroke="#d1d5db"/>`+T(x+70,359,t,`font-family="${F.inter}" font-weight="600" font-size="13" fill="#374151" text-anchor="middle"`);});
+  s+=`<rect x="656" y="388" width="288" height="88" rx="12" fill="#fff7e6" stroke="#f3d9a4"/><circle cx="680" cy="412" r="13" fill="#e0b13c"/>`+T(680,417,'W',`font-family="${F.man}" font-weight="800" font-size="13" fill="#fff" text-anchor="middle"`)+
+    T(702,409,'List od wujka',`font-family="${F.inter}" font-weight="600" font-size="13" fill="#111827"`)+T(702,424,'teraz',`font-family="${F.inter}" font-size="11" fill="#9ca3af"`)+
+    T(670,446,'„Za Gierka kolejka stała do samego rogu.',`font-family="${F.inter}" font-size="12" fill="#4b5563"`)+T(670,463,'U ciebie dziś o czternastej pusto.”',`font-family="${F.inter}" font-size="12" fill="#4b5563"`);
+  s+=`<rect y="492" width="960" height="48" fill="#fff"/><line x1="0" y1="492" x2="960" y2="492" stroke="#e5e7eb"/>`;
+  [['kebab','Twój lokal'],['bank','Bank'],['hurt','Hurtownia'],['kadry','Kadry']].forEach(([ik,t],i)=>{const x=70+i*120,a=i===0;
+    s+=`<g transform="translate(${x},508)" fill="none" stroke="${a?'#c2272d':'#6b7280'}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${IKONY[ik]}"/></g>`+
+      T(x,531,t,`font-family="${F.inter}" font-weight="${a?600:500}" font-size="11" fill="${a?'#c2272d':'#6b7280'}" text-anchor="middle"`);});
+  s+=`<rect x="790" y="499" width="154" height="34" rx="17" fill="#c2272d"/>`+T(867,521,'Wyślij decyzje',`font-family="${F.inter}" font-weight="600" font-size="13.5" fill="#fff" text-anchor="middle"`);
+  return svg(960,540,'Podgląd: nowoczesna apka',s);
+}
+
+/* ---------- 1D: pixel art ---------- */
+const SPR={
+  kebab:['.kkkkkk.','kkkkkkkk','.wwwwww.','.wbbwbw.','rwrwrwrw','.wwwwww.','.wwwddw.','.wwwddw.'],
+  house:['...kk...','..kkkk..','.kkkkkk.','kkkkkkkk','.wwwwww.','.wbwwbw.','.wwwddw.','.wwwddw.'],
+  tower:['...kk...','..kkkk..','..wwww..','..wbbw..','..wwww..','.wwwwww.','.wwddww.','.wwddww.'],
+  castle:['w.w....w.w','www.kk.www','www.ww.www','wwwwwwwwww','wbwwwwwwbw','wwwwddwwww','wwwwddwwww','wwwwddwwww'],
+  ware:['.kkkkkkkk.','kkkkkkkkkk','wwwwwwwwww','wddddwwbbw','wddddwwbbw','wddddwwwww'],
+  bank:['...kk...','.kkkkkk.','kkkkkkkk','wwwwwwww','w.w.w.w.','w.w.w.w.','w.w.w.w.','wwwwwwww'],
+  arena:['..wwwwww..','.wggggggw.','wggggggggw','.wggggggw.','..wwwwww..'],
+  arrow:['yyyyy','.yyy.','..y..'],
+  star:['..y..','.yyy.','yyyyy','.yyy.','.y.y.']
+};
+const SPR_K={
+  kebab:['kebab',{k:'#5a2a1a',w:'#f2e6c8',b:'#6fb7ff',d:'#6b3b1f',r:'#e0412f'}],
+  rywal:['kebab',{k:'#2a3a5a',w:'#e6e6e6',b:'#6fb7ff',d:'#3a3a3a',r:'#3a7bd5'}],
+  bank:['bank',{k:'#8a8f99',w:'#f0ede4'}],
+  biuro:['house',{k:'#6d4bb3',w:'#e9e2f5',b:'#6fb7ff',d:'#4a3570'}],
+  hurt:['ware',{k:'#6e6a66',w:'#b9b2a6',d:'#4a4642',b:'#6fb7ff'}],
+  sanepid:['house',{k:'#2f8f46',w:'#f2f2ea',b:'#6fb7ff',d:'#2f5a3a'}],
+  brama:['tower',{k:'#2f5a4a',w:'#b5583e',b:'#f2e6c8',d:'#3a1f14'}],
+  zamek:['castle',{k:'#8a7f72',w:'#efe9da',b:'#6fb7ff',d:'#5a4a3a'}],
+  umcs:['ware',{k:'#3c5a8a',w:'#dfe6f0',d:'#2a3a5a',b:'#6fb7ff'}],
+  arena:['arena',{w:'#e8e8e8',g:'#3fa34d'}]
+};
+function sprite(rows,col,x,y,c=4){const h=rows.length,w=rows[0].length,x0=Math.round(x-w*c/2),y0=y-h*c;let s='';
+  rows.forEach((r,i)=>[...r].forEach((ch,j)=>{if(col[ch])s+=`<rect x="${x0+j*c}" y="${y0+i*c}" width="${c}" height="${c}" fill="${col[ch]}"/>`;}));return s;}
+function bevel(x,y,w,h,c,t,fs=18,font=F.vt){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}"/><rect x="${x}" y="${y}" width="${w}" height="3" fill="${shade(c,.35)}"/><rect x="${x}" y="${y}" width="3" height="${h}" fill="${shade(c,.35)}"/>`+
+  `<rect x="${x}" y="${y+h-3}" width="${w}" height="3" fill="${shade(c,-.4)}"/><rect x="${x+w-3}" y="${y}" width="3" height="${h}" fill="${shade(c,-.4)}"/>`+T(x+w/2,y+h/2+fs*.32,t,`font-family="${font}" font-size="${fs}" fill="#fff" text-anchor="middle"`);}
+function ekranPixel(id){
+  const C=8,rz=bez(PLAN.rzeka),cz=bez(PLAN.czechowka),[zx,zy,zrx,zry]=PLAN.zalew;
+  const kd=['#d7c48c','#cbb97f','#e0cd96','#c6bd86','#d5b98a','#cfc48e','#c7b482'];
+  let m='';
+  for(let r=0;r<56;r++){let run=null;const flush=()=>{if(run)m+=`<rect x="${run.c*C}" y="${r*C}" width="${run.n*C}" height="${C}" fill="${run.f}"/>`;};
+    for(let c=0;c<80;c++){const x=c*C+4,y=r*C+4,h=(r*7+c*13)%17;let f;
+      if(((x-zx)/zrx)**2+((y-zy)/zry)**2<1||distPoly(x,y,rz)<7||distPoly(x,y,cz)<3.2)f=(h===0||h===9)?'#86b5ff':'#3f6fd9';
+      else if(PLAN.drogi.some(l=>distPoly(x,y,l)<3.4))f='#8e8a84';
+      else{const pk=PLAN.parki.find(([px,py,rx,ry])=>((x-px)/rx)**2+((y-py)/ry)**2<1);
+        if(pk)f=h%4===0?'#1e5a2b':'#2f7d3b';
+        else{const i=PLAN.dz.findIndex(d=>inPoly(x,y,d.p));f=i<0?(h===3?'#3b7432':'#4b8a3e'):((h===5||h===12)?shade(kd[i],-.18):kd[i]);}}
+      if(run&&run.f===f)run.n++;else{flush();run={c,n:1,f};}}
+    flush();}
+  [...PLAN.miejsca].sort((a,b)=>a.y-b.y).forEach(p=>{const [sp,col]=SPR_K[p.k];m+=sprite(SPR[sp],col,p.x,p.y);});
+  m+=`<g class="migaj">${sprite(SPR.arrow,{y:'#ffd35c'},316,184,4)}</g>`;
+  PLAN.miejsca.forEach(p=>{const ty=p.k==='kebab';m+=T(p.lx,p.ly+2,p.n,`font-family="${F.silk}" font-size="${ty?10:9}" fill="${ty?'#ffd35c':'#ffffff'}" stroke="#14141c" stroke-width="3" paint-order="stroke" stroke-linejoin="round" text-anchor="${p.a||'middle'}"`);});
+  m+=bevel(596,366,32,30,'#3a3d63','+',22)+bevel(596,402,32,30,'#3a3d63','-',22);
+  let s=`<defs><clipPath id="${id}c"><rect width="640" height="448"/></clipPath></defs><rect width="960" height="540" fill="#101018"/>`;
+  s+=`<g transform="translate(0,44)" clip-path="url(#${id}c)" shape-rendering="crispEdges">${m}</g><g shape-rendering="crispEdges">`;
+  s+=T(18,31,'LUKRUM',`font-family="${F.silk}" font-size="22" fill="#ffd35c"`);
+  [[170,'TYDZIEŃ 3/4'],[320,'KASA 48 320 ZŁ'],[490,'WYNIK 612 PKT']].forEach(([x,t])=>s+=T(x,30,t,`font-family="${F.vt}" font-size="22" fill="#e6e6f0"`));
+  s+=bevel(770,8,174,28,'#b8322e','DECYZJE DO 12:40',20);
+  s+=`<rect x="652" y="56" width="296" height="424" fill="#1f2140" stroke="#f4f4f4" stroke-width="4"/><rect x="660" y="64" width="280" height="408" fill="none" stroke="#5a5f8a" stroke-width="2"/>`+
+    T(672,96,'TWÓJ KEBAB',`font-family="${F.silk}" font-size="19" fill="#ffd35c"`)+T(672,118,'Krakowskie Przedmieście 12',`font-family="${F.vt}" font-size="19" fill="#9ea3d0"`);
+  [150,180,210,262].forEach((y,i)=>{const [l,v]=D.rows[i];s+=T(672,y,l,`font-family="${F.vt}" font-size="22" fill="#e6e6f0"`)+T(928,y,v,`font-family="${F.vt}" font-size="22" fill="#7cf29a" text-anchor="end"`);});
+  for(let i=0;i<5;i++)s+=sprite(SPR.star,{y:i<4?'#ffd35c':'#3a3d63'},806+i*16,178,3);
+  for(let i=0;i<10;i++)s+=`<rect x="${672+i*25}" y="220" width="21" height="12" fill="${i<7?'#7cf29a':'#3a3d63'}"/>`;
+  D.btn.forEach((t,i)=>s+=bevel(672+i*88,282,82,32,i?'#3a3d63':'#3f8f4f',t,17));
+  s+=`<rect x="668" y="334" width="264" height="130" fill="#16182e" stroke="#5a5f8a" stroke-width="2"/>`+
+    sprite(['wwwwwww','ww...ww','w.w.w.w','w..w..w','wwwwwww'],{w:'#ffd35c'},692,362,3)+T(708,358,'LIST OD WUJKA',`font-family="${F.silk}" font-size="11" fill="#ffd35c"`);
+  D.list.forEach((l,i)=>s+=T(680,384+i*21,l,`font-family="${F.vt}" font-size="19" fill="#c9cdf0"`));
+  D.skroty.forEach((t,i)=>s+=bevel(16+i*118,500,108,32,'#3a3d63',t,19));
+  s+=bevel(770,500,174,32,'#3f8f4f','WYŚLIJ DECYZJE',20)+'</g>';
+  return svg(960,540,'Podgląd: pixel art',s);
+}
+
+/* ---------- 2: sposoby rysowania mapy ---------- */
+function mapaPlaskaSVG(id,P,lab){return svg(640,448,lab,mapaA(id,P,{kompas:true,skala:true,font:P===PAL_NOC?F.nunito:F.hand}));}
+function mapaIsoSVG(id){
+  const P=PAL_LUB,s0=.78,k=Math.SQRT1_2,a=s0*k,b=s0*k*.56,tx=267,ty=66;
+  const pr=(x,y)=>[a*(x-y)+tx,b*(x+y)+ty];
+  const poly=(ps,f)=>`<polygon points="${pts(ps)}" fill="${f}" stroke="${P.line}" stroke-width=".8" stroke-linejoin="round"/>`;
+  const up=(p,d)=>[p[0],p[1]-d];
+  const box=(x,y,hw,hd,h,top,col,z=0)=>{const c1=pr(x-hw,y-hd),c2=pr(x+hw,y-hd),c3=pr(x+hw,y+hd),c4=pr(x-hw,y+hd);
+    return poly([up(c4,z),up(c3,z),up(c3,z+h),up(c4,z+h)],col)+poly([up(c2,z),up(c3,z),up(c3,z+h),up(c2,z+h)],shade(col,-.22))+poly([up(c1,z+h),up(c2,z+h),up(c3,z+h),up(c4,z+h)],top);};
+  const dach=(x,y,hw,hd,z,h,col)=>{const q=[pr(x-hw,y-hd),pr(x+hw,y-hd),pr(x+hw,y+hd),pr(x-hw,y+hd)].map(p=>up(p,z));const ap=up(pr(x,y),z+h);
+    return poly([q[0],q[1],ap],shade(col,-.3))+poly([q[3],q[0],ap],shade(col,-.15))+poly([q[3],q[2],ap],col)+poly([q[2],q[1],ap],shade(col,-.25));};
+  const BUD={
+    kebab:(x,y)=>box(x,y,13,10,15,'#d9cdb0',P.wall)+box(x,y+11,13,1.6,3,P.red,P.red,8)+box(x-2,y,6,3,5,P.gold,P.gold,15),
+    rywal:(x,y)=>box(x,y,10,8,11,'#cfd6dd',P.wall)+dach(x,y,10,8,11,7,P.rival),
+    brama:(x,y)=>box(x,y,6,6,30,P.brick,P.brick)+box(x,y,5,5,8,P.cream,P.cream,30)+dach(x,y,5,5,38,12,P.dome),
+    zamek:(x,y)=>box(x-6,y,16,8,14,P.cream,P.cream)+box(x+14,y-4,6,6,24,'#cdb894','#cdb894'),
+    bank:(x,y)=>box(x,y,11,9,13,P.cream,P.cream)+dach(x,y,11,9,13,7,'#b9b2a6'),
+    biuro:(x,y)=>box(x,y,7,7,26,P.wall2,P.wall2),
+    hurt:(x,y)=>box(x,y,18,11,10,'#cfc6b2','#cfc6b2'),
+    sanepid:(x,y)=>box(x,y,9,8,11,P.wall,P.wall)+dach(x,y,9,8,11,8,P.green),
+    umcs:(x,y)=>box(x,y,16,9,12,P.wall2,P.wall2),
+    arena:(x,y)=>box(x,y,15,12,5,P.green,P.cream)
+  };
+  const A=pr(0,0),B=pr(640,0),Cc=pr(640,448),Dd=pr(0,448),dn=p=>[p[0],p[1]+14];
+  let s=`<rect width="640" height="448" fill="${P.tlo}"/>`+poly([B,Cc,dn(Cc),dn(B)],'#b89b6a')+poly([Dd,Cc,dn(Cc),dn(Dd)],'#cdb17d');
+  s+=`<g transform="matrix(${a} ${b} ${-a} ${b} ${tx} ${ty})"><rect width="640" height="448" fill="${P.paper}"/>${warstwy(P,{dzDash:'6 4'})}</g>`;
+  const drzewa=[];PLAN.parki.forEach(([x,y,rx,ry])=>[[-12,-3],[-2,-7],[10,-4],[-7,5],[6,5]].forEach(([dx,dy])=>drzewa.push([x+dx*rx/26,y+dy*ry/15])));
+  const obiekty=[...PLAN.miejsca.map(m=>({z:m.x+m.y,f:()=>BUD[m.k](m.x,m.y)})),...drzewa.map(([x,y])=>({z:x+y,f:()=>{const p=pr(x,y);
+    return `<line x1="${p[0]}" y1="${p[1]}" x2="${p[0]}" y2="${p[1]-6}" stroke="#6b4a2b" stroke-width="1.5"/><circle cx="${p[0]}" cy="${p[1]-9}" r="5" fill="${P.tree}" stroke="${P.line}" stroke-width=".6"/>`;}}))];
+  obiekty.sort((u,v)=>u.z-v.z).forEach(o=>s+=o.f());
+  PLAN.miejsca.forEach(m=>{const p=pr(m.x,m.y),ty=m.k==='kebab';
+    s+=T(p[0],p[1]+15,m.n,`font-family="${F.hand}" font-size="${ty?14:12.5}" fill="${ty?P.red:P.ink}" stroke="${P.paper}" stroke-width="3" paint-order="stroke" text-anchor="middle"`);});
+  return svg(640,448,'Mapa izometryczna',s);
+}
+function mapaPlamySVG(id){
+  const kol=['#f6c85f','#9dd9d2','#f4a6a6','#b5d99c','#c9b6e4','#ffd3a5','#a8c8f0'];
+  const pule=['1 400','1 100','2 600','900','1 800','1 200','700'];
+  const pos=[[338,78],[540,112],[396,150],[130,132],[180,372],[404,372],[566,238]];
+  let s=`<rect width="640" height="448" fill="#fbf7ee"/>`;
+  PLAN.dz.forEach((d,i)=>{const c=d.p.reduce((u,v)=>[u[0]+v[0]/d.p.length,u[1]+v[1]/d.p.length],[0,0]);
+    const q=d.p.map(([x,y])=>[c[0]+(x-c[0])*.84,c[1]+(y-c[1])*.84]);
+    s+=`<polygon points="${pts(q)}" fill="${kol[i]}" stroke="${kol[i]}" stroke-width="22" stroke-linejoin="round"/>`;});
+  const rz=curveD(PLAN.rzeka),[zx,zy,zrx,zry]=PLAN.zalew;
+  s+=`<path d="${rz}" fill="none" stroke="#fbf7ee" stroke-width="22" stroke-linecap="round"/><path d="${rz}" fill="none" stroke="#6fa8cf" stroke-width="11" stroke-linecap="round"/>`+
+    `<ellipse cx="${zx}" cy="${zy}" rx="${zrx}" ry="${zry}" fill="#6fa8cf"/>`;
+  PLAN.miejsca.forEach(p=>{const ty=p.k==='kebab',c=ty?'#c2272d':'#2b2118';
+    s+=`<g transform="translate(${p.x},${p.y-12})"><circle r="${ty?13:10.5}" fill="${ty?'#c2272d':'#fff'}" stroke="#2b2118" stroke-width="1.5"/><g transform="scale(${ty?1:.85})" fill="none" stroke="${ty?'#fff':c}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${IKONY[p.k]}"/></g></g>`;});
+  PLAN.dz.forEach((d,i)=>{const [x,y]=pos[i];
+    s+=T(x,y,d.n,`font-family="${F.bric}" font-weight="800" font-size="${d.n.length>12?14:16}" fill="#2b2118" text-anchor="middle"`)+
+      T(x,y+15,`pula ~${pule[i]} gości`,`font-family="${F.inter}" font-size="10.5" fill="#5b4a3a" text-anchor="middle"`);});
+  s+=T(316,206,'Ty',`font-family="${F.bric}" font-weight="800" font-size="13" fill="#c2272d" stroke="#fbf7ee" stroke-width="3" paint-order="stroke" text-anchor="middle"`);
+  return svg(640,448,'Mapa ze stylizowanymi dzielnicami',s);
+}
+
+/* ---------- 4: wnętrza ---------- */
+function strefa(id,x,y,w,h,tag){return `<g class="strefa" data-s="${id}" tabindex="0" role="button" aria-label="${tag}"><rect class="obrys" x="${x}" y="${y}" width="${w}" height="${h}" rx="8"/>`+
+  `<rect x="${x+w/2-tag.length*4.4-10}" y="${y-2}" width="${tag.length*8.8+20}" height="22" rx="11" fill="#4a3423"/>`+T(x+w/2,y+14,tag,`font-family="${F.hand}" font-size="16" fill="#fdf6e3" text-anchor="middle"`)+'</g>';}
+function wnetrzeKebab(){
+  let s=`<defs><pattern id="wkP" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#c99a62"/><rect width="20" height="20" fill="#b3824c"/><rect x="20" y="20" width="20" height="20" fill="#b3824c"/></pattern>
+    <pattern id="wkK" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#d8cfbb"/><rect x="1" y="1" width="18" height="18" fill="#f7f2e6"/></pattern>
+    <clipPath id="wkS"><path d="M516 112 L556 112 L548 222 L524 222 Z"/></clipPath></defs>`;
+  s+=`<rect width="640" height="448" fill="#efe0bd"/><rect y="196" width="640" height="76" fill="url(#wkK)"/><rect y="272" width="640" height="176" fill="url(#wkP)"/><rect y="268" width="640" height="6" fill="#8a5a35"/>`;
+  s+=`<rect x="44" y="96" width="92" height="176" fill="#8a5a35" stroke="#4a3423" stroke-width="2"/><rect x="56" y="140" width="68" height="50" fill="none" stroke="#6b4228" stroke-width="2"/><rect x="56" y="200" width="68" height="56" fill="none" stroke="#6b4228" stroke-width="2"/>`+
+    `<circle cx="124" cy="196" r="3.5" fill="#d9a531"/><rect x="52" y="108" width="76" height="22" fill="#fdf6e3" stroke="#4a3423"/>`+T(90,123,'ZAPLECZE',`font-family="${F.nunito}" font-weight="700" font-size="11" fill="#4a3423" text-anchor="middle"`);
+  s+=`<rect x="196" y="34" width="250" height="88" rx="4" fill="#2f2a26" stroke="#6b4a2b" stroke-width="5"/>`+T(321,58,'MENU',`font-family="${F.hand}" font-size="20" fill="#f6e7c1" text-anchor="middle"`)+
+    [['Kebab w bułce','18 zł'],['Rollo','21 zł'],['Talerz','29 zł']].map(([t,c],i)=>T(214,80+i*16,t,`font-family="${F.hand}" font-size="15" fill="#f6e7c1"`)+T(428,80+i*16,c,`font-family="${F.hand}" font-size="15" fill="#d9a531" text-anchor="end"`)).join('');
+  s+=`<rect x="160" y="200" width="320" height="14" fill="#b07a4b" stroke="#4a3423" stroke-width="2"/><rect x="170" y="214" width="300" height="100" fill="#8a5a35" stroke="#4a3423" stroke-width="2"/>`+
+    [230,290,350,410].map(x=>`<line x1="${x}" y1="214" x2="${x}" y2="314" stroke="#6b4228" stroke-width="2"/>`).join('')+
+    [['#6aa84f',190],['#d1361f',222],['#8e5aa8',254],['#f2efe0',286]].map(([c,x])=>`<rect x="${x}" y="186" width="28" height="14" rx="3" fill="${c}" stroke="#4a3423" stroke-width="1.5"/>`).join('')+
+    `<rect x="410" y="170" width="46" height="30" rx="3" fill="#4d5a63" stroke="#2a3238" stroke-width="2"/><rect x="416" y="176" width="34" height="10" fill="#9fe0b0"/>`;
+  s+=`<rect x="482" y="88" width="104" height="152" fill="#bfc5c9" stroke="#7c858b" stroke-width="2"/>`+[104,128,152,176,200].map(y=>`<rect x="492" y="${y}" width="10" height="16" fill="#e8562f" opacity=".85"/>`).join('')+
+    `<line x1="536" y1="96" x2="536" y2="236" stroke="#59636a" stroke-width="3"/><path d="M516 112 L556 112 L548 222 L524 222 Z" fill="#9a5a2e" stroke="#4a3423" stroke-width="1.5"/>`+
+    `<g clip-path="url(#wkS)"><g class="obrot">${Array.from({length:8},(_,i)=>`<rect x="${496+i*10}" y="110" width="4" height="114" fill="#6e3a1a" opacity=".5"/>`).join('')}</g></g>`+
+    `<rect x="476" y="236" width="120" height="20" fill="#a9b0b5" stroke="#7c858b" stroke-width="2"/><rect x="512" y="226" width="48" height="10" fill="#7c858b"/>`;
+  s+=`<rect x="508" y="336" width="116" height="12" fill="#7a5134" stroke="#4a3423" stroke-width="2"/><rect x="516" y="348" width="8" height="64" fill="#7a5134"/><rect x="608" y="348" width="8" height="64" fill="#7a5134"/>`+
+    `<rect x="526" y="326" width="34" height="10" fill="#fdf6e3" stroke="#4a3423" transform="rotate(-6 543 331)"/><rect x="572" y="324" width="24" height="12" fill="#f3e6a8" stroke="#4a3423"/><line x1="610" y1="336" x2="604" y2="306" stroke="#4a3423" stroke-width="2"/><path d="M596 306 L614 306 L608 296 L600 296 Z" fill="#2f7d3b"/>`;
+  s+=`<ellipse cx="96" cy="380" rx="44" ry="10" fill="#7a5134"/><rect x="92" y="380" width="8" height="40" fill="#5a3a24"/><ellipse cx="300" cy="392" rx="44" ry="10" fill="#7a5134"/><rect x="296" y="392" width="8" height="38" fill="#5a3a24"/>`;
+  s+=strefa('zaplecze',36,92,108,186,'Zaplecze')+strefa('lada',156,126,330,194,'Lada')+strefa('kuchnia',476,82,116,180,'Kuchnia')+strefa('biuro',500,290,132,128,'Biuro');
+  return svg(640,448,'Wnętrze twojego kebaba',s);
+}
+function wnetrzeBank(){
+  let s=`<rect width="640" height="448" fill="#e8dfc8"/><rect y="220" width="640" height="84" fill="#3f5b47"/><rect y="216" width="640" height="6" fill="#c9a34a"/>`+
+    `<rect y="304" width="640" height="144" fill="#a87a4c"/>`+Array.from({length:9},(_,i)=>`<line x1="0" y1="${316+i*15}" x2="640" y2="${316+i*15}" stroke="#8c6238" stroke-width="1.5"/>`).join('');
+  s+=`<rect x="220" y="22" width="200" height="46" rx="4" fill="#3f5b47" stroke="#c9a34a" stroke-width="3"/>`+T(320,52,'SOPLICOWO',`font-family="${F.nunito}" font-weight="700" font-size="22" letter-spacing="5" fill="#e8c35a" text-anchor="middle"`)+
+    T(320,86,'kasa oszczędności · od 1811 roku',`font-family="${F.hand}" font-size="16" fill="#5b4a3a" text-anchor="middle"`);
+  s+=`<rect x="54" y="60" width="78" height="100" fill="#c9a34a" stroke="#4a3423" stroke-width="2"/><rect x="62" y="68" width="62" height="84" fill="#3b3a36"/><circle cx="93" cy="98" r="13" fill="#d9c3a0"/><path d="M70 152 Q93 116 116 152 Z" fill="#2f4a6a"/>`+
+    `<rect x="60" y="164" width="66" height="16" fill="#fdf6e3" stroke="#4a3423"/>`+T(93,176,'Kościuszko',`font-family="${F.hand}" font-size="12" fill="#4a3423" text-anchor="middle"`);
+  s+=`<rect x="548" y="70" width="54" height="234" fill="#6b4228" stroke="#4a3423" stroke-width="2"/><circle cx="575" cy="104" r="19" fill="#fdf6e3" stroke="#4a3423" stroke-width="2"/><path d="M575 104 V92 M575 104 L584 108" stroke="#4a3423" stroke-width="2"/><rect x="560" y="140" width="30" height="110" fill="#5a3620" stroke="#4a3423"/><circle cx="575" cy="226" r="8" fill="#d9a531"/>`;
+  [[164,'KONTO FIRMOWE'],[340,'DEBET']].forEach(([x,t])=>{
+    s+=`<rect x="${x}" y="112" width="140" height="22" fill="#fdf6e3" stroke="#4a3423"/>`+T(x+70,127,t,`font-family="${F.nunito}" font-weight="700" font-size="12" letter-spacing="1" fill="#4a3423" text-anchor="middle"`)+
+      `<circle cx="${x+70}" cy="176" r="15" fill="#5b4a3a"/><path d="M${x+40} 230 Q${x+70} 186 ${x+100} 230 Z" fill="#5b4a3a"/>`+
+      `<rect x="${x}" y="136" width="140" height="94" fill="#bfe3f2" opacity=".45" stroke="#4a3423" stroke-width="3"/><rect x="${x+50}" y="214" width="40" height="16" fill="#e8dfc8" stroke="#4a3423"/>`+
+      `<rect x="${x-8}" y="230" width="156" height="12" fill="#b07a4b" stroke="#4a3423" stroke-width="2"/><rect x="${x}" y="242" width="140" height="62" fill="#8a5a35" stroke="#4a3423" stroke-width="2"/>`;});
+  s+=strefa('konto',150,104,168,206,'Konto')+strefa('debet',326,104,168,206,'Debet');
+  return svg(640,448,'Wnętrze banku Soplicowo',s);
+}
+const STREFY={
+  lada:['Lada','Menu, ceny i promocje dnia. Tu ustalasz, co sprzedajesz i za ile.'],
+  kuchnia:['Kuchnia','Wyposażenie i limit dań. Za mało sprzętu w szczycie oznacza więcej pomyłek.'],
+  zaplecze:['Zaplecze','Zespół, grafik zmian i nastrój pracowników. Tu zatrudniasz i zwalniasz zgodnie z Kodeksem pracy.'],
+  biuro:['Biuro','Finanse, księgowość i listy od wujka.'],
+  konto:['Konto firmowe','Opłata 0 zł miesięcznie, lokata 3% w skali roku (przykład).'],
+  debet:['Debet','Do 8 000 zł, opłata 2% tygodniowo od wykorzystanej kwoty (przykład).']
+};
+const KARTY={
+  bank:`<button class="zamknij" type="button" aria-label="Zamknij">×</button><h4>Soplicowo</h4><p class="adr">bank · Krakowskie Przedmieście</p>
+    <dl><div><dt>Konto firmowe</dt><dd>0 zł/mies.</dd></div><div><dt>Debet do</dt><dd>8 000 zł</dd></div><div><dt>Opłata za debet</dt><dd>2% tyg.</dd></div><div><dt>Lokata</dt><dd>3% rocznie</dd></div></dl>
+    <div class="przyc"><button type="button">Otwórz konto</button><button type="button">Weź debet</button></div><p class="przyp">Liczby są przykładowe.</p>`,
+  kebab:`<button class="zamknij" type="button" aria-label="Zamknij">×</button><h4>Twój kebab</h4><p class="adr">Krakowskie Przedmieście 12</p>
+    <dl><div><dt>Goście w tygodniu</dt><dd>412</dd></div><div><dt>Ocena gości</dt><dd><span style="color:#d9a531">★★★★</span>★ 4,2</dd></div><div><dt>Nastrój zespołu</dt><dd>71/100</dd></div><div><dt>Pomyłki w szczycie</dt><dd>6</dd></div></dl>
+    <div class="przyc"><button type="button">Menu i ceny</button><button type="button">Grafik</button><button type="button">Zamówienia</button></div><p class="przyp">Liczby są przykładowe.</p>`
+};
+
+/* ---------- pytania ---------- */
+const PYT={
+  charakter:{nazwa:'Charakter',opcje:[
+    {id:'plansza',t:'Ilustrowana plansza',pol:1,d:'Mapa jak plansza gry planszowej: rysowane budynki, papier, flaga na twoim lokalu i karty przyklejone taśmą. Od razu widać, że to gra, a nie program księgowy.',r:()=>ekranPlansza('a1')},
+    {id:'prl',t:'Retro PRL i bar mleczny',d:'Plan miasta z lat 70. z kratką i objaśnieniami, neony lokali, druki z pieczątką i dopiski wujka długopisem. Najbardziej pasuje do fabuły z barem mlecznym.',r:()=>ekranPRL('a2')},
+    {id:'apka',t:'Nowoczesna apka miejska',d:'Czysto i płasko: pinezki, kafelki z liczbami, okrągłe przyciski. Najłatwiej ją czytać na telefonie, ale wygląda najmniej jak gra.',r:()=>ekranApka('a3')},
+    {id:'pixel',t:'Pixel art',d:'Miasto z kwadratowych pikseli jak w grach typu tycoon, migająca strzałka nad twoim lokalem. Bardzo „growo”, ale drobne napisy i liczby czyta się trudniej.',r:()=>ekranPixel('a4')}]},
+  mapa:{nazwa:'Mapa',opcje:[
+    {id:'plaska',t:'Płaska z budynkami-ikonami',pol:1,d:'Układ Lublina (dzielnice, Bystrzyca, główne ulice) widziany z góry, na nim większe rysunki ważnych budynków. Lekka i czytelna na telefonie i rzutniku.',r:()=>mapaPlaskaSVG('b1',PAL_LUB,'Mapa płaska z budynkami')},
+    {id:'izo',t:'Izometryczna 3D',d:'Miasto widziane skośnie z góry, budynki mają bryłę. Efektowna, ale każdy budynek trzeba narysować w bryle, a na telefonie trudniej trafić palcem.',r:()=>mapaIsoSVG('b2')},
+    {id:'plamy',t:'Stylizowane dzielnice',d:'Każda dzielnica to kolorowa plama z nazwą i pulą gości, bez ulic. Najprościej pokazuje popyt z mapy, ale to mniej „prawdziwy Lublin”.',r:()=>mapaPlamySVG('b3')}]},
+  kolory:{nazwa:'Kolory',opcje:[
+    {id:'lubelska',t:'Lubelska',pol:1,d:'Złoto i czerwień z herbu z koziołkiem, zieleń parków, niebieska Bystrzyca na jasnym papierze. Ciepła i miejska, dobrze widoczna na rzutniku.',
+      sw:[['#d9a426','złoto koziołka'],['#b8242c','czerwień herbu'],['#8fb867','Ogród Saski'],['#5f9cc4','Bystrzyca'],['#f4eedd','papier']],r:()=>mapaPlaskaSVG('c1',PAL_LUB,'Paleta lubelska')},
+    {id:'kebabowa',t:'Kebabowa',d:'Brązy pieczonego mięsa, czerwień ostrego sosu, kremowy czosnkowy i zielona sałata. Apetycznie i z humorem.',
+      sw:[['#a3532a','mięso z rożna'],['#d1361f','sos ostry'],['#fff8ea','czosnkowy'],['#8cc152','sałata'],['#e2b97f','pita']],r:()=>mapaPlaskaSVG('c2',PAL_KEB,'Paleta kebabowa')},
+    {id:'nocna',t:'Nocny Lublin',d:'Ciemna mapa, neony lokali i światła okien. Klimat nocnego kebaba, ale w jasnej sali na rzutniku czyta się słabiej.',
+      sw:[['#0f1526','noc'],['#ff4f8b','neon'],['#ffd36b','światła okien'],['#3de0e6','lazur'],['#0f3d5e','Bystrzyca nocą']],r:()=>mapaPlaskaSVG('c3',PAL_NOC,'Paleta nocna')}]},
+  okna:{nazwa:'Okna',opcje:[
+    {id:'karta',t:'Karta z boku',pol:1,d:'Mapa zostaje na ekranie, a z boku (na telefonie od dołu) wysuwa się karta z decyzjami. Szybko wraca się do miasta.'},
+    {id:'wnetrze',t:'Wejście do środka',d:'Kliknięty budynek przybliża się i otwiera wnętrze na cały ekran. W środku klikasz miejsca: okienka w banku, ladę i kuchnię w kebabie.'},
+    {id:'mieszane',t:'Mieszane',d:'Bank, biura i hurtownie otwierają kartę z boku. Tylko twój kebab ma pełne wnętrze z ladą, kuchnią, zapleczem i biurem.'}]}
+};
+let wybory={charakter:null,mapa:null,kolory:null,okna:null};
+try{const z=JSON.parse(localStorage.getItem('lukrum-wyglad')||'null');if(z&&typeof z==='object')wybory={...wybory,...z};}catch(e){}
+function zapisz(){try{localStorage.setItem('lukrum-wyglad',JSON.stringify(wybory));}catch(e){}}
+
+document.querySelectorAll('.opcje').forEach(box=>{
+  const k=box.dataset.pyt;
+  PYT[k].opcje.forEach(o=>{
+    const f=document.createElement('figure');f.className='opcja';f.dataset.id=o.id;
+    f.innerHTML=`<button class="podglad" type="button" aria-label="Powiększ: ${o.t}">${o.r()}<span class="lupa">Powiększ</span></button>
+      <figcaption class="opis"><div class="tytul"><h3>${o.t}</h3>${o.pol?'<span class="chip">Polecane</span>':''}</div><p>${o.d}</p>
+      ${o.sw?`<ul class="paleta">${o.sw.map(([c,n])=>`<li><i style="background:${c}"></i>${n}</li>`).join('')}</ul>`:''}
+      <button class="wybierz" type="button" aria-pressed="false">Wybieram</button></figcaption>`;
+    f.querySelector('.wybierz').addEventListener('click',()=>{wybory[k]=wybory[k]===o.id?null:o.id;zapisz();odswiez();});
+    f.querySelector('.podglad').addEventListener('click',()=>powieksz(f.querySelector('.podglad svg')));
+    box.appendChild(f);
+  });
+});
+
+/* powiększenie */
+const lb=document.getElementById('lightbox'),lbT=document.getElementById('lbTresc');
+function powieksz(el){lbT.innerHTML='';lbT.appendChild(el.cloneNode(true));lb.hidden=false;}
+lb.addEventListener('click',()=>{lb.hidden=true;lbT.innerHTML='';});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.hidden){lb.hidden=true;lbT.innerHTML='';}});
+
+/* demo okien */
+const demo=document.getElementById('demo'),scena=document.getElementById('scena'),karta=document.getElementById('kartaBoczna'),
+  wn=document.getElementById('wnetrzeSvg'),dymek=document.getElementById('dymek'),sciezka=document.getElementById('sciezka');
+scena.innerHTML=svg(640,448,'Mapa do kliknięcia',mapaA('d1',PAL_PLANSZA,{wobble:true,kompas:true}));
+const CELE={bank:{x:262,y:246,n:'Soplicowo',sc:'Lublin › Śródmieście › Soplicowo'},kebab:{x:316,y:216,n:'Twój kebab',sc:'Lublin › Krakowskie Przedmieście › Twój kebab'}};
+Object.entries(CELE).forEach(([k,c])=>{const b=document.createElement('button');b.type='button';b.className='punkt';
+  b.style.left=(c.x/640*100)+'%';b.style.top=(c.y/448*100)+'%';b.innerHTML=`<span>${c.n}</span>`;b.setAttribute('aria-label','Otwórz: '+c.n);
+  b.addEventListener('click',()=>otworz(k));scena.appendChild(b);});
+let tryb='karta';
+const zakl=document.querySelector('.zakl');
+PYT.okna.opcje.forEach(o=>{const b=document.createElement('button');b.type='button';b.role='tab';b.dataset.tryb=o.id;
+  b.innerHTML=o.t+(o.pol?'<span class="pol">polecane</span>':'');b.addEventListener('click',()=>{tryb=o.id;zamknij();odswiez();});zakl.appendChild(b);});
+function otworz(k){
+  const c=CELE[k],wejdz=tryb==='wnetrze'||(tryb==='mieszane'&&k==='kebab');
+  dymek.hidden=true;
+  if(wejdz){scena.style.transformOrigin=`${c.x/640*100}% ${c.y/448*100}%`;wn.innerHTML=k==='kebab'?wnetrzeKebab():wnetrzeBank();sciezka.textContent=c.sc;
+    demo.classList.remove('karta');demo.classList.add('wewnatrz');}
+  else{karta.innerHTML=KARTY[k];karta.querySelector('.zamknij').addEventListener('click',zamknij);demo.classList.add('karta');}
+}
+function zamknij(){demo.classList.remove('karta','wewnatrz');dymek.hidden=true;}
+document.getElementById('wroc').addEventListener('click',zamknij);
+function pokazStrefe(e){const g=e.target.closest('[data-s]');if(!g)return;const [t,o]=STREFY[g.dataset.s];dymek.innerHTML=`<b>${t}</b>${o}`;dymek.hidden=false;}
+wn.addEventListener('click',pokazStrefe);
+wn.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pokazStrefe(e);}});
+karta.addEventListener('click',e=>{const b=e.target.closest('.przyc button');if(b){const p=karta.querySelector('.przyp');p.textContent='To tylko podgląd: „'+b.textContent+'” jeszcze nic nie robi.';}});
+document.getElementById('wybierzTryb').addEventListener('click',()=>{wybory.okna=wybory.okna===tryb?null:tryb;zapisz();odswiez();});
+
+/* podsumowanie */
+const uwagi=document.getElementById('uwagi');
+try{uwagi.value=localStorage.getItem('lukrum-wyglad-uwagi')||'';}catch(e){}
+uwagi.addEventListener('input',()=>{try{localStorage.setItem('lukrum-wyglad-uwagi',uwagi.value);}catch(e){}tekst();});
+function nazwa(k){const o=PYT[k].opcje.find(x=>x.id===wybory[k]);return o?o.t:null;}
+function tekst(){
+  const t='Wygląd LUKRUM – wybory:\n'+Object.keys(PYT).map((k,i)=>`${i+1}. ${PYT[k].nazwa}: ${nazwa(k)||'(bez wyboru)'}`).join('\n')+(uwagi.value.trim()?'\nUwagi: '+uwagi.value.trim():'');
+  document.getElementById('tekst').textContent=t;return t;}
+function odswiez(){
+  document.querySelectorAll('.opcje').forEach(box=>{const k=box.dataset.pyt;box.querySelectorAll('.opcja').forEach(f=>{const w=wybory[k]===f.dataset.id;
+    f.dataset.wybrana=w?'tak':'nie';const b=f.querySelector('.wybierz');b.setAttribute('aria-pressed',w);b.textContent=w?'Wybrane ✓':'Wybieram';});});
+  zakl.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tryb===tryb));
+  const o=PYT.okna.opcje.find(x=>x.id===tryb);document.getElementById('trybOpis').textContent=o.d;
+  const bt=document.getElementById('wybierzTryb'),w=wybory.okna===tryb;bt.setAttribute('aria-pressed',w);bt.textContent=w?'Wybrane ✓':'Wybieram ten sposób';
+  document.getElementById('lista').innerHTML=Object.keys(PYT).map(k=>`<li>${PYT[k].nazwa}: ${nazwa(k)?`<b>${nazwa(k)}</b>`:'<span class="brak">jeszcze bez wyboru</span>'}</li>`).join('');
+  tekst();
+}
+document.getElementById('kopiuj').addEventListener('click',()=>{const t=tekst(),st=document.getElementById('status');
+  const zaznacz=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('tekst'));const s=getSelection();s.removeAllRanges();s.addRange(r);
+    st.textContent='Nie udało się skopiować automatycznie. Tekst jest zaznaczony, naciśnij Ctrl+C.';};
+  try{navigator.clipboard.writeText(t).then(()=>st.textContent='Skopiowano. Wklej to w terminalu.',zaznacz);}catch(e){zaznacz();}});
+odswiez();
+</script>

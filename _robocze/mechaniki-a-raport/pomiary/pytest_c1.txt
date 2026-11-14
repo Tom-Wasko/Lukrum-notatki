@@ -1,0 +1,44 @@
+
+testy\ludzie\test_zadowolenie.py:119: AssertionError
+___________________ test_w_kodzie_silnika_nie_ma_liczb_gry ____________________
+
+    def test_w_kodzie_silnika_nie_ma_liczb_gry():
+        """Parametry gry są w `dane/*.yaml` – w kodzie silnika zostają tylko liczby budowy modelu."""
+        obce = []
+        for plik in sorted(SILNIK.rglob("*.py")):
+            for wezel in ast.walk(ast.parse(plik.read_text(encoding="utf-8"))):
+                if isinstance(wezel, ast.Constant) and type(wezel.value) in (int, float):
+                    if wezel.value not in DOZWOLONE_LICZBY:
+                        obce.append(f"{plik.name}:{wezel.lineno}: {wezel.value}")
+>       assert obce == []
+E       AssertionError: assert ['punkty.py:7...y.py:73: 200'] == []
+E         
+E         Left contains 2 more items, first extra item: 'punkty.py:73: 200'
+E         Use -v to get more diff
+
+testy\rdzen\test_dane.py:95: AssertionError
+___________ test_zakup_ponizej_progu_amortyzacji_ostrzega_o_karcie ____________
+
+gra_botow = (<silnik.gra.Gra object at 0x000001F1E9BFE190>, StanGry(runda=3, firmy={'Tani': Firma(nazwa='Tani', bot='tani', nazwa_...er_przyjmie', 'kanal': 'ulotki', 'strefa': 'akademickie', 'faza': 'trwa', 'emisje': 6}]}}, 'promocje': {}}}, wersja=1))
+
+    def test_zakup_ponizej_progu_amortyzacji_ostrzega_o_karcie(gra_botow):
+        dane, f, r = _firma(gra_botow)
+>       dz = dane.z["karta_wynikow"]["wynik_ekonomiczny_dzielnik"]
+             ^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'karta_wynikow'
+
+testy\rdzen\test_lista_bledow.py:152: KeyError
+=========================== short test summary info ===========================
+FAILED testy/aplikacja/test_panel_mg.py::test_historia_rankingu_jak_ranking_mistrza_gry
+FAILED testy/ludzie/test_kal_ludzie.py::test_oferta_miedzy_progiem_a_oczekiwana_trwale_obniza_zadowolenie
+FAILED testy/ludzie/test_kal_ludzie.py::test_tempo_z_zadowolenia[0.97-1.05]
+FAILED testy/ludzie/test_kal_ludzie.py::test_tempo_z_zadowolenia[0.92-1.0] - ...
+FAILED testy/ludzie/test_kal_ludzie.py::test_tempo_z_zadowolenia[0.9-1.0] - a...
+FAILED testy/ludzie/test_zadowolenie.py::test_podwyzka_w_projekcie_usuwa_ostrzezenie
+FAILED testy/ludzie/test_zadowolenie.py::test_bot_daje_podwyzke_niezadowolonemu
+FAILED testy/rdzen/test_dane.py::test_w_kodzie_silnika_nie_ma_liczb_gry - Ass...
+FAILED testy/rdzen/test_lista_bledow.py::test_zakup_ponizej_progu_amortyzacji_ostrzega_o_karcie
+
+real	4m28.116s
+user	0m0.233s
+sys	0m0.405s

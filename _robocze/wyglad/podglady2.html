@@ -1,0 +1,1007 @@
+<meta charset="utf-8">
+<title>Wygląd LUKRUM 2</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600&family=Manrope:wght@600;800&family=Monoton&family=Nunito:wght@400;700&family=Oswald:wght@500;600&family=Patrick+Hand&display=swap">
+<style>
+/* Układ: sticky pasek z przełącznikiem motywu, trzy pytania (każda opcja = para podglądów jasny/ciemny), podsumowanie na dole */
+:root{
+  --bg:#eef0ec; --surface:#ffffff; --fg:#1b1d1a; --muted:#596056; --line:#d5d9d0;
+  --accent:#b3261e; --accent-soft:#f7dfdc;
+  --f-head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --f-body:Inter,'Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1122; --surface:#151d36; --fg:#eaeefc; --muted:#a3acc9; --line:#2b3760;
+  --accent:#ff7a6e; --accent-soft:#3a2233; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1122; --surface:#151d36; --fg:#eaeefc; --muted:#a3acc9; --line:#2b3760;
+  --accent:#ff7a6e; --accent-soft:#3a2233; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55}
+.wrap{max-width:1240px;margin:0 auto;padding-block:28px 120px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-head);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:18px;font-weight:600}
+.brew{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.pasek{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);
+  padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));
+  display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.przel{display:inline-flex;border:1.5px solid var(--fg);border-radius:999px;overflow:hidden}
+.przel button{font:600 13.5px var(--f-body);padding:7px 16px;border:0;background:transparent;color:var(--fg);cursor:pointer}
+.przel button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wstep{display:grid;gap:14px;max-width:74ch;margin:28px 0 36px}
+.wstep p{margin:0;color:var(--muted)}
+section.pyt{display:grid;gap:18px;padding-block:34px;border-top:1px solid var(--line)}
+section.pyt>header{display:grid;gap:6px;max-width:74ch}
+section.pyt>header p{margin:0;color:var(--muted)}
+.opcje{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.opcja{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  display:flex;flex-direction:column;min-width:0;transition:box-shadow .2s,border-color .2s}
+.opcja[data-wybrana="tak"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.para{display:grid;gap:10px;padding:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}
+.podglad{position:relative;display:block;padding:0;border:0;background:#000;cursor:zoom-in;width:100%;border-radius:8px;overflow:hidden}
+.podglad svg{display:block;width:100%;height:auto}
+.podglad .lupa{position:absolute;right:10px;top:10px;font:600 12px var(--f-body);color:#fff;
+  background:rgba(0,0,0,.55);padding:4px 9px;border-radius:999px;opacity:.85}
+.podglad .et{position:absolute;left:10px;bottom:10px;font:600 11px var(--f-body);letter-spacing:.06em;text-transform:uppercase;
+  color:#fff;background:rgba(0,0,0,.6);padding:3px 9px;border-radius:999px}
+.opis{display:grid;gap:8px;padding:6px 18px 18px;flex:1;align-content:start}
+.opis p{margin:0;color:var(--muted);font-size:14.5px;max-width:90ch}
+.tytul{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent)}
+.wybierz{justify-self:start;margin-top:6px;font:600 14px var(--f-body);padding:9px 16px;border-radius:8px;cursor:pointer;
+  border:1.5px solid var(--fg);background:transparent;color:var(--fg)}
+.wybierz:hover{background:var(--fg);color:var(--bg)}
+.wybierz[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.podpowiedz{margin:0;font-size:13.5px;color:var(--muted)}
+h3.pod{font-size:20px;margin-top:10px}
+
+/* przejście mapa -> budynek -> wnętrze */
+.demobox{padding:10px 10px 0;display:grid;gap:10px}
+.sterowanie{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sterowanie .przel button{padding:6px 14px}
+.btn{font:600 14px var(--f-body);padding:8px 16px;border-radius:999px;border:1.5px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer}
+.btn.dr{background:transparent;color:var(--fg)}
+.demo3{max-width:900px;margin-inline:auto;position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#05070f;width:100%}
+.demo3 .l{position:absolute;inset:0}
+.demo3 .l svg{display:block;width:100%;height:100%}
+.l-mapa{transform-origin:49.4% 53.3%;transition:transform 1.1s cubic-bezier(.65,0,.3,1),opacity .6s ease .55s}
+.l-fas{opacity:0;transform:scale(.55);transform-origin:60% 66%;transition:transform 1s cubic-bezier(.3,0,.2,1) .35s,opacity .5s ease .5s}
+.l-wn{opacity:0;transform:scale(1.12);pointer-events:none;transition:transform .8s ease,opacity .6s ease .1s}
+.demo3[data-w="A"][data-faza="zblizenie"] .l-mapa,.demo3[data-w="A"][data-faza="drzwi"] .l-mapa,.demo3[data-w="A"][data-faza="wnetrze"] .l-mapa{transform:scale(6);opacity:0}
+.demo3[data-w="A"][data-faza="zblizenie"] .l-fas,.demo3[data-w="A"][data-faza="drzwi"] .l-fas{opacity:1;transform:none}
+.demo3[data-w="A"][data-faza="wnetrze"] .l-fas{opacity:0;transform:scale(2.6);transition:transform .8s ease,opacity .45s ease}
+.demo3[data-w="A"][data-faza="wnetrze"] .l-wn{opacity:1;transform:none}
+.drzwi{transform-box:fill-box;transform-origin:0% 50%;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+.demo3[data-faza="drzwi"] .drzwi,.demo3[data-faza="wnetrze"] .drzwi{transform:scaleX(.1)}
+.demo3[data-w="B"] .l{transition:none}
+.demo3[data-w="B"][data-baza="wn"] .l-mapa{opacity:0}
+.demo3[data-w="B"][data-baza="wn"] .l-wn{opacity:1;transform:none}
+.zaciem{position:absolute;inset:0;background:#05070f;opacity:0;display:grid;place-items:center;pointer-events:none;transition:opacity .35s ease}
+.zaciem span{font:400 clamp(20px,4vw,40px) 'Patrick Hand',cursive;color:#f6e7c1;letter-spacing:.06em}
+.demo3[data-w="B"][data-faza="zaciem"] .zaciem{opacity:1;transition:opacity .15s ease}
+.demo3.stat[data-faza="zaciem"] .zaciem{opacity:.85}
+.demo3.stat .l,.demo3.stat .drzwi,.demo3.stat .zaciem{transition:none!important}
+.demo3.wroc .l-mapa,.demo3.wroc .l-fas,.demo3.wroc .l-wn{transition:transform .5s ease,opacity .4s ease}
+.punkt3{position:absolute;left:49.4%;top:53.3%;width:15%;height:20%;transform:translate(-50%,-50%);border-radius:50%;cursor:pointer;
+  border:2.5px dashed #b23a2e;background:rgba(255,240,200,.15);animation:puls-p 1.8s ease-in-out infinite;padding:0}
+.punkt3 span{position:absolute;left:50%;top:100%;transform:translateX(-50%);white-space:nowrap;font:700 12px Nunito,sans-serif;
+  background:#b23a2e;color:#fff;padding:2px 8px;border-radius:999px;margin-top:2px}
+.demo3:not([data-faza="mapa"]) .punkt3{display:none}
+.demo3[data-w="B"][data-baza="wn"] .punkt3{display:none}
+@keyframes puls-p{50%{transform:translate(-50%,-50%) scale(1.1)}}
+.wroc-b{position:absolute;left:10px;top:10px;font:700 13px Nunito,sans-serif;color:#3b2a1e;background:rgba(253,246,227,.95);
+  border:1.5px solid #3b2a1e;border-radius:999px;padding:6px 12px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease .6s}
+.demo3[data-faza="wnetrze"] .wroc-b{opacity:1;pointer-events:auto}
+.demo3.stat .wroc-b{transition:none}
+.film{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));padding:0 10px 10px}
+.film figure{margin:0;display:grid;gap:4px}
+.film figcaption{font-size:12.5px;color:var(--muted)}
+.minis{display:grid;gap:22px}
+.mini{display:grid;gap:8px}
+.mini h4{margin:0;font:600 15px var(--f-body)}
+.mini p{margin:0;color:var(--muted);font-size:14px}
+.mini .para{padding:0}
+
+.puls{transform-box:fill-box;transform-origin:center;animation:puls 2s ease-out infinite}
+@keyframes puls{from{transform:scale(.6);opacity:.55}to{transform:scale(2.1);opacity:0}}
+@media (prefers-reduced-motion: reduce){
+  .puls,.punkt3{animation:none}
+  .l-mapa,.l-fas,.l-wn,.drzwi,.zaciem,.wroc-b{transition:none!important}
+}
+
+
+/* panel gości */
+.panel{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.panel strong{font:800 15px var(--f-head)}
+.panel label{display:inline-flex;gap:6px;align-items:center;font-size:14px;cursor:pointer}
+.panel input{width:17px;height:17px;accent-color:var(--accent)}
+.panel .przel button{padding:6px 14px}
+.info{margin:0;min-height:1.5em;font-size:14px;color:var(--fg)}
+.klik{cursor:pointer}.klik .ob{fill:rgba(255,230,150,0);stroke:none}
+.klik:hover .ob,.klik:focus .ob{fill:rgba(255,230,150,.2);stroke:#d9a531;stroke-width:3;stroke-dasharray:8 5}
+.klik:focus{outline:none}
+/* lekkie animacje wnętrz */
+@keyframes wejdz{from{transform:translateX(-70px);opacity:0}to{transform:none;opacity:1}}
+.wchodzi{animation:wejdz 1.1s ease-out both}
+@keyframes paruj{from{transform:translateY(0) scale(.8);opacity:.6}to{transform:translateY(-30px) scale(1.5);opacity:0}}
+.para-a{transform-box:fill-box;transform-origin:center;animation:paruj 2.4s ease-out infinite}
+@keyframes wahadlo{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
+.wahadlo{animation:wahadlo 1.6s ease-in-out infinite alternate}
+@keyframes mruga{0%,88%,100%{opacity:1}90%{opacity:.3}92%{opacity:1}95%{opacity:.5}97%{opacity:1}}
+.mruga{animation:mruga 5s infinite}
+@keyframes jedzie{from{transform:translateX(0)}to{transform:translateX(-26px)}}
+.jedzie{animation:jedzie 3.6s ease-in-out infinite alternate}
+@media (prefers-reduced-motion: reduce){.wchodzi,.para-a,.wahadlo,.mruga,.jedzie{animation:none!important}}
+
+/* podsumowanie */
+.podsum{display:grid;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;max-width:760px}
+.podsum ol{margin:0;padding-left:22px;display:grid;gap:4px}
+.podsum li b{font-weight:600}
+.podsum .brak{color:var(--muted);font-style:italic}
+.podsum label{font-weight:600;font-size:14px}
+.podsum textarea{width:100%;min-height:80px;font:15px var(--f-body);padding:10px 12px;border-radius:8px;border:1px solid var(--line);
+  background:var(--bg);color:var(--fg);resize:vertical}
+.podsum textarea:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+.podsum .rzad{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.podsum pre{margin:0;white-space:pre-wrap;font:13px/1.5 ui-monospace,Consolas,monospace;background:var(--bg);border:1px solid var(--line);
+  border-radius:8px;padding:12px;user-select:all}
+.status{font-size:13.5px;color:var(--muted)}
+
+/* powiększenie */
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(10,10,10,.88);display:grid;place-items:center;
+  padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lightbox svg{width:min(100%,1500px);height:auto;max-height:100%;display:block}
+.lightbox p{position:absolute;top:max(12px,env(safe-area-inset-top,0px));left:0;right:0;text-align:center;margin:0;color:#ddd;font-size:13px}
+</style>
+
+<div class="pasek"><span class="brew">LUKRUM · wygląd 2 · etap 1½</span>
+  <div class="przel" role="group" aria-label="Motyw strony"><button type="button" data-m="light" aria-pressed="false">Jasny</button><button type="button" data-m="dark" aria-pressed="false">Ciemny</button></div></div>
+<div class="wrap">
+  <div class="wstep">
+    <h1>Wygląd LUKRUM, drugie podejście</h1>
+    <p>Wiemy już, że chcemy płaską mapę z budynkami-ikonami, wejście do środka oraz jasny i ciemny tryb. Teraz trzy pytania. Przy każdej opcji widać oba tryby obok siebie: po lewej jasny, po prawej „Lublin nocą”. Przełącznik na górze zmienia tylko wygląd tej strony.</p>
+    <p>Wnętrza wzięły pomysł z gier o obsłudze klientów przy ladzie, ale postacie, grafika i układ są nasze. Liczby i teksty to przykłady. Kliknij podgląd, żeby go powiększyć.</p>
+  </div>
+
+  <section class="pyt" id="prl">
+    <header><span class="brew">Pytanie 1 z 3</span><h2>Ile PRL-u?</h2>
+      <p>Ekran główny jest zawsze czytelny jak apka (karty, kafelki z liczbami), a mapa wygląda jak plansza z papieru. Różni się tylko ilość PRL-u.</p></header>
+    <div class="opcje" data-pyt="prl"></div>
+  </section>
+
+  <section class="pyt" id="wnetrze">
+    <header><span class="brew">Pytanie 2 z 3</span><h2>Jaką rolę ma wnętrze kebaba?</h2>
+      <p>Widok lady z boku. Ty jesteś właścicielem i patrzysz z boku, a za ladą stoi pracownik. Przy ladzie bywają postacie z lektur, z imionami (Ignacy Rzecki, Józio, pani Dulska), obok anonimowych gości. Opcje A i C da się łączyć: goście komentują wyniki, a co jakiś czas ktoś staje z ofertą albo kłopotem.</p></header>
+    <div class="panel" id="panel" role="group" aria-label="Co mówią goście">
+      <strong>Co mówią goście</strong>
+      <label><input type="checkbox" data-r="cena" checked> Opinie o cenie i smaku</label>
+      <label><input type="checkbox" data-r="plotki" checked> Plotki z miasta</label>
+      <label><input type="checkbox" data-r="prop" checked> Propozycje i kłopoty</label>
+      <label><input type="checkbox" data-r="wos" checked> Zaczepki WOS</label>
+      <span style="display:inline-flex;gap:8px;align-items:center"><strong>Lokal</strong><span class="przel" role="group" aria-label="Rozwój lokalu"><button type="button" data-l="0" aria-pressed="true">Na start</button><button type="button" data-l="1" aria-pressed="false">Po rozbudowie</button></span></span>
+    </div>
+    <div class="opcje" data-pyt="wnetrze"></div>
+  </section>
+
+  <section class="pyt" id="wejscie">
+    <header><span class="brew">Pytanie 3 z 3</span><h2>Jak wchodzimy do środka?</h2>
+      <p>Kliknij „Odtwórz” albo pulsujący kebab na mapie. Pod animacją są klatki przejścia, a niżej wnętrza innych budynków w tym samym stylu.</p></header>
+    <div class="opcje" data-pyt="wejscie"></div>
+    <h3 class="pod">Wnętrza innych budynków</h3>
+    <div class="minis" id="minis"></div>
+  </section>
+
+  <section class="pyt" id="podsumowanie">
+    <header><span class="brew">Na koniec</span><h2>Twoje wybory</h2></header>
+    <div class="podsum">
+      <ol id="lista"></ol>
+      <div style="display:grid;gap:6px"><label for="uwagi">Uwagi (opcjonalnie)</label>
+        <textarea id="uwagi" placeholder="Np. wariant B, ale bez neonów nad konkurencją; mini-gra tylko w szczycie"></textarea></div>
+      <pre id="tekst"></pre>
+      <div class="rzad"><button class="wybierz" type="button" id="kopiuj" aria-pressed="false">Kopiuj do schowka</button><span class="status" id="status"></span></div>
+    </div>
+  </section>
+</div>
+
+<div class="lightbox" id="lightbox" hidden><p>Kliknij albo naciśnij Esc, żeby zamknąć</p><div id="lbTresc" style="display:contents"></div></div>
+
+<script>
+const F={hand:"'Patrick Hand','Comic Sans MS',cursive",nunito:"Nunito,'Segoe UI',sans-serif",mono:"'Courier Prime','Courier New',monospace",
+  osw:"Oswald,'Arial Narrow',sans-serif",neon:"Monoton,Impact,sans-serif",inter:"Inter,'Segoe UI',sans-serif",man:"Manrope,'Segoe UI',sans-serif",
+  silk:"Silkscreen,'Courier New',monospace",vt:"VT323,'Courier New',monospace",bric:"'Bricolage Grotesque','Segoe UI',sans-serif"};
+/* ---------- uproszczony plan Lublina (współrzędne mapy 640×448) ---------- */
+const PLAN={
+  dz:[
+    {n:'Czechów',p:[[250,24],[430,20],[446,128],[338,146],[246,118]],l:[330,72]},
+    {n:'Kalinowszczyzna',p:[[446,40],[600,52],[620,178],[490,196],[446,128]],l:[546,84]},
+    {n:'Śródmieście',p:[[246,118],[338,146],[446,128],[490,196],[466,250],[372,282],[248,262]],l:[300,134]},
+    {n:'Sławin',p:[[60,96],[246,118],[248,262],[70,250],[40,170]],l:[104,128]},
+    {n:'Czuby',p:[[70,250],[248,262],[372,282],[296,360],[130,392],[56,320]],l:[190,368]},
+    {n:'Dziesiąta',p:[[372,282],[466,250],[486,404],[300,412],[296,360]],l:[412,394]},
+    {n:'Bronowice',p:[[490,196],[620,178],[630,380],[486,404],[466,250]],l:[580,236]}
+  ],
+  rzeka:{s:[250,448],segs:[[300,400,360,350,400,286],[420,246,436,222,470,206],[520,186,580,166,640,156]]},
+  czechowka:{s:[40,140],segs:[[140,160,230,150,300,166],[350,176,400,196,452,212]]},
+  zalew:[230,446,80,26],
+  parki:[[250,168,24,14,'Ogród Saski',250,149],[430,316,28,16,'Park Ludowy',430,295]],
+  drogi:[
+    [[30,186],[150,206],[250,226],[330,236],[372,214]],
+    [[220,20],[290,104],[380,158]],
+    [[372,206],[384,120],[392,20]],
+    [[250,226],[180,282],[80,400]],
+    [[236,228],[250,320],[266,412]],
+    [[420,240],[540,276],[630,300]],
+    [[372,214],[420,240]]
+  ],
+  miejsca:[
+    {k:'sanepid',x:506,y:112,n:'Sanepid',lx:506,ly:127},
+    {k:'zamek',x:420,y:182,n:'Zamek',lx:452,ly:160,a:'start'},
+    {k:'umcs',x:130,y:186,n:'UMCS',lx:130,ly:201},
+    {k:'biuro',x:200,y:200,n:'J.K.Ś.',lx:200,ly:215},
+    {k:'brama',x:372,y:206,n:'Brama Krakowska',lx:386,ly:201,a:'start'},
+    {k:'kebab',x:316,y:236,n:'Twój kebab',lx:316,ly:252},
+    {k:'bank',x:262,y:262,n:'Soplicowo',lx:262,ly:277},
+    {k:'rywal',x:362,y:286,n:'Konkurencja',lx:362,ly:301},
+    {k:'hurt',x:548,y:306,n:'Hurtownia',lx:548,ly:321},
+    {k:'rywal',x:200,y:322,n:'Konkurencja',lx:200,ly:337},
+    {k:'arena',x:456,y:358,n:'Arena',lx:456,ly:375}
+  ]
+};
+const D={tydz:'Tydzień 3 z 4',kasa:'48 320 zł',wynik:'612 pkt',czas:'12:40',
+  rows:[['Goście w tygodniu','412'],['Ocena gości','4,2'],['Nastrój zespołu','71/100'],['Pomyłki w szczycie','6']],
+  btn:['Menu i ceny','Grafik','Zamówienia'],skroty:['Twój lokal','Bank','Hurtownia','Kadry'],
+  list:['„Za Gierka kolejka stała','do samego rogu. U ciebie','dziś o czternastej pusto.','Przemyśl ceny.”']};
+
+/* ---------- pomocnicze ---------- */
+const pts=p=>p.map(q=>q.map(v=>+v.toFixed(1)).join(',')).join(' ');
+const curveD=c=>'M'+c.s.join(' ')+c.segs.map(g=>' C'+g.join(' ')).join('');
+const lineD=l=>'M'+l.map(q=>q.join(' ')).join(' L');
+function shade(hex,f){const n=parseInt(hex.slice(1),16);let r=n>>16,g=n>>8&255,b=n&255;const t=f<0?0:255,p=Math.abs(f);
+  r=Math.round((t-r)*p+r);g=Math.round((t-g)*p+g);b=Math.round((t-b)*p+b);return '#'+((1<<24)|(r<<16)|(g<<8)|b).toString(16).slice(1);}
+function bez(c){const out=[c.s];let [x0,y0]=c.s;for(const [x1,y1,x2,y2,x3,y3] of c.segs){for(let i=1;i<=40;i++){const t=i/40,u=1-t;
+  out.push([u*u*u*x0+3*u*u*t*x1+3*u*t*t*x2+t*t*t*x3,u*u*u*y0+3*u*u*t*y1+3*u*t*t*y2+t*t*t*y3]);}x0=x3;y0=y3;}return out;}
+function distPoly(px,py,pl){let m=1e9;for(let i=1;i<pl.length;i++){const [ax,ay]=pl[i-1],[bx,by]=pl[i];const dx=bx-ax,dy=by-ay;
+  let t=((px-ax)*dx+(py-ay)*dy)/(dx*dx+dy*dy||1);t=Math.max(0,Math.min(1,t));const ex=ax+t*dx-px,ey=ay+t*dy-py;m=Math.min(m,ex*ex+ey*ey);}return Math.sqrt(m);}
+function inPoly(x,y,p){let c=false;for(let i=0,j=p.length-1;i<p.length;j=i++){const [xi,yi]=p[i],[xj,yj]=p[j];
+  if(((yi>y)!=(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi))c=!c;}return c;}
+const T=(x,y,t,a)=>`<text x="${x}" y="${y}" ${a}>${t}</text>`;
+const svg=(w,h,lab,inner)=>`<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${lab}">${inner}</svg>`;
+const PAL_LUB={paper:'#f4eedd',dz:['#efe3c2','#e9dcb6','#f2e7c8','#ebdfba','#efe2bf','#e6d8ae','#eee2c0'],dzStroke:'#c9a34a',
+  water:'#5f9cc4',waterEdge:'#3f7aa3',park:'#8fb867',tree:'#4f7f34',road:'#fffaf0',roadEdge:'#d4b56a',ink:'#3b2a1e',halo:'#f4eedd',
+  line:'#3b2a1e',wall:'#f8ecd0',wall2:'#e9d6a8',roof:'#b8242c',red:'#b8242c',cream:'#fffaf0',gold:'#d9a426',green:'#6b9a45',
+  win:'#9cc8e0',rival:'#4d7ea8',brick:'#b5654a',dome:'#3f5b4a',dzLabel:'#a07f3a',tlo:'#ddd5c0'};
+const PAL_NOC={paper:'#0f1526',dz:['#19223b','#1c2642','#172038','#1e2844','#1a233d','#18213a','#1d2741'],dzStroke:'#2d3a60',
+  water:'#0f3d5e',waterEdge:'#1f6a96',park:'#12301f',tree:'#1f5a36',road:'#27314e',roadEdge:'#3b4a78',ink:'#e8e4ff',halo:'#0f1526',
+  line:'#070b16',wall:'#2a3454',wall2:'#232c48',roof:'#ff4f8b',red:'#ff4f8b',cream:'#f6e9ff',gold:'#ffc857',green:'#3fd18a',
+  win:'#ffd36b',rival:'#3de0e6',brick:'#5b2e4a',dome:'#3de0e6',dzLabel:'#7d88b8'};
+/* ---------- warstwy wspólne ---------- */
+function warstwy(P,o={}){
+  let s='';
+  PLAN.dz.forEach((d,i)=>{
+    s+=`<polygon points="${pts(d.p)}" fill="${P.dz[i%P.dz.length]}" stroke="${P.dzStroke}" stroke-width="${o.dzW??1.4}"${o.dzDash?` stroke-dasharray="${o.dzDash}"`:''} stroke-linejoin="round"/>`;
+    if(o.hatch)s+=`<polygon points="${pts(d.p)}" fill="url(#${o.hatch})"/>`;
+  });
+  const [zx,zy,zrx,zry]=PLAN.zalew,ew=o.edgeW??2,rw=o.rzW??11,cw=o.czW??4;
+  s+=`<ellipse cx="${zx}" cy="${zy}" rx="${zrx}" ry="${zry}" fill="${P.water}" stroke="${P.waterEdge}" stroke-width="${ew}"/>`;
+  for(const [d,w] of [[curveD(PLAN.czechowka),cw],[curveD(PLAN.rzeka),rw]]){
+    if(ew>0)s+=`<path d="${d}" fill="none" stroke="${P.waterEdge}" stroke-width="${w+ew*2}" stroke-linecap="round"/>`;
+    s+=`<path d="${d}" fill="none" stroke="${P.water}" stroke-width="${w}" stroke-linecap="round"/>`;
+  }
+  PLAN.parki.forEach(([x,y,rx,ry])=>{
+    s+=`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${P.park}"${o.parkStroke?` stroke="${o.parkStroke}"`:''}/>`;
+    if(o.drzewa)[[-12,-3],[-2,-7],[10,-4],[-7,5],[6,5],[15,3]].forEach(([dx,dy])=>s+=`<circle cx="${x+dx*rx/26}" cy="${y+dy*ry/15}" r="3.6" fill="${P.tree}"/>`);
+  });
+  const w=o.drW??6,e=o.drEdge??2;
+  PLAN.drogi.forEach(l=>s+=`<path d="${lineD(l)}" fill="none" stroke="${P.roadEdge}" stroke-width="${w+e*2}" stroke-linecap="round" stroke-linejoin="round"/>`);
+  PLAN.drogi.forEach(l=>s+=`<path d="${lineD(l)}" fill="none" stroke="${P.road}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`);
+  return s;
+}
+/* ---------- budynki rysowane (plansza i mapy płaskie) ---------- */
+function budA(k,x,y,P){
+  const o=`stroke="${P.line}" stroke-width="1.4" stroke-linejoin="round"`;
+  const cien=r=>`<ellipse cx="0" cy="1.5" rx="${r}" ry="3.5" fill="#000" opacity=".16"/>`;
+  let g='';
+  const kebab=(markiza,szyld,flaga)=>{
+    let a=cien(22)+`<rect x="-18" y="-22" width="36" height="22" fill="${P.wall}" ${o}/>`+
+      `<rect x="-20" y="-31" width="40" height="10" fill="${P.line}" ${o}/>`+
+      `<text x="0" y="-23.2" font-family="${F.hand}" font-size="9" fill="${P.gold}" text-anchor="middle" letter-spacing="1.5">${szyld}</text>`;
+    for(let i=0;i<6;i++)a+=`<rect x="${-18+i*6}" y="-21" width="6" height="6" fill="${i%2?P.cream:markiza}"/>`;
+    a+=`<rect x="-18" y="-21" width="36" height="6" fill="none" ${o}/>`+
+      `<rect x="-13" y="-12" width="12" height="8" fill="${P.win}" ${o}/><rect x="4" y="-12" width="8" height="12" fill="${P.line}"/>`;
+    if(flaga)a+=`<line x1="17" y1="-31" x2="17" y2="-54" stroke="${P.line}" stroke-width="1.6"/>`+
+      `<path d="M17 -54 L36 -49 L17 -43 Z" fill="${P.red}" ${o}/>`+
+      `<text x="24" y="-46" font-family="${F.nunito}" font-weight="700" font-size="7" fill="${P.cream}" text-anchor="middle">TY</text>`;
+    return a;
+  };
+  switch(k){
+    case 'kebab':g=kebab(P.red,'KEBAB',true);break;
+    case 'rywal':g=`<g transform="scale(.78)">${kebab(P.rival,'BAR',false)}</g>`;break;
+    case 'bank':g=cien(18)+`<rect x="-18" y="-3" width="36" height="3" fill="${P.wall2}" ${o}/>`+
+      [-13,-6,1,8].map(cx=>`<rect x="${cx}" y="-21" width="5" height="18" fill="${P.cream}" ${o}/>`).join('')+
+      `<rect x="-17" y="-25" width="34" height="4" fill="${P.wall2}" ${o}/><path d="M-18 -25 L0 -36 L18 -25 Z" fill="${P.cream}" ${o}/>`+
+      `<circle cx="0" cy="-29" r="2.6" fill="${P.gold}"/>`;break;
+    case 'biuro':g=cien(13)+`<rect x="-10" y="-34" width="20" height="34" fill="${P.wall2}" ${o}/><rect x="-12" y="-37" width="24" height="4" fill="${P.roof}" ${o}/>`+
+      [[-6,-29],[2,-29],[-6,-21],[2,-21]].map(([wx,wy])=>`<rect x="${wx}" y="${wy}" width="4" height="5" fill="${P.win}"/>`).join('')+
+      `<rect x="-8" y="-13" width="16" height="5" fill="${P.gold}" ${o}/><rect x="-3" y="-7" width="6" height="7" fill="${P.line}"/>`;break;
+    case 'hurt':g=cien(25)+`<rect x="-22" y="-16" width="44" height="16" fill="${P.wall2}" ${o}/>`+
+      `<path d="M-22 -16 L-22 -25 L-11 -16 L-11 -25 L0 -16 L0 -25 L11 -16 L11 -25 L22 -16 Z" fill="${P.roof}" ${o}/>`+
+      `<rect x="-8" y="-11" width="16" height="11" fill="${P.line}" opacity=".85"/><path d="M-8 -7 H8 M-8 -3 H8" stroke="${P.wall2}" stroke-width="1"/>`;break;
+    case 'sanepid':g=cien(15)+`<rect x="-12" y="-18" width="24" height="18" fill="${P.wall}" ${o}/><path d="M-15 -17 L0 -29 L15 -17 Z" fill="${P.green}" ${o}/>`+
+      `<circle cx="-5" cy="-9" r="3.5" fill="${P.cream}" ${o}/><rect x="2" y="-11" width="6" height="11" fill="${P.line}"/>`;break;
+    case 'brama':g=cien(13)+`<rect x="-9" y="-34" width="18" height="34" fill="${P.brick}" ${o}/>`+
+      `<rect x="-7" y="-46" width="14" height="12" fill="${P.cream}" ${o}/><path d="M-7 -46 Q0 -60 7 -46 Z" fill="${P.dome}" ${o}/>`+
+      `<line x1="0" y1="-56" x2="0" y2="-64" stroke="${P.line}" stroke-width="1.4"/><circle cx="0" cy="-27" r="3.2" fill="${P.cream}" ${o}/>`+
+      `<path d="M-5 0 V-9 A5 5 0 0 1 5 -9 V0 Z" fill="${P.line}"/>`;break;
+    case 'zamek':g=cien(26)+`<rect x="-24" y="-18" width="34" height="18" fill="${P.cream}" ${o}/>`+
+      [-24,-18,-12,-6,0,6].map(cx=>`<rect x="${cx}" y="-22" width="4" height="4" fill="${P.cream}" ${o}/>`).join('')+
+      `<path d="M-11 0 V-8 A4 4 0 0 1 -3 -8 V0 Z" fill="${P.line}"/>`+
+      `<rect x="-20" y="-13" width="3" height="5" fill="${P.line}"/><rect x="3" y="-13" width="3" height="5" fill="${P.line}"/>`+
+      `<rect x="11" y="-34" width="14" height="34" fill="#cdb894" ${o}/>`+
+      [11,16,21].map(cx=>`<rect x="${cx}" y="-38" width="4" height="4" fill="#cdb894" ${o}/>`).join('');break;
+    case 'umcs':g=cien(21)+`<rect x="-20" y="-18" width="40" height="18" fill="${P.wall2}" ${o}/>`+
+      [-15,-8,-1,6,13].map(cx=>`<rect x="${cx}" y="-14" width="3" height="10" fill="${P.win}"/>`).join('')+
+      `<line x1="14" y1="-18" x2="14" y2="-30" stroke="${P.line}" stroke-width="1.3"/><path d="M14 -30 L24 -27 L14 -24 Z" fill="${P.green}"/>`;break;
+    case 'arena':g=cien(21)+`<ellipse cx="0" cy="-7" rx="20" ry="9" fill="${P.cream}" ${o}/><ellipse cx="0" cy="-7" rx="12" ry="5" fill="${P.green}" ${o}/>`;break;
+  }
+  return `<g transform="translate(${x},${y})">${g}</g>`;
+}
+function etykiety(P,font,size){
+  let s='';
+  PLAN.miejsca.forEach(m=>{const ty=m.k==='kebab';
+    s+=T(m.lx,m.ly,m.n,`font-family="${font}" font-size="${ty?size+2:size}" ${ty?`font-weight="700"`:''} fill="${ty?P.red:P.ink}" stroke="${P.halo}" stroke-width="3.2" paint-order="stroke" stroke-linejoin="round" text-anchor="${m.a||'middle'}"`);});
+  PLAN.parki.forEach(p=>s+=T(p[5],p[6],p[4],`font-family="${font}" font-size="${size-1}" fill="${P.green}" stroke="${P.halo}" stroke-width="3" paint-order="stroke" text-anchor="middle"`));
+  return s;
+}
+const IKONY={
+  kebab:'M-5 -5 L5 -5 L0 6 Z M-3 -1 H3 M-1.5 2.5 H1.5',rywal:'M-5 -5 L5 -5 L0 6 Z M-3 -1 H3 M-1.5 2.5 H1.5',
+  bank:'M-6 -2 L0 -6 L6 -2 Z M-4.5 -1 V4 M-1.5 -1 V4 M1.5 -1 V4 M4.5 -1 V4 M-6 5.5 H6',
+  biuro:'M-6 -2.5 H6 V5.5 H-6 Z M-2.5 -2.5 V-5 H2.5 V-2.5 M-6 1 H6',
+  hurt:'M-6 -3 L0 -6 L6 -3 V4 L0 7 L-6 4 Z M-6 -3 L0 0 L6 -3 M0 0 V7',
+  sanepid:'M-4.5 -5 H4.5 V6 H-4.5 Z M-2 -6.5 H2 V-4 H-2 Z M-2.5 1 L-0.5 3 L3 -1',
+  brama:'M-3.5 6 V-2 L0 -7 L3.5 -2 V6 Z M-1.5 6 V2.5 A1.5 1.5 0 0 1 1.5 2.5 V6',
+  zamek:'M-6.5 6 V-4.5 H-4 V-2 H-1.5 V-4.5 H1.5 V-2 H4 V-4.5 H6.5 V6 Z M-1.5 6 V3 H1.5 V6',
+  umcs:'M-7 -2 L0 -5.5 L7 -2 L0 1.5 Z M-4 0 V3.5 Q0 6 4 3.5 V0',
+  arena:'M-6.5 0 A6.5 4 0 1 0 6.5 0 A6.5 4 0 1 0 -6.5 0 Z M-3.5 0 A3.5 2 0 1 0 3.5 0 A3.5 2 0 1 0 -3.5 0',
+  kadry:'M-5 6 Q-5 1 0 1 Q5 1 5 6 M0 -1 A3 3 0 1 0 0 -7 A3 3 0 1 0 0 -1'
+};
+const KOL_C={kebab:'#d23b30',rywal:'#8b93a1',bank:'#b8860b',biuro:'#6d5bd0',hurt:'#14857c',sanepid:'#2f9e44',brama:'#3b4252',zamek:'#3b4252',umcs:'#3b4252',arena:'#3b4252'};
+
+/* =====================================================================
+   NOWE: palety interfejsu (j = jasny, c = ciemny „Lublin nocą”)
+   ===================================================================== */
+const U={
+  j:{bg:'#eef0ec',sf:'#ffffff',sf2:'#f1f3ef',fg:'#1b1d1a',mu:'#5d6559',ln:'#d5d9d0',ac:'#b3261e',acs:'#f7dfdc',pill:'#e8ebe5',gold:'#c98f10'},
+  c:{bg:'#0a0f1f',sf:'#131b33',sf2:'#1a2442',fg:'#eaeefc',mu:'#a1abcc',ln:'#2a3760',ac:'#ff7a6e',acs:'#3a2233',pill:'#1c2648',gold:'#ffc857'}
+};
+/* palety wnętrz */
+const IN={
+  j:{top:'#cfe3d8',tile:'#f4efe2',tline:'#cfc6ae',rail:'#8a6a45',floor:'#d8cfc0',sp1:'#b9a99a',sp2:'#f2ebdf',wood:'#b07a4b',woodD:'#7a5134',
+     board:'#2f2a26',bt:'#f2ecd9',groove:'#4a423a',ol:'#3b2a1e',metal:'#c3c9cd',metalD:'#7c858b',plate:'#fdf6e3',pt:'#3b2a1e',
+     bub:'#ffffff',bubt:'#26231f',glow:'#ffd36b',glass:'#bfe3f2',ac:'#b3261e',gold:'#d9a531',paper:'#fdf6e3',mu:'#5b4a3a'},
+  c:{top:'#16203a',tile:'#202c4d',tline:'#2e3b66',rail:'#3d4c7a',floor:'#1a2034',sp1:'#2b3454',sp2:'#10152a',wood:'#6b4630',woodD:'#3d281b',
+     board:'#080a12',bt:'#ffe9b0',groove:'#1d2238',ol:'#04060e',metal:'#59657a',metalD:'#323b4c',plate:'#2b3558',pt:'#ffe9b0',
+     bub:'#1e2a4d',bubt:'#f4f1ff',glow:'#ffd36b',glass:'#2d5775',ac:'#ff7a6e',gold:'#ffc857',paper:'#cfc7b0',mu:'#b9c0dd'}
+};
+const rc=(I,x,y,w,h,f,rx=0,sw=2)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${I.ol}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+const glowF=(id)=>`<filter id="${id}n" x="-40%" y="-80%" width="180%" height="260%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>`;
+
+/* ---------- mapa do ekranu głównego (A, B, C) ---------- */
+function miniBar(id,t){
+  /* miniatura wnętrza dawnego baru mlecznego (wariant C): kafelki, lastryko, tablica z literkami */
+  const I=IN[t];
+  let s=`<g transform="translate(12,318)"><defs><clipPath id="${id}q"><rect width="142" height="92" rx="10"/></clipPath>
+    <pattern id="${id}kq" width="14" height="11" patternUnits="userSpaceOnUse"><rect width="14" height="11" fill="${I.tline}"/><rect x=".6" y=".6" width="12.8" height="9.8" rx="1" fill="${I.tile}"/></pattern></defs>
+    <rect width="142" height="92" rx="10" fill="${I.tile}" stroke="${I.ol}" stroke-width="1.5"/>
+    <g clip-path="url(#${id}q)"><rect width="142" height="52" fill="url(#${id}kq)"/><rect y="52" width="142" height="40" fill="${I.floor}"/>`;
+  [[10,60],[34,78],[58,66],[84,82],[110,64],[126,80],[96,70],[20,86]].forEach(([x,y],i)=>s+=`<circle cx="${x}" cy="${y}" r="${1+i%2}" fill="${i%2?I.sp1:I.sp2}"/>`);
+  s+=`<rect x="16" y="8" width="80" height="30" rx="2" fill="${I.board}" stroke="${I.wood}" stroke-width="3"/>`+
+    T(56,20,'ZUPA DNIA   4 zł',`font-family="${F.mono}" font-weight="700" font-size="7.5" fill="${I.bt}" text-anchor="middle"`)+
+    T(56,30,'PIEROGI    12 zł',`font-family="${F.mono}" font-weight="700" font-size="7.5" fill="${I.bt}" text-anchor="middle"`)+
+    `<rect x="98" y="30" width="34" height="22" rx="2" fill="${I.metal}" stroke="${I.ol}"/><circle cx="115" cy="28" r="6" fill="${I.metalD}"/>`+
+    `<rect x="0" y="50" width="142" height="14" fill="${I.wood}" stroke="${I.ol}"/><rect x="0" y="64" width="142" height="28" fill="${I.woodD}"/></g>`+
+    `<rect y="68" width="142" height="24" fill="${I.bub}" opacity=".0"/>`+
+    T(8,86,'Lokal po wujku: dawny bar mleczny',`font-family="${F.inter}" font-weight="600" font-size="7.6" fill="#fff"`)+'</g>';
+  return s;
+}
+function mapaQ1(id,P,t,w){
+  const modern=w==='C',night=t==='c',u=U[t];
+  let s=`<rect width="640" height="448" fill="${P.paper}"/>`;
+  s+=`<g${modern?'':` filter="url(#${id}w)"`}>${warstwy(P,{dzDash:modern?null:'6 4',dzW:modern?2.2:1.4,drzewa:true,drW:modern?7:6})}</g>`;
+  PLAN.dz.forEach(d=>{
+    let [x,y]=d.l;
+    if(w==='B'){
+      if(d.n==='Kalinowszczyzna'){x+=12;y-=20;}
+      const pw=Math.round(d.n.length*6.6+18);
+      s+=`<g transform="translate(${x},${y})"><rect x="${-pw/2}" y="-9" width="${pw}" height="18" rx="3.5" fill="${night?'#0e2442':'#1f4e79'}" stroke="${night?'#6ec6ff':'#ffffff'}" stroke-width="1.4"${night?` filter="url(#${id}n)"`:''}/>`+
+        `<rect x="${-pw/2+2.5}" y="-6.5" width="${pw-5}" height="13" rx="2" fill="none" stroke="${night?'#6ec6ff':'#ffffff'}" stroke-width=".6" opacity=".7"/>`+
+        T(0,3.6,d.n.toUpperCase(),`font-family="${F.osw}" font-weight="500" font-size="9.5" letter-spacing="1.1" fill="${night?'#d6efff':'#ffffff'}" text-anchor="middle"`)+'</g>';
+    }else s+=T(x,y,d.n.toUpperCase(),`font-family="${F.nunito}" font-weight="700" font-size="10.5" letter-spacing="2.4" fill="${P.dzLabel}" text-anchor="middle" opacity=".95"`);
+  });
+  if(night)PLAN.miejsca.forEach(m=>s+=`<ellipse cx="${m.x}" cy="${m.y-8}" rx="34" ry="16" fill="url(#${id}r)"/>`);
+  [...PLAN.miejsca].sort((a,b)=>a.y-b.y).forEach(m=>s+=budA(m.k,m.x,m.y,P));
+  if(w==='B'){
+    const neon=(x,y,txt,c,wd,cl)=>`<g class="${cl||''}" transform="translate(${x},${y})"><rect x="${-wd/2}" y="-8" width="${wd}" height="15" rx="2.5" fill="${night?'#0a0d1a':'#3a2b24'}" stroke="${c}" stroke-width="1.2"${night?` filter="url(#${id}n)"`:''}/>`+
+      T(0,3,txt,`font-family="${F.neon}" font-size="9" fill="${c}" text-anchor="middle"${night?` filter="url(#${id}n)"`:''}`)+'</g>';
+    const col={kebab:night?'#ff4f8b':'#ff8a7d',rywal:night?'#3de0e6':'#7fd7ff',bank:night?'#ffd36b':'#ffd36b',hurt:night?'#3fd18a':'#9be3b4'};
+    PLAN.miejsca.forEach(m=>{
+      if(m.k==='kebab')s+=neon(m.x-9,m.y-41,'KEBAB',col.kebab,38);
+      else if(m.k==='rywal')s+=neon(m.x,m.y-35,'BAR',col.rywal,26,'mruga');
+      else if(m.k==='bank')s+=neon(m.x,m.y-47,'BANK',col.bank,30);
+      else if(m.k==='hurt')s+=neon(m.x,m.y-36,'HURT',col.hurt,30);
+    });
+  }
+  s+=etykiety(P,F.nunito,11);
+  if(modern)s+=miniBar(id,t);
+  s+=`<g><rect x="596" y="364" width="32" height="64" rx="8" fill="${u.sf}" stroke="${u.ln}"/><line x1="602" y1="396" x2="622" y2="396" stroke="${u.ln}"/>`+
+    T(612,387,'+',`font-family="${F.inter}" font-size="18" fill="${u.fg}" text-anchor="middle"`)+T(612,419,'−',`font-family="${F.inter}" font-size="18" fill="${u.fg}" text-anchor="middle"`)+'</g>';
+  return s;
+}
+
+/* ---------- Pytanie 1: ekran główny 960×540 (w = A | B | C, t = j | c) ---------- */
+function ekranGlowny(id,w,t){
+  const u=U[t],P=t==='j'?PAL_LUB:PAL_NOC,night=t==='c',ox=w==='C'?0:32;
+  let s=`<defs><clipPath id="${id}c"><rect width="640" height="448"/></clipPath>
+    <filter id="${id}w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>
+    ${glowF(id)}
+    <filter id="${id}s" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="-2" dy="0" stdDeviation="5" flood-opacity="${night?.5:.14}"/></filter>
+    <radialGradient id="${id}r"><stop offset="0" stop-color="#ffd36b" stop-opacity=".42"/><stop offset="1" stop-color="#ffd36b" stop-opacity="0"/></radialGradient></defs>`;
+  s+=`<rect width="960" height="540" fill="${u.bg}"/><g transform="translate(0,44)" clip-path="url(#${id}c)">${mapaQ1(id,P,t,w)}</g>`;
+  /* pasek górny */
+  s+=`<rect width="960" height="44" fill="${u.sf}"/><line x1="0" y1="44" x2="960" y2="44" stroke="${u.ln}"/>`;
+  if(w!=='C'){ /* drobny znaczek-logo: emaliowana tabliczka */
+    s+=`<g transform="translate(18,9)"><rect width="30" height="26" rx="4" fill="${night?'#0e2442':'#1f4e79'}" stroke="${night?'#6ec6ff':'#ffffff'}" stroke-width="1.5"/><rect x="2.5" y="2.5" width="25" height="21" rx="2.5" fill="none" stroke="${night?'#6ec6ff':'#ffffff'}" stroke-width=".8" opacity=".8"/>`+
+      T(15,20,'L',`font-family="${F.osw}" font-weight="600" font-size="17" fill="${night?'#d6efff':'#ffffff'}" text-anchor="middle"`)+'</g>';
+  }
+  s+=T(20+ox+(w==='C'?0:0),29,'LUKRUM',`font-family="${F.man}" font-weight="800" font-size="19" letter-spacing=".5" fill="${u.ac}"`);
+  const px=w==='C'?150:176;
+  [[px,112,D.tydz],[px+122,100,D.kasa],[px+232,84,D.wynik]].forEach(([x,wd,tt])=>s+=`<rect x="${x}" y="8" width="${wd}" height="28" rx="14" fill="${u.pill}"/>`+T(x+wd/2,27,tt,`font-family="${F.inter}" font-weight="500" font-size="13" fill="${u.fg}" text-anchor="middle"`));
+  s+=`<rect x="790" y="8" width="154" height="28" rx="14" fill="${u.acs}"/>`+T(867,27,'Decyzje do '+D.czas,`font-family="${F.inter}" font-weight="600" font-size="13" fill="${u.ac}" text-anchor="middle"`);
+  /* karta lokalu */
+  s+=`<g filter="url(#${id}s)"><rect x="640" y="45" width="320" height="447" fill="${u.sf}"/></g>`+
+    `<circle cx="676" cy="88" r="20" fill="${u.acs}"/><g transform="translate(676,88)" fill="none" stroke="${u.ac}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${IKONY.kebab}"/></g>`+
+    T(706,86,'Twój kebab',`font-family="${F.man}" font-weight="800" font-size="20" fill="${u.fg}"`)+T(706,105,'Krakowskie Przedmieście 12',`font-family="${F.inter}" font-size="12.5" fill="${u.mu}"`);
+  const tiles=[['412','Goście w tygodniu'],[`4,2 <tspan fill="${u.gold}">★</tspan>`,'Ocena gości'],[`71<tspan font-size="13" fill="${u.mu}">/100</tspan>`,'Nastrój zespołu'],['6','Pomyłki w szczycie']];
+  tiles.forEach(([v,l],i)=>{const x=656+(i%2)*148,y=124+Math.floor(i/2)*74;
+    s+=`<rect x="${x}" y="${y}" width="140" height="66" rx="12" fill="${u.sf2}"/>`+T(x+14,y+31,v,`font-family="${F.man}" font-weight="800" font-size="21" fill="${u.fg}"`)+T(x+14,y+51,l,`font-family="${F.inter}" font-size="11.5" fill="${u.mu}"`);});
+  s+=`<rect x="656" y="280" width="288" height="38" rx="19" fill="${u.ac}"/>`+T(800,304,'Menu i ceny',`font-family="${F.inter}" font-weight="600" font-size="14" fill="${night?'#2a0b09':'#fff'}" text-anchor="middle"`);
+  ['Grafik zmian','Zamówienia'].forEach((tt,i)=>{const x=656+i*148;s+=`<rect x="${x}" y="326" width="140" height="36" rx="18" fill="${u.sf}" stroke="${u.ln}" stroke-width="1.5"/>`+T(x+70,349,tt,`font-family="${F.inter}" font-weight="600" font-size="13" fill="${u.fg}" text-anchor="middle"`);});
+  /* list od wujka */
+  if(w==='C'){
+    s+=`<rect x="656" y="378" width="288" height="98" rx="12" fill="${night?'#2b2536':'#fff7e6'}" stroke="${night?'#4a3b55':'#f3d9a4'}"/><circle cx="680" cy="402" r="13" fill="${u.gold}"/>`+
+      T(680,407,'W',`font-family="${F.man}" font-weight="800" font-size="13" fill="${night?'#2b2536':'#fff'}" text-anchor="middle"`)+
+      T(702,399,'List od wujka',`font-family="${F.inter}" font-weight="600" font-size="13" fill="${u.fg}"`)+T(702,414,'teraz',`font-family="${F.inter}" font-size="11" fill="${u.mu}"`)+
+      T(670,438,'„Za Gierka kolejka stała do samego rogu.',`font-family="${F.inter}" font-size="12" fill="${u.mu}"`)+T(670,456,'U ciebie dziś o czternastej pusto.”',`font-family="${F.inter}" font-size="12" fill="${u.mu}"`);
+  }else{
+    const pap=night?'#e6dec4':'#f8f2de',ink='#2b2a26';
+    s+=`<g transform="rotate(-.8 800 428)"><rect x="660" y="384" width="288" height="96" rx="2" fill="#000" opacity="${night?.5:.13}"/><rect x="656" y="378" width="288" height="96" rx="2" fill="${pap}" stroke="${night?'#9a927a':'#cdb88a'}"/>`+
+      T(670,398,'LIST OD WUJKA',`font-family="${F.mono}" font-weight="700" font-size="12" letter-spacing="1.5" fill="${ink}"`)+
+      `<line x1="670" y1="405" x2="930" y2="405" stroke="${ink}" stroke-width=".8" stroke-dasharray="2 3"/>`+
+      ['Za Gierka kolejka stała','do samego rogu. U ciebie','dziś o czternastej pusto.','Przemyśl ceny.” — W.'].map((l,i)=>T(670,423+i*15,l,`font-family="${F.mono}" font-size="12" fill="${ink}"`)).join('')+
+      `<g transform="translate(897,433) rotate(-12)" opacity=".85"><circle r="21" fill="none" stroke="#b3261e" stroke-width="2"/><circle r="17" fill="none" stroke="#b3261e" stroke-width=".8"/>`+
+      T(0,-3,'WUJEK',`font-family="${F.osw}" font-weight="600" font-size="8.5" letter-spacing="1" fill="#b3261e" text-anchor="middle"`)+T(0,8,'LUBLIN',`font-family="${F.osw}" font-weight="500" font-size="7.5" letter-spacing="1" fill="#b3261e" text-anchor="middle"`)+'</g></g>';
+  }
+  if(w==='B'){ /* pieczątka po wysłaniu decyzji */
+    const rc2=night?'#ff8a7d':'#c0392b';
+    s+=`<g transform="translate(802,296) rotate(-9)" opacity=".92"><rect x="-96" y="-22" width="192" height="44" rx="4" fill="${u.sf}" fill-opacity=".55" stroke="${rc2}" stroke-width="3.2"/><rect x="-91" y="-17" width="182" height="34" rx="2" fill="none" stroke="${rc2}" stroke-width="1"/>`+
+      T(0,8,'ZATWIERDZONO',`font-family="${F.osw}" font-weight="600" font-size="23" letter-spacing="3" fill="${rc2}" text-anchor="middle"`)+'</g>';
+  }
+  /* dolny pasek */
+  s+=`<rect y="492" width="960" height="48" fill="${u.sf}"/><line x1="0" y1="492" x2="960" y2="492" stroke="${u.ln}"/>`;
+  [['kebab','Twój lokal'],['bank','Bank'],['hurt','Hurtownia'],['kadry','Kadry']].forEach(([ik,tt],i)=>{const x=70+i*120,a=i===0,c=a?u.ac:u.mu;
+    s+=`<g transform="translate(${x},508)" fill="none" stroke="${c}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="${IKONY[ik]}"/></g>`+
+      T(x,531,tt,`font-family="${F.inter}" font-weight="${a?600:500}" font-size="11" fill="${c}" text-anchor="middle"`);});
+  s+=`<rect x="790" y="499" width="154" height="34" rx="17" fill="${u.ac}"/>`+T(867,521,'Wyślij decyzje',`font-family="${F.inter}" font-weight="600" font-size="13.5" fill="${night?'#2a0b09':'#fff'}" text-anchor="middle"`);
+  return svg(960,540,'Ekran główny, '+(t==='j'?'jasny':'ciemny'),s);
+}
+
+/* =====================================================================
+   WNĘTRZA (960×540): tło, lada, postacie, dymki
+   ===================================================================== */
+function tloWnetrza(id,t,o={}){
+  const I=IN[t],dots=[[8,10],[30,44],[52,20],[70,70],[20,78],[62,50],[84,12],[40,88],[76,36],[12,52]];
+  let s=`<defs><pattern id="${id}k" width="48" height="36" patternUnits="userSpaceOnUse"><rect width="48" height="36" fill="${I.tline}"/><rect x="1.5" y="1.5" width="45" height="33" rx="2" fill="${I.tile}"/></pattern>
+    <pattern id="${id}l" width="96" height="96" patternUnits="userSpaceOnUse"><rect width="96" height="96" fill="${I.floor}"/>${dots.map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="${i%3+1.6}" fill="${i%2?I.sp1:I.sp2}"/>`).join('')}</pattern>
+    <pattern id="${id}z" width="80" height="40" patternUnits="userSpaceOnUse"><rect width="80" height="40" fill="${I.floor}"/><rect width="40" height="20" fill="${I.sp1}" opacity=".55"/><rect x="40" y="20" width="40" height="20" fill="${I.sp1}" opacity=".55"/></pattern>
+    <radialGradient id="${id}g"><stop offset="0" stop-color="${I.glow}" stop-opacity="${t==='c'?.5:.28}"/><stop offset="1" stop-color="${I.glow}" stop-opacity="0"/></radialGradient></defs>`;
+  s+=`<rect width="960" height="540" fill="${I.top}"/>`;
+  s+=`<rect y="150" width="960" height="190" fill="${o.panel?o.panel:`url(#${id}k)`}"/>`;
+  s+=`<rect y="146" width="960" height="7" fill="${I.rail}"/><rect y="340" width="960" height="200" fill="url(#${id}${o.szach?'z':'l'})"/><rect y="336" width="960" height="8" fill="${I.woodD}"/>`;
+  (o.lampy||[130,330,880]).forEach(x=>{s+=`<ellipse cx="${x}" cy="84" rx="120" ry="90" fill="url(#${id}g)"/><line x1="${x}" y1="0" x2="${x}" y2="56" stroke="${I.ol}" stroke-width="2"/><path d="M${x-26} 78 Q${x} 40 ${x+26} 78 Z" fill="${I.metal}" stroke="${I.ol}" stroke-width="2"/><ellipse cx="${x}" cy="79" rx="13" ry="4" fill="${I.glow}"/>`;});
+  return s;
+}
+function lada(I,x0){
+  let s=rc(I,x0,358,970-x0,18,I.wood,3)+rc(I,x0,376,970-x0,96,I.woodD,0);
+  for(let x=x0+30;x<960;x+=44)s+=`<line x1="${x}" y1="382" x2="${x}" y2="466" stroke="${I.ol}" stroke-width="2" opacity=".35"/>`;
+  s+=`<rect x="${x0}" y="462" width="${970-x0}" height="10" fill="${I.ol}" opacity=".45"/>`;
+  return s;
+}
+
+/* postacie: proste i płaskie, stopy w (x,y), patrzą w prawo, wysokość ok. 165 */
+const TYP={
+  student:{sk:'#f1c9a5',leg:'#3b4a6b',body:'#3b8f8a',w:22,hair:'#5a3a24'},
+  emerytka:{sk:'#efc3a0',leg:'#6b5b73',body:'#8e5aa8',w:23,hair:'#d8d8dc'},
+  budowlaniec:{sk:'#d9a47c',leg:'#4b5563',body:'#8a8f98',w:26,hair:'#3b2a1e'},
+  nastolatka:{sk:'#f4d0b4',leg:'#2a2f45',body:'#e0679a',w:21,hair:'#7a4a2a'},
+  inspektor:{sk:'#e9bf9c',leg:'#2b3a4d',body:'#34506b',w:23,hair:'#555'},
+  rzecki:{sk:'#e6bd9a',leg:'#3a3a40',body:'#7a6a58',w:24,hair:'#cfcfd6'},
+  jozio:{sk:'#f4d0b4',leg:'#3b4a6b',body:'#6aa84f',w:21,hair:'#4a2f1c'},
+  dulska:{sk:'#efc3a0',leg:'#4a3b4a',body:'#8a3b6a',w:24,hair:'#b8b8c0'},
+  pracownik:{sk:'#e5b78f',leg:'#2b3a4d',body:'#f2efe0',w:23,hair:'#3b2a1e'},
+  urzednik:{sk:'#e9bf9c',leg:'#2b3a4d',body:'#3b4a6a',w:23,hair:'#6b5b4b'}
+};
+function postac(x,y,typ,t,s=1,an){
+  const I=IN[t],c=TYP[typ],ol=I.ol,sw=2.2,hx=c.w+11;
+  const P=(d,f)=>`<path d="${d}" fill="${f}" stroke="${ol}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+  const C=(cx,cy,r,f)=>`<circle cx="${cx}" cy="${cy}" r="${r}" fill="${f}" stroke="${ol}" stroke-width="${sw}"/>`;
+  const R=(rx,ry,w,h,f,r=4)=>`<rect x="${rx}" y="${ry}" width="${w}" height="${h}" rx="${r}" fill="${f}" stroke="${ol}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+  let g=`<ellipse cx="0" cy="2" rx="32" ry="7" fill="#000" opacity=".22"/>`;
+  if(typ==='student')g+=R(-40,-118,22,52,'#2f6f8f',7);
+  if(typ==='nastolatka')g+=P('M-8 -152 Q-38 -150 -32 -100 Q-22 -118 -6 -128 Z',c.hair);
+  g+=R(-14,-66,12,62,c.leg,4)+R(3,-66,12,62,c.leg,4)+R(-17,-8,20,9,'#2b2b33',4)+R(1,-8,22,9,'#2b2b33',4);
+  g+=R(-c.w,-122,c.w*2,62,c.body,14);
+  if(typ==='budowlaniec')g+=R(-c.w+3,-122,c.w*2-6,60,'#f08a24',12)+`<rect x="${-c.w+4}" y="-100" width="${c.w*2-8}" height="6" fill="#f2efe0"/><rect x="${-c.w+4}" y="-82" width="${c.w*2-8}" height="6" fill="#f2efe0"/>`;
+  g+=`<path d="M${c.w-6} -112 L${hx} -78" stroke="${ol}" stroke-width="15" stroke-linecap="round"/><path d="M${c.w-6} -112 L${hx} -78" stroke="${c.body}" stroke-width="10" stroke-linecap="round"/>`+C(hx,-74,6.5,c.sk);
+  if(typ==='emerytka')g+=`<path d="M${hx-5} -72 Q${hx+9} -96 ${hx+23} -72" fill="none" stroke="${ol}" stroke-width="2.4"/>`+R(hx-4,-70,26,30,'#d9a531',5)+`<path d="M${hx} -62 H${hx+18} M${hx} -52 H${hx+18}" stroke="${ol}" stroke-width="1.2" opacity=".5"/>`;
+  if(typ==='nastolatka')g+=R(hx-2,-96,11,19,'#1f2937',2.5)+`<rect x="${hx}" y="-93" width="7" height="12" rx="1" fill="#7cc4ff"/>`;
+  if(typ==='inspektor')g+=R(hx-4,-104,25,34,'#c9a77a',3)+`<rect x="${hx-1}" y="-99" width="19" height="25" fill="#fff" stroke="${ol}" stroke-width="1"/><path d="M${hx+2} -92 H${hx+15} M${hx+2} -86 H${hx+15} M${hx+2} -80 H${hx+12}" stroke="#888" stroke-width="1.2"/>`;
+  g+=R(-5,-134,10,14,c.sk,3)+C(0,-144,17,c.sk)+`<circle cx="7" cy="-146" r="2.2" fill="${ol}"/><path d="M3 -137 Q8 -134 12 -138" fill="none" stroke="${ol}" stroke-width="1.8" stroke-linecap="round"/>`;
+  if(typ==='student'||typ==='nastolatka')g+=P('M-18 -148 Q-16 -168 2 -166 Q19 -164 17 -146 Q6 -156 -18 -148 Z',c.hair);
+  if(typ==='emerytka')g+=C(-9,-166,8,c.hair)+P('M-18 -146 Q-17 -164 0 -163 Q16 -162 17 -146 Q6 -154 -18 -146 Z',c.hair)+`<circle cx="8" cy="-146" r="5" fill="none" stroke="${ol}" stroke-width="1.6"/>`;
+  if(typ==='budowlaniec')g+=P('M-21 -152 A21 21 0 0 1 21 -152 Z','#f2c230')+R(-24,-153,48,6,'#e0a81c',3);
+  if(typ==='inspektor')g+=P('M-19 -157 Q0 -176 19 -157 Z','#2b3e52')+R(-20,-158,40,5,'#1f2d3c',2);
+  if(typ==='rzecki')g+=P('M-17 -150 Q-14 -166 2 -165 Q17 -164 17 -148 Q4 -158 -17 -150 Z',c.hair)+`<circle cx="8" cy="-146" r="5" fill="none" stroke="${ol}" stroke-width="1.6"/><path d="M2 -138 Q9 -134 15 -138" fill="none" stroke="#8a8a92" stroke-width="3" stroke-linecap="round"/>`+R(hx-4,-92,22,28,'#7a3b2e',2)+`<path d="M${hx} -86 H${hx+14}" stroke="#e9e2cf" stroke-width="2"/>`;
+  if(typ==='jozio')g+=P('M-18 -148 Q-20 -170 -4 -168 Q0 -176 10 -168 Q22 -164 17 -146 Q6 -158 -18 -148 Z',c.hair)+C(hx+9,-94,11,'#f2c230')+`<circle cx="${hx+5}" cy="-97" r="1.8" fill="${ol}"/><circle cx="${hx+13}" cy="-97" r="1.8" fill="${ol}"/><path d="M${hx+3} -91 Q${hx+9} -85 ${hx+15} -91" fill="none" stroke="${ol}" stroke-width="1.6"/>`;
+  if(typ==='dulska')g+=C(-9,-166,7,c.hair)+P('M-20 -156 Q0 -178 20 -156 Z','#5a2a40')+R(-24,-158,48,6,'#4a2036',3)+`<path d="M12 -168 Q26 -180 30 -166" fill="none" stroke="#d9a531" stroke-width="3" stroke-linecap="round"/>`+R(hx-5,-66,26,18,'#5a2a40',4)+`<path d="M${hx} -66 Q${hx+8} -80 ${hx+16} -66" fill="none" stroke="${ol}" stroke-width="2"/>`;
+  if(typ==='pracownik')g+=R(-c.w+6,-96,c.w*2-12,38,'#c23b2c',6)+P('M-19 -156 Q0 -176 19 -156 Z','#f2efe0')+R(-20,-157,40,6,'#e4dfcc',3);
+  if(typ==='urzednik')g+=P('M-17 -150 Q-14 -165 2 -164 Q17 -163 17 -148 Q4 -158 -17 -150 Z',c.hair)+`<circle cx="8" cy="-146" r="5" fill="none" stroke="${ol}" stroke-width="1.6"/><path d="M-6 -122 L0 -100 L6 -122" fill="#fff" stroke="${ol}" stroke-width="1.5"/>`;
+  const w1=`<g transform="translate(${x},${y}) scale(${s})">${g}</g>`;
+  return an===undefined?w1:`<g class="wchodzi" style="animation-delay:${an}s">${w1}</g>`;
+}
+function dym(I,x,y,lines,tx,fs=15,tl=16,kind=''){
+  const w=Math.round(Math.max(...lines.map(l=>l.length))*fs*.54+28),h=lines.length*(fs+5)+14;
+  return `<g data-r="${kind}"><path d="M${x+tx-9} ${y+h-1} L${x+tx} ${y+h+tl} L${x+tx+11} ${y+h-1}" fill="${I.bub}" stroke="${I.ol}" stroke-width="2" stroke-linejoin="round"/>`+
+    `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="13" fill="${I.bub}" stroke="${I.ol}" stroke-width="2"/><rect x="${x+tx-8}" y="${y+h-3}" width="18" height="5" fill="${I.bub}"/>`+
+    lines.map((l,i)=>T(x+14,y+6+fs+i*(fs+5),l,`font-family="${F.nunito}" font-weight="700" font-size="${fs}" fill="${I.bubt}"`)).join('')+'</g>';
+}
+function chip(x,y,txt,bg,fg,fs=12.5,anchor='middle',extra=''){
+  const w=Math.round(txt.length*fs*.56+20),x0=anchor==='middle'?x-w/2:x;
+  return `<rect x="${x0}" y="${y-fs-3}" width="${w}" height="${fs+10}" rx="${(fs+10)/2}" fill="${bg}"${extra}/>`+
+    T(x0+w/2,y+1,txt,`font-family="${F.man}" font-weight="800" font-size="${fs}" fill="${fg}" text-anchor="middle"`);
+}
+function okruszki(I,txt){
+  const w=Math.round(txt.length*7.4+26);
+  return `<rect x="14" y="12" width="${w}" height="30" rx="15" fill="${I.plate}" stroke="${I.ol}" stroke-width="1.8"/>`+T(14+w/2,32,txt,`font-family="${F.nunito}" font-weight="700" font-size="14" fill="${I.pt}" text-anchor="middle"`);
+}
+function przerywany(I,x,y,w,h){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9" fill="none" stroke="${I.gold}" stroke-width="3" stroke-dasharray="9 6"/>`;}
+
+/* elementy ściany */
+function elDrzwi(I){
+  return rc(I,50,126,100,214,I.woodD,3)+rc(I,62,200,76,120,I.wood,2,1.5)+rc(I,66,186,68,52,I.glass,3,2)+
+    `<circle cx="132" cy="270" r="5" fill="${I.gold}" stroke="${I.ol}" stroke-width="1.5"/>`+rc(I,45,96,110,26,I.plate,3)+T(100,114,'ZAPLECZE',`font-family="${F.nunito}" font-weight="700" font-size="13" letter-spacing="2" fill="${I.pt}" text-anchor="middle"`);
+}
+function elTablica(I){
+  let s=rc(I,516,18,268,122,I.wood,5,2)+`<rect x="524" y="26" width="252" height="106" rx="3" fill="${I.board}"/>`+
+    T(650,48,'M E N U',`font-family="${F.mono}" font-weight="700" font-size="15" fill="${I.bt}" text-anchor="middle"`);
+  [['KEBAB MAŁY','19 zł'],['KEBAB DUŻY','24 zł'],['TALERZ','32 zł']].forEach(([a,b],i)=>{const y=76+i*22;
+    s+=T(538,y,a,`font-family="${F.mono}" font-weight="700" font-size="16" fill="${I.bt}" letter-spacing="1.5"`)+T(762,y,b,`font-family="${F.mono}" font-weight="700" font-size="16" fill="${I.gold}" text-anchor="end"`)+
+      `<line x1="530" y1="${y+6}" x2="770" y2="${y+6}" stroke="${I.groove}" stroke-width="1.5"/>`;});
+  return s;
+}
+function elBiurko(I,t){
+  return rc(I,770,326,174,14,I.wood,3)+rc(I,880,168,52,62,I.paper,2)+rc(I,880,168,52,15,I.ac,2)+T(906,180,'TYDZ. 3',`font-family="${F.man}" font-weight="800" font-size="9" fill="#fff" text-anchor="middle"`)+
+    T(906,212,'3',`font-family="${F.man}" font-weight="800" font-size="30" fill="${I.pt==='#3b2a1e'?'#3b2a1e':'#222'}" text-anchor="middle"`)+
+    rc(I,806,268,60,52,'#1f2430',3)+`<path d="M814 308 L826 296 L838 302 L852 284 L860 280" fill="none" stroke="#7cf29a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>`+
+    rc(I,796,318,80,8,I.metal,2)+rc(I,892,306,40,12,'#ffffff',1,1.5)+`<path d="M896 312 H928" stroke="#999" stroke-width="1.2"/>`;
+}
+
+
+/* stan panelu „Co mówią goście” i rozwoju lokalu (steruje wszystkimi scenami kebaba) */
+const STAN={rozb:false,r:{cena:1,plotki:1,prop:1,wos:1}};
+
+function elKuchnia(I,t,R){
+  const mieso=t==='c'?'#8a4e26':'#a8622f',hot=t==='c'?'#ff7a3a':'#e8562f';
+  const cone=cx=>`<line x1="${cx}" y1="208" x2="${cx}" y2="344" stroke="${I.ol}" stroke-width="4"/><path d="M${cx-22} 216 L${cx+22} 216 L${cx+12} 340 L${cx-12} 340 Z" fill="${mieso}" stroke="${I.ol}" stroke-width="2.2" stroke-linejoin="round"/>`+
+    [232,250,268,286,304,322].map(y=>`<path d="M${cx-20+(y-216)*.08} ${y} H${cx+20-(y-216)*.08}" stroke="${I.ol}" stroke-width="1.4" opacity=".45"/>`).join('');
+  let s='';
+  if(!R){ /* na start: jeden stary rożen, rdza, mały okap */
+    s+=rc(I,540,168,184,40,I.metal,4)+`<rect x="552" y="176" width="160" height="8" rx="3" fill="${I.metalD}" opacity=".6"/>`+cone(600)+
+      `<rect x="636" y="214" width="9" height="126" rx="3" fill="${hot}" stroke="${I.ol}" stroke-width="1.5"/>`+
+      rc(I,664,262,56,98,I.metal,4)+`<circle cx="692" cy="290" r="9" fill="${I.metalD}"/><ellipse cx="560" cy="196" rx="10" ry="5" fill="#8a4a22" opacity=".5"/>`;
+    s+=[0,.8,1.6].map(d=>`<ellipse class="para-a" style="animation-delay:${d}s" cx="${590+d*9}" cy="196" rx="8" ry="5" fill="#fff" opacity=".5"/>`).join('');
+  }else{ /* po rozbudowie: nowy duży okap, dwa rożny, świecący pasek */
+    s+=rc(I,536,162,212,46,I.metal,4)+`<rect x="548" y="172" width="188" height="9" rx="4" fill="${I.glow}" opacity="${t==='c'?.95:.7}"/>`+cone(582)+cone(672)+
+      `<rect x="615" y="214" width="9" height="126" rx="3" fill="${hot}" stroke="${I.ol}" stroke-width="1.5"/><rect x="706" y="214" width="9" height="126" rx="3" fill="${hot}" stroke="${I.ol}" stroke-width="1.5"/>`+
+      chip(742,200,'NOWE',I.gold,'#2a1d14',10,'middle');
+    s+=[0,.8,1.6].map(d=>`<ellipse class="para-a" style="animation-delay:${d}s" cx="${582+d*40}" cy="196" rx="9" ry="5" fill="#fff" opacity=".55"/>`).join('');
+  }
+  return s;
+}
+function dodatkiTlo(I,id,t,R){
+  let s='';
+  if(!R){ /* plamy na podłodze i ścianie */
+    s+=`<ellipse cx="300" cy="432" rx="70" ry="12" fill="#6b4a2b" opacity=".22"/><ellipse cx="120" cy="505" rx="52" ry="9" fill="#6b4a2b" opacity=".2"/><ellipse cx="620" cy="510" rx="60" ry="9" fill="#6b4a2b" opacity=".2"/>`+
+      `<path d="M410 206 q-8 34 4 66 q12 -26 8 -66z" fill="#7a5a30" opacity=".2"/><path d="M360 160 l14 40 l-8 26 l16 40" fill="none" stroke="${I.ol}" stroke-width="1.5" opacity=".35"/>`;
+  }else{ /* neon na ścianie */
+    s+=`<defs><filter id="${id}n" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`+
+      `<g class="mruga"><text x="430" y="66" font-family="${F.neon}" font-size="30" fill="${t==='c'?'#ff4f8b':'#e0357a'}" text-anchor="middle" filter="url(#${id}n)">KEBAB</text><path d="M372 78 Q430 92 488 78" fill="none" stroke="${t==='c'?'#3de0e6':'#2a9fb0'}" stroke-width="3" stroke-linecap="round" filter="url(#${id}n)"/></g>`;
+  }
+  return s;
+}
+function dodatkiPodloga(I,R){
+  const krzeslo=x=>rc(I,x,500,36,8,I.wood,2,2)+rc(I,x,462,8,40,I.wood,2,2)+rc(I,x+4,508,6,24,I.woodD,1,1.5)+rc(I,x+28,508,6,24,I.woodD,1,1.5);
+  if(R)return rc(I,748,500,120,10,I.wood,3,2.5)+rc(I,802,510,12,26,I.woodD,2,2)+krzeslo(706)+`<g transform="translate(1692,0) scale(-1,1)">${krzeslo(826)}</g>`;
+  return `<g><rect x="876" y="504" width="40" height="8" rx="3" fill="${I.wood}" stroke="${I.ol}" stroke-width="2"/><rect x="882" y="512" width="6" height="22" fill="${I.woodD}"/><rect x="904" y="512" width="6" height="22" fill="${I.woodD}"/></g>`;
+}
+
+/* ---------- Pytanie 2: widok lady z boku (v = A | B | C). Gracz jest właścicielem i patrzy z boku, za ladą stoi pracownik ---------- */
+function scenaLada(id,t,v,o={}){
+  const I=IN[t],cz=o.czysta,R=STAN.rozb,Y=490;
+  const lab=(x,y,txt)=>cz?'':T(x,y,txt,`font-family="${F.inter}" font-weight="600" font-size="11" fill="${I.mu}"`);
+  const B=(k,x,y,l,tx,tl,txt)=>STAN.r[k]?dym(I,x,y,l,tx,15,tl,k)+lab(x+2,y-7,txt):'';
+  const nazwa=(x,txt)=>chip(x,514,txt,I.plate,I.pt,10.5,'middle',` stroke="${I.ol}" stroke-width="1.2"`);
+  let s=tloWnetrza(id,t,{lampy:v==='B'?[130,330,620]:[130,330,880]})+dodatkiTlo(I,id,t,R);
+  s+=elDrzwi(I);
+  if(v==='A'){s+=elTablica(I)+elKuchnia(I,t,R)+elBiurko(I,t);}
+  if(v==='C')s+=elKuchnia(I,t,R);
+  if(v==='B'){ /* tablica zamówień na szynie */
+    s+=`<line x1="430" y1="168" x2="690" y2="168" stroke="${I.metalD}" stroke-width="4"/>`+
+      `<g transform="rotate(3 600 230)">${rc(I,584,174,128,96,'#f0ead6',2)}${T(594,192,'ZAM. #15',`font-family="${F.mono}" font-weight="700" font-size="11" fill="#2b2a26"`)}${T(594,208,'mały, bez sosu',`font-family="${F.mono}" font-size="10.5" fill="#2b2a26"`)}</g>`+
+      `<g transform="rotate(-2 520 230)">${rc(I,448,174,150,110,'#fffdf2',2)}`+
+      [['ZAM. #14','b'],['[x] bułka duża',''],['[x] mięso',''],['[ ] sos ostry',''],['[ ] bez cebuli','']].map(([a,b],i)=>T(458,194+i*17,a,`font-family="${F.mono}" font-weight="${b?700:400}" font-size="12" fill="#2b2a26"`)).join('')+
+      `<circle cx="523" cy="176" r="4" fill="${I.ac}"/></g>`;
+  }
+  /* pracownik stoi dalej od widza, za ladą (nogi zasłania lada); gracz-właściciel nie jest rysowany */
+  if(v==='A')s+=postac(752,425,'pracownik',t,.95,.3);
+  if(v==='B')s+=postac(925,425,'pracownik',t,.95,.3);
+  if(v==='C')s+=postac(480,425,'pracownik',t,.95,.3);
+  s+=lada(I,440);
+  if(v==='B'){
+    const bins=[['MIĘSO','#a8622f',520],['SAŁATA','#6aa84f',594],['POMIDOR','#d1361f',668],['CEBULA','#e9e2c8',742]];
+    bins.forEach(([n,c,x])=>{
+      s+=`<path d="M${x+4} 312 Q${x+33} 284 ${x+62} 312 Z" fill="${c}" stroke="${I.ol}" stroke-width="2"/>`+rc(I,x,308,66,50,I.metal,4)+
+        [[10,316],[28,322],[46,316],[22,330]].map(([dx,dy])=>`<circle cx="${x+dx+8}" cy="${dy-10}" r="3.2" fill="${c}" stroke="${I.ol}" stroke-width="1"/>`).join('')+
+        T(x+33,347,n,`font-family="${F.osw}" font-weight="500" font-size="12" letter-spacing=".8" fill="${I.ol}" text-anchor="middle"`);});
+    s+=`<g><line x1="748" y1="298" x2="788" y2="326" stroke="#c0392b" stroke-width="3.5" stroke-linecap="round"/></g>`+chip(775,298,'BEZ',I.ac,'#fff',10);
+    [['OSTRY','#d1361f',836],['CZOSN.','#f2efe0',872]].forEach(([n,c,x])=>{
+      s+=rc(I,x,304,26,54,c,6)+rc(I,x+8,294,10,12,I.metalD,2)+T(x+13,336,n,`font-family="${F.osw}" font-weight="500" font-size="7.5" fill="${n==='OSTRY'?'#fff':I.ol}" text-anchor="middle" transform="rotate(-90 ${x+13} 336)"`);});
+    s+=`<ellipse cx="482" cy="358" rx="38" ry="6" fill="#f2efe0" stroke="${I.ol}" stroke-width="2"/>`+
+      `<path d="M446 354 Q446 346 482 346 Q518 346 518 354 Q518 358 482 358 Q446 358 446 354Z" fill="#e2b97f" stroke="${I.ol}" stroke-width="2"/>`+
+      `<rect x="450" y="338" width="64" height="9" rx="4" fill="#a8622f" stroke="${I.ol}" stroke-width="2"/><path d="M452 336 q8 -8 16 0 t16 0 t16 0 t14 0" fill="none" stroke="#6aa84f" stroke-width="5" stroke-linecap="round"/>`+
+      `<path d="M446 322 Q482 286 518 322 Z" fill="none" stroke="${I.gold}" stroke-width="2.5" stroke-dasharray="6 5"/>`;
+    s+=`<g transform="translate(632,318)"><path d="M0 0 L0 22 L6 17 L10 27 L15 25 L11 15 L19 15 Z" fill="#fff" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/></g>`;
+    if(!cz)s+=chip(690,420,'Pracownik składa, ty podpowiadasz',I.ac,'#fff',11.5);
+  }
+  s+=dodatkiPodloga(I,R);
+  /* goście */
+  if(v==='A'){
+    if(!R)s+=postac(46,470,'student',t,.88,0)+postac(84,470,'nastolatka',t,.88,.1);
+    s+=postac(110,Y,'budowlaniec',t,1,.2)+postac(215,Y,'jozio',t,1,.5)+postac(320,Y,'dulska',t,.96,.8)+postac(410,Y,'rzecki',t,1,1.1);
+    s+=nazwa(215,'Józio')+nazwa(320,'pani Dulska')+nazwa(410,'Ignacy Rzecki');
+    s+=B('wos',120,196,['A paragon będzie?'],95,60,'zaczepka WOS')+B('plotki',300,196,['Ludzie gadają: kontrola','u konkurencji!'],20,50,'plotka z miasta')+
+      B('prop',20,262,['Rożen dymi, szefie!'],90,16,'kłopot')+B('cena',330,262,['Za 24 zł? Za Gierka','było po 19…'],80,16,'opinia o cenie');
+    if(!cz){
+      s+=przerywany(I,510,12,280,134)+przerywany(I,528,160,224,204)+przerywany(I,42,92,116,252)+przerywany(I,764,160,190,184);
+      s+=chip(650,166,'Tablica: ceny',I.ac,'#fff')+chip(640,228,'Kuchnia: przepisy i jakość',I.ac,'#fff')+chip(100,164,'Drzwi: grafik i ludzie',I.ac,'#fff',11.5)+chip(850,250,'Biurko: finanse',I.ac,'#fff');
+    }
+  }
+  if(v==='B'){
+    s+=postac(250,Y,'nastolatka',t,1,.2)+postac(400,Y,'budowlaniec',t,1,.6);
+    s+=dym(I,200,226,['Poproszę duży w bułce,','ostry, bez cebuli!'],200,15,16,'zamowienie');
+    s+=`<rect x="352" y="302" width="96" height="11" rx="5.5" fill="${I.plate}" stroke="${I.ol}" stroke-width="1.8"/><rect x="354" y="304" width="58" height="7" rx="3.5" fill="#e0a41c"/>`;
+    if(!cz){
+      s+=`<g>${rc(I,716,22,224,146,I.plate,12,2.5)}`+T(732,46,'SZCZYT 12:00–14:00',`font-family="${F.man}" font-weight="800" font-size="13" fill="${I.pt}"`)+
+        T(732,70,'Cierpliwość klienta',`font-family="${F.inter}" font-size="12" fill="${I.pt}"`)+`<rect x="732" y="76" width="140" height="9" rx="4.5" fill="${I.ol}" opacity=".25"/><rect x="732" y="76" width="82" height="9" rx="4.5" fill="#e0a41c"/>`+
+        T(732,106,'Napiwek',`font-family="${F.inter}" font-size="12" fill="${I.pt}"`)+T(924,106,'+4 zł',`font-family="${F.man}" font-weight="800" font-size="14" fill="${I.pt}" text-anchor="end"`)+
+        T(732,128,'Ocena zamówienia',`font-family="${F.inter}" font-size="12" fill="${I.pt}"`)+T(924,128,'★★★★☆',`font-family="${F.inter}" font-size="14" fill="${t==='c'?'#ffc857':'#c98f10'}" text-anchor="end"`)+
+        chip(790,157,'Gra opcjonalna',I.ac,'#fff',10.5)+chip(884,157,'Pomiń',I.plate,I.pt,10.5,'middle',` stroke="${I.ol}" stroke-width="1.5"`)+'</g>';
+    }
+  }
+  if(v==='C'){
+    s+=postac(250,Y,'inspektor',t,1,.2)+postac(400,Y,'rzecki',t,1,.6)+nazwa(400,'Ignacy Rzecki');
+    s+=B('prop',170,188,['Sanepid: kontrola','w środę'],80,16,'propozycja / kłopot')+B('prop',300,252,['Catering dla UMCS:','200 porcji na piątek'],100,16,'');
+    if(!cz){
+      const card=(x,sel,tytul,opis,ef)=>{
+        let g=`<rect x="${x}" y="22" width="206" height="258" rx="14" fill="${I.plate}" stroke="${sel?I.ac:I.ol}" stroke-width="${sel?4:2}"/>`+
+          T(x+16,46,sel?'WYBRANE':'OPCJA',`font-family="${F.man}" font-weight="800" font-size="10.5" letter-spacing="1.4" fill="${sel?I.ac:I.mu}"`)+
+          T(x+16,72,tytul,`font-family="${F.man}" font-weight="800" font-size="17" fill="${I.pt}"`)+
+          opis.map((l,i)=>T(x+16,94+i*16,l,`font-family="${F.inter}" font-size="12" fill="${I.mu}"`)).join('')+
+          `<line x1="${x+16}" y1="136" x2="${x+190}" y2="136" stroke="${I.ol}" stroke-width="1" opacity=".3" stroke-dasharray="3 3"/>`;
+        ef.forEach(([l,v2,gd],i)=>{const y=162+i*28;
+          g+=`<circle cx="${x+22}" cy="${y-4}" r="5" fill="${gd?'#2fa84f':'#d9473d'}"/>`+T(x+34,y,l,`font-family="${F.inter}" font-size="12.5" fill="${I.pt}"`)+T(x+192,y,v2,`font-family="${F.man}" font-weight="800" font-size="13.5" fill="${gd?(t==='c'?'#6be08a':'#1f8a3d'):(t==='c'?'#ff8a7d':'#b3261e')}" text-anchor="end"`);});
+        g+=`<rect x="${x+16}" y="236" width="174" height="32" rx="16" fill="${sel?I.ac:'none'}" stroke="${I.ac}" stroke-width="2"/>`+T(x+103,257,sel?'Wybieram ✓':'Wybieram',`font-family="${F.man}" font-weight="800" font-size="13" fill="${sel?'#fff':I.ac}" text-anchor="middle"`);
+        return g;};
+      s+=card(520,true,'Biorę zlecenie',['Dostawa w piątek,','trzeba dołożyć zmianę.'],[['Kasa','+4 800 zł',1],['Ocena','−0,1',0],['Nastrój','−12',0]])+
+        card(740,false,'Grzecznie odmawiam',['Skupiasz się na stałych','gościach.'],[['Kasa','±0',1],['Ocena','+0,05',1],['Nastrój','+3',1]]);
+      s+=`<rect x="560" y="292" width="386" height="34" rx="17" fill="${I.plate}" stroke="${I.ol}" stroke-width="1.8"/>`+
+        T(753,314,'Po wyborze: Kasa 53 120 zł · Ocena 4,1 · Nastrój 59/100',`font-family="${F.inter}" font-weight="600" font-size="13" fill="${I.pt}" text-anchor="middle"`);
+    }
+  }
+  if(!cz)s+=okruszki(I,'← Wróć na mapę  ·  Twój kebab  ·  '+(R?'po rozbudowie':'na start'));
+  return svg(960,540,'Wnętrze kebaba, '+(t==='j'?'jasny':'ciemny'),s);
+}
+
+/* =====================================================================
+   Pytanie 3: mapa -> budynek -> wnętrze oraz miniatury innych wnętrz
+   ===================================================================== */
+function mapaDemo(id,t){
+  const P=t==='j'?PAL_LUB:PAL_NOC,night=t==='c';
+  const defs=`<defs><filter id="${id}w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>${glowF(id)}
+    <radialGradient id="${id}r"><stop offset="0" stop-color="#ffd36b" stop-opacity=".42"/><stop offset="1" stop-color="#ffd36b" stop-opacity="0"/></radialGradient></defs>`;
+  const ac=night?'#ff7a6e':'#b3261e';
+  const pin=`<circle class="puls" cx="316" cy="236" r="15" fill="${ac}"/>`;
+  return `<svg viewBox="0 44 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa Lublina z twoim kebabem">${defs}${mapaQ1(id,P,t,'A').replace(/<g><rect x="596"[\s\S]*$/,'')}${pin}</svg>`;
+}
+function fasada(id,t){
+  const I=IN[t],night=t==='c',wall=night?'#26335a':'#f6e3bf',wall2=night?'#1b2442':'#e2cc9b';
+  let s=`<defs><linearGradient id="${id}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${night?'#0a1022':'#cfe6f2'}"/><stop offset="1" stop-color="${night?'#1a2547':'#f3ecd6'}"/></linearGradient>
+    <linearGradient id="${id}i" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe9b0"/><stop offset="1" stop-color="#e2a14a"/></linearGradient>
+    <radialGradient id="${id}g"><stop offset="0" stop-color="#ffd36b" stop-opacity="${night?.6:.3}"/><stop offset="1" stop-color="#ffd36b" stop-opacity="0"/></radialGradient></defs>`;
+  s+=`<rect width="960" height="540" fill="url(#${id}s)"/>`;
+  s+=rc(I,-30,120,250,330,wall2)+rc(I,740,90,260,360,wall2);
+  [[20,160],[110,160],[20,260],[110,260],[790,140],[880,140],[790,250],[880,250]].forEach(([x,y],i)=>s+=rc(I,x,y,60,70,night&&i%3?'#ffd36b':I.glass,2,2));
+  s+=`<rect y="440" width="960" height="100" fill="${night?'#161b30':'#cdc6b4'}"/><rect y="436" width="960" height="8" fill="${night?'#2a3354':'#a99f89'}"/>`;
+  s+=rc(I,250,126,460,314,wall,0,3);
+  s+=rc(I,250,126,460,64,'#2a1f1a',0,3)+T(480,176,'KEBAB',`font-family="${F.hand}" font-size="54" letter-spacing="8" fill="${I.gold}" text-anchor="middle"`);
+  for(let i=0;i<10;i++){const x=250+i*46,c=i%2?'#fdf6e3':'#c23b2c';s+=`<rect x="${x}" y="192" width="46" height="46" fill="${c}" stroke="${I.ol}" stroke-width="1.5"/><path d="M${x} 238 a23 14 0 0 0 46 0Z" fill="${c}" stroke="${I.ol}" stroke-width="1.5"/>`;}
+  s+=rc(I,274,268,200,132,I.glass,4,3)+`<ellipse cx="374" cy="334" rx="130" ry="80" fill="url(#${id}g)"/>`+rc(I,300,292,92,64,I.board,3,2)+
+    T(346,312,'MENU',`font-family="${F.mono}" font-weight="700" font-size="12" fill="${I.bt}" text-anchor="middle"`)+T(346,330,'KEBAB 24 zł',`font-family="${F.mono}" font-size="11" fill="${I.bt}" text-anchor="middle"`)+
+    rc(I,274,400,200,18,I.woodD,0,2);
+  /* wnętrze widoczne po otwarciu drzwi */
+  s+=rc(I,520,262,120,178,`url(#${id}i)`,0,3)+rc(I,528,360,104,80,I.woodD,0,2)+rc(I,528,350,104,12,I.wood,0,2)+`<circle cx="580" cy="296" r="24" fill="url(#${id}g)"/>`;
+  s+=`<g class="drzwi">${rc(I,520,262,120,178,I.woodD,2,3)}${rc(I,534,276,92,76,I.glass,3,2)}<circle cx="620" cy="360" r="5" fill="${I.gold}" stroke="${I.ol}" stroke-width="1.5"/>${rc(I,534,368,92,56,I.wood,2,1.5)}</g>`;
+  s+=rc(I,660,262,32,22,I.plate,3,2)+T(676,277,'OPEN',`font-family="${F.nunito}" font-weight="700" font-size="10" fill="${I.pt}" text-anchor="middle"`);
+  s+=`<line x1="690" y1="126" x2="690" y2="64" stroke="${I.ol}" stroke-width="3"/><path d="M690 64 L744 78 L690 94 Z" fill="${I.ac}" stroke="${I.ol}" stroke-width="2.5" stroke-linejoin="round"/>`+T(716,84,'TY',`font-family="${F.nunito}" font-weight="700" font-size="13" fill="#fff" text-anchor="middle"`);
+  return svg(960,540,'Fasada twojego kebaba',s);
+}
+
+/* ---------- miniatury innych wnętrz (960×540) ---------- */
+function wnBiuro(id,t){
+  const I=IN[t],dk=t==='c';
+  let s=tloWnetrza(id,t,{panel:dk?'#2a3150':'#cdb98f',lampy:[200,520,860]});
+  const seg=dk?['#8a3b3b','#3b6a8a','#6a8a3b','#8a6f3b','#5b4a8a']:['#b8242c','#2f6f8f','#5f8a3c','#c98f10','#6d5bd0'];
+  [96,214].forEach((y,r)=>{
+    s+=rc(I,60,y+60,420,10,I.woodD,2,2);
+    for(let i=0;i<19;i++){const h=46+((i*7+r*3)%4)*5;s+=rc(I,66+i*21.5,y+60-h,19,h,seg[(i+r)%5],2,1.8)+`<rect x="${70+i*21.5}" y="${y+60-h+8}" width="11" height="10" fill="#fff" opacity=".8"/>`;}});
+  s+=rc(I,540,36,300,62,I.plate,4,3)+T(690,62,'J.K.Ś.',`font-family="${F.man}" font-weight="800" font-size="26" letter-spacing="6" fill="${I.pt}" text-anchor="middle"`)+T(690,86,'biuro rachunkowe',`font-family="${F.hand}" font-size="19" fill="${I.pt}" text-anchor="middle"`);
+  /* wieszak z kapeluszem i płaszczem */
+  s+=rc(I,858,150,10,300,I.woodD,2,2)+rc(I,838,440,50,12,I.woodD,2,2)+
+    `<path d="M863 168 L836 196 M863 168 L890 196 M863 210 L840 232 M863 210 L886 232" stroke="${I.woodD}" stroke-width="6" stroke-linecap="round"/>`+
+    `<ellipse cx="892" cy="188" rx="32" ry="8" fill="${dk?'#5b4a3a':'#6b4a2b'}" stroke="${I.ol}" stroke-width="2"/><path d="M874 188 Q874 160 892 160 Q910 160 910 188 Z" fill="${dk?'#5b4a3a':'#6b4a2b'}" stroke="${I.ol}" stroke-width="2"/><rect x="874" y="178" width="36" height="7" fill="#2b2b33"/>`+
+    `<path d="M836 214 L890 214 L898 330 L828 330 Z" fill="${dk?'#3b4660':'#4b5563'}" stroke="${I.ol}" stroke-width="2.2" stroke-linejoin="round"/><path d="M863 214 V330" stroke="${I.ol}" stroke-width="1.5"/>`;
+  /* biurko z maszyną do pisania i liczydłem */
+  s+=rc(I,150,396,560,18,I.wood,3,3)+rc(I,170,414,520,86,I.woodD,0,3)+rc(I,190,426,150,60,I.wood,2,1.5)+rc(I,360,426,150,60,I.wood,2,1.5)+rc(I,530,426,140,60,I.wood,2,1.5);
+  s+=rc(I,220,350,120,46,I.metalD,6,2.5)+rc(I,230,336,100,16,I.metal,3,2)+`<rect x="248" y="322" width="64" height="26" fill="#fffdf2" stroke="${I.ol}" stroke-width="1.5"/><path d="M256 330 H300 M256 338 H294" stroke="#888" stroke-width="1.5"/>`+
+    [236,256,276,296,316].map(x=>`<circle cx="${x}" cy="378" r="5" fill="${I.metal}" stroke="${I.ol}" stroke-width="1.5"/>`).join('');
+  s+=rc(I,400,372,110,24,I.metal,3,2)+rc(I,408,356,94,16,I.ac,3,2)+`<path d="M456 356 q6 -26 -2 -44" fill="none" stroke="#fffdf2" stroke-width="10" stroke-linecap="round"/>`+
+    rc(I,540,374,60,22,'#fffdf2',1,1.8)+rc(I,546,364,60,10,'#ffffff',1,1.8)+`<rect x="624" y="364" width="26" height="32" rx="3" fill="${I.ac}" stroke="${I.ol}" stroke-width="2"/>`+
+    `<path d="M668 396 V356 Q668 340 684 340 L700 340" fill="none" stroke="${I.metalD}" stroke-width="6" stroke-linecap="round"/><path d="M692 336 L724 336 L716 352 L700 352 Z" fill="${I.metal}" stroke="${I.ol}" stroke-width="2"/><ellipse cx="710" cy="358" rx="40" ry="14" fill="url(#${id}g)"/>`;
+  s+=rc(I,60,36,140,30,I.plate,3,2)+T(130,57,'Bilans 1811 zł',`font-family="${F.hand}" font-size="17" fill="${I.pt}" text-anchor="middle"`);
+  s+=[0,.8,1.6].map(d=>`<ellipse class="para-a" style="animation-delay:${d}s" cx="${637+d*3}" cy="356" rx="6" ry="4" fill="#fff" opacity=".6"/>`).join('');
+  return svg(960,540,'Biuro J.K.Ś., '+(dk?'ciemny':'jasny'),s);
+}
+
+/* ---------- animowane przejście ---------- */
+function demoHTML(id,w,t,faza,o={}){
+  const wszystko=!!o.pelne,baza=o.baza||'mapa';
+  const mapa=(wszystko||faza==='mapa'||(w==='B'&&baza==='mapa'))?`<div class="l l-mapa">${mapaDemo(id+'m',t)}</div>`:'';
+  const fas=(w==='A'&&(wszystko||faza==='zblizenie'||faza==='drzwi'))?`<div class="l l-fas">${fasada(id+'f',t)}</div>`:'';
+  const wn=(wszystko||faza==='wnetrze'||(w==='B'&&baza==='wn'))?`<div class="l l-wn">${scenaLada(id+'w',t,'A',{czysta:true})}</div>`:'';
+  const zac=w==='B'?`<div class="zaciem"><span>Twój kebab</span></div>`:'';
+  const pelne=wszystko?`<button class="punkt3" type="button" aria-label="Wejdź do środka: Twój kebab"><span>Twój kebab</span></button><button class="wroc-b" type="button">← Wróć na mapę</button>`:'';
+  return `<div class="demo3${o.stat?' stat':''}" data-w="${w}" data-faza="${faza}" data-baza="${baza}" data-t="${t}">${mapa}${fas}${wn}${zac}${pelne}</div>`;
+}
+const REDUKCJA=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function ustaw(el,faza,baza){el.dataset.faza=faza;if(baza)el.dataset.baza=baza;}
+function czysc(el){(el._t||[]).forEach(clearTimeout);el._t=[];}
+function po(el,ms,f){el._t.push(setTimeout(f,ms));}
+function graj(el){
+  czysc(el);el.classList.remove('wroc');
+  if(el.dataset.faza!=='mapa'||el.dataset.baza==='wn'){el.classList.add('stat');ustaw(el,'mapa','mapa');void el.offsetWidth;el.classList.remove('stat');}
+  const w=el.dataset.w;
+  if(REDUKCJA){ustaw(el,'wnetrze','wn');return;}
+  if(w==='A'){ustaw(el,'zblizenie');po(el,1300,()=>ustaw(el,'drzwi'));po(el,2200,()=>ustaw(el,'wnetrze'));}
+  else{ustaw(el,'zaciem');po(el,230,()=>ustaw(el,'zaciem','wn'));po(el,300,()=>ustaw(el,'wnetrze','wn'));}
+}
+function wroc(el){
+  czysc(el);
+  if(REDUKCJA){ustaw(el,'mapa','mapa');return;}
+  if(el.dataset.w==='A'){el.classList.add('wroc');ustaw(el,'mapa');}
+  else{ustaw(el,'zaciem');po(el,230,()=>ustaw(el,'zaciem','mapa'));po(el,300,()=>ustaw(el,'mapa','mapa'));}
+}
+
+/* okienko urzędnika: bank i urząd (gracz jest klientem, urzędnik mówi i daje karty z opcjami) */
+function wnOkienko(id,t,kind){
+  const I=IN[t],dk=t==='c',mar=dk?'#1c3a30':'#46664f',bank=kind==='bank';
+  let s=tloWnetrza(id,t,{panel:mar,szach:true,lampy:[200,780]});
+  s+=rc(I,330,20,300,52,mar,5,3)+T(480,58,bank?'SOPLICOWO':'SANEPID',`font-family="${F.man}" font-weight="800" font-size="28" letter-spacing="7" fill="${I.gold}" text-anchor="middle"`);
+  if(bank){ /* portret Kościuszki */
+    s+=rc(I,52,60,140,176,I.gold,4,4)+rc(I,64,72,116,152,dk?'#27304f':'#cdb98f',2,2)+
+      `<path d="M76 224 Q80 176 122 170 Q164 176 168 224 Z" fill="#3a4a6a" stroke="${I.ol}" stroke-width="2"/><path d="M108 172 L122 196 L136 172 Z" fill="#fff" stroke="${I.ol}" stroke-width="1.5"/><path d="M96 180 L108 172 L110 190 Z M148 180 L136 172 L134 190 Z" fill="#b3261e" stroke="${I.ol}" stroke-width="1.2"/>`+
+      `<ellipse cx="122" cy="132" rx="25" ry="31" fill="#e8c3a0" stroke="${I.ol}" stroke-width="2"/><path d="M96 130 Q92 96 122 98 Q152 96 148 130 Q142 112 122 112 Q102 112 96 130Z" fill="#cfcfd6" stroke="${I.ol}" stroke-width="2"/>`+
+      `<circle cx="112" cy="134" r="2.2" fill="${I.ol}"/><circle cx="132" cy="134" r="2.2" fill="${I.ol}"/><path d="M113 152 Q122 157 131 152" fill="none" stroke="${I.ol}" stroke-width="2" stroke-linecap="round"/>`+
+      rc(I,62,242,120,24,I.plate,3,2)+T(122,259,'T. Kościuszko',`font-family="${F.hand}" font-size="15" fill="${I.pt}" text-anchor="middle"`);
+  }else{ /* plakat sanepidu */
+    s+=rc(I,52,70,140,190,I.paper,3,3)+rc(I,62,80,120,34,'#2f9e44',2,2)+T(122,104,'MYJ RĘCE',`font-family="${F.man}" font-weight="800" font-size="19" fill="#fff" text-anchor="middle"`)+
+      `<circle cx="122" cy="160" r="26" fill="${I.glass}" stroke="${I.ol}" stroke-width="2"/><path d="M110 168 Q122 146 134 168 M114 150 v-12 M122 146 v-16 M130 150 v-12" fill="none" stroke="${I.ol}" stroke-width="3" stroke-linecap="round"/>`+
+      T(122,222,'Książeczka zdrowia',`font-family="${F.hand}" font-size="14" fill="#2b2a26" text-anchor="middle"`)+T(122,240,'obowiązkowa',`font-family="${F.hand}" font-size="14" fill="#2b2a26" text-anchor="middle"`);
+  }
+  /* zegar z wahadłem */
+  s+=rc(I,812,164,56,112,I.woodD,4,3)+`<circle cx="840" cy="120" r="54" fill="${I.wood}" stroke="${I.ol}" stroke-width="3"/><circle cx="840" cy="120" r="44" fill="${I.paper}" stroke="${I.ol}" stroke-width="2"/>`;
+  for(let i=0;i<12;i++){const a=i*Math.PI/6;s+=`<line x1="${840+Math.sin(a)*37}" y1="${120-Math.cos(a)*37}" x2="${840+Math.sin(a)*42}" y2="${120-Math.cos(a)*42}" stroke="${I.ol}" stroke-width="2.4"/>`;}
+  s+=`<path d="M840 120 L840 88 M840 120 L858 130" stroke="${I.ol}" stroke-width="4" stroke-linecap="round"/><circle cx="840" cy="120" r="4" fill="${I.ol}"/>`+T(840,150,bank?'od 1811':'od 1919',`font-family="${F.hand}" font-size="13" fill="${I.ol}" text-anchor="middle"`)+
+    `<g class="wahadlo" style="transform-origin:840px 176px"><line x1="840" y1="176" x2="840" y2="240" stroke="${I.ol}" stroke-width="3"/><circle cx="840" cy="246" r="11" fill="${I.gold}" stroke="${I.ol}" stroke-width="2.5"/></g>`;
+  /* okienko 1 z urzędnikiem, okienko 2 nieczynne */
+  s+=rc(I,250,180,210,150,dk?'#10182e':'#e9e2cf',3,3)+postac(355,332,'urzednik',t,.72,.2)+
+    `<rect x="256" y="186" width="198" height="138" fill="${I.glass}" opacity=".35"/><line x1="310" y1="186" x2="310" y2="324" stroke="${I.ol}" stroke-width="2.5"/><line x1="400" y1="186" x2="400" y2="324" stroke="${I.ol}" stroke-width="2.5"/>`+rc(I,325,306,60,18,I.metal,3,2);
+  s+=rc(I,540,180,210,150,I.metal,3,3);
+  for(let y=192;y<326;y+=14)s+=`<line x1="542" y1="${y}" x2="748" y2="${y}" stroke="${I.ol}" stroke-width="1.5" opacity=".5"/>`;
+  s+=rc(I,570,150,150,26,I.plate,3,2)+T(645,168,'OKIENKO 2 — NIECZYNNE',`font-family="${F.nunito}" font-weight="700" font-size="11.5" fill="${I.pt}" text-anchor="middle"`);
+  s+=rc(I,230,330,620,26,I.wood,3,3)+rc(I,230,356,620,86,I.woodD,0,3);
+  s+=dym(I,205,86,bank?['Dzień dobry! Konto firmowe','czy debet?']:['Dzień dobry. Kontrola w środę.','Dokumenty gotowe?'],150,15,70,'urzednik');
+  const kar=bank?[['Konto firmowe','0 zł miesięcznie'],['Debet do 8 000 zł','2% tygodniowo'],['Lokata','3% w skali roku']]:[['Pokaż dokumenty','książeczki zdrowia'],['Umów kontrolę','środa, 10:00'],['Poproś o termin','po remoncie']];
+  kar.forEach(([a,b],i)=>{const x=240+i*200;s+=rc(I,x,456,188,68,I.plate,10,2)+T(x+14,480,a,`font-family="${F.man}" font-weight="800" font-size="14.5" fill="${I.pt}"`)+T(x+14,498,b,`font-family="${F.inter}" font-size="12" fill="${I.mu}"`)+chip(x+54,516,'Wybieram',I.ac,'#fff',10,'middle');});
+  s+=chip(896,490,'Jesteś klientem:',I.plate,I.pt,11,'middle',` stroke="${I.ol}" stroke-width="1.2"`)+chip(896,514,'wybierz kartę',I.ac,'#fff',11,'middle');
+  return svg(960,540,(bank?'Wnętrze banku Soplicowo, ':'Wnętrze urzędu Sanepid, ')+(dk?'ciemny':'jasny'),s);
+}
+/* hurtownia: przekrój z klikalnymi regałami i wózkiem */
+function wnHurt(id,t){
+  const I=IN[t],dk=t==='c',rack=dk?'#a85a22':'#e07a2f';
+  let s=tloWnetrza(id,t,{panel:dk?'#222a44':'#b8c0c4',lampy:[180,500,800]});
+  s=s.replace('</defs>',`<pattern id="${id}h" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="${I.metal}"/><line x1="0" y1="0" x2="0" y2="8" stroke="${I.ol}" stroke-width="2"/></pattern></defs>`);
+  const kraft=dk?['#7a5c3a','#6b4f31','#85673f','#4b6272']:['#c9a06a','#b98a52','#d8b985','#8fa8b8'];
+  const klik=(info,naz,inner,x,y,w,h)=>`<g class="klik" tabindex="0" role="button" data-info="${info}" aria-label="${naz}">${inner}<rect class="ob" x="${x}" y="${y}" width="${w}" height="${h}" rx="8"/></g>`;
+  const reg=(x0)=>{let g='';
+    [150,230,310].forEach((y,li)=>{
+      g+=rc(I,x0,y+36,270,8,rack,1,2);
+      for(let b=0;b<4;b++){const bw=52+((b+li)%2)*10,bx=x0+8+b*66;
+        g+=rc(I,bx,y+36-48,bw,48,kraft[(b+li)%4],2,2)+`<rect x="${bx+6}" y="${y+36-32}" width="${bw-12}" height="10" fill="${I.paper}" opacity=".85"/>`;}});
+    g+=rc(I,x0-6,130,10,224,rack,1,2)+rc(I,x0+266,130,10,224,rack,1,2);return g;};
+  s+=klik('Regał 1: mięso z rożna i półprodukty. Tu ustalasz zapasy: za mało i brakuje w szczycie, za dużo i się psuje.','Regał 1',reg(40),30,124,290,236)+
+     klik('Regał 2: bułki, warzywa i sosy. Świeże rzeczy mają termin ważności, więc nie kupuj ich na zapas.','Regał 2',reg(360),350,124,290,236);
+  s+=klik('Cennik: ceny hurtowe zmieniają się co tydzień. Sprawdź go przed zamówieniem.','Cennik',
+    rc(I,690,70,210,206,I.paper,2,2)+`<circle cx="795" cy="76" r="5" fill="${I.ac}" stroke="${I.ol}" stroke-width="1.5"/>`+
+    T(795,106,'CENNIK HURT',`font-family="${F.hand}" font-size="24" fill="#2b2a26" text-anchor="middle"`)+
+    [['Mięso z rożna','26 zł/kg'],['Bułki (100 szt.)','80 zł'],['Sałata','4 zł/kg'],['Sos czosnkowy 5 l','38 zł'],['Frytki 10 kg','54 zł']].map(([a,b],i)=>T(704,138+i*26,a,`font-family="${F.mono}" font-size="12.5" fill="#2b2a26"`)+T(888,138+i*26,b,`font-family="${F.mono}" font-weight="700" font-size="12.5" fill="#2b2a26" text-anchor="end"`)).join(''),684,62,222,222);
+  s+=klik('Wózek: dostawa do twojego lokalu. Im częstsze kursy, tym mniej leży na zapleczu, ale płacisz za transport.','Wózek paletowy',
+    `<g class="jedzie">`+rc(I,690,452,210,14,I.metal,2,2)+rc(I,700,408,190,44,dk?'#7a5c3a':'#c9a06a',3,2)+rc(I,712,392,70,16,kraft[2],2,2)+rc(I,792,388,84,20,kraft[1],2,2)+
+    `<path d="M900 452 L930 380 L938 384 L914 452" fill="${I.metalD}" stroke="${I.ol}" stroke-width="2" stroke-linejoin="round"/><rect x="924" y="372" width="26" height="9" rx="4" fill="${I.ac}" stroke="${I.ol}" stroke-width="2"/>`+
+    [706,880].map(x=>`<circle cx="${x}" cy="474" r="9" fill="#2b2b33" stroke="${I.ol}" stroke-width="2"/>`).join('')+`</g>`,680,366,276,122);
+  /* przekrój: odcięta ściana i płyta podłogi */
+  s+=`<rect x="0" y="504" width="960" height="36" fill="url(#${id}h)" stroke="${I.ol}" stroke-width="3"/><rect x="0" y="0" width="14" height="504" fill="url(#${id}h)" stroke="${I.ol}" stroke-width="3"/>`;
+  s+=chip(480,476,'Przekrój hurtowni: kliknij regał, cennik albo wózek',I.plate,I.pt,12,'middle',` stroke="${I.ol}" stroke-width="1.4"`);
+  return svg(960,540,'Przekrój hurtowni, '+(dk?'ciemny':'jasny'),s);
+}
+
+/* =====================================================================
+   Strona: pytania, wybory, motyw, panel gości, podsumowanie
+   ===================================================================== */
+const PYT=[
+  {k:'prl',nazwa:'Ile PRL-u',opcje:[
+    {id:'szczypta',t:'A · Szczypta',d:'PRL tylko w liście od wujka (maszyna do pisania, pieczątka) i w drobnym znaczku-logo. Reszta jest nowoczesna jak apka. Najbezpieczniejsza przy nowoczesnych funkcjach i przepisach.',r:(t,id)=>ekranGlowny(id,'A',t)},
+    {id:'akcenty',t:'B · Akcenty',pol:1,d:'To co w A, plus neony nad lokalami na mapie (w trybie nocnym świecą, jeden mruga), emaliowane tabliczki z nazwami dzielnic i pieczątka „ZATWIERDZONO” po wysłaniu decyzji (na podglądzie jest już przybita na karcie).',r:(t,id)=>ekranGlowny(id,'B',t)},
+    {id:'wsrodku',t:'C · PRL w środku',d:'Mapa i interfejs są nowoczesne, a PRL zostaje we wnętrzach: lokal po wujku to dawny bar mleczny (lastryko, kafelki, menu z literkami wsuwanymi na tablicę). Mała miniatura na mapie pokazuje ten klimat.',r:(t,id)=>ekranGlowny(id,'C',t)}]},
+  {k:'wnetrze',nazwa:'Rola wnętrza kebaba',opcje:[
+    {id:'lada',t:'A · Lada z gośćmi',pol:1,d:'Przy ladzie stoją bywalcy: pan Ignacy Rzecki (Lalka: liczy grosze, pamięta dawne ceny), Józio (Ferdydurke: „gęba” lokalu, zaczepki WOS), pani Dulska (Zapolska: „co ludzie powiedzą”, plotki) i anonimowi goście. Dymki komentują to, co policzyła gra. Decyzje są przypięte do przedmiotów: tablica z menu to ceny, kuchnia to przepisy i jakość, drzwi na zaplecze to grafik i ludzie, biurko to finanse. Za ladą stoi pracownik, a ty jako właściciel patrzysz z boku. Da się połączyć z C.',r:(t,id)=>scenaLada(id,t,'A')},
+    {id:'mini',t:'B · Mini-gra przy ladzie',d:'Pracownik składa kebaba, a ty podpowiadasz, klikając składniki w pojemnikach (rola właściciela zostaje, nie stoisz za ladą). Klient zamawia w dymku, jest pasek cierpliwości, napiwek i ocena. Gra jest opcjonalna, tylko w godzinach szczytu, i można ją pominąć.',r:(t,id)=>scenaLada(id,t,'B')},
+    {id:'propozycje',t:'C · Klient z propozycją',d:'Przy ladzie staje ktoś z ofertą albo kłopotem (Rzecki z cateringiem dla UMCS, inspektor z kontrolą w środę). Wybierasz jedną z dwóch kart odpowiedzi i od razu widzisz skutki: kasa, ocena, nastrój. Łatwo połączyć z A: zwykli goście w dymkach, a od czasu do czasu ktoś z propozycją.',r:(t,id)=>scenaLada(id,t,'C')}]},
+  {k:'wejscie',nazwa:'Wejście do środka',opcje:[
+    {id:'plynne',t:'A · Płynne przybliżenie',w:'A',d:'Mapa przybliża się do budynku, drzwi się otwierają i wnętrze pojawia się płynnie (ok. 3 s). Daje poczucie wejścia do lokalu. Przy ograniczeniu animacji w systemie przejście jest natychmiastowe.'},
+    {id:'szybkie',t:'B · Szybkie przejście',w:'B',d:'Krótkie zaciemnienie jak zmiana sceny (ok. 0,5 s) i od razu wnętrze. Szybsze, gdy gracz wchodzi do lokali często.'}]}
+];
+const MINIS=[
+  {n:'Bank Soplicowo',d:'Okienko z urzędnikiem. Postać mówi w dymku i podaje karty z opcjami, a ty jesteś klientem. Wahadło zegara „od 1811” się wychyla.',r:(t,id)=>wnOkienko(id,t,'bank')},
+  {n:'Urząd: Sanepid',d:'Ten sam układ okienka dla urzędów: urzędnik, dymek i trzy karty do wyboru.',r:(t,id)=>wnOkienko(id,t,'urzad')},
+  {n:'Hurtownia',d:'Przekrój z klikalnymi regałami, cennikiem i wózkiem. Kliknij element, żeby zobaczyć, co tam ustawiasz. Wózek lekko jeździ.',r:(t,id)=>wnHurt(id,t),klik:1},
+  {n:'Biuro J.K.Ś.',d:'Segregatory, maszyna do pisania i liczydło z paskiem, wieszak z kapeluszem. Z kubka unosi się para.',r:(t,id)=>wnBiuro(id,t)}
+];
+let wybory={prl:null,wnetrze:null,wejscie:null};
+try{const z=JSON.parse(localStorage.getItem('lukrum-wyglad2')||'null');if(z&&typeof z==='object')wybory={...wybory,...z};}catch(e){}
+function zapisz(){try{localStorage.setItem('lukrum-wyglad2',JSON.stringify(wybory));}catch(e){}}
+
+/* motyw strony */
+function motyw(){const a=document.documentElement.dataset.theme;if(a)return a==='dark'?'c':'j';return matchMedia('(prefers-color-scheme: dark)').matches?'c':'j';}
+const modDemo={A:'j',B:'j'};
+function pokazMotyw(){const m=motyw();document.querySelectorAll('.pasek [data-m]').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.m==='dark')===(m==='c')));}
+function ustawMotyw(m){document.documentElement.dataset.theme=m;try{localStorage.setItem('lukrum-wyglad2-motyw',m);}catch(e){}
+  modDemo.A=modDemo.B=motyw();pokazMotyw();demaOdnow();}
+(function(){let m=null;try{m=localStorage.getItem('lukrum-wyglad2-motyw');}catch(e){}
+  if(location.hash==='#ciemny')m='dark';if(m==='dark'||m==='light')document.documentElement.dataset.theme=m;
+  modDemo.A=modDemo.B=motyw();})();
+document.querySelectorAll('.pasek [data-m]').forEach(b=>b.addEventListener('click',()=>ustawMotyw(b.dataset.m)));
+
+/* pytania 1 i 2: pary podglądów */
+const nazwaTrybu=t=>t==='j'?'Jasny':'Ciemny';
+function paraHTML(k,o){return ['j','c'].map(t=>`<button class="podglad" type="button" aria-label="Powiększ: ${o.t}, ${nazwaTrybu(t).toLowerCase()}">${o.r(t,'p'+k+o.id+t)}<span class="et">${nazwaTrybu(t)}</span><span class="lupa">Powiększ</span></button>`).join('');}
+function opisHTML(o,naWybor=true){return `<figcaption class="opis"><div class="tytul"><h3>${o.t}</h3>${o.pol?'<span class="chip">Polecane</span>':''}</div><p>${o.d}</p>${naWybor?'<button class="wybierz" type="button" aria-pressed="false">Wybieram</button>':''}</figcaption>`;}
+function przerysujPary(k){const box=document.querySelector(`.opcje[data-pyt="${k}"]`),p=PYT.find(x=>x.k===k);
+  p.opcje.forEach(o=>{const f=box.querySelector(`[data-id="${o.id}"] .para`);if(f)f.innerHTML=paraHTML(k,o);});}
+function filmHTML(o,t){
+  const idb='f'+o.id+t,ramki=o.w==='A'?[['mapa','Mapa',{}],['zblizenie','Przybliżenie do budynku',{}],['drzwi','Drzwi się otwierają',{}],['wnetrze','Wnętrze',{baza:'wn'}]]:
+    [['mapa','Mapa',{}],['zaciem','Zaciemnienie',{}],['wnetrze','Wnętrze',{baza:'wn'}]];
+  return ramki.map(([fz,n,ex],i)=>`<figure>${demoHTML(idb+i,o.w,t,fz,{stat:true,...ex})}<figcaption>${i+1}. ${n}</figcaption></figure>`).join('');
+}
+function demoOdnow(f,o){
+  const t=modDemo[o.w];
+  f.querySelector('.demoslot').innerHTML=demoHTML('d'+o.id,o.w,t,'mapa',{pelne:true});
+  f.querySelector('.film').innerHTML=filmHTML(o,t);
+  f.querySelectorAll('.sterowanie .przel button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.t===t));
+}
+function demaOdnow(){PYT[2].opcje.forEach(o=>{const f=document.querySelector(`[data-id="${o.id}"]`);if(f){const el=f.querySelector('.demo3');if(el)czysc(el);demoOdnow(f,o);}});}
+
+document.querySelectorAll('.opcje').forEach(box=>{
+  const k=box.dataset.pyt,p=PYT.find(x=>x.k===k);
+  p.opcje.forEach(o=>{
+    const f=document.createElement('figure');f.className='opcja';f.dataset.id=o.id;
+    if(o.w){
+      f.innerHTML=`<div class="demobox"><div class="sterowanie"><button class="btn" type="button" data-a="graj">▶ Odtwórz</button><button class="btn dr" type="button" data-a="wroc">← Wróć na mapę</button>
+        <span class="przel" role="group" aria-label="Tryb podglądu"><button type="button" data-t="j" aria-pressed="false">Jasny</button><button type="button" data-t="c" aria-pressed="false">Ciemny</button></span></div><div class="demoslot"></div></div><div class="film"></div>`+opisHTML(o);
+    }else f.innerHTML=`<div class="para">${paraHTML(k,o)}</div>`+opisHTML(o);
+    f.querySelector('.wybierz').addEventListener('click',()=>{wybory[k]=wybory[k]===o.id?null:o.id;zapisz();odswiez();});
+    box.appendChild(f);
+    if(o.w){demoOdnow(f,o);
+      f.querySelector('[data-a="graj"]').addEventListener('click',()=>graj(f.querySelector('.demo3')));
+      f.querySelector('[data-a="wroc"]').addEventListener('click',()=>wroc(f.querySelector('.demo3')));
+      f.querySelectorAll('.sterowanie .przel button').forEach(b=>b.addEventListener('click',()=>{modDemo[o.w]=b.dataset.t;czysc(f.querySelector('.demo3'));demoOdnow(f,o);}));
+      f.addEventListener('click',e=>{const d=f.querySelector('.demo3');
+        if(e.target.closest('.punkt3'))graj(d);else if(e.target.closest('.wroc-b'))wroc(d);});
+    }
+  });
+});
+
+/* miniatury innych wnętrz */
+const minis=document.getElementById('minis');
+MINIS.forEach((m,i)=>{
+  const d=document.createElement('div');d.className='mini';
+  d.innerHTML=`<h4>${m.n}</h4><p>${m.d}</p><div class="para">${['j','c'].map(t=>{
+    const svgs=m.r(t,'m'+i+t),et=`<span class="et">${nazwaTrybu(t)}</span>`;
+    return m.klik?`<div class="podglad" style="cursor:default;background:#000">${svgs}${et}<button class="lupa" type="button" data-lb style="border:0;cursor:zoom-in">Powiększ</button></div>`:
+      `<button class="podglad" type="button" aria-label="Powiększ: ${m.n}, ${nazwaTrybu(t).toLowerCase()}">${svgs}${et}<span class="lupa">Powiększ</span></button>`;}).join('')}</div>${m.klik?'<p class="info" aria-live="polite">Kliknij regał, cennik albo wózek.</p>':''}`;
+  minis.appendChild(d);
+});
+document.addEventListener('click',e=>{const k=e.target.closest('.klik');if(k){const p=k.closest('.mini');if(p)p.querySelector('.info').textContent=k.dataset.info;return;}});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('klik')){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
+
+/* powiększenie */
+const lb=document.getElementById('lightbox'),lbT=document.getElementById('lbTresc');
+document.addEventListener('click',e=>{
+  if(e.target.closest('.klik'))return;
+  const b=e.target.closest('button.podglad,[data-lb]');if(!b)return;
+  const kont=b.closest('.podglad'),sv=kont&&kont.querySelector('svg');if(!sv)return;
+  lbT.innerHTML='';lbT.appendChild(sv.cloneNode(true));lb.hidden=false;});
+lb.addEventListener('click',()=>{lb.hidden=true;lbT.innerHTML='';});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.hidden){lb.hidden=true;lbT.innerHTML='';}});
+
+/* panel „Co mówią goście” i rozwój lokalu: naprawdę filtruje dymki i zmienia wygląd lokalu */
+function wnetrzaOdnow(){przerysujPary('wnetrze');demaOdnow();}
+document.querySelectorAll('#panel input[data-r]').forEach(c=>c.addEventListener('change',()=>{STAN.r[c.dataset.r]=c.checked?1:0;wnetrzaOdnow();}));
+document.querySelectorAll('#panel [data-l]').forEach(b=>b.addEventListener('click',()=>{STAN.rozb=b.dataset.l==='1';
+  document.querySelectorAll('#panel [data-l]').forEach(x=>x.setAttribute('aria-pressed',x===b));wnetrzaOdnow();}));
+
+/* podsumowanie */
+const uwagi=document.getElementById('uwagi');
+try{uwagi.value=localStorage.getItem('lukrum-wyglad2-uwagi')||'';}catch(e){}
+uwagi.addEventListener('input',()=>{try{localStorage.setItem('lukrum-wyglad2-uwagi',uwagi.value);}catch(e){}tekst();});
+function nazwa(k){const p=PYT.find(x=>x.k===k),o=p.opcje.find(x=>x.id===wybory[k]);return o?o.t:null;}
+function tekst(){
+  const t='Wygląd LUKRUM 2 – wybory:\n'+PYT.map((p,i)=>`${i+1}. ${p.nazwa}: ${nazwa(p.k)||'(bez wyboru)'}`).join('\n')+(uwagi.value.trim()?'\nUwagi: '+uwagi.value.trim():'');
+  document.getElementById('tekst').textContent=t;return t;}
+function odswiez(){
+  document.querySelectorAll('.opcje').forEach(box=>{const k=box.dataset.pyt;box.querySelectorAll('.opcja').forEach(f=>{const w=wybory[k]===f.dataset.id;
+    f.dataset.wybrana=w?'tak':'nie';const b=f.querySelector('.wybierz');b.setAttribute('aria-pressed',w);b.textContent=w?'Wybrane ✓':'Wybieram';});});
+  document.getElementById('lista').innerHTML=PYT.map(p=>`<li>${p.nazwa}: ${nazwa(p.k)?`<b>${nazwa(p.k)}</b>`:'<span class="brak">jeszcze bez wyboru</span>'}</li>`).join('');
+  tekst();
+}
+document.getElementById('kopiuj').addEventListener('click',()=>{const t=tekst(),st=document.getElementById('status');
+  const zaznacz=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('tekst'));const s=getSelection();s.removeAllRanges();s.addRange(r);
+    st.textContent='Nie udało się skopiować automatycznie. Tekst jest zaznaczony, naciśnij Ctrl+C.';};
+  try{navigator.clipboard.writeText(t).then(()=>st.textContent='Skopiowano. Wklej to w terminalu.',zaznacz);}catch(e){zaznacz();}});
+pokazMotyw();odswiez();
+</script>
