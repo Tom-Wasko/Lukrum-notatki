@@ -41,6 +41,11 @@ Rozstrzygnięte 13.11 wieczorem, do wprowadzenia 14.11:
 - [x] urlop 10% na umowie o pracę
 - [ ] (otwarte) czy zlecenie ma być jeszcze mniej zadowalające (teraz −0,02); czy biura mają mieć dodatkowe różnice
 
+Wprowadzone 14.11, PR #2 (https://github.com/Tom-Wasko/Lukrum/pull/2, scala autor). Przegląd PR robi agent Fable (`_robocze/przeglad-a-fable.md`). Otwarte po wprowadzeniu:
+- [ ] czy dopłata 3 zł za dokument przeniesiony po święcie wystarcza, żeby Scrooge nie był zawsze najlepszym biurem
+- [ ] boty kupują tylko tyle wyposażenia, ile ma ich strategia, więc nowe pozycje mało na nie działają: zostawić czy dać im zakupy
+- [ ] „Gazeta Pana Cogito” i „Radio Tichy” są kanałami istniejących agencji, a nie osobnymi agencjami: czy tak ma zostać
+
 ## Inne
 - [ ] położenie sanepidu i agencji reklamowej na mapie
 - [ ] lekcje: ile rund na żywo, ile między lekcjami

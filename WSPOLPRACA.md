@@ -61,6 +61,7 @@ Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechaniki]`.
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR). Najnowsze na górze. -->
+- 14.11 [mechaniki]: PR #2 `mechaniki-a` (tor A): wynik 0–1000 pkt, pieniądze z debetem, biura rachunkowe, kadry wg KP, pomyłki w szczycie, nowe katalogi. Czeka na scalenie przez autora. Po scaleniu: `budynki.yaml` z `geo`/`adres` (propozycja wyżej).
 - 14.11 [mechaniki]: `wnetrza-dane` – propozycje klientów ze skutkami, zaczepki WOS ze źródłami (czekają na zatwierdzenie autora), cytaty z lektur. Silnik wnętrz w toku. Propozycje granicy z mapą wyżej.
 - 13.11 [mechaniki]: gałąź `wnetrza-dane` – dane bywalców i dymków przy ladzie (`gra/dane/wnetrza/`), bez silnika. Pauza do 14.11, plan w [[Plan na 14.11]].
 - 13.11 [mechaniki]: założone repozytorium notatek, ten plik i [[Wygląd]]. Tor A nowych mechanik jest w toku na gałęzi `mechaniki-a`.
