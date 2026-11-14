@@ -29,12 +29,26 @@ Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechaniki]`.
 
 | Sprawa | Kto | Stan |
 |---|---|---|
-| Lista miejsc na mapie (id, nazwa, dzielnica, współrzędne, rodzaj budynku) | `[mapa]` → plik danych, który czytają mechaniki | do ustalenia |
+| Lista miejsc na mapie (id, nazwa, dzielnica, współrzędne, rodzaj budynku) | `[mapa]` → plik danych, który czytają mechaniki | propozycja 14.11 niżej |
 | Dzielnice jako jednostki popytu (id dzielnicy w danych gry) | wspólnie | do ustalenia |
-| Wejście do budynku: mapa wywołuje `otworzWnetrze(idMiejsca)`, a wnętrze ma przycisk „Wróć na mapę” | `[mapa]` wywołuje, `[mechaniki]` rysuje wnętrze | propozycja |
-| Wspólne zmienne kolorów i fontów (jasny/ciemny) | wspólnie, jeden plik CSS | do ustalenia |
+| Wejście do budynku: mapa wywołuje `otworzWnetrze(idMiejsca)`, a wnętrze ma przycisk „Wróć na mapę” | `[mapa]` wywołuje, `[mechaniki]` rysuje wnętrze | propozycja 14.11 niżej |
+| Zdarzenia w parkach (`gra/dane/zdarzenia/parki.yaml`) pokazuje mapa w parkach; `[mechaniki]` dopisują nowe historie z lektur | `[mechaniki]` dane, `[mapa]` rysuje | ustalone przez autora 13.11 |
+| Wspólne zmienne kolorów i fontów (jasny/ciemny) | wspólnie, jeden plik CSS | propozycja 14.11 niżej |
 | Ikony budynków na mapie a ich wnętrza (spójny styl) | `[mapa]` ikony, `[mechaniki]` wnętrza | do ustalenia |
 | Lokale konkurencji i boty na mapie (dane z silnika) | `[mechaniki]` → API, `[mapa]` rysuje | do ustalenia |
+
+### Propozycje `[mechaniki]` z 14.11 (do przyjęcia albo zmiany przez `[mapa]`)
+1. **Lista miejsc**: rozszerzamy istniejący `gra/dane/mapa/budynki.yaml`, zamiast zakładać nowy plik. Każde miejsce ma już
+   `id`, `nazwa`, `rodzaj`, `strefa`, `opis`. `[mapa]` dopisuje `geo: {lat, lon}` i `adres` (z OSM). Pole `zakladka`
+   zastąpi później `wnetrze` (id wnętrza, `null` = budynek bez wnętrza). Id zostają jak teraz (`bank_1`, …). Dzielnica
+   to dzisiejsza `strefa`, czyli jednostka popytu. Uwaga: plik jest zmieniany na `mechaniki-a`, dlatego dopiski robimy
+   po scaleniu tego PR.
+2. **Wejście do środka**: mapa wywołuje `window.lukrum.otworzWnetrze(idMiejsca)`. Wnętrze rysuje się w tym samym oknie,
+   bez długiej animacji (decyzja autora), i ma przycisk „Wróć na mapę”, który wywołuje `window.lukrum.wrocNaMape()`.
+   Dane wnętrza kebaba poda API `GET /api/wnetrza/…` (gałąź `wnetrza-dane`, w toku).
+3. **CSS**: jeden wspólny plik zmiennych `gra/panel_gracza/static/motywy/zmienne.css` (`:root` = jasny,
+   `[data-motyw="ciemny"]` = ciemny). Nazwy: `--papier`, `--tusz`, `--akcent`, `--akcent-2`, `--ramka`, `--font-tekst`,
+   `--font-szyld`. Mapa i wnętrza biorą kolory tylko stąd. Paletę i kroje wybiera autor przy podglądzie 3.
 
 ## Umowy na granicy
 <!-- Ustalone rzeczy przenosimy tutaj z „Pytań”. Format: data, strony, ustalenie. -->
@@ -47,5 +61,6 @@ Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechaniki]`.
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR). Najnowsze na górze. -->
+- 14.11 [mechaniki]: `wnetrza-dane` – propozycje klientów ze skutkami, zaczepki WOS ze źródłami (czekają na zatwierdzenie autora), cytaty z lektur. Silnik wnętrz w toku. Propozycje granicy z mapą wyżej.
 - 13.11 [mechaniki]: gałąź `wnetrza-dane` – dane bywalców i dymków przy ladzie (`gra/dane/wnetrza/`), bez silnika. Pauza do 14.11, plan w [[Plan na 14.11]].
 - 13.11 [mechaniki]: założone repozytorium notatek, ten plik i [[Wygląd]]. Tor A nowych mechanik jest w toku na gałęzi `mechaniki-a`.
