@@ -20,7 +20,7 @@ W każdej palecie zysk ma znak ▲, a strata ▼, więc nie musisz rozpoznawać 
 - **We wszystkich paletach** (`static/motywy/dostepnosc.css`): klasy `.znak-zysk` ▲, `.znak-strata` ▼, `.znak-uwaga` !,
   `.znak-ok` ✓, `.znak-brak` ✕ oraz wzory `--wzor-strata` i `--wzor-uwaga` do wykresów. Stan nigdy nie jest samym kolorem.
 - Przy okazji poprawiony jasny Pewex: akcent `#d4601b` miał 3,1:1, teraz `#a84a0e` ma 4,7:1 (AA).
-- `prefers-reduced-motion`: zmienna `--ruch: 0`, animacje grafik (`.para`, `.neon`, `.sekundnik`, `.hak`) trzeba nią wyłączać.
+- `prefers-reduced-motion`: animacje grafik (`.para`, `.neon`, `.sekundnik`, `.hak`) wyłącza `dostepnosc.css`.
 
 ## Czego uczy (do planu zajęć)
 - pojęcie z WOS / przedsiębiorczości: dostępność cyfrowa; ustawa z 4.04.2019 o dostępności cyfrowej stron i aplikacji
