@@ -16,6 +16,8 @@ się podwójnie. Wyjątkowa gra (np. bardzo hojny socjal dla załogi) może dać
   zaopatrzenie i rezerwa w kasie (razem 1000).
 - Ranking = suma punktów z tygodni z wagami. Otwarcie waży tyle co zwykły tydzień (1,0), a kolejne tygodnie coraz więcej (od 1 do 2).
   Wynik gry (skala 0–1000) to suma ważona podzielona przez sumę wag.
+- Firma bezczynna (nic nie sprzedaje) ma łącznie ok. 0–100 pkt: punkty działów Goście, Zespół i Bezpieczeństwo rosną
+  proporcjonalnie do liczby obsłużonych gości (pełne od 100 gości w tygodniu).
 - Zadowolenie gości i zespołu liczą proste wzory punktowe (jakość dania, cena, kolejki, braki dań, pensje, sprzęt,
   przepracowanie). Później zastąpią je gwiazdki gości i nastrój zespołu.
 

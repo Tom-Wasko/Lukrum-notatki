@@ -8,9 +8,11 @@ Kiedy w lokalu jest tłok, kucharze się mylą: kebab trzeba zrobić drugi raz, 
 Pomyłek jest więcej, gdy kuchnia jest przeciążona, załoga zmęczona nadgodzinami i nikt nie był na szkoleniu.
 
 ## Zasada działania
-Każde danie ma szansę na pomyłkę: skłonność kucharza (kilka procent) plus dodatek za przeciążoną kuchnię (od 70% obciążenia),
-plus dodatek za zmęczenie (wykorzystanie czasu pracy ponad 85%), plus drobny dodatek, gdy firma nie ma żadnego szkolenia.
-Pomyłka zużywa składniki jeszcze raz i obniża zadowolenie gości (dział „Goście” w wyniku punktowym).
+Każde danie ma szansę na pomyłkę: skłonność kucharza (kilka procent) plus dodatek za przeciążoną kuchnię (od 90% obciążenia, do +4 pp),
+plus dodatek za zmęczenie (wykorzystanie czasu pracy ponad 85%, do +2,5 pp), plus +1 pp, gdy firma nie ma żadnego szkolenia.
+Po pomiarze botów (14.11.2026): dobrze obsadzona firma myli się w ok. 2–4% porcji, przeciążona w ok. 10%. W opiniach gości pomyłki
+ważą 2,5 gwiazdki na cały udział (kolejka 4,0): 10% pomyłek to ok. −0,25★, a nie −1,6★ jak przy starej wadze.
+Pomyłka zużywa składniki jeszcze raz i obniża zadowolenie gości (dział „Goście” w wyniku punktowym) i ocenę lokalu.
 Rada: dodać kucharza albo stanowisko, nie przepracowywać ludzi, kupić szkolenie.
 
 ## Czego uczy (do planu zajęć)

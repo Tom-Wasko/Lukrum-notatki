@@ -10,7 +10,7 @@ sportowe i posiłki. Szkolenia kupuje się w trzech lubelskich firmach, a reklam
 
 ## Zasada działania
 Każda pozycja ma „procent gości, którym odpowiada”. Im więcej odpowiednich rzeczy, tym więcej gości wybiera lokal (z nasyceniem: pierwsze dają
-najwięcej). Ceny z rynku 2026: meble ogrodowe i parasole ok. 6 tys. zł, kiosk samoobsługowy 8–10 tys. zł, licencja muzyczna ok. 60 zł
+najwięcej). Pozycje pierwszych rund (14.11.2026) policzone od zera: ekspres do kawy ziarnistej ok. 3,4 tys. zł, wiata rowerowa ok. 1,4 tys. zł, szatnia z szafkami ok. 1,3 tys. zł, stoły i ławy z jasnego drewna ok. 3,1 tys. zł, ekran z transmisją meczów Motoru Lublin ok. 2,9 tys. zł (źródło każdej liczby – w polu `zrodlo` katalogu). Ceny z rynku 2026: meble ogrodowe i parasole ok. 6 tys. zł, kiosk samoobsługowy 8–10 tys. zł, licencja muzyczna ok. 60 zł
 miesięcznie. Szkolenia kosztują od 650 do 2 000 zł, a ogłoszenie ramkowe w gazecie miejskiej ok. 90 zł za emisję w grze.
 Udogodnienia (karta sportowa, posiłki) podnoszą zadowolenie zespołu w dziale „Zespół”, ale „hojny socjal” kosztuje co tydzień.
 

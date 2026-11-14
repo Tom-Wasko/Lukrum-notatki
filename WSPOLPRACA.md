@@ -61,6 +61,8 @@ Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechaniki]`.
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR). Najnowsze na górze. -->
+- 14.11 [mechaniki]: PR #2 poprawiony po przeglądzie (1d8b921): debet od salda końca tygodnia, pomyłki, punkty firmy bezczynnej, okres próbny, własne katalogi. `wnetrza-dane`: silnik dymków i propozycji (0779722).
+- 14.11 [mechaniki]: podgląd 4 wnętrz (`_robocze/wyglad/podglad4.html`, grafiki SVG w `_robocze/wyglad/grafiki/`). **Do uzgodnienia z [mapa]:** do wspólnych zmiennych CSS dochodzą `--font-gruby` (gruby krój: szyld, nagłówki, ceny) i kolory grafik `--g-*` (skóra, drewno, metal). Propozycja: `grafiki/zmienne.css`.
 - 14.11 [mechaniki]: PR #2 `mechaniki-a` (tor A): wynik 0–1000 pkt, pieniądze z debetem, biura rachunkowe, kadry wg KP, pomyłki w szczycie, nowe katalogi. Czeka na scalenie przez autora. Po scaleniu: `budynki.yaml` z `geo`/`adres` (propozycja wyżej).
 - 14.11 [mechaniki]: `wnetrza-dane` – propozycje klientów ze skutkami, zaczepki WOS ze źródłami (czekają na zatwierdzenie autora), cytaty z lektur. Silnik wnętrz w toku. Propozycje granicy z mapą wyżej.
 - 13.11 [mechaniki]: gałąź `wnetrza-dane` – dane bywalców i dymków przy ladzie (`gra/dane/wnetrza/`), bez silnika. Pauza do 14.11, plan w [[Plan na 14.11]].

@@ -46,12 +46,30 @@ Wprowadzone 14.11, PR #2 (https://github.com/Tom-Wasko/Lukrum/pull/2, scala auto
 - [ ] boty kupują tylko tyle wyposażenia, ile ma ich strategia, więc nowe pozycje mało na nie działają: zostawić czy dać im zakupy
 - [ ] „Gazeta Pana Cogito” i „Radio Tichy” są kanałami istniejących agencji, a nie osobnymi agencjami: czy tak ma zostać
 
+Poprawki po przeglądzie Fable wprowadzone 14.11 (commit 1d8b921, PR #2). Otwarte po nich:
+- [ ] zlecenie jest o ok. 34% tańsze od etatu i bez ryzyka kontroli PIP: zostawić czy dodać ryzyko
+- [ ] Scrooge: darmowa zmiana biura; limit pakietu liczony co tydzień, nie co miesiąc
+- [ ] Asteroida 328 zawsze gorsza od J.K.Ś.: jaką ma mieć przewagę
+- [ ] Józef K.: da się obejść opóźnienie zmiany pakietu
+- [ ] pensja za okres wypowiedzenia przy wyprowadzce: zła kolumna KPiR i brak ZUS
+- [ ] pomyłka przy pustym magazynie nic nie kosztuje
+- [ ] zmiana banku z otwartym debetem
+- [ ] pomyłki: mediana 5,2% (cel 2–5%), w firmie z dobrą obsadą 2,8%; czy obniżyć jeszcze trochę
+
 ## Symulowany pozew REVAS (Fable 14.11, `_robocze/pozew-revas-fable.md`)
 - [x] nazwy własne i logotypy prawdziwych firm zostają (np. IKEA, Pewex), decyzja autora 14.11
 - [ ] katalogi z liczbami z REVAS (main: banki, biura, media, pakiety, kandydaci; PR #2: udogodnienia, wyposażenie, oceny szkoleń) zastąpić własnymi
 - [ ] stałe modelu wspólne z REVAS (main 45, PR #2 22) przeliczyć od zera, martwe usunąć
 - [ ] harmonogram odblokowań i nazwy „Karta wyników”, „Lista błędów”, „Wyślij decyzje” zmienić
 - [ ] folder `revas_26` i regulamin platformy: rozmowa z prawnikiem
+
+## Podgląd 4 (Fable 14.11, `_robocze/wyglad/podglad4.html`)
+- [ ] gruby krój: Alfa Slab One czy Rubik Mono One
+- [ ] style dekoru i grupy: PRL → turyści, imprezowicze; nowoczesny → biurowi, podróżni; studencki → studenci, uczniowie, imprezowicze; rodzinny → rodziny, uczniowie
+- [ ] zakup w sklepie meblowym: wózek i kasa z paragonem czy jedno kliknięcie
+- [ ] zestaw ★★★ w danych (dziś ★, ★★ i podwójny ★★); czy działka po otwarciu ma własne wnętrze
+- [ ] ceny dekoru (przykład: 900–3 200 zł) i próg „dobrze trafiony” (przykład: od 40% klientów strefy)
+- [ ] czy klikalne miejsca są dość spokojne i czy pasują postacie
 
 ## Inne
 - [ ] położenie sanepidu i agencji reklamowej na mapie
