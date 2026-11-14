@@ -57,7 +57,17 @@ Podglądy (pliki HTML) są w `../_robocze/wyglad/` u autora. Jeśli chcesz je zo
   - Dekor kupuje się raz i zostaje, nie starzeje się.
 - Następny krok: podgląd 4 (grafiki może zrobić Fable) i notatka `Funkcje/Dekorowanie lokalu.md`.
 
+## Decyzje 14.11 wieczorem (przed startem mapy)
+- Gruby krój: **Alfa Slab One**. Fonty są w repo (`static/fonty/`, licencja OFL), gra działa bez Google Fonts.
+- Trzecia paleta: **wysoka widoczność** (jasna i ciemna) dla osób słabowidzących i z daltonizmem: kontrast tekstu
+  co najmniej 7:1, litery o 25% większe, grube ramki i fokus, krój Atkinson Hyperlegible, bez tekstur. Zob. [[Wysoka widoczność]].
+- **Nie tylko kolor, we wszystkich paletach**: zysk ▲, strata ▼, uwaga !, do tego wzory w wykresach (`dostepnosc.css`).
+- **Osobne paski**: mapa ma swój pasek (robi `[mapa]`), wnętrza swój (`[mechaniki]`).
+- Grafiki Fable z podglądu 4 weszły do main: `static/grafiki/`, narzędzia w `narzedzia/grafiki/`.
+- Wspólne zmienne: `static/motywy/zmienne.css` z atrybutami `data-paleta` (bar, pewex, wysoka) i `data-tryb`
+  (jasny, ciemny). `data-motyw` zostaje dla starego wyboru układu panelu, dopóki go nie zastąpimy.
+
 ## Do ustalenia później
-- Paleta kolorów (jasna i ciemna) i kroje pisma.
-- Ikony (styl kreski).
-- Pasek skrótów i układ na telefonie (wspólnie z `[mapa]`).
+- Ikony mapy a ikony paska wnętrz (jedna kreska?).
+- Układ na telefonie (wspólnie z `[mapa]`).
+- Kiedy stary wybór motywu (bok, grafik) znika na rzecz nowych palet.

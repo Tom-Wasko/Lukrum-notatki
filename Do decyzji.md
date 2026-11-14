@@ -80,5 +80,5 @@ Poprawki po przeglądzie Fable wprowadzone 14.11 (commit 1d8b921, PR #2). Otwart
 - [x] bez gry próbnej przed nowym wyglądem (były testy na Levasie); następny test z kolegami w gotowym LUKRUM
 
 ## Inne
-- [ ] położenie sanepidu i agencji reklamowej na mapie
+- [x] położenie sanepidu i agencji reklamowej na mapie: sanepid w Śródmieściu (ul. Karłowicza), agencja w biurowcach przy Zana (Rury); park handlowy na Węglinie to dwa sklepy obok siebie (14.11)
 - [ ] lekcje: ile rund na żywo, ile między lekcjami

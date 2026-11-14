@@ -140,16 +140,17 @@ na nowo), `narzedzia/cloudflared.exe` (pobierany przy hostowaniu), `dokumentacja
 
 Prawdziwe miejsca Lublina. Autor uznał, że w centrum jest za dużo, więc urzędy i biura są rozrzucone po mieście.
 Dokładne adresy sprawdzimy na OSM w etapie 2.
+Stan 14.11: pole `miejsce` przy każdym budynku w `gra/dane/mapa/budynki.yaml`. Robimy tylko 10 stref gry, reszta dzielnic
+to tło miasta. Prawdziwe miejsca, ale bez tłoku na Starym Mieście i Krakowskim Przedmieściu (decyzja autora 14.11).
 
 | Miejsce | Dzielnica | Co tam się robi (dzisiejsze zakładki) |
 |---|---|---|
 | **Twój kebab, wnętrze** | tam, gdzie lokal | Lada: menu, ceny, promocje · Kuchnia: magazyn, świeżość, obciążenie · Sala: wyposażenie · Zaplecze: pracownicy, szkolenia, grafik, czas właściciela · Biuro: finanse, KPiR, VAT, właściciel |
 | **Krakowskie Przedmieście** | Śródmieście | banki, dom maklerski (giełda) |
 | **Urzędy** (ul. Szeligowskiego) | Czechów | urząd skarbowy (podatki), ZUS, urząd (sprawy lokalu) |
-| **Sanepid** | do ustalenia na OSM | kontrole, higiena |
-| **Biurowce przy Zana** | LSM / Rury | biuro rachunkowe, ubezpieczyciel |
-| **Agencja reklamowa i radio** | do ustalenia | reklama, internet, ulotki |
-| **Węglin, park handlowy** | Węglin Południowy | meble, sprzęt kuchenny, wyposażenie |
+| **Sanepid** (okolice ul. Karłowicza, 14.11) | Śródmieście | odbiór lokalu, kontrole, higiena |
+| **Biurowce przy Zana** | LSM / Rury | biuro rachunkowe, ubezpieczyciel, agencja reklamowa i radio (14.11) |
+| **Węglin, park handlowy** | Węglin Południowy | dwa sklepy obok siebie (14.11): sklep meblowy (dekor, własne wnętrze) i sklep ze sprzętem kuchennym |
 | **Mełgiewska / Tatary** | Tatary | hurtownie, dostawcy, przewozy |
 | **Elizówka** | za granicą miasta (płn.) | rynek hurtowy: warzywa |
 | **Dyskonty** | po osiedlach | zakupy z odbiorem osobistym |
