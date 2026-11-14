@@ -38,6 +38,8 @@ Wszystko poniżej jest w `main` repo gry (PR #3). Zacznij od `git pull`.
 | Fonty lokalnie (Oswald, PT Sans, Alfa Slab One, Atkinson Hyperlegible) | `static/fonty/fonty.css` | podłączasz `fonty.css` w stronie mapy |
 | Wejście do budynku i wybór wyglądu | `static/lukrum.js` (już w `gra.html` i `_pulpit.html`) | po kliknięciu budynku wołasz `lukrum.otworzWnetrze(id)`; na `lukrum:wyglad` przerysowujesz kolory |
 | Grafiki SVG (ikony, postacie, wnętrza) | `static/grafiki/` + `README.md` | do wglądu, żeby ikony mapy miały tę samą kreskę |
+| Budynki zbiorcze: kamienica bankowa (6 banków i giełda) i biurowiec przy Zana (5 firm) | `zespoly` i pole `zespol` w `budynki.yaml` (PR #4) | rysujesz tylko zespół, `adres`/`geo` dopisujesz w zespole; klik → `lukrum.otworzWnetrze(id_zespolu)` |
+| Spis wszystkich elementów mapy według dzielnic i rodzajów, z tym, co dopiero w planie | [[Mapa – elementy]] | lista kontrolna, co narysować |
 
 Stara mapa z kratką (`mapa.js`, `mapa_uklad.js`, `uklad.pola` w `miasto.yaml`) działa dalej, dopóki nowa jej nie zastąpi.
 Nowy budynek dziś musi mieć pole w kratce swojej strefy (np. `sanepid: [15, 7]`); po przejściu na OSM to wymaganie usuniemy.
@@ -61,6 +63,9 @@ Nowy budynek dziś musi mieć pole w kratce swojej strefy (np. `sanepid: [15, 7]
 - 14.11 autor: robimy tylko **10 stref** gry, a nie wszystkie dzielnice. Inne dzielnice to tło. Prawdziwe miejsca, ale bez
   tłoku na Starym Mieście i Krakowskim Przedmieściu. Sanepid: Śródmieście (ul. Karłowicza). Agencja reklamowa: biurowce
   przy Zana (Rury). Park handlowy na Węglinie: dwa sklepy obok siebie (meblowy z własnym wnętrzem i sprzęt kuchenny).
+- 14.11 autor: banki i giełda w **jednej kamienicy** przy Krakowskim Przedmieściu (najpierw klik w kamienicę, potem w bank);
+  firmy przy Zana w **jednym biurowcu** tak samo. Gazeta Pana Cogito i Radio Tichy to kanały agencji, bez osobnych miejsc.
+  Po budowie na działce stoi pawilon z własnym wnętrzem.
 - 14.11 `[mechaniki]`, **lista miejsc**: rozszerzamy `gra/dane/mapa/budynki.yaml` (bez nowego pliku). Id zostają (`bank_1`, …).
   Pola: `miejsce` (opis prawdziwego miejsca), `adres` i `geo: {lat, lon}` (wpisuje `[mapa]` z OSM), `wnetrze` (id wnętrza,
   puste = budynek bez wnętrza; do tego czasu otwiera się stara zakładka z pola `zakladka`). Strefy w `strefy.yaml` mają
@@ -85,6 +90,7 @@ Nowy budynek dziś musi mieć pole w kratce swojej strefy (np. `sanepid: [15, 7]
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR). Najnowsze na górze. -->
+- 14.11 [mechaniki]: PR #4 w main (ddb885c): zespoły budynków (kamienica bankowa, biurowiec przy Zana). Spis [[Mapa – elementy]]. W toku: gałąź `mechaniki-b` (biura, bank przy debecie, PIP przy zleceniu, kadry) i `wnetrza-dane` część 2 (WOS zatwierdzone, cytaty, wskazówki propozycji, zestaw ★★★).
 - 14.11 [mechaniki]: PR #2 (tor A) scalony. PR #3 `wspolne-mapa` w main: pola miejsc i stref, sanepid, wspólne zmienne CSS z paletą wysokiej widoczności, fonty lokalnie, `lukrum.js`, grafiki z podglądu 4. Start dla [mapa] wyżej.
 - 14.11 [mechaniki]: PR #2 poprawiony po przeglądzie (1d8b921): debet od salda końca tygodnia, pomyłki, punkty firmy bezczynnej, okres próbny, własne katalogi. `wnetrza-dane`: silnik dymków i propozycji (0779722).
 - 14.11 [mechaniki]: podgląd 4 wnętrz (`_robocze/wyglad/podglad4.html`, grafiki SVG w `_robocze/wyglad/grafiki/`). **Do uzgodnienia z [mapa]:** do wspólnych zmiennych CSS dochodzą `--font-gruby` (gruby krój: szyld, nagłówki, ceny) i kolory grafik `--g-*` (skóra, drewno, metal). Propozycja: `grafiki/zmienne.css`.

@@ -44,7 +44,7 @@ Rozstrzygnięte 13.11 wieczorem, do wprowadzenia 14.11:
 Wprowadzone 14.11, PR #2 (https://github.com/Tom-Wasko/Lukrum/pull/2, scala autor). Przegląd PR robi agent Fable (`_robocze/przeglad-a-fable.md`). Otwarte po wprowadzeniu:
 - [ ] czy dopłata 3 zł za dokument przeniesiony po święcie wystarcza, żeby Scrooge nie był zawsze najlepszym biurem
 - [ ] boty kupują tylko tyle wyposażenia, ile ma ich strategia, więc nowe pozycje mało na nie działają: zostawić czy dać im zakupy
-- [ ] „Gazeta Pana Cogito” i „Radio Tichy” są kanałami istniejących agencji, a nie osobnymi agencjami: czy tak ma zostać
+- [x] „Gazeta Pana Cogito” i „Radio Tichy” zostają kanałami drukarni i Fali Koziołka (14.11); banki i giełda w jednej kamienicy, firmy przy Zana w jednym biurowcu (spis: „Mapa – elementy”)
 
 Poprawki po przeglądzie Fable wprowadzone 14.11 (commit 1d8b921, PR #2). Otwarte po nich:
 - [x] zlecenie: ryzyko kontroli PIP, gdy zleceniobiorca pracuje jak etatowiec, i mniej zadowolenia (14.11)
