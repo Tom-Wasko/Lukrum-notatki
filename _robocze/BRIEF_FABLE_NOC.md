@@ -4,8 +4,8 @@
 O 16:00 17.11 autor ma mieć **gotową grę**: drużyny licealistów przechodzą w przeglądarce całą grę od pierwszej do ostatniej
 rundy, na mapie Lublina, z wnętrzami, instrukcją i panelem mistrza gry. To eksperyment: autor chce
 zobaczyć, ile ulepszysz bez nadzoru. Masz **pełną swobodę**: wdrażaj ustalone rzeczy, wymyślaj nowe funkcje, przebudowuj
-istniejące, a jeśli uznasz, że gra na tym zyska, zmieniaj nawet **fundamentalne zasady gry** (punkty, rundy, balans, ekrany,
-mapę kolegi – autor się na to zgodził). Nie pytaj, tylko decyduj. Niedokończone końcówki dopnie później Opus, więc lepiej
+istniejące, a jeśli uznasz, że gra na tym zyska, zmieniaj nawet **fundamentalne zasady gry** (punkty, rundy, balans, ekrany).
+**Wyjątek: mapa** (zasada „Mapa” niżej) – do odwołania jest nietykalna. Nie pytaj, tylko decyduj. Niedokończone końcówki dopnie później Opus, więc lepiej
 więcej dobrych funkcji niż perfekcyjnie wygładzona jedna – ale **każda zmiana musi być świetnie opisana** (niżej).
 
 **Najważniejsze: dokumentacja do wybierania.** Jeśli autorowi coś się nie spodoba, ma móc wziąć tylko wybrane zmiany i dodać
@@ -14,7 +14,7 @@ z pełnym opisem w katalogu zmian (sekcja „Dziennik i raport”).
 
 **„Gotowa” znaczy:**
 1. Pełna gra pokazowa (`manage.py gra_pokazowa`) przechodzi wszystkie rundy bez błędów w konsoli i w logach serwera.
-2. Każdy budynek z mapy da się otworzyć i coś w nim zrobić, albo jest uczciwie oznaczony jako „wkrótce”.
+2. Każdy budynek z mapy (starej albo nowej, jeśli już jest w `main`) da się otworzyć i coś w nim zrobić, albo jest uczciwie oznaczony jako „wkrótce”.
 3. Instrukcja gracza i MG opisuje obecne mechaniki (nie stare z Levasa).
 4. Wszystko w trzech paletach × jasny/ciemny jest czytelne, także w palecie wysokiej widoczności.
 5. Uczeń rozumie po 10 minutach, co ma robić (pierwsza runda prowadzi za rękę).
@@ -31,8 +31,8 @@ z pełnym opisem w katalogu zmian (sekcja „Dziennik i raport”).
   lekcje: 2–3 rundy na żywo, dalej między lekcjami.
 
 ## Twarde zasady (bez wyjątków)
-- Gałąź główna Fable: `fable`, od `main` po scaleniu mapy (15.11), w worktree `lukrum/_robocze/fable`. Jeśli jej nie ma,
-  utwórz: `git worktree add ../_robocze/fable -b fable main`. Od `fable` możesz robić własne gałęzie tematyczne
+- Gałąź główna Fable: `fable`, od aktualnego `main` (najpierw `git pull` w `lukrum_gra`), w worktree `lukrum/_robocze/fable`.
+  Jeśli jej nie ma, utwórz (z folderu `lukrum_gra`): `git worktree add ../_robocze/fable -b fable main`. Od `fable` możesz robić własne gałęzie tematyczne
   (`fable/<temat>`) i scalać je do `fable`. **`main` jest nietykalny: nie commituj, nie scalaj, nie pushuj na main, nic na FTP.**
   Push `fable` i `fable/*` na GitHub co kilka commitów (kopia zapasowa).
 - Agenci: najwyżej 3 naraz, na Sonnecie, do jasno opisanych zadań; większość pracy i myślenia robisz sam. Agent pracuje
@@ -44,7 +44,18 @@ z pełnym opisem w katalogu zmian (sekcja „Dziennik i raport”).
   Nie ruszaj `Levas/levas_gra` ani `Levas/notatki`.
 - Liczby gry tylko w `dane/*.yaml` (`{wartosc, pewnosc, zrodlo}`); zmiana balansu = pomiar przed/po (`balans.symuluj`).
 - Teksty po polsku, neutralne płciowo; nawiązania literackie mile widziane (jak banki i biura).
-- Mapę kolegi możesz zmieniać jak resztę gry; każdą zmianę mapy opisz też krótko w `WSPOLPRACA.md` (dziennik), żeby kolega wiedział.
+- **Mapa – nie ruszaj, dopóki autor nie pozwoli.** Kolega robi nową mapę równolegle (wieczorem 15.11 i dalej). Do
+  odwołania nie zmieniasz jego działki z tabeli „Kto co robi” w `WSPOLPRACA.md`: silnik i rysowanie mapy (`mapa.js`,
+  `mapa_uklad.js`, nowe pliki mapy), zoom, ikony budynków, pasek mapy, pola `adres`/`geo`/`dzielnice`/`serce` w
+  `dane/mapa/*.yaml`, gałęzie `mapa-…` i wszystko, co kolega dopisze. Wolno: wnętrza, silnik gry, dane mechanik, panel,
+  instrukcja; nowe budynki i lokale dodajesz w danych z `id`, `nazwa`, `strefa`, `miejsce` (bez `geo`), a wejście
+  zostaje przez `lukrum.otworzWnetrze(id)`. Pomysły dotyczące mapy zapisuj w `_robocze/fable/MAPA_POMYSLY.md` do
+  późniejszego wdrożenia.
+- **Odblokowanie mapy:** autor napisze w tej sesji „mapa odblokowana” (może też dopisać to w `WSPOLPRACA.md`). Wtedy:
+  `git fetch`, scal aktualny `main` (z mapą kolegi) do `fable`, rozwiąż konflikty na korzyść mapy kolegi, pełny pytest,
+  a dopiero potem zmieniaj mapę jak resztę gry (każdą zmianę opisz w dzienniku `WSPOLPRACA.md`, żeby kolega wiedział).
+  Co godzinę `git fetch` – gdy w `main` pojawi się nowa wersja, scal ją do `fable` (bez czekania na odblokowanie mapy,
+  bo tylko pobierasz zmiany kolegi, a nie zmieniasz jego plików).
 - Dane osobowe autora (e-mail itp.) nigdzie poza gitem.
 
 ## Jak pracujesz
