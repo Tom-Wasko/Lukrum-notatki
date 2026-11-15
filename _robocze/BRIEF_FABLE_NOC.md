@@ -51,6 +51,14 @@ z pełnym opisem w katalogu zmian (sekcja „Dziennik i raport”).
   instrukcja; nowe budynki i lokale dodajesz w danych z `id`, `nazwa`, `strefa`, `miejsce` (bez `geo`), a wejście
   zostaje przez `lukrum.otworzWnetrze(id)`. Pomysły dotyczące mapy zapisuj w `_robocze/fable/MAPA_POMYSLY.md` do
   późniejszego wdrożenia.
+- **Podgląd mapy (decyzja autora 15.11, ok. 17:30):** mapa kolegi jest na gałęzi `origin/maciex` (jeszcze nie w `main`,
+  kolega pracuje dalej po 20:00). Możesz ją czytać i uruchamiać lokalnie (`git fetch`, `git log/diff main...origin/maciex`,
+  osobny worktree tylko do odczytu). Możesz też zrobić po **swojej** stronie podłączenia do niej: słuchacz `lukrum:wnetrze`
+  we wnętrzach z `e.detail.obsluzone = true`, linki i przejścia mapa ↔ wnętrza, `geo` w `lokale.yaml`, wycięcie odsyłaczy
+  z opisów budynków (propozycje z `raporty/etap2-mapa/raport.md` na `maciex`). Takie rzeczy commituj na `fable/<temat>`
+  albo `fable` i pushuj. Plików mapy kolegi (`static/mapa/*`, `narzedzia/mapa/*`) nadal nie zmieniasz i nie scalasz
+  `maciex` do `fable` – to nastąpi dopiero po „mapa odblokowana”.
+- **Commity:** regularnie, co najmniej co godzinę, i push na swoją gałąź (kopia na GitHubie).
 - **Odblokowanie mapy:** autor napisze w tej sesji „mapa odblokowana” (może też dopisać to w `WSPOLPRACA.md`). Wtedy:
   `git fetch`, scal aktualny `main` (z mapą kolegi) do `fable`, rozwiąż konflikty na korzyść mapy kolegi, pełny pytest,
   a dopiero potem zmieniaj mapę jak resztę gry (każdą zmianę opisz w dzienniku `WSPOLPRACA.md`, żeby kolega wiedział).
