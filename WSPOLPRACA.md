@@ -12,7 +12,7 @@ przed pracą.** Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechanik
 
 ## Zasady
 1. **Przed pracą:** `git pull` w `Lukrum-notatki`, a w `Lukrum` `git fetch` i przegląd nowych gałęzi.
-2. **Scalanie do `main`:** strona `[mechaniki]` scala po akceptacji autora i zostawia wpis w Dzienniku niżej. Pull
+2. **Scalanie do `main`:** strona `[mechaniki]` scala po akceptacji autora i zostawia wpis w Dzienniku niżej; zmiany z `maciex` scala do `main` od razu (od 17.11). Pull
    request jest potrzebny, gdy zmiana dotyka plików drugiej strony. Strona `[mapa]` wysyła swoje zmiany gałęzią
    albo pull requestem. (zmiana 16.11; wcześniej wszystko szło przez pull request)
 3. **Cudze pliki:** zmianę przez granicę zapowiadamy wpisem w „Pytaniach” albo w Dzienniku. Od 16.11 agenci autora
@@ -85,6 +85,12 @@ przed pracą.** Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechanik
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR / commit). Najnowsze na górze. Wpisy starsze niż miesiąc przenosimy do [[Historia]]. -->
+- 17.11 [mechaniki]: **repo gry spłaszczone** (na gałęzi `porzadki`, do `main` po recenzji): wszystko z `gra/` jest teraz
+  w korzeniu repo (`silnik/`, `dane/`, `panel_gracza/`, `testy/`, `manage.py`…), `.venv` w korzeniu. Po scaleniu do
+  `main` majster: `git pull`, usunąć stare `gra/.venv`, założyć nowe (`start.bat` robi to sam). Ścieżki w
+  `narzedzia/mapa/pobierz_osm.py` poprawione (bez członu `gra`). Gałąź `maciex` scalamy do `main` od razu po każdym
+  `git fetch`, bez czekania. Notatki: nowe pliki `Plan`, `Decyzje`, `Postęp`, `Mapa`, `Historia`, `Serie/`, `Analizy/`;
+  usunięte `LUKRUM.md`, `PLAN_PRZEBUDOWY.md`, `Mapa – elementy.md` (treść w `Mapa.md`).
 - 16.11 [mechaniki]: `main` gry = 08268aa: gałąź `fable` (wnętrza, palety, list od wujka i reszta) scalona z mapą
   z `maciex`. Scalone gałęzie zdalne usunięte, `maciex` została.
 - 16.11 [mechaniki]: na mapie budynek z bieżącego kroku Planu tygodnia ma obwódkę i plakietkę „teraz”. Zrobione po

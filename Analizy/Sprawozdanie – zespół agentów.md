@@ -48,7 +48,7 @@ Zastrzeżenie: liczby 4×, 15× i 90% pochodzą z badania Anthropic nad wyszukiw
 po jednym briefie → lider sprawdza dowody i diff, scala po akceptacji szefa → dokumentacja i dziennik.
 Gdy szef jest niedostępny, lider zapisuje pytania w [[Dziennik lidera]] i idzie dalej tylko tam, gdzie da się to łatwo cofnąć.
 
-Szczegóły: `lukrum_gra/AGENTS.md` (dla każdego agenta), `lukrum_gra/dokumentacja/zespol/LIDER.md` (dla lidera).
+Szczegóły (od 17.11): `warsztat/ZESPOL.md` i `gra/AGENTS.md` (dla każdego agenta), `warsztat/LIDER.md` (dla lidera).
 
 ## Do decyzji szefa
 Pytania są w [[Dziennik lidera]] → „Pytania do szefa”.

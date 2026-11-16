@@ -29,7 +29,7 @@ Role: **szef** (autor), **lider** (Claude Opus, główna sesja), **agenci** (pod
   8. Seria `wnetrza`: osobne wnętrza dla każdego żetonu, PRL w holach; ok. 2–3 dni.
   9. Dalej: lekcje (etap 4), ZwzT, audyt i prawnik (etap 5), telefon, pilot w szkole do maja 2027.
 
-### Przekazanie dla nowego lidera (16.11 wieczorem, przed przeprowadzką `lukrum/` poza `Levas/`)
+### Przekazanie dla nowego lidera (16.11 wieczorem) – wykonane 17.11, zostaje jako historia
 **Stan na 17.11.2026, noc (przed przeprowadzką):** agenci zakończeni, nic nie działa w tle, kopie robocze gita usunięte.
 Szef odpowiedział na **wszystkie** pytania (ocena, plan porządków 1–8, krytyka wnętrz 1–16). Odpowiedzi są niżej
 w „Decyzje szefa” (16.11, noc). Pliki zespołu są zacommitowane lokalnie w obu repo, ale **nie wypchnięte**: push za zgodą szefa.
@@ -53,6 +53,8 @@ Wyniki do wykorzystania (po porządkach przenieść do `analizy/`, a artefakty d
 
 ## Decyzje szefa
 **17.11.2026 (nowy lider)**
+- **Push bez pytania** („nie musisz mieć mojej zgody na push”); nadal bez `--force`. Nowe repo na GitHubie i usuwanie zdalnych gałęzi – pytać.
+- Sesje startują z folderu `Pulpit\lukrum` (po przeprowadzce; wcześniejszy wpis o `Pulpit\Levas\lukrum` nieaktualny).
 - **Fable (ostatnie godziny do 17.11 8:00):** kolejno: 1) „projekt wnętrz” (makiety i specyfikacja do serii budynki i wnetrza, `_robocze/fable-wnetrza/`), 2) treść zeszytu wujka (`_robocze/fable-zeszyt/`), 3) dziury w ekonomii (`_robocze/fable-dziury/`, na własnej kopii `main`). Brief: `_robocze/fable-wnetrza/brief.md`, prompt startu z `/loop`: `prompt-startu.md`. Kolejność: najpierw porządki; Fable startuje na hasło szefa **„fable start”**, wtedy lider nie stawia nowych agentów, a działający kończą bieżący krok.
 - **Porządki, pytania 9–11:** 9a – pozew, SWOT i podobieństwa do `archiwum/prawne/` (bez gita), w notatkach tylko streszczenie wniosków bez starej nazwy; 10a – `testy/dane_zamrozone/` bez zmian; 11b – analizy jako `notatki/Analizy/`, repo notatek zostaje w `notatki/` (zmienia wybór lidera z 16.11 o korzeniu w `lukrum/`).
 - **Zmiany majstra scalamy do `main` od razu** („scalaj wszystko od majstra od razu”): po `git fetch` lider scala `origin/maciex` bez pytania, sprawdza składnię JS i testy mapy, a push zostaje za zgodą szefa.
