@@ -1,6 +1,6 @@
 # Wysoka widoczność
 
-- **Stan:** gotowa część wspólna (14.11, PR #3 `wspolne-mapa`): zmienne, fonty, znaki. Przełącznik w ustawieniach gracza: do zrobienia przy nowym pasku
+- **Stan:** w grze (część wspólna 14.11, PR #3 `wspolne-mapa`: zmienne, fonty, znaki; przełącznik w menu ⚙ działa od 16.11.2026)
 - **Gdzie w grze:** ustawienia wyglądu (⚙), obok palet Bar mleczny i Pewex; działa na mapie i we wnętrzach
 
 ## Dla ucznia (do instrukcji)

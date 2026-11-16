@@ -1,6 +1,6 @@
 # Sklep meblowy „Meblościanka” (dekor lokalu)
 
-- **Stan:** gotowa na gałęzi `fable` (16.11.2026; silnik `fable-dekor` 4cba26e, sklep `fable-sklep` cb1aa66), czeka na zatwierdzenie
+- **Stan:** w grze (main, 16.11.2026); do akceptacji szefa
 - **Gdzie w grze:** Park handlowy → „Meblościanka” (od tygodnia, w którym odblokowuje się wyposażenie)
 
 ## Dla ucznia (do instrukcji)

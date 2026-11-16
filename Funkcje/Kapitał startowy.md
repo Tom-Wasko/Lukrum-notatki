@@ -1,7 +1,7 @@
 # Kapitał startowy
 
-- **Stan:** na gałęzi mechaniki-a, czeka na zatwierdzenie
-- **Gdzie w grze:** Dashboard i Pieniądze, od pierwszego tygodnia
+- **Stan:** w grze (PR #2, 14.11.2026)
+- **Gdzie w grze:** Dashboard i Pieniądze, od pierwszego tygodnia; po końcu gry w Planie tygodnia
 
 ## Dla ucznia (do instrukcji)
 Każda drużyna zaczyna z 50 000 zł na koncie. To wszystko, co ma na wynajem lokalu, sprzęt, pierwszą ekipę, towar

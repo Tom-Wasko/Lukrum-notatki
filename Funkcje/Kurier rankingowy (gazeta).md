@@ -1,6 +1,6 @@
 # Kurier rankingowy (gazeta i finał sezonu)
 
-- **Stan:** gotowa na gałęziach `fable-kurier` i `fable-final` (16.11.2026), czeka na zatwierdzenie
+- **Stan:** w grze (main, 16.11.2026); do akceptacji szefa
 - **Gdzie w grze:** redakcja „Kuriera rankingowego” (menu), a po końcu gry Plan tygodnia
 
 ## Dla ucznia (do instrukcji)

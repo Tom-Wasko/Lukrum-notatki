@@ -1,7 +1,7 @@
 # Dymki przy ladzie
 
 
-- **Stan:** dane i silnik na gałęzi `wnetrza-dane`; zatwierdzone 8 zaczepek WOS i 4 cytaty sprawdzone w Wolnych Lekturach (14.11). Rysowanie dymków w panelu: osobne zadanie
+- **Stan:** w grze (PR #5; wnętrze kebaba i przełącznik mistrza gry 16.11.2026); 8 zaczepek WOS zatwierdzonych, 4 cytaty sprawdzone w Wolnych Lekturach (14.11)
 - **Gdzie w grze:** wnętrze kebaba (widok od drzwi, przy ladzie)
 
 ## Dla ucznia (do instrukcji)
@@ -26,6 +26,17 @@ Dymków nie da się wyłączyć u siebie, bo to źródło wiedzy o grze. Wyłąc
 - pytanie do omówienia na lekcji: czym różni się opinia klienta o cenie od opinii o smaku i co z każdą z nich zrobić?
 - krótkie zadanie dla drużyn: wybierzcie jedną zaczepkę WOS i sprawdźcie w ISAP, czy odpowiedź pod dymkiem jest prawdziwa.
   Podajcie numer przepisu.
+
+## Zaczepki WOS i ich podstawa prawna
+Zatwierdzone przez szefa, sprawdzone 14.11.2026 (`dane/wnetrza/dymki.yaml`, pole `sprawdzone`). Gra pokazuje tylko zatwierdzone.
+1. **Paragon** (Józio): kasa musi wydać paragon bez proszenia; e-paragon za zgodą klienta. Ustawa o VAT, art. 111 ust. 3a pkt 1.
+2. **Alergeny** (Zagłoba): 14 alergenów z listy UE także przy jedzeniu bez opakowania. Rozp. (UE) 1169/2011, art. 44 ust. 1 lit. a, zał. II. Forma informacji zależy od przepisów krajowych, więc dymek jej nie narzuca.
+3. **Cena z VAT** (Rzecki): cena dla klienta zawsze brutto. Ustawa z 9.05.2014 o informowaniu o cenach, art. 3 ust. 1 pkt 1 (numer punktu do potwierdzenia w ISAP).
+4. **Reklamacja** (gość): 14 dni na odpowiedź, milczenie = przyjęcie. Ustawa o prawach konsumenta, art. 7a.
+5. **Praca 16-latka** (Józio): tylko lekkie prace, badanie lekarskie, w wakacje 7 h dziennie i 35 h tygodniowo, bez nadgodzin i nocy. KP art. 200¹, 200², 201, 203.
+6. **Monitoring** (Judym): informacja 2 tygodnie przed uruchomieniem, cel, oznaczenie terenu. KP art. 22², RODO art. 13.
+7. **Płatność kartą** (gość): obowiązek płatności bezgotówkowej od 2022, kasa połączona z terminalem od 2025. Prawo przedsiębiorców, art. 19a (zakres do potwierdzenia).
+8. **„Na zeszyt”** (Papkin): odroczona płatność; ryzyko po stronie sprzedawcy, sprzedaż i tak na kasie. KC art. 535, ustawa o VAT art. 111. Najsłabiej udokumentowana; można ją usunąć.
 
 ## Do promocji
 „Klienci przy ladzie gadają jak prawdziwi: o cenie, o kolejce i o paragonie. Czasem cytują Fredrę.”

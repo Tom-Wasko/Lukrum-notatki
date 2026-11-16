@@ -1,6 +1,6 @@
 # Księga gości (opinie w wymiarach)
 
-- **Stan:** gotowa na gałęzi `fable-ksiega` (16.11.2026), czeka na zatwierdzenie
+- **Stan:** w grze (main, 16.11.2026); do akceptacji szefa
 - **Gdzie w grze:** Mój kebab, pod wnętrzem lokalu
 
 ## Dla ucznia (do instrukcji)

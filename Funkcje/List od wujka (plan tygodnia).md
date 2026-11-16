@@ -1,6 +1,6 @@
 # List od wujka (plan tygodnia)
 
-- **Stan:** gotowa na gałęzi `fable-wujek` (16.11.2026, a2e9efe), czeka na zatwierdzenie
+- **Stan:** w grze (main, 16.11.2026); do akceptacji szefa
 - **Gdzie w grze:** Plan tygodnia (pierwszy ekran po wejściu do gry)
 
 ## Dla ucznia (do instrukcji)

@@ -1,7 +1,7 @@
 # Wynik 0–1000 pkt
 
-- **Stan:** na gałęzi mechaniki-a, czeka na zatwierdzenie
-- **Gdzie w grze:** zakładka Wyniki ▸ Karta wyników i Ranking; tydzień 1 to „Wielkie otwarcie”
+- **Stan:** w grze (PR #2, 14.11.2026)
+- **Gdzie w grze:** zakładka Wyniki ▸ Karta wyników i Ranking, redakcja „Kuriera rankingowego”; tydzień 1 to „Wielkie otwarcie”
 
 ## Dla ucznia (do instrukcji)
 Za każdy tydzień firma dostaje punkty w pięciu działach: finanse, goście, zespół, rozwój i bezpieczeństwo finansowe.

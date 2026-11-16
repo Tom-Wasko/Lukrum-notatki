@@ -1,6 +1,6 @@
 # Miejsca zamiast zakładek (świat gry)
 
-- **Stan:** gotowa na gałęzi `fable-swiat` (15.11.2026, 81bf8d3), czeka na zatwierdzenie
+- **Stan:** w grze (main, 16.11.2026); do akceptacji szefa
 - **Gdzie w grze:** całe menu z boku i mapa miasta
 
 ## Dla ucznia (do instrukcji)
