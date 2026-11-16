@@ -86,3 +86,16 @@ Poprawki po przeglądzie Fable wprowadzone 14.11 (commit 1d8b921, PR #2). Otwart
 ## Inne
 - [x] położenie sanepidu i agencji reklamowej na mapie: sanepid w Śródmieściu (ul. Karłowicza), agencja w biurowcach przy Zana (Rury); park handlowy na Węglinie to dwa sklepy obok siebie (14.11)
 - [x] lekcje: mieszane – pierwsze 2–3 rundy na żywo na lekcji, dalej między lekcjami (np. 2 w tygodniu, zamyka MG) (14.11)
+
+## Po nocy Fable (16.11) – szczegóły w `_robocze/fable/pozew-2.md` i `ZMIANY.md`
+- [ ] „Nocna 13” w grze dla niepełnoletnich: (a) zostaje, ale opisana w instrukcji mistrza gry z wyłącznikiem w kreatorze; (b) domyślnie wyłączona; (c) usunięta. Domyślnie przyjęte: zostaje, usunięta zachęta do ukrywania jej przed mistrzem gry, dopisane zdanie o 18 latach.
+- [ ] znaki prawdziwych marek (`LOGA` w `ikony_marek.js`: sieci sklepów, banki): (a) zostają (decyzja 8.11: prawdziwe marki zostają), (b) zwykłe ikony rodzaju sklepu, (c) fikcyjne nazwy. Domyślnie: bez zmian.
+- [ ] opisy porównujące ceny prawdziwych sieci (Stokrotka „trochę drożej”, Auchan „drożej niż w hurtowni”, abonament przypisany Auchan): (a) zostają, (b) opisy neutralne (propozycje tekstów w pozew-2.md, M1). Domyślnie: bez zmian.
+- [ ] zlecenie bez składek pracodawcy: (a) uproszczenie z dopiskiem w instrukcji (zrobione), (b) składki jak w prawie (`podatki_2026.yaml`). Domyślnie: (a).
+- [ ] przejęcie debetu przez nowy bank: (a) zostaje jako uproszczenie z dopiskiem (zrobione), (b) spłata debetu przed zmianą banku. Domyślnie: (a).
+- [ ] Józio (Gombrowicz, prawa do 2039) i bank „Solaris” (Lem): (a) zostają jako aluzje, (b) Józio tylko z imienia bez cytatów, (c) zamiana. Domyślnie: bez zmian.
+- [ ] prawdziwe numery domów z OSM przy lichwiarzu, detektywie i lombardzie: (a) zostają, (b) sama ulica. Domyślnie: bez zmian (pole mapy kolegi).
+- [ ] paleta „Pewex” (nazwa marki): (a) zostaje, (b) nazwa opisowa. Domyślnie: bez zmian.
+- [ ] nazwy z nocy do akceptacji: sklep „Meblościanka”, tytuły ekranów (tabela `NAZWY` w `zakladki/index.js`), listy wujka (`zakladki/wujek.js`).
+- [ ] tryb lekcyjny: zamykanie rund po terminie wymaga uruchamiania `manage.py zamykaj_rundy` na serwerze (harmonogram zadań). Kto to ustawia?
+- [ ] dymki: instrukcja nie opisuje wyłączania dymków przez mistrza gry, bo w panelu MG nie ma takiego przełącznika (decyzja 14.11 mówi, że ma zostać ustawienie MG) – do dorobienia.
