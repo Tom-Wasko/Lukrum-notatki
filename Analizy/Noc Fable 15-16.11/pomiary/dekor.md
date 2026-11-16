@@ -22,3 +22,14 @@
 - premium: zwrot przy pełnej konwersji 11.4 tyg.
 - agresywny: zwrot przy pełnej konwersji 7.5 tyg.
 - nasladowca: zwrot przy pełnej konwersji 10.5 tyg.
+
+## Pomiar 17.11.2026
+
+Powtórzony na gałęzi `porzadki` poleceniem `.venv/Scripts/python -X utf8 -m balans.dekor_pomiar` (24 rundy, ziarna 7, 11, 23, pięć botów średnich, 15 gier; komplet 4 elementów w najlepiej dopasowanym stylu).
+Wynik jest identyczny z pomiarem z nocy 15–16.11 (tabela wyżej):
+
+- średnio zysk/tyg. przy pełnej konwersji popytu 761 zł → **zwrot 10,9 tyg.** (cel 8–12);
+- w symulacji botów (moc ograniczona godzinami kuchni) przyrost gotówki 112 zł/tyg.;
+- wg strategii: zrównoważony 12,0; tani 17,2; premium 11,4; agresywny 7,5; naśladowca 10,5 tyg.
+
+Dawna liczba 9,8 tyg. w `dane/mapa/dekor.yaml` była z wcześniejszego, mniejszego pomiaru; zastąpiona wartością 10,9 tyg.

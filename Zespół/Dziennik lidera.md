@@ -12,6 +12,13 @@ Role: **szef** (autor), **lider** (Claude Opus, główna sesja), **agenci** (pod
 ## Stan prac
 *(aktualizuje lider; po przerwaniu albo w nowej sesji zacznij stąd – zob. LIDER.md §8)*
 
+### 17.11 – stan porządków (zapis przed końcem limitu)
+- Gotowe i wypchnięte (gałęzie `porzadki`): kroki 1–8 (gra 3aac792, 6f85cb8; notatki do 7e5cd7d; warsztat e4d247b – lokalnie, bez zdalnego repo). Szczegóły i dowody: `_robocze/porzadki/STAN.md`.
+- W toku: **krok 4d** (agent Sonnet G w repo gry, bez commitów): kody serii z `_robocze/porzadki/kody.md` → realia w `zrodlo`, komentarze bez kodów, `archiwum/kody-serii.md`, nowy pomiar dekoru. Raport ma trafić do `_robocze/porzadki/raporty/krok-4d.md`. Po wznowieniu: sprawdź `git -C gra status`/raport; jeśli agent przerwany – nowy agent z tym samym briefem (wiadomość do G w rozmowie 17.11) i dopiskiem „zrobione: <git diff --stat>”.
+- Potem: jeden recenzent (4e + 9: próbka 30 `zrodlo` + kontrola z planu (d) i odsyłaczy) → poprawki → scalenie `porzadki` do `main` w gra i notatki, push → usunąć `_robocze/krytyka-wyniki/` po Fable → `plan.md`+`STAN.md` do `notatki/Serie/porzadki/` → krok 11 (METODA.md).
+- Czeka na szefa: założenie repo `warsztat` na GitHubie, usunięcie zdalnej gałęzi `fable` w notatkach.
+- Fable (noc): prompt do okna Fable z `/loop 15m` – `_robocze/fable-wnetrza/prompt-okno-fable.md`; wyniki w `_robocze/fable-wnetrza|fable-zeszyt|fable-dziury/`, start widać po `START.txt`.
+
 ### 17.11 – nowy lider, pierwsze kroki
 - Krok 1 (pamięć) i 2 (worktree: tylko `main` w obu repo, nic do naprawy) zrobione.
 - Krok 3: `origin/maciex` scalony do `main` repo gry (`a0e123d`, żetony jako przedmioty), testy `swiat`+`aplikacja` 114 passed.
