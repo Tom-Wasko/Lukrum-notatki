@@ -12,6 +12,23 @@ Role: **szef** (autor), **lider** (Claude Opus, główna sesja), **agenci** (pod
 ## Stan prac
 *(aktualizuje lider; po przerwaniu albo w nowej sesji zacznij stąd – zob. LIDER.md §8)*
 
+### 17.11 – nowy lider, pierwsze kroki
+- Krok 1 (pamięć) i 2 (worktree: tylko `main` w obu repo, nic do naprawy) zrobione.
+- Krok 3: `origin/maciex` scalony do `main` repo gry (`a0e123d`, żetony jako przedmioty), testy `swiat`+`aplikacja` 114 passed.
+- Nie wypchnięte (czeka na zgodę szefa): repo gry `main` (+3: pliki zespołu i scalenie majstra), repo notatek `main` (+1).
+- Krok 4: `_robocze/porzadki/plan.md` ma sekcję (0) „Zmiany po decyzjach 16.11 (noc)” i nowe pytania 9–11 w (h). Czeka na szefa.
+- Nikt nie pracuje w tle.
+- **Mapa drogowa (17.11, do potwierdzenia przez szefa):**
+  1. Porządki (kroki 1–11 planu) ok. 7–9 h pracy, 2 okna limitu, 17–18.11.
+  2. Warsztat i panel na claude.ai ok. 2–3 h, 18–19.11.
+  3. Seria `pulpit`: teczka, portfel, ramki tylko po najechaniu, „Co tu zrobisz” ukryte; ok. 1 dzień.
+  4. Seria `kebab-park`: sprzęt tylko w Parku, kebab odsyła; ok. 1 dzień.
+  5. Seria `zeszyt`: zeszyt wujka i krój odręczny; ok. 1 dzień.
+  6. Przygotowanie gry testowej ok. 0,5 dnia, a sama gra w tygodniu 23.11.
+  7. Seria `budynki`: pierzeja 5 banków, giełda, Kamienica rachmistrzów, Dom reklamy, redakcja; ok. 2 dni.
+  8. Seria `wnetrza`: osobne wnętrza dla każdego żetonu, PRL w holach; ok. 2–3 dni.
+  9. Dalej: lekcje (etap 4), ZwzT, audyt i prawnik (etap 5), telefon, pilot w szkole do maja 2027.
+
 ### Przekazanie dla nowego lidera (16.11 wieczorem, przed przeprowadzką `lukrum/` poza `Levas/`)
 **Stan na 17.11.2026, noc (przed przeprowadzką):** agenci zakończeni, nic nie działa w tle, kopie robocze gita usunięte.
 Szef odpowiedział na **wszystkie** pytania (ocena, plan porządków 1–8, krytyka wnętrz 1–16). Odpowiedzi są niżej
@@ -35,6 +52,11 @@ Wyniki do wykorzystania (po porządkach przenieść do `analizy/`, a artefakty d
 7. Przypomnij szefowi o rozmowie z kapitanem o metodzie z AI i o grze testowej (może w tygodniu 23.11).
 
 ## Decyzje szefa
+**17.11.2026 (nowy lider)**
+- **Fable (ostatnie godziny do 17.11 8:00):** kolejno: 1) „projekt wnętrz” (makiety i specyfikacja do serii budynki i wnetrza, `_robocze/fable-wnetrza/`), 2) treść zeszytu wujka (`_robocze/fable-zeszyt/`), 3) dziury w ekonomii (`_robocze/fable-dziury/`, na własnej kopii `main`). Brief: `_robocze/fable-wnetrza/brief.md`, prompt startu z `/loop`: `prompt-startu.md`. Kolejność: najpierw porządki; Fable startuje na hasło szefa **„fable start”**, wtedy lider nie stawia nowych agentów, a działający kończą bieżący krok.
+- **Porządki, pytania 9–11:** 9a – pozew, SWOT i podobieństwa do `archiwum/prawne/` (bez gita), w notatkach tylko streszczenie wniosków bez starej nazwy; 10a – `testy/dane_zamrozone/` bez zmian; 11b – analizy jako `notatki/Analizy/`, repo notatek zostaje w `notatki/` (zmienia wybór lidera z 16.11 o korzeniu w `lukrum/`).
+- **Zmiany majstra scalamy do `main` od razu** („scalaj wszystko od majstra od razu”): po `git fetch` lider scala `origin/maciex` bez pytania, sprawdza składnię JS i testy mapy, a push zostaje za zgodą szefa.
+
 **16.11.2026 (noc): przegląd oceny sposobu pracy, plan porządków (5–8), krytyka wnętrz (1–16)**
 
 *Ocena (`analizy/` po porządkach, teraz `_robocze/ocena-sposobu-pracy/ocena.md`):*
