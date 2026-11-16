@@ -42,7 +42,7 @@ Wyniki do wykorzystania (po porządkach przenieść do `analizy/`, a artefakty d
 - `_robocze/pamiec/`: **czysty pakiet pamięci** dla nowej ścieżki.
 
 **Pierwsze kroki nowego lidera:**
-1. **Pamięć:** skopiuj całą zawartość `_robocze/pamiec/` (z `MEMORY.md`) do swojego katalogu pamięci. Starej pamięci Levasa nie przenoś.
+1. **Pamięć:** skopiuj całą zawartość `_robocze/pamiec/` (z `MEMORY.md`) do swojego katalogu pamięci. Starej pamięci z poprzedniego folderu nie przenoś.
 2. `git worktree list` w obu repo, w razie potrzeby `git worktree repair`. Zapytaj szefa o push plików zespołu.
 3. `git fetch` w repo gry: nowe commity majstra na `origin/maciex` (17.11: m.in. „budynki jako przedmioty”).
 4. Zaktualizuj `plan.md` porządków o decyzje 16.11 (noc) i pokaż szefowi zmiany. Potem porządki według planu
@@ -54,7 +54,7 @@ Wyniki do wykorzystania (po porządkach przenieść do `analizy/`, a artefakty d
 ## Decyzje szefa
 **17.11.2026 (nowy lider)**
 - **Push bez pytania** („nie musisz mieć mojej zgody na push”); nadal bez `--force`. Nowe repo na GitHubie i usuwanie zdalnych gałęzi – pytać.
-- Sesje startują z folderu `Pulpit\lukrum` (po przeprowadzce; wcześniejszy wpis o `Pulpit\Levas\lukrum` nieaktualny).
+- Sesje startują z folderu `Pulpit\lukrum` (po przeprowadzce; wcześniejszy wpis o starym folderze nieaktualny).
 - **Fable (ostatnie godziny do 17.11 8:00):** kolejno: 1) „projekt wnętrz” (makiety i specyfikacja do serii budynki i wnetrza, `_robocze/fable-wnetrza/`), 2) treść zeszytu wujka (`_robocze/fable-zeszyt/`), 3) dziury w ekonomii (`_robocze/fable-dziury/`, na własnej kopii `main`). Brief: `_robocze/fable-wnetrza/brief.md`, prompt startu z `/loop`: `prompt-startu.md`. Kolejność: najpierw porządki; Fable startuje na hasło szefa **„fable start”**, wtedy lider nie stawia nowych agentów, a działający kończą bieżący krok.
 - **Porządki, pytania 9–11:** 9a – pozew, SWOT i podobieństwa do `archiwum/prawne/` (bez gita), w notatkach tylko streszczenie wniosków bez starej nazwy; 10a – `testy/dane_zamrozone/` bez zmian; 11b – analizy jako `notatki/Analizy/`, repo notatek zostaje w `notatki/` (zmienia wybór lidera z 16.11 o korzeniu w `lukrum/`).
 - **Zmiany majstra scalamy do `main` od razu** („scalaj wszystko od majstra od razu”): po `git fetch` lider scala `origin/maciex` bez pytania, sprawdza składnię JS i testy mapy, a push zostaje za zgodą szefa.
@@ -115,7 +115,7 @@ Wyniki do wykorzystania (po porządkach przenieść do `analizy/`, a artefakty d
 
 **16.11.2026 (pytania z planu porządków)**
 - **Spłaszczenie repo gry:** lider ściąga najnowszy `maciex` i robi po swojemu („majster da sobie radę”), a majster dostaje wpis w WSPOLPRACA.
-- **Pozew, SWOT, podobieństwa** (dokumenty ze starą nazwą) idą poza `lukrum/`, np. do `Levas/_prawne/`.
+- **Pozew, SWOT, podobieństwa** (dokumenty ze starą nazwą) idą poza `lukrum/`, ostatecznie do `archiwum/prawne/` (decyzja 9a).
 - **Historia repo notatek zostaje**, bez nowego repo. Stara nazwa jest w treści plików 6 commitów z 13–14.11
   (`PLAN_PRZEBUDOWY.md`, `WSPOLPRACA.md`, `Do decyzji.md`, `Wnioski Fable 14.11.md`, `_robocze/…`). Po porządkach bieżące pliki są czyste.
 - **Raporty agentów i plany serii:** `notatki/Serie/<seria>/` (plan.md + `<temat>.md` + indeks).
@@ -134,11 +134,11 @@ Wyniki do wykorzystania (po porządkach przenieść do `analizy/`, a artefakty d
   - `notatki/` = repo `Lukrum-notatki`, wszystko o projekcie, w tym raporty, plany serii i dziennik;
   - `warsztat/` = **zwykły folder bez gita**: ogólny sposób pracy zespołu, szablony, definicje agentów, narzędzia i panel. To szablon na kolejne projekty.
 - **Panel kontrolny** (projekt poboczny): **oba warianty**, czyli lokalny generator HTML w warsztacie i strona na claude.ai z bazą stanu.
-- Szef przenosi `lukrum/` poza `Levas/` **17.11 ok. 6:00**, po pracy agentów nocnych, i w nowym folderze startuje nowego lidera.
+- Szef przenosi `lukrum/` do nowego folderu (`Pulpitukrum`) **17.11 ok. 6:00**, po pracy agentów nocnych, i w nowym folderze startuje nowego lidera.
 - Porządki bez ograniczeń: „możesz zmieniać wszystko, jeśli wyjdzie lepiej”.
 
 **16.11.2026**
-- Sesje startują z folderu `Pulpit\Levas\lukrum`, bo wtedy działają `CLAUDE.md` i własni agenci.
+- Sesje startują z folderu projektu (od 17.11 `Pulpit\lukrum`), bo wtedy działają `CLAUDE.md` i własni agenci.
 - Scalenia do `main` po akceptacji szefa, a koledze zostaje wpis w dzienniku WSPOLPRACA. PR tylko przy zmianach w jego plikach.
 - Fable jest dostępny tylko do 17.11 8:00 (darmowy okres), potem poza zespołem.
 - Szef czyta pliki zespołu przed commitem. Porządki ruszają po jego uwagach.
