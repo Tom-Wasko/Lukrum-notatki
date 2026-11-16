@@ -1,14 +1,40 @@
-# Lukrum – notatki
+# LUKRUM – notatki
 
-Notatki projektu LUKRUM. LUKRUM to edukacyjna symulacja biznesu (kebab w Lublinie) dla liceów, na lekcje WOS i
-konkurs „Zwolnieni z Teorii”. Kod gry jest w osobnym repozytorium `Tom-Wasko/Lukrum`.
+Notatki projektu LUKRUM: edukacyjnej symulacji biznesu (kebab na mapie Lublina) dla liceów, na lekcje WOS i konkurs
+„Zwolnieni z Teorii”. To sejf Obsidiana i prywatne repozytorium `Tom-Wasko/Lukrum-notatki`, wspólne dla autora
+i majstra (mapa). Kod gry jest w repozytorium `Tom-Wasko/Lukrum` (lokalnie `../gra`).
 
-To repozytorium to sejf Obsidiana: otwórz folder w Obsidianie albo czytaj pliki na GitHubie.
+## Spis
 
-**Zacznij od:**
-- [WSPOLPRACA.md](WSPOLPRACA.md) – kto co robi (mapa ↔ mechaniki i wnętrza), zasady, pytania między stronami. Agenci czytają go przed pracą.
-- [PLAN_PRZEBUDOWY.md](PLAN_PRZEBUDOWY.md) – cel, decyzje, etapy, strefy na mapie, nawiązania literackie.
-- [Wygląd.md](Wygląd.md) – ustalenia wyglądu.
-- [Do decyzji.md](Do%20decyzji.md) – sprawy czekające na autora.
-- [Funkcje/](Funkcje/) – notatka o każdej funkcji gry. Z nich powstaną instrukcje, plany zajęć i materiały promocyjne.
-- [LUKRUM.md](LUKRUM.md) – spis notatek.
+| Notatka | Co w niej jest | Kto pisze |
+|---|---|---|
+| [[Plan]] | cel, etapy, role, czego jeszcze brakuje | lider |
+| [[Postęp]] | zadania i stan etapów (jedyna lista zadań projektu) | lider po każdej serii |
+| [[Decyzje]] | obowiązujące decyzje autora, tematami | lider, po decyzji autora |
+| [[Do decyzji]] | **tylko** sprawy otwarte, z wariantami | lider i agenci (gdy brief każe) |
+| [[Wygląd]] | obowiązujący wygląd: styl, palety, kroje, wnętrza, pulpit | lider |
+| [[Mapa]] | strefy, zespoły budynków, spis elementów mapy | obie strony |
+| [[Nawiązania literackie]] | zasady, lista nawiązań, nazwy banków i biur | lider |
+| [[WSPOLPRACA]] | tablica mapa ↔ mechaniki: podział, umowy na granicy, pytania, dziennik | obie strony, **czytać przed pracą** |
+| `Funkcje/` | jedna notatka na funkcję gry wg [[_Szablon funkcji]]; baza do instrukcji, planów zajęć i promocji | agenci, gdy brief każe |
+| `Zespół/` | [[Dziennik lidera]] (decyzje dzień po dniu, pytania do szefa), [[Sprawozdanie – zespół agentów]] | lider |
+| `Analizy/` | oceny, research, krytyki i sprawozdania z datą; indeks [[Analizy]] | lider |
+| `Serie/` | plany i raporty serii prac, pomiary; indeks [[Serie]] | lider i agenci |
+| [[Historia]] | kronika prac i sprawy już rozstrzygnięte | lider, przy zamknięciu serii |
+
+## Zasady tego repozytorium
+1. **Jeden temat, jedna notatka.** Zanim założysz nową, sprawdź spis. Nie zakładamy notatek z datą w nazwie
+   („Plan na…”, „Wnioski z…”): bieżące rzeczy idą do notatki tematu, a po zamknięciu jedna linia do [[Historia]].
+2. **Stan obecny osobno od historii.** Notatka tematu mówi, jak jest teraz. Jak do tego doszło, mówi [[Historia]]
+   i historia gita.
+3. **Sprawa otwarta żyje tylko w [[Do decyzji]].** Po decyzji znika stamtąd i trafia do [[Decyzje]] albo notatki tematu.
+4. **Bez plików roboczych.** Briefy, raporty agentów, pomiary i zrzuty nie należą do notatek. Raporty i plany serii mają tu jedno miejsce
+   (wyjątek: folder `Serie/`, zob. [[Serie]]), rzeczy tymczasowe w `../_robocze/` u autora.
+5. **Nic z innych gier biznesowych:** żadnych nazw, wzmianek ani porównań.
+6. Przed pracą `git pull`. Commity w imieniu autora tylko jako Tom-Wasko, bez dopisków o asystentach AI.
+7. Agenci zmieniają notatki tylko wtedy, gdy każe im to brief.
+
+## Gdzie co jest poza notatkami
+- Kod gry, instrukcja dla graczy i mistrza gry, dokumentacja techniczna: `../gra/`.
+- Surowe materiały (briefy, logi, zrzuty, pliki z dawnych serii) leżą lokalnie w `../archiwum/`, poza gitem; spis w `LEGENDA.md`.
+- Sposób pracy zespołu, szablony i definicje agentów: `../warsztat/` (osobne repozytorium szefa; majster ma własne narzędzia).

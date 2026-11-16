@@ -1,73 +1,62 @@
-# Wygląd LUKRUM (etap 1½)
+# Wygląd LUKRUM
 
-To plan wyglądu, który wychodzi z rozmów i podglądów. Jest podstawą dla mapy (`[mapa]`) i wnętrz (`[mechaniki]`).
-Podglądy (pliki HTML) są w `../_robocze/wyglad/` u autora. Jeśli chcesz je zobaczyć, poproś o link.
+Obowiązujący wygląd gry. Podstawa dla mapy (`[mapa]`) i wnętrz (`[mechaniki]`). Jak powstawał (podglądy 1–4):
+[[Historia]]. Sprawy otwarte: [[Do decyzji]], rozdz. 6. Co z tego już działa: [[Postęp]].
 
-## Ustalone (13.11.2026)
+## Charakter
+- **Ilustrowana plansza + czytelność nowoczesnej apki + sporo PRL-u.** Mapa wygląda jak plansza gry (papier, żetony,
+  tabliczki). Karty, przyciski, paski i typografia są w stylu PRL, ale liczby i przyciski mają być wyraźne jak w apce.
+- **Jasny i ciemny tryb zawsze razem**, dla każdego ekranu.
+- Inspiracja to tylko pomysł „gość przy ladzie mówi w dymku”. Postacie, grafika i nazwy są nasze i lubelskie.
 
-| Sprawa | Decyzja |
+## Palety i kroje
+| Sprawa | Ustalenie |
 |---|---|
-| Charakter | **Ilustrowana plansza + czytelność nowoczesnej apki + nutka PRL.** Mapa wygląda jak plansza gry (papier, rysowane budynki), a karty, liczby i przyciski są czyste jak w apce. **Zmiana po podglądach 2 (13.11): sporo PRL-u.** Próbujemy całego interfejsu w stylu PRL (karty, przyciski, paski, typografia), a mapa zostaje mniej więcej planszówkowa. Czytelność apki dalej obowiązuje: liczby i przyciski mają być wyraźne |
-| Mapa | **Płaska, z budynkami-ikonami** w miejscach stref. Widok z góry: dzielnice, Bystrzyca, zieleń, główne ulice |
-| Kliknięcie budynku | **Wejście do środka**: przybliżenie do budynku, potem wnętrze, potem „Wróć na mapę” |
-| Tryby | **Jasny i ciemny robimy równolegle** dla każdego ekranu |
-| Wnętrza | We wszystkich budynkach: kebab, bank, hurtownia, biuro J.K.Ś., urzędy… |
-| Gracz we wnętrzu kebaba | **Właściciel z boku**: patrzy, jak pracownicy obsługują klientów, słucha ich i decyduje. Nie stoi za ladą |
-| Klienci | **Kilku stałych bywalców** z imionami i historiami. Wracają, pamiętają ceny, niosą nawiązania literackie. Obok nich anonimowi goście |
-| Bywalcy a lektury | **Wprost, z imionami** (np. pan Ignacy Rzecki z „Lalki” mówi cytatem i pamięta dawne ceny). Postacie z lektur szkolnych są w domenie publicznej |
-| Co mówią klienci | Cztery rodzaje dymków: **opinie o cenie i smaku**, **plotki z miasta** (zapowiedzi zdarzeń), **propozycje i kłopoty** (z wyborem odpowiedzi), **zaczepki WOS** (paragon, prawa konsumenta, podatki). **Każdy rodzaj da się włączać i wyłączać**: mistrz gry w ustawieniach (np. pod lekcję), a gracz u siebie |
-| Wnętrza bez klientów | **Zależnie od budynku**: bank i urzędy mają okienko z urzędnikiem (gracz jest klientem, postać mówi w dymku i daje karty z opcjami), a hurtownia i podobne mają przekrój z klikalnymi miejscami (regały, wózek). Wszędzie są **lekkie animacje** (wejście postaci, para z kuchni, zegar, migające neony), wyłączane przy `prefers-reduced-motion` |
-| Rozwój wnętrza | **Widać kupione rzeczy**: nowy rożen, krzesła, neon nad wejściem. Brud, kolejka i tłok też są widoczne. Wnętrze pokazuje stan firmy |
-| Pracownicy we wnętrzu | **Widoczni jako postacie** na swoich miejscach (lada, kuchnia). **Nastrój i zmęczenie widać na twarzy.** Kliknięcie otwiera kartę pracownika (umowa, grafik, szkolenia) |
-| Wujek | **Zdjęcie na ścianie** przy dawnym barze (kliknięcie pokazuje jego listy) i **wizyty osobiście** przy ladzie w ważnych momentach („Za moich czasów…”) |
-| Dźwięk | **Lekkie dźwięki, domyślnie włączone** (dzwonek nad drzwiami, skwierczenie, gwar, stempel w urzędzie). Łatwy przycisk wyciszenia. Mistrz gry może wyciszyć dźwięk całej klasie |
-| Pora dnia | **Zgodna z prawdziwą godziną**: za oknem rano jasno, wieczorem ciemno, w porze obiadowej więcej ludzi. Niezależna od trybu jasny/ciemny |
-| Inspiracja | Gry z obsługą klientów przy ladzie (np. „Good Pizza, Great Pizza”). **Bierzemy tylko pomysł:** klient przy ladzie mówi w dymku. Postacie, grafika i nazwy są nasze i lubelskie |
+| Palety | **Bar mleczny** (domyślna), **Pewex**, **wysoka widoczność**; każda jasna i ciemna. Gracz wybiera w menu ⚙ |
+| Wysoka widoczność | kontrast tekstu co najmniej 7:1, litery o 25% większe, grube ramki i fokus, krój Atkinson Hyperlegible, bez tekstur. Zob. [[Wysoka widoczność]] |
+| Nie tylko kolor | we wszystkich paletach: zysk ▲, strata ▼, uwaga !, wzory w wykresach (`dostepnosc.css`) |
+| Kroje | Oswald + PT Sans, gruby krój **Alfa Slab One** (szyld, nagłówki, ceny). Fonty w repozytorium (OFL), bez Google Fonts |
+| Zmienne | jeden plik `static/motywy/zmienne.css`; atrybuty `data-paleta` (`bar`, `pewex`, `wysoka`) i `data-tryb` (`jasny`, `ciemny`). Kolory tylko przez zmienne. Pełna lista zmiennych: [[WSPOLPRACA]], „Umowy na granicy” |
+| Ruch | lekkie animacje (wejście postaci, para z kuchni, zegar, neony), wyłączane przy `prefers-reduced-motion` |
 
-## Ustalone po podglądach 2 (13.11)
-- **Rola wnętrza kebaba: A + C.** Lada z gośćmi to podstawa: bywalcy i goście komentują w dymkach, a decyzje są
-  przypięte do przedmiotów (menu → ceny, kuchnia → jakość, zaplecze → ludzie, biurko → finanse). Klient
-  z propozycją (C) pojawia się od czasu do czasu jako dodatek.
-- **Losowe zdarzenia zostają w parkach** (potwierdzone 13.11). Zdarzenia z `dane/zdarzenia/parki.yaml` zostają
-  i **pokazuje je mapa w parkach** (Ogród Saski, Park Ludowy…). Przy ladzie są tylko plotki o nich i od czasu do czasu
-  klient z propozycją. **Dopisujemy zdarzenia z lektur** (np. „bal” jak u Dulskiej, kulig, pojedynek na słowa).
-- **Wejście do środka bez animacji:** klikasz i jesteś w środku. Długie przejście znudziłoby się w późniejszych
-  rundach. Wyjście tak samo szybkie („Wróć na mapę”).
+## Mapa i pulpit
+- Mapa płaska, widok z góry: dzielnice, Bystrzyca, zieleń, główne ulice, budynki jako żetony.
+- **Pulpit to mapa na cały ekran.** W rogach małe ikony: runda, kasa, „Wyślij decyzje”, lista wujka, ⚙, konto,
+  „Jak grać”. Wyniki rundy są w budynku Redakcji. (16.11, do zrobienia)
+- Kliknięcie budynku: **od razu jesteś w środku**, bez długiego przejścia. Wyjście tak samo szybkie („Wróć na mapę”).
+- Lista wujka: kliknięcie pozycji przesuwa i przybliża mapę do budynku, a ten pulsuje. (16.11, do zrobienia)
+- Mapa ma swój pasek skrótów (robi `[mapa]`), wnętrza swój (`[mechaniki]`). Pasek wnętrz pokazuje same ikony
+  i rozwija się do pełnych nazw.
 
-## Dymki i bywalcy (decyzje 13.11 wieczorem)
-- **Ton bywalców:** po swojemu i z humorem (jak w pierwszej wersji `dymki.yaml`) **oraz** z prawdziwymi cytatami z lektur
-  w domenie publicznej. Gombrowicz (Józio) bez cytatów, tylko aluzje.
-- **Zaczepki WOS:** Claude sprawdza każdy przepis w źródłach (ISAP, gov.pl), poprawia tekst i dopisuje źródło. Autor
-  zatwierdza (`sprawdzone: true`). Silnik pokazuje tylko zatwierdzone.
-- **Klient z propozycją:** 2–3 odpowiedzi z **prawdziwym skutkiem** w liczbach (jednorazowy przychód, koszt, opinia,
-  ryzyko kontroli, nowy kandydat). Najwyżej jedna propozycja na kilka rund.
+## Wnętrza
+| Sprawa | Ustalenie |
+|---|---|
+| Gdzie | we wszystkich budynkach: kebab, bank, hurtownia, biura, urzędy, sklep meblowy |
+| Rola wnętrza kebaba | lada z gośćmi to podstawa. Decyzje są przypięte do przedmiotów: menu → ceny, kuchnia → jakość, zaplecze → ludzie, biurko → finanse. Klient z propozycją pojawia się od czasu do czasu |
+| Gracz | **właściciel z boku**: patrzy, słucha i decyduje. Nie stoi za ladą |
+| Klikalne miejsca | wyróżnione w scenie |
+| Goście | kilku stałych bywalców z imionami i historiami, obok nich anonimowi goście. Dymek pokazuje się po najechaniu na postać |
+| Bywalcy a lektury | postacie z lektur z imionami (np. pan Ignacy Rzecki). **W interfejsie nie podpisujemy, z jakiej lektury jest postać.** Klucz ma tylko mistrz gry, w instrukcji |
+| Pracownicy | widoczni na swoich miejscach. **Nastrój i zmęczenie widać na twarzy.** Kliknięcie otwiera kartę pracownika |
+| Rozwój | widać kupione rzeczy (rożen, krzesła, neon) oraz brud, kolejkę i tłok. Wnętrze pokazuje stan firmy |
+| Typy i stany | kilka wnętrz kebaba: różne typy lokali oraz stany „działka w budowie”, „niewyposażony”, „wyposażony” |
+| Wystrój | style trafiają do różnych grup gości. Elementy: ściany i podłoga, szyld i neon, dodatki, meble i oświetlenie. Kupuje się w sklepie meblowym. Zob. [[Sklep meblowy Meblościanka (dekor)]] |
+| Wnętrza bez gości | bank i urzędy: okienko z urzędnikiem, który mówi w dymku i daje karty z opcjami. Hurtownia i podobne: przekrój z klikalnymi miejscami (regały, wózek) |
+| Wujek | zdjęcie na ścianie (kliknięcie pokazuje jego listy) i wizyty przy ladzie w ważnych momentach |
 
-## Decyzje po podglądzie 3 (14.11)
-- Paleta: **Bar mleczny i Pewex**, gracz wybiera jedną z nich (każda w wersji jasnej i ciemnej).
-- Fonty: zostają chude litery (Oswald + PT Sans), a w niektórych miejscach grube (szyld, nagłówki). Grubego fontu nie wybrano: w podglądzie 4 będą do porównania Alfa Slab One i Rubik Mono One.
-- W lokalu wyróżnione są miejsca, które da się kliknąć.
-- Pasek z lewej pokazuje same ikony i rozwija się do pełnych nazw.
-- Jest kilka wnętrz kebabów: różne typy lokali oraz stany „działka w budowie”, „niewyposażony” i „wyposażony”.
-- Dymki ludzi pokazują się dopiero po najechaniu na postać.
-- Nowa funkcja **dekorowanie lokalu**:
-  - Każdy styl trafia do innych grup klientów. Gdy pasuje do klientów strefy, daje mały plus do opinii i popytu (uczy segmentacji).
-  - Elementy: ściany i podłoga, szyld i neon, dodatki (Lublin, postacie), meble i oświetlenie.
-  - **Nie podpisujemy, z jakiej lektury są postacie i inne odniesienia.**
-  - Dekor kupuje się w **sklepie meblowym** na mapie (wejście do sklepu, jak w inne budynki).
-  - Dekor kupuje się raz i zostaje, nie starzeje się.
-- Następny krok: podgląd 4 (grafiki może zrobić Fable) i notatka `Funkcje/Dekorowanie lokalu.md`.
+## Dymki
+Cztery rodzaje: opinie o cenie i smaku, plotki z miasta, propozycje i kłopoty, zaczepki WOS. Zasady: [[Decyzje]],
+„Goście i dymki”. Opis funkcji: [[Dymki przy ladzie]].
 
-## Decyzje 14.11 wieczorem (przed startem mapy)
-- Gruby krój: **Alfa Slab One**. Fonty są w repo (`static/fonty/`, licencja OFL), gra działa bez Google Fonts.
-- Trzecia paleta: **wysoka widoczność** (jasna i ciemna) dla osób słabowidzących i z daltonizmem: kontrast tekstu
-  co najmniej 7:1, litery o 25% większe, grube ramki i fokus, krój Atkinson Hyperlegible, bez tekstur. Zob. [[Wysoka widoczność]].
-- **Nie tylko kolor, we wszystkich paletach**: zysk ▲, strata ▼, uwaga !, do tego wzory w wykresach (`dostepnosc.css`).
-- **Osobne paski**: mapa ma swój pasek (robi `[mapa]`), wnętrza swój (`[mechaniki]`).
-- Grafiki Fable z podglądu 4 weszły do main: `static/grafiki/`, narzędzia w `narzedzia/grafiki/`.
-- Wspólne zmienne: `static/motywy/zmienne.css` z atrybutami `data-paleta` (bar, pewex, wysoka) i `data-tryb`
-  (jasny, ciemny). `data-motyw` zostaje dla starego wyboru układu panelu, dopóki go nie zastąpimy.
+## Jeszcze niewdrożone z ustalonego
+- **Dźwięk:** lekkie dźwięki domyślnie włączone (dzwonek nad drzwiami, skwierczenie, gwar, stempel w urzędzie),
+  łatwe wyciszenie, mistrz gry może wyciszyć całą klasę.
+- **Pora dnia** zgodna z prawdziwą godziną także we wnętrzu: za oknem rano jasno, wieczorem ciemno, w porze
+  obiadowej więcej ludzi. Niezależna od trybu jasny/ciemny. (Na mapie pora dnia już jest.)
+- Wizyty wujka przy ladzie.
+- Pełne wnętrza poza kebabem (dziś schematyczne).
 
-## Do ustalenia później
-- Ikony mapy a ikony paska wnętrz (jedna kreska?).
-- Układ na telefonie (wspólnie z `[mapa]`).
-- Kiedy stary wybór motywu (bok, grafik) znika na rzecz nowych palet.
+## Grafiki
+Własne płaskie grafiki SVG bez wpisanych kolorów (zmienne CSS i `currentColor`). Spis i zasady użycia:
+`panel_gracza/static/grafiki/README.md`. Generator: `narzedzia/grafiki/`. Żadna grafika nie
+odtwarza cudzego logo, a postacie nie wzorują się na ekranizacjach.

@@ -1,105 +1,104 @@
 # WSPOLPRACA – mapa ↔ mechaniki i wnętrza
 
-Wspólna tablica dla ludzi i agentów obu stron. **Każdy agent czyta ten plik przed pracą nad LUKRUM.**
-Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechaniki]`.
+Wspólna tablica dla ludzi i agentów obu stron. **Każdy agent, który pracuje na granicy mapy i wnętrz, czyta ten plik
+przed pracą.** Dopisuj się z datą i podpisem strony: `[mapa]` albo `[mechaniki]`.
 
 ## Kto co robi
 
 | Strona | Ludzie | Działka | Gałęzie w `Tom-Wasko/Lukrum` |
 |---|---|---|---|
-| `[mapa]` | kolega autora + jego agenci | dane mapy (OSM), silnik mapy, zoom, budynki-ikony na mapie, pasek skrótów, telefon na mapie | `mapa-…` |
-| `[mechaniki]` | autor (Tom-Wasko) + Claude | silnik gry, dane, balans, **wnętrza budynków**, klienci przy ladzie, teksty dla graczy | `mechaniki-…`, `wnetrza-…` |
+| `[mapa]` | majster + jego agenci | dane mapy (OSM), silnik mapy, przybliżanie, żetony budynków, pasek skrótów, telefon na mapie | `maciex`, `mapa-…` |
+| `[mechaniki]` | autor (Tom-Wasko) + zespół agentów | silnik gry, dane, balans, **wnętrza budynków**, goście przy ladzie, teksty dla graczy | `<seria>`, `<seria>-<temat>` |
 
 ## Zasady
+1. **Przed pracą:** `git pull` w `Lukrum-notatki`, a w `Lukrum` `git fetch` i przegląd nowych gałęzi.
+2. **Scalanie do `main`:** strona `[mechaniki]` scala po akceptacji autora i zostawia wpis w Dzienniku niżej. Pull
+   request jest potrzebny, gdy zmiana dotyka plików drugiej strony. Strona `[mapa]` wysyła swoje zmiany gałęzią
+   albo pull requestem. (zmiana 16.11; wcześniej wszystko szło przez pull request)
+3. **Cudze pliki:** zmianę przez granicę zapowiadamy wpisem w „Pytaniach” albo w Dzienniku. Od 16.11 agenci autora
+   mogą zmieniać kod mapy, ale każdą taką zmianę odnotowują w Dzienniku, żeby majster wiedział, co się ruszyło.
+4. **Gdzie są ustalenia:** plan [[Plan]], decyzje [[Decyzje]], wygląd [[Wygląd]], mapa [[Mapa]], funkcje `Funkcje/`,
+   sprawy otwarte [[Do decyzji]].
+5. Commity w imieniu autora tylko jako Tom-Wasko, bez dopisków o asystentach AI. Majster podpisuje się swoim kontem.
+6. Wygląd: **jasny i ciemny tryb zawsze razem**, kolory tylko przez wspólne zmienne ([[Wygląd]]).
+7. Nic z innych gier biznesowych. Prawdziwe marki tylko z zastrzeżeniem ([[Decyzje]], „Marki i prawo”).
 
-1. **Przed pracą:** `git pull` w `Lukrum-notatki`, a w `Lukrum` `git fetch` i przegląd nowych gałęzi i PR.
-2. **Do `main` tylko przez pull request.** Przegląda go druga strona. Nie wysyłamy prosto do `main`.
-3. **Nie ruszamy cudzych plików** bez wpisu w „Pytania” i zgody. Granica jest w tabeli poniżej. Jeśli zmiana musi
-   przejść przez granicę, najpierw dopisujemy ją do „Umów na granicy”.
-4. **Notatki i decyzje lądują w tym repozytorium:**
-   - plan: [[PLAN_PRZEBUDOWY]];
-   - wygląd: [[Wygląd]];
-   - funkcje: `Funkcje/`;
-   - sprawy otwarte: [[Do decyzji]].
-5. Commity w imieniu autora tylko jako Tom-Wasko, bez dopisków o asystentach AI. Kolega podpisuje się swoim kontem.
-6. Wygląd: **jasny i ciemny tryb zawsze razem**. Styl to ilustrowana plansza + czytelność apki + nutka PRL ([[Wygląd]]).
-7. Nic z gry Revas. Prawdziwe marki tylko z zastrzeżeniem i z naszymi ikonami ([[PLAN_PRZEBUDOWY]], rozdz. 7).
+## Wspólne pliki
 
-## Start dla `[mapa]` (15.11 rano)
-Wszystko poniżej jest w `main` repo gry (PR #3). Zacznij od `git pull`.
-
-| Co | Gdzie | Co z tym robisz |
+| Co | Gdzie | Uwagi |
 |---|---|---|
-| Lista miejsc: 43 budynki z `id`, `nazwa`, `rodzaj`, `strefa`, `miejsce` (prawdziwe miejsce w Lublinie) | `gra/dane/mapa/budynki.yaml` | dopisujesz `adres` i `geo: {lat, lon}` z OSM; `miejsce` możesz poprawić, gdy OSM mówi inaczej |
-| 10 stref gry z `dzielnice` (prawdziwe dzielnice Lublina) i `serce` (punkt, wokół którego rysujesz strefę, gdy lista dzielnic jest pusta) | `gra/dane/mapa/strefy.yaml` | sprawdzasz granice dzielnic; inne dzielnice to tło miasta (bez stref) |
-| Schemat pól (`geo`, `adres`, `miejsce`, `wnetrze`, `dzielnice`, `serce`) | `gra/silnik/schematy.py` | po zmianie danych: `python -m silnik.dane sprawdz` (z folderu `gra/`) |
-| Kolory i kroje: 3 palety × jasny/ciemny | `gra/panel_gracza/static/motywy/zmienne.css` | mapa bierze kolory **tylko** stąd (`var(--papier)` itd.), żadnych własnych kolorów na sztywno |
-| „Nie tylko kolor” i dodatki wysokiej widoczności | `static/motywy/dostepnosc.css` | klasy `.znak-zysk`, `.znak-strata`, `.znak-uwaga`, wzory `--wzor-*` |
-| Fonty lokalnie (Oswald, PT Sans, Alfa Slab One, Atkinson Hyperlegible) | `static/fonty/fonty.css` | podłączasz `fonty.css` w stronie mapy |
-| Wejście do budynku i wybór wyglądu | `static/lukrum.js` (już w `gra.html` i `_pulpit.html`) | po kliknięciu budynku wołasz `lukrum.otworzWnetrze(id)`; na `lukrum:wyglad` przerysowujesz kolory |
-| Grafiki SVG (ikony, postacie, wnętrza) | `static/grafiki/` + `README.md` | do wglądu, żeby ikony mapy miały tę samą kreskę |
-| Budynki zbiorcze: kamienica bankowa (6 banków i giełda) i biurowiec przy Zana (5 firm) | `zespoly` i pole `zespol` w `budynki.yaml` (PR #4) | rysujesz tylko zespół, `adres`/`geo` dopisujesz w zespole; klik → `lukrum.otworzWnetrze(id_zespolu)` |
-| Spis wszystkich elementów mapy według dzielnic i rodzajów, z tym, co dopiero w planie | [[Mapa – elementy]] | lista kontrolna, co narysować |
+| Lista budynków: `id`, `nazwa`, `rodzaj`, `strefa`, `miejsce`, `adres`, `geo`, `wnetrze`, `zespol` | `dane/mapa/budynki.yaml` | `[mechaniki]` id i miejsca, `[mapa]` adres i geo |
+| Zespoły budynków (`kamienica_bankowa`, `biurowiec_zana`) | lista `zespoly` w `budynki.yaml` | mapa rysuje tylko zespół; adres i geo w zespole |
+| 10 stref gry z dzielnicami | `dane/mapa/strefy.yaml` | strefa to jednostka popytu |
+| Lokale | `dane/mapa/lokale.yaml` | położenia lokali są dziś w `lublin.json` (do przeniesienia) |
+| Schemat pól | `silnik/schematy.py` | po zmianie danych: `python -X utf8 -m silnik.dane sprawdz` w korzeniu repozytorium gry |
+| Kolory i kroje: 3 palety × jasny/ciemny | `static/motywy/zmienne.css` | żadnych kolorów na sztywno |
+| „Nie tylko kolor”, wysoka widoczność | `static/motywy/dostepnosc.css` | klasy `.znak-zysk`, `.znak-strata`, `.znak-uwaga`, wzory `--wzor-*` |
+| Fonty lokalnie | `static/fonty/fonty.css` | Oswald, PT Sans, Alfa Slab One, Atkinson Hyperlegible |
+| Wejście do budynku i wybór wyglądu | `static/lukrum.js` | zob. umowy niżej |
+| Grafiki SVG | `static/grafiki/` + `README.md` | wspólna kreska dla ikon mapy i wnętrz |
+| Dane terenu z OSM | `static/mapa/lublin.json`, skrypt `narzedzia/mapa/pobierz_osm.py` | strona `[mapa]` |
 
-Stara mapa z kratką (`mapa.js`, `mapa_uklad.js`, `uklad.pola` w `miasto.yaml`) działa dalej, dopóki nowa jej nie zastąpi.
-Nowy budynek dziś musi mieć pole w kratce swojej strefy (np. `sanepid: [15, 7]`); po przejściu na OSM to wymaganie usuniemy.
+Ścieżki `static/…` liczą się od `panel_gracza/`.
 
 ## Granica: co mapa daje mechanikom i odwrotnie
 
 | Sprawa | Kto | Stan |
 |---|---|---|
-| Lista miejsc (id, nazwa, strefa, miejsce, adres, geo) | `[mechaniki]` id i miejsca, `[mapa]` adres i geo | umowa 14.11 |
-| Strefy = jednostki popytu, dzielnice tylko do rysowania | wspólnie | umowa 14.11 |
-| Wejście do budynku `lukrum.otworzWnetrze(id)` i powrót `lukrum.wrocNaMape()` | `[mapa]` wywołuje, `[mechaniki]` rysują wnętrze | umowa 14.11 |
-| Zdarzenia w parkach (`gra/dane/zdarzenia/parki.yaml`) pokazuje mapa w parkach; `[mechaniki]` dopisują nowe historie z lektur | `[mechaniki]` dane, `[mapa]` rysuje | ustalone przez autora 13.11 |
-| Wspólne zmienne kolorów i fontów | jeden plik `zmienne.css` | umowa 14.11 |
-| Paski: mapa ma swój, wnętrza swój | `[mapa]` / `[mechaniki]` | decyzja autora 14.11 |
+| Lista miejsc (id, nazwa, strefa, miejsce, adres, geo) | `[mechaniki]` id i miejsca, `[mapa]` adres i geo | umowa 14.11, działa |
+| Strefy = jednostki popytu | wspólnie | umowa 14.11; od 15.11 strefa = jedna dzielnica (czeka na akceptację autora) |
+| Wejście do budynku i powrót | `[mapa]` wywołuje, `[mechaniki]` rysują wnętrze | działa od 16.11 |
+| Zdarzenia w parkach (`dane/zdarzenia/parki.yaml`) | `[mechaniki]` dane, `[mapa]` rysuje | ustalone 13.11 |
+| Wspólne zmienne kolorów i fontów | jeden plik `zmienne.css` | umowa 14.11, działa |
+| Paski: mapa ma swój, wnętrza swój | `[mapa]` / `[mechaniki]` | decyzja autora 14.11; od 16.11 kierunek „mapa na cały ekran, ikony w rogach” ([[Wygląd]]) |
+| Krok „teraz” z listu od wujka na mapie | `[mechaniki]` wstawiają regułę CSS, `[mapa]` trzyma `data-id` i `.lm-kafel` | działa od 16.11 |
 | Ikony budynków na mapie a ich wnętrza (spójny styl) | `[mapa]` ikony, `[mechaniki]` wnętrza | do ustalenia |
-| Lokale konkurencji i boty na mapie (dane z silnika) | `[mechaniki]` → API, `[mapa]` rysuje | do ustalenia |
+| Lokale konkurencji i boty na mapie | `[mechaniki]` → API, `[mapa]` rysuje | do ustalenia |
 
 ## Umowy na granicy
-<!-- Ustalone rzeczy przenosimy tutaj z „Pytań”. Format: data, strony, ustalenie. -->
-- 13.11 `[mechaniki]`: miejsca z [[PLAN_PRZEBUDOWY]], rozdz. 6, to lista wyjściowa stref. Adresy sprawdza `[mapa]` na OSM.
-- 14.11 autor: robimy tylko **10 stref** gry, a nie wszystkie dzielnice. Inne dzielnice to tło. Prawdziwe miejsca, ale bez
-  tłoku na Starym Mieście i Krakowskim Przedmieściu. Sanepid: Śródmieście (ul. Karłowicza). Agencja reklamowa: biurowce
-  przy Zana (Rury). Park handlowy na Węglinie: dwa sklepy obok siebie (meblowy z własnym wnętrzem i sprzęt kuchenny).
-- 14.11 autor: banki i giełda w **jednej kamienicy** przy Krakowskim Przedmieściu (najpierw klik w kamienicę, potem w bank);
-  firmy przy Zana w **jednym biurowcu** tak samo. Gazeta Pana Cogito i Radio Tichy to kanały agencji, bez osobnych miejsc.
-  Po budowie na działce stoi pawilon z własnym wnętrzem.
-- 14.11 `[mechaniki]`, **lista miejsc**: rozszerzamy `gra/dane/mapa/budynki.yaml` (bez nowego pliku). Id zostają (`bank_1`, …).
-  Pola: `miejsce` (opis prawdziwego miejsca), `adres` i `geo: {lat, lon}` (wpisuje `[mapa]` z OSM), `wnetrze` (id wnętrza,
-  puste = budynek bez wnętrza; do tego czasu otwiera się stara zakładka z pola `zakladka`). Strefy w `strefy.yaml` mają
-  `dzielnice` i `serce`.
-- 14.11 `[mechaniki]`, **wejście do środka** (`static/lukrum.js`): mapa woła `lukrum.otworzWnetrze(id)` → zdarzenie
-  `lukrum:wnetrze` `{id}`; wnętrze woła `lukrum.wrocNaMape()` → zdarzenie `lukrum:mapa`. Wnętrze rysuje się w tym samym
-  oknie, bez długiej animacji (decyzja autora).
-- 14.11 `[mechaniki]`, **wygląd** (`static/motywy/zmienne.css`): atrybuty na `<html>` `data-paleta` = `bar` (domyślna) |
-  `pewex` | `wysoka` i `data-tryb` = `jasny` | `ciemny`. Ustawia je `lukrum.wyglad.ustaw({paleta, tryb})`, zapis w przeglądarce,
-  zdarzenie `lukrum:wyglad`. Zmienne: `--papier`, `--tusz`, `--akcent`, `--akcent-2`, `--ramka`, `--zysk`, `--strata`,
-  `--uwaga`, `--font-tekst`, `--font-szyld`, `--font-gruby` (Alfa Slab One), `--skala-tekstu`, `--ramka-grubosc`,
-  `--ognisko`, `--tekstura` oraz `--g-*` dla grafik. Stan nigdy samym kolorem (▲ ▼ !, wzory). `data-motyw` zostaje
-  dla starego wyboru układu panelu (bok, grafik), nie używać go w mapie. Zmiana nazw: najpierw wpis tutaj.
+<!-- Ustalone rzeczy przenosimy tutaj z „Pytań”. Format: data, strony, ustalenie. Zmiana nazw: najpierw wpis tutaj. -->
+- **Lista miejsc** (14.11): rozszerzamy `dane/mapa/budynki.yaml`, bez nowego pliku. Id zostają (`bank_1`, …).
+  Pola: `miejsce` (opis prawdziwego miejsca), `adres` i `geo: {lat, lon}` (wpisuje `[mapa]` z OSM), `wnetrze` (id
+  wnętrza; puste = budynek bez wnętrza). `miejsce` wolno poprawić, gdy OSM mówi inaczej.
+- **Wejście do środka** (14.11, `static/lukrum.js`): mapa woła `lukrum.otworzWnetrze(id)` → zdarzenie `lukrum:wnetrze`
+  `{id}`; dla zespołu id zespołu. Wnętrze woła `lukrum.wrocNaMape()` → zdarzenie `lukrum:mapa`. Wnętrze rysuje się
+  w tym samym oknie, bez długiej animacji.
+- **Pole `obsluzone`** (w użyciu od 16.11, do formalnego potwierdzenia): słuchacz wnętrz ustawia
+  `e.detail.obsluzone = true`. Gdy nikt tego nie zrobi, mapa otwiera zastępczo dotychczasowe okno.
+- **Wygląd** (14.11, `static/motywy/zmienne.css`): atrybuty na `<html>` `data-paleta` = `bar` (domyślna) | `pewex` |
+  `wysoka` i `data-tryb` = `jasny` | `ciemny`. Ustawia je `lukrum.wyglad.ustaw({paleta, tryb})`, zapis w przeglądarce,
+  zdarzenie `lukrum:wyglad` (mapa przerysowuje kolory). Zmienne: `--papier`, `--tusz`, `--akcent`, `--akcent-2`,
+  `--ramka`, `--zysk`, `--strata`, `--uwaga`, `--font-tekst`, `--font-szyld`, `--font-gruby`, `--skala-tekstu`,
+  `--ramka-grubosc`, `--ognisko`, `--tekstura` oraz `--g-*` dla grafik. Stan nigdy samym kolorem (▲ ▼ !, wzory).
+  `data-motyw` zostaje dla starego wyboru układu panelu, nie używać go w mapie.
+- **Znacznik na mapie** (16.11): element znacznika ma `data-id` i w środku `.lm-kafel`. Korzysta z tego zaznaczenie
+  kroku „teraz”. Nie zmieniać bez wpisu tutaj.
+- **Zdarzenia w parkach** (13.11): dane w `dane/zdarzenia/parki.yaml`, pokazuje je mapa w parkach.
+- **Zespoły budynków** (14.11): na mapie jeden budynek, w środku hol z szyldami. Zob. [[Mapa]], rozdz. 2.
 
 ## Pytania
-<!-- Format: - [ ] data [strona] → [do kogo]: pytanie. Odpowiedź wpisz pod spodem i odhacz. -->
-- [x] 13.11 [mechaniki] → [mapa]: w jakim formacie dasz listę miejsc (YAML w `gra/dane/mapa/`?) i jak nazwiesz id?
-  - 14.11: YAML, istniejący `budynki.yaml`, id bez zmian (umowa wyżej). Jeśli wolisz inaczej, dopisz tutaj.
-- [x] 13.11 [mechaniki] → [mapa]: czy mapa ma swój plik CSS z kolorami, czy robimy jeden wspólny?
-  - 14.11: jeden wspólny `zmienne.css` (umowa wyżej). Własny CSS mapy tak, ale kolory tylko przez zmienne.
-- [ ] 14.11 [mechaniki] → [mapa]: czy `serce` stref bez dzielnic (Politechnika, Dworzec, Zygmuntowskie) wystarczy, czy wolisz własny obrys?
+<!-- Format: - [ ] data [strona] → [do kogo]: pytanie. Odpowiedź wpisz pod spodem i odhacz. Odhaczone po miesiącu usuwamy. -->
+- [ ] 16.11 [mapa] → [mechaniki]: pole `geo` w `lokale.yaml` zamiast położeń w `lublin.json`? (propozycja z raportu mapy)
+- [ ] 16.11 [mapa] → [mechaniki]: odsyłacze dla twórców w opisach `budynki.yaml` usunąć z danych? Dziś mapa je wycina.
+- [ ] 16.11 [mechaniki] → [mapa]: biura rachunkowe i agencje reklamowe dostaną osobne budynki (decyzja autora 16.11).
+  Gdzie je postawić na mapie?
 
 ## Dziennik
-- 16.11 [mechaniki/Fable]: na mapie budynek z bieżącego kroku Planu tygodnia ma obwódkę i plakietkę „teraz”. Zrobione po stronie mechanik (`zakladki/wujek.js` wstawia regułę CSS dla `.lm-znak[data-id="…"] .lm-kafel`), bez zmian w `static/mapa/*`. Zależy od tego, że znacznik ma `data-id` i element `.lm-kafel` – proszę ich nie zmieniać bez wpisu tutaj.
-- 16.11 [mechaniki/Fable]: po „mapa odblokowana” gałąź `maciex` (ef1c59d) scalona do `fable` bez konfliktów i bez zmian w plikach mapy. Po stronie mechanik: słuchacz `lukrum:wnetrze` ustawia `e.detail.obsluzone = true` (app.js), więc kliknięcie budynku otwiera wnętrze; sprawdzone automatem, że wszystkie 75 znaczników coś otwiera. Jedyna zmiana w `dane/mapa/budynki.yaml`: pole `opis` budynku `biura` (stara lista pięciu biur → cztery obecne), bez ruszania `adres`/`geo`. Propozycje z raportu mapy (pole `obsluzone` w umowie, `geo` w `lokale.yaml`, wycięcie odsyłaczy z opisów) czekają na decyzję autora. Pomysły do mapy: `_robocze/fable/MAPA_POMYSLY.md`.
-<!-- Krótko: data, strona, co weszło (gałąź / PR). Najnowsze na górze. -->
-- 14.11 [mechaniki]: **kopia `_robocze/`** (briefy i raporty agentów, pomiary, przeglądy Fable, podglądy wyglądu) jest teraz w tym repo w folderze `_robocze/` (stan 14.11). Oryginał roboczy leży lokalnie w `lukrum/_robocze/`, poza gitem. Grafiki z podglądu 4 są już w repo gry (`narzedzia/grafiki/`, `gra/panel_gracza/static/grafiki/`).
-- 14.11 [mechaniki]: **plan na 15–16.11.** Od wieczora 15.11 Fable pracuje sam do 16.11 15:50 na gałęzi `fable` (i `fable/<temat>`); **main zostaje nietykalny**. **Mapy nie rusza, dopóki autor nie pozwoli**: nie zmienia plików `[mapa]`, tylko co godzinę pobiera nowe wersje `main`. Po odblokowaniu każdą zmianę mapy odnotuje tutaj. Brief: `_robocze/BRIEF_FABLE_NOC.md`. Na `main` pracujemy normalnie. Z gałęzi Fable autor wybierze potem pojedyncze tematy.
-- 14.11 [mechaniki]: PR #5 w main (00fef41): biura, zmiana banku z debetem, kontrola PIP przy zleceniu, kadry, pomyłki; wnętrza (dymki, propozycje ze wskazówkami, plotki w tej samej rundzie, zestaw ★★★). Gałęzie `mechaniki-b` i `wnetrza-dane` zamknięte.
-- 14.11 [mechaniki]: PR #4 w main (ddb885c): zespoły budynków (kamienica bankowa, biurowiec przy Zana). Spis [[Mapa – elementy]].
-- 14.11 [mechaniki]: PR #2 (tor A) scalony. PR #3 `wspolne-mapa` w main: pola miejsc i stref, sanepid, wspólne zmienne CSS z paletą wysokiej widoczności, fonty lokalnie, `lukrum.js`, grafiki z podglądu 4. Start dla [mapa] wyżej.
-- 14.11 [mechaniki]: PR #2 poprawiony po przeglądzie (1d8b921): debet od salda końca tygodnia, pomyłki, punkty firmy bezczynnej, okres próbny, własne katalogi. `wnetrza-dane`: silnik dymków i propozycji (0779722).
-- 14.11 [mechaniki]: podgląd 4 wnętrz (`_robocze/wyglad/podglad4.html`, grafiki SVG w `_robocze/wyglad/grafiki/`). **Do uzgodnienia z [mapa]:** do wspólnych zmiennych CSS dochodzą `--font-gruby` (gruby krój: szyld, nagłówki, ceny) i kolory grafik `--g-*` (skóra, drewno, metal). Propozycja: `grafiki/zmienne.css`.
-- 14.11 [mechaniki]: PR #2 `mechaniki-a` (tor A): wynik 0–1000 pkt, pieniądze z debetem, biura rachunkowe, kadry wg KP, pomyłki w szczycie, nowe katalogi. Czeka na scalenie przez autora. Po scaleniu: `budynki.yaml` z `geo`/`adres` (propozycja wyżej).
-- 14.11 [mechaniki]: `wnetrza-dane` – propozycje klientów ze skutkami, zaczepki WOS ze źródłami (czekają na zatwierdzenie autora), cytaty z lektur. Silnik wnętrz w toku. Propozycje granicy z mapą wyżej.
-- 13.11 [mechaniki]: gałąź `wnetrza-dane` – dane bywalców i dymków przy ladzie (`gra/dane/wnetrza/`), bez silnika. Pauza do 14.11, plan w [[Plan na 14.11]].
-- 13.11 [mechaniki]: założone repozytorium notatek, ten plik i [[Wygląd]]. Tor A nowych mechanik jest w toku na gałęzi `mechaniki-a`.
+<!-- Krótko: data, strona, co weszło (gałąź / PR / commit). Najnowsze na górze. Wpisy starsze niż miesiąc przenosimy do [[Historia]]. -->
+- 16.11 [mechaniki]: `main` gry = 08268aa: gałąź `fable` (wnętrza, palety, list od wujka i reszta) scalona z mapą
+  z `maciex`. Scalone gałęzie zdalne usunięte, `maciex` została.
+- 16.11 [mechaniki]: na mapie budynek z bieżącego kroku Planu tygodnia ma obwódkę i plakietkę „teraz”. Zrobione po
+  stronie mechanik (`zakladki/wujek.js` wstawia regułę CSS dla `.lm-znak[data-id="…"] .lm-kafel`), bez zmian
+  w `static/mapa/*`.
+- 16.11 [mechaniki]: słuchacz `lukrum:wnetrze` ustawia `e.detail.obsluzone = true` (`app.js`), więc kliknięcie
+  budynku otwiera wnętrze. Sprawdzone automatem: wszystkie 75 znaczników coś otwiera. Jedyna zmiana
+  w `dane/mapa/budynki.yaml`: pole `opis` budynku `biura` (cztery obecne biura), bez ruszania `adres` i `geo`.
+- 15.11 [mapa]: nowa mapa z OSM: granice dzielnic, żetony, tabliczki, trzy poziomy szczegółów, strefa = jedna
+  dzielnica, siedem lokali z nowymi adresami. Raport: [[etap2-mapa – raport]].
+- 14.11 [mechaniki]: PR #5 (00fef41): biura, zmiana banku z debetem, kontrola PIP, kadry, pomyłki; silnik dymków
+  i propozycji, zestaw ★★★.
+- 14.11 [mechaniki]: PR #4 (ddb885c): zespoły budynków (kamienica bankowa, biurowiec przy Zana).
+- 14.11 [mechaniki]: PR #3 (0d62000): pola miejsc i stref, sanepid, wspólne zmienne z paletą wysokiej widoczności,
+  fonty lokalnie, `lukrum.js`, grafiki wnętrz.
+- 14.11 [mechaniki]: PR #2 (9df787f): tor A: wynik 0–1000 pkt, debet, biura rachunkowe, kadry, pomyłki, katalogi.
+- 13.11 [mechaniki]: założone repozytorium notatek i ta tablica.
