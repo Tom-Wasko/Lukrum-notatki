@@ -15,6 +15,8 @@ Po zamknięciu serii lider dopisuje tutaj jeden wiersz. Nazwy plików są unikal
 | `mechaniki-b` + `wnetrza-dane` | 14.11 | Poprawki toru A po przeglądzie (opłata za zmianę biura, zmiana banku z debetem, kontrola PIP, pomyłka przy pustym magazynie); silnik dymków i propozycji gości, zestaw sprzętu ★★★ | PR #5, 00fef41 | – |
 | `etap2-mapa` | 15–16.11 | Mapa Lublina z OpenStreetMap: silnik z przybliżaniem, żetony, zespoły, pasek skrótów, pora dnia (strona `[mapa]`) | gałąź `maciex`, 96b3ad6, a0e123d | [[etap2-mapa – raport]] |
 | `fable` | 15–16.11 | Miejsca z wnętrzami, palety w całym panelu, list od wujka, sklep meblowy i wystrój lokalu, „Kurier rankingowy”, księga gości, podium, tryb lekcyjny, nowa instrukcja, ceny katalogów od zera, przegląd prawny | 4afdd60, 9ee8192 | [[fable – raport]]; przegląd prawny i pomiary w `archiwum/notatki-wycofane/Analizy/Noc Fable 15-16.11/` |
+| `porzadki` | 16–17.11 | Nowy układ `lukrum/` (`gra/`, `notatki/`, `warsztat/`, `archiwum/`), spłaszczenie repo gry, kody serii zastąpione realiami w danych (740 testów), odchudzenie notatek do 41 plików. Plan i stan: [[porzadki – plan]], [[porzadki – stan]], recenzja: [[porzadki – recenzja]]. |
+| `fable-wnetrza` | 16–17.11 | Noc Fable: projekt 34 wnętrz (makiety, specyfikacje), treść zeszytu wujka, dziury w ekonomii (zmowa na giełdzie handlu). Wyniki: `archiwum/fable-17.11/`, pytania w [[Do decyzji]] §8. |
 
 ## Wyniki pomiarów, na które powołują się dane gry
 

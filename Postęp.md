@@ -55,7 +55,7 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
 - [ ] pora dnia zgodna z prawdziwą godziną także we wnętrzu (za oknem rano jasno, wieczorem ciemno; niezależna od trybu
   jasny/ciemny; na mapie już jest)
 - [ ] wizyty wujka przy ladzie w ważnych momentach
-- [ ] wnętrza dla każdego żetonu mapy według projektu Fable 17.11 (makiety w `_robocze/fable-wnetrza/`; pytania: [[Do decyzji]] §8c)
+- [ ] wnętrza dla każdego żetonu mapy według projektu Fable 17.11 (makiety w `archiwum/fable-17.11/fable-wnetrza/`; pytania: [[Do decyzji]] §8c)
 
 ## Mechaniki
 Tor A (zrobione, PR #2 i #5, 14.11.2026):

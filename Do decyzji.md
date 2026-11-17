@@ -141,10 +141,10 @@ Opis: [[etap2-mapa – raport]].
 - [ ] dług w kodzie i dokumentacji: lista w [[Postęp]], „Dług w dokumentacji i kodzie”
 
 ## 8. Pytania po nocy Fable z 17.11
-Trzy raporty Fable czekają na szefa. Pełne pytania, makiety i skrypty są w `_robocze/fable-*/` (po przeniesieniu:
+Trzy raporty Fable czekają na szefa. Pełne pytania, makiety i skrypty są w `archiwum/fable-17.11/fable-*/` (po przeniesieniu:
 `Serie/fable`).
 
-### 8a. Dziury w ekonomii (`_robocze/fable-dziury/raport.md`, tabela w `dziury.md`)
+### 8a. Dziury w ekonomii (`archiwum/fable-17.11/fable-dziury/raport.md`, tabela w `dziury.md`)
 Wzorzec: bot `zrownowazony` grający jako człowiek, 12 tygodni, 3 ziarna; za dziurę uznana różnica o tym samym znaku
 na wszystkich ziarnach (szum pojedynczej gry ok. ±15 pkt). Jedna drużyna sama gry nie złamie.
 - [ ] **D1 (gra złamana): zmowa na giełdzie handlu.** Oferta w licytacji nie ma górnej granicy: drużyna kupuje paczkę
@@ -162,7 +162,7 @@ na wszystkich ziarnach (szum pojedynczej gry ok. ±15 pkt). Jedna drużyna sama 
   Tak ma być? (zob. §1, „Nocna 13”)
 - [ ] pomiar szumu (ta sama strategia w dwóch firmach różni się o ±16 pkt) wziąć pod uwagę przy ocenianiu drużyn na lekcji
 
-### 8b. Zeszyt wujka (`_robocze/fable-zeszyt/raport.md`, treść w `zeszyt.md` i `zeszyt-szkic.yaml`)
+### 8b. Zeszyt wujka (`archiwum/fable-17.11/fable-zeszyt/raport.md`, treść w `zeszyt.md` i `zeszyt-szkic.yaml`)
 Szkic: 48 zadań w 18 tygodniach, 23 warunki odhaczania, rozdział „gdzie co najlepiej kupić” z cenami z `dostawcy.yaml`.
 - [ ] **Sprzęt w tygodniu 1:** decyzja szefa 16.11 każe mieć krok „sprzęt w Parku” w tygodniu 1, a harmonogram
   odblokowuje sprzęt w tygodniu 2 (`katalog.yaml: rundy.odblokowanie`). Przesunąć sprzęt na tydzień 1 (rekomendacja
@@ -177,7 +177,7 @@ Szkic: 48 zadań w 18 tygodniach, 23 warunki odhaczania, rozdział „gdzie co n
   rekomendacja, nie tło: zostaje?
 - [ ] zadania tygodni 12–17 są przeglądowe (po jednym), bo harmonogram nie odblokowuje już nic po tygodniu 11. Wystarczy?
 
-### 8c. Projekt wnętrz (`_robocze/fable-wnetrza/raport.md`, `projekt.md`, makiety w `makiety/`)
+### 8c. Projekt wnętrz (`archiwum/fable-17.11/fable-wnetrza/raport.md`, `projekt.md`, makiety w `makiety/`)
 Makiety scen dla każdego żetonu mapy i warianty alternatywne. Fable zaproponował: Solaris znika (6 → 5 banków), boczek
 zamiast układu pływającego, Kamienica rachmistrzów jako klatka schodowa, Dom reklamy z numerami pięter przy szybie windy.
 - [ ] **1. Który bank znika (6 → 5)?** Decyzja szefa 16.11: 5 banków w pierzei. Propozycja Fable: **Solaris** (ryzyko

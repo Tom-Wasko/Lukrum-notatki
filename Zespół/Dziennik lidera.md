@@ -19,9 +19,9 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 - Dalej: recenzent (4e + 9: próbka 30 `zrodlo`, kontrola odsyłaczy) → poprawki → scalenie `porzadki` do `main` w obu
   repo i push (bez pytania, zob. Decyzje) → usunięcie `_robocze/krytyka-wyniki/` po Fable → `plan.md` i `STAN.md` do
   `notatki/Serie/porzadki/` → krok 11 (`METODA.md`, regulamin ZwzT a AI).
-- Wyniki nocy Fable (projekt wnętrz, zeszyt wujka, dziury w ekonomii): `_robocze/fable-wnetrza|fable-zeszyt|fable-dziury/`
+- Wyniki nocy Fable (projekt wnętrz, zeszyt wujka, dziury w ekonomii): `archiwum/fable-17.11/fable-wnetrza|fable-zeszyt|fable-dziury/`
   (po porządkach do `Serie/fable`); pytania w [[Do decyzji]], §8. Prompt do okna Fable z `/loop 15m`:
-  `_robocze/fable-wnetrza/prompt-okno-fable.md`.
+  `archiwum/fable-17.11/fable-wnetrza/prompt-okno-fable.md`.
 - Zmiany majstra: `origin/maciex` scalony do `main` gry 17.11 (żetony jako przedmioty); każdą następną serię zaczynamy od
   `git fetch`.
 - Nikt nie pracuje w tle poza bieżącym krokiem. Mapa drogowa serii (kolejność prac po porządkach): [[Postęp]], „Teraz”.
@@ -33,7 +33,7 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 - Sesje startują z folderu `Pulpit\lukrum`.
 - **Zmiany majstra scalamy do `main` od razu** („scalaj wszystko od majstra od razu”): po `git fetch` lider scala
   `origin/maciex`, sprawdza składnię JS i testy mapy, a push idzie bez pytania.
-- **Fable (do 17.11 8:00):** kolejno projekt wnętrz, treść zeszytu wujka, dziury w ekonomii (raporty w `_robocze/fable-*/`).
+- **Fable (do 17.11 8:00):** kolejno projekt wnętrz, treść zeszytu wujka, dziury w ekonomii (raporty w `archiwum/fable-17.11/fable-*/`).
   Start na hasło „fable start”; wtedy lider nie stawia nowych agentów.
 - **Porządki, pytania 9–11:** pozew, SWOT i podobieństwa do `archiwum/prawne/` (bez gita), w notatkach tylko wnioski bez
   starej nazwy; `testy/dane_zamrozone/` bez zmian; analizy jako `notatki/Analizy/` (repo notatek zostaje w `notatki/`).
