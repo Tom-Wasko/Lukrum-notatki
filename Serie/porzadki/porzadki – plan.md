@@ -105,7 +105,7 @@ lukrum/                         (bez gita)
 [Z] `_archiwum/` zmienia nazwę na `archiwum/` (bez gita). Dokumenty ze starą nazwą (pozew, SWOT, podobieństwa) → `archiwum/prawne/` (9a).
 
 Nazwy plików w `Serie/` mają postać `<seria> – <temat>.md`, a nie `plan.md`/`raport.md`: w Obsidianie nazwy muszą
-być unikalne w sejfie, inaczej `[[raport]]` jest niejednoznaczny.
+być unikalne w sejfie, inaczej ``raport`` jest niejednoznaczny.
 
 ### Co łamie spłaszczenie `lukrum_gra/gra/` → korzeń repo (sprawdzone grepem)
 
@@ -196,7 +196,7 @@ Akcje: **zostaje**, **przenieś**, **scal**, **przepisz** (jest szkic), **popraw
 | `Funkcje/Dymki przy ladzie.md` | popraw `Stan` → „w grze (PR #5; wnętrze kebaba i przełącznik mistrza gry 16.11)”; dopisać listę 8 zaczepek WOS ze źródłami (z obecnego `Do decyzji`) | lista zaczepek znika z `Do decyzji`, a jest potrzebna do lekcji |
 | `Funkcje/Księga gości…`, `Kurier rankingowy (gazeta).md`, `List od wujka…`, `Miejsca zamiast zakładek…`, `Sklep meblowy Meblościanka (dekor).md` | popraw `Stan` → „w grze (main, 16.11.2026); do akceptacji szefa” | gałęzie `fable-*` już nie istnieją |
 | `Funkcje/Wysoka widoczność.md` | popraw `Stan` → przełącznik w menu ⚙ działa od 16.11 | – |
-| `Funkcje/Logo i zastrzeżenie marek.md` | popraw 2 odsyłacze: `[[Wnioski Fable 14.11]]` → `[[Decyzje]]`, „rozdz. 7 planu przebudowy” → `[[Decyzje]]` | cele odsyłaczy znikają |
+| `Funkcje/Logo i zastrzeżenie marek.md` | popraw 2 odsyłacze: ``Wnioski Fable 14.11`` → `[[Decyzje]]`, „rozdz. 7 planu przebudowy” → `[[Decyzje]]` | cele odsyłaczy znikają |
 | `Funkcje/Kasyno Pod Złotym Koziołkiem.md`, `Szperacz (rękopis w danych).md` | zostaje | aktualne |
 | `Funkcje/_Szablon funkcji.md` | przepisz (szkic `warsztat-06`) | dochodzi „Liczby i źródła”, „Otwarte” i zasada „bez sekcji Zmiany” |
 | `Zespół/Dziennik lidera.md` (nieśledzony) | zostaje; lider poprawia ścieżkę startu sesji i nazwy ról | dziennik projektu |
@@ -319,7 +319,7 @@ grep -r -i -l -E "revas|levas" warsztat CLAUDE.md .claude              → 0
 |---|---|---|---|
 | 1 | Spłaszczenie repo gry (20 punktów w (a)) | czerwony test, generator i skrypt OSM piszą w złe miejsce, 60 MB exe w gicie | osobny krok, osobna gałąź `porzadki`, pełny pytest + ruff + `silnik.dane sprawdz` + `start.bat` przed scaleniem |
 | 2 | Majster pracuje na `maciex` w starym układzie | konflikty przy jego następnym scaleniu, zepsute `.venv` | spłaszczyć tuż po scaleniu aktualnego `maciex`; wpis w WSPOLPRACA i wiadomość przed pushem |
-| 3 | Odsyłacze Obsidiana do usuwanych notatek: `[[PLAN_PRZEBUDOWY]]` (7), `[[Mapa – elementy]]` (2), `[[Plan na 14.11]]` (1), `[[Wnioski Fable 14.11]]` (1), `[[LUKRUM]]` (1) | martwe linki w sejfie | wszystkie są w plikach przepisywanych albo usuwanych; jedyny poza nimi to `Funkcje/Logo i zastrzeżenie marek.md` (w tabeli (b)). Kontrola skryptem z kroku 9 |
+| 3 | Odsyłacze Obsidiana do usuwanych notatek: ``PLAN_PRZEBUDOWY`` (7), ``Mapa – elementy`` (2), ``Plan na 14.11`` (1), ``Wnioski Fable 14.11`` (1), ``LUKRUM`` (1) | martwe linki w sejfie | wszystkie są w plikach przepisywanych albo usuwanych; jedyny poza nimi to `Funkcje/Logo i zastrzeżenie marek.md` (w tabeli (b)). Kontrola skryptem z kroku 9 |
 | 4 | Zmiany nazw plików w sejfie robione poza Obsidianem | Obsidian nie poprawi linków sam | linki są już poprawione w szkicach; po wykonaniu szef otwiera sejf i sprawdza „Niepołączone odnośniki” |
 | 5 | `.obsidian/workspace.json` majstra i szefa wskazuje otwarte stare pliki | pusta karta po starcie | nieszkodliwe (plik jest ignorowany przez git) |
 | 6 | Majster albo jego agenci mają w instrukcjach nazwy `WSPOLPRACA.md`, `PLAN_PRZEBUDOWY.md`, `Mapa – elementy.md` | jego agent nie znajdzie pliku | `WSPOLPRACA.md` zachowuje nazwę; o dwóch pozostałych wpis w Dzienniku WSPOLPRACA |
