@@ -1,6 +1,6 @@
 # Plan LUKRUM
 
-Cel, etapy i to, czego jeszcze brakuje. Zadania szczegółowe są w notatce [[Postęp]].
+Cel, etapy i podział ról. Zadania, kolejność prac i stan są w notatce [[Postęp]].
 Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. Jak do tego doszliśmy: [[Historia]].
 
 ## 1. Cel
@@ -29,40 +29,25 @@ Wymagania:
 | 4 | Lekcje: scenariusze, zestawy funkcji, gra testowa w klasie | projekt scenariuszy i tryb lekcyjny gotowe |
 | 5 | Audyt i publikacja | do zrobienia |
 
-**Mechaniki** idą obok etapów. Tor A (wynik w punktach, pieniądze, biura, kadry, pomyłki, katalogi) jest zrobiony.
-Z toru B są: księga gości, list od wujka, wystrój lokalu. Zostają: nastrój zespołu na twarzach, wydarzenia dla
-filii, popyt z mapy, odblokowania prowadzone listami wujka.
+**Mechaniki** idą obok etapów (tor A zrobiony, z toru B część). Stan i lista zadań: [[Postęp]].
 
-**Teraz** (kolejność autora z 16.11, bez terminu):
-1. sposób pracy zespołu, do przeglądu autora;
-2. porządek w całym folderze projektu;
-3. gra etapami: krytyka wnętrz i poprawki, pulpit z mapą na cały ekran, biura w osobnych budynkach ([[Decyzje]]).
+**Teraz** i kolejne serie: [[Postęp]], „Teraz”. **Czego brakuje** (lekcja 45 minut, przewodnik nauczyciela, podstawa
+programowa, serwer, RODO, gra próbna, zgłoszenie do konkursu, nazwa w UPRP) ma właścicieli: zadania w [[Postęp]]
+(etapy 4 i 5), pytania w [[Do decyzji]] (§1 i §5). Priorytety z analizy SWOT: [[Pozew i SWOT – wnioski]].
 
-## 3. Czego brakuje w planie
-Lista z przeglądu całego projektu (14.11). Nic z tego nie ma jeszcze właściciela ani terminu.
-- lekcja 45 minut ze zmierzonym czasem rundy;
-- przewodnik nauczyciela i zasady oceniania;
-- tabela „mechanika a podstawa programowa” (WOS, biznes i zarządzanie);
-- serwer (dziś laptop autora i tunel) i osoba, która uruchamia zamykanie rund po terminie;
-- dane osobowe uczniów (RODO);
-- gra próbna z 4–6 osobami ze stoperem, potem z klasą; dotąd balans jest tylko z botów;
-- zgłoszenie do konkursu z datą lekcji (termin 31.03.2027, niepotwierdzony);
-- przełącznik „ikony ogólne” na pokaz dla urzędów (propozycja);
-- sprawdzenie nazwy w UPRP, jeśli LUKRUM wyjdzie poza szkoły.
-
-## 4. Kto co robi
+## 3. Kto co robi
 - **Mapa** (dane z OpenStreetMap, silnik mapy, żetony, pasek skrótów): majster ze swoimi agentami.
 - **Mechaniki i wnętrza** (silnik gry, dane, balans, ekrany w budynkach, teksty): autor z zespołem agentów.
 - Tablica wymiany między stronami: [[WSPOLPRACA]].
 - **Kapitan:** nauczyciel, opiekun projektu.
-- Role i zasady zespołu (szef, lider, agenci): `../warsztat/`, [[Dziennik lidera]].
+- Role i zasady zespołu (szef, lider, agenci): `../warsztat/ZESPOL.md`, [[Dziennik lidera]].
 
-## 5. Folder projektu
+## 4. Folder projektu
 ```
 lukrum/                 folder główny u autora, poza gitem
   CLAUDE.md, .claude/   start sesji; definicje agentów instalowane z warsztatu
   gra/                  repozytorium Tom-Wasko/Lukrum: tylko gra (kod, instrukcja, dokumentacja techniczna)
-  notatki/              to repozytorium: plan, decyzje, funkcje, Serie/ (raporty serii), Analizy/ (oceny i research)
+  notatki/              to repozytorium: plan, decyzje, Funkcje/, Serie/ (raporty serii), Analizy/ (krytyki, sprawozdania), Zespół/
   archiwum/             surowe materiały, tylko lokalnie, poza gitem (spis w LEGENDA.md)
   warsztat/             osobne repozytorium: sposób pracy zespołu, szablony, definicje agentów, narzędzia
   _robocze/             kopie robocze agentów; nic trwałego

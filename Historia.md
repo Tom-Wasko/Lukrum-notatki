@@ -1,17 +1,27 @@
 # Historia
 
-Kronika prac i sprawy już rozstrzygnięte. Tu się nie planuje i nie decyduje: obowiązujący stan jest w [[Decyzje]],
+Kronika prac. Tu się nie planuje i nie decyduje: obowiązujący stan jest w [[Decyzje]],
 [[Wygląd]] i [[Mapa]]. Wpis dopisuje lider przy zamknięciu serii, najnowsze na górze. Szczegóły techniczne serii:
 [[Serie]].
 
 ## Kronika
+
+### 17.11.2026 – porządki
+- Seria `porzadki`: repo gry spłaszczone (kod w korzeniu, bez folderu `gra/` w ścieżkach), `warsztat/` jako osobne repo,
+  `archiwum/` poza gitem, notatki odchudzone (jeden właściciel informacji, wycofane pliki w `archiwum/notatki-wycofane/`),
+  kody dawnych serii w danych zastąpione realiami, nowy pomiar zwrotu z wystroju (10,9 tygodnia). Szczegóły: [[Serie]].
+- Zmiany majstra scalane do `main` od razu; push bez pytania ([[Decyzje]], „Sposób pracy i repozytoria”).
+- Noc 16/17.11: agent Fable przygotował projekt wnętrz, treść zeszytu wujka i raport o dziurach w ekonomii; pytania
+  czekają w [[Do decyzji]], §8.
 
 ### 16.11.2026 – nowy sposób pracy
 - Role: autor to **szef**, główna sesja to **lider**, podagenci to **agenci**. Nowy `AGENTS.md`, protokół lidera,
   własne definicje agentów. Powód i źródła: [[Sprawozdanie – zespół agentów]].
 - Gałąź `fable` i mapa majstra scalone do `main` gry i wypchnięte (740 testów). Scalone gałęzie zdalne usunięte.
 - Decyzje szefa: bez terminu, biura i agencje w osobnych budynkach, pulpit z mapą na cały ekran, pełna przebudowa
-  notatek. Zapis: [[Dziennik lidera]].
+  notatek. Zapis: [[Dziennik lidera]]. Dorobione tego dnia: panel pokazuje kontrolę PIP, opłatę za zmianę biura i przejęcie
+  debetu; mistrz gry ma przełącznik rodzajów dymków. Po krytyce wnętrz: 5 banków, giełda osobno, Kamienica rachmistrzów,
+  Dom reklamy ([[Decyzje]]).
 
 ### 15–16.11.2026 – samodzielna praca agenta Fable i mapa majstra
 - Agent pracował sam na gałęzi `fable` (15.11 od 16:55 do 17:25, potem 16.11 od 06:49 do 12:47). Zrobił 18 tematów:
@@ -44,21 +54,3 @@ Kronika prac i sprawy już rozstrzygnięte. Tu się nie planuje i nie decyduje: 
 - Decyzje o nowych mechanikach w dwóch torach: A (niezależny od mapy) i B (po mapie).
 - Wygląd po podglądach 1 i 2: plansza + apka + PRL, wnętrza we wszystkich budynkach, bywalcy z lektur.
 - Wieczorem pauza z planem na 14.11: dokończyć tor A, napisać silnik dymków, uzgodnić granicę z mapą, zrobić podgląd 3.
-
-## Sprawy rozstrzygnięte, które wracają w rozmowach
-| Sprawa | Jak się skończyła |
-|---|---|
-| Prawdziwe logo czy własne ikony | 13.11 „bez logo”, 14.11 zmiana: uproszczone znaki marek zostają |
-| Kapitał startowy | 50 000 zł (wcześniej 40 000 zł) |
-| Automatyczny kredyt odnawialny | usunięty, zamiast niego debet włączany ręcznie |
-| Reklamacje | zastąpione pomyłkami w szczycie |
-| Odprawy | zastąpione okresem wypowiedzenia |
-| „Karta wyników” | zastąpiona wynikiem 0–1000 pkt i gazetą „Kurier rankingowy” |
-| Scrooge i święta | zamiast 50% ryzyka: biuro zamknięte, dokumenty przechodzą z dopłatą 6 zł (wcześniej 3 zł) |
-| Filtr dymków u gracza | był tylko do testów; zostało ustawienie mistrza gry |
-| Strefy bez dzielnic i pole `serce` | nieaktualne od 15.11, każda strefa ma dzielnicę |
-| Panel i instrukcja bez PIP, opłaty za zmianę biura i przejęcia debetu | dorobione 16.11 |
-| Przełącznik dymków w panelu mistrza gry | dorobiony 16.11 |
-| Gruby krój: Alfa Slab One czy Rubik Mono One | Alfa Slab One |
-| Sanepid przy ul. Prószyńskiego | zmienione 14.11 na okolice ul. Karłowicza |
-| Motyw „stary” (górne menu i tabele) | nieprzeniesiony |

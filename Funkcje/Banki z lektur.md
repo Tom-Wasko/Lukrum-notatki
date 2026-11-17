@@ -1,7 +1,8 @@
 # Banki z lektur
 
 - **Stan:** w grze (PR #2, 14.11.2026)
-- **Gdzie w grze:** Pieniądze ▸ Bank; na mapie miasta Kamienica bankowa (banki i giełda w jednej kamienicy)
+- **Gdzie w grze:** Pieniądze ▸ Bank; na mapie miasta dziś Kamienica bankowa (banki i giełda w jednej kamienicy).
+  **Zmiana przesądzona (decyzja 16.11, seria `budynki`):** pięć banków jako pierzeja (rząd kamienic), a giełda jako osobny budynek. Tabela niżej opisuje stan w danych (sześć banków); który bank odpada, jeszcze nie ustalono.
 
 ## Dla ucznia (do instrukcji)
 W Lublinie działa sześć banków i każdy jest dobry w czymś innym. Jeden da szybki kredyt na start, drugi najtańszy

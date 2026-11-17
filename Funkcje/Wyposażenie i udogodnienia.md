@@ -23,25 +23,14 @@ taniej się go utrzymuje. Każdy poziom to wybór z kosztem.
   na razie lokal `centrum_1` (Krakowskie Przedmieście, gra od 6 firm). Czynsz się nie zmienia, więc to dodatkowa
   wartość tego lokalu: założenie do oceny po grze testowej.
 - **Jakość a cena (od 15.11):** składniki ★ kosztują 85%, a ★★★ 132% ceny ★★. Sprzęt i szkolenia mają uporządkowany
-  cennik. Pomiar: `Analizy/Noc Fable 15-16.11/pomiary/katalogi.md`.
+  cennik. Pomiar: `archiwum/notatki-wycofane/Analizy/Noc Fable 15-16.11/pomiary/katalogi.md` (poza gitem).
 - Boty kupują tylko tyle wyposażenia, ile ma ich strategia (decyzja 14.11).
 
 ## Liczby i źródła
-Źródło każdej liczby jest w polu `zrodlo` katalogu. Kwoty sprawdzone w danych gry 16.11.2026 (po przeliczeniu 15.11).
-
-| Pozycja | Kwota | Plik i klucz |
-|---|---|---|
-| ekspres do kawy ziarnistej | 3 400 zł, utrzymanie 320 zł | `dane/katalog.yaml: udogodnienia` (Ekspres do kawy ziarnistej dla zespołu) |
-| wiata rowerowa | 1 400 zł | `dane/katalog.yaml: udogodnienia` (Wiata rowerowa przy lokalu) |
-| szatnia z szafkami | 1 300 zł | `dane/katalog.yaml: udogodnienia` (Szatnia z szafkami na klucz) |
-| stoły i ławy z jasnego drewna | 3 100 zł | `dane/katalog.yaml: wyposazenie` |
-| ekran z transmisją meczów Motoru Lublin | 2 900 zł, utrzymanie 120 zł | `dane/katalog.yaml: wyposazenie` |
-| meble ogrodowe i parasole (ogródek) | 6 000 zł, utrzymanie 120 zł | `dane/katalog.yaml: wyposazenie` |
-| kiosk do zamówień | 9 000 zł, utrzymanie 150 zł (rynkowo 8–10 tys. zł) | `dane/katalog.yaml: wyposazenie` |
-| licencja muzyczna | 800 zł zakupu i 60 zł miesięcznie | `dane/katalog.yaml: wyposazenie` (Muzyka w lokalu) |
-| szkolenia | 600–2 300 zł | `dane/katalog.yaml: szkolenia.pozycje[].ceny` |
-| ogłoszenie ramkowe w „Gazecie Pana Cogito” | 90 zł za emisję | `dane/mapa/reklama.yaml: cena_emisji` |
-| rożen ★★★, frytownica ★★★ | 10 000 zł, 6 500 zł | `dane/sprzet.yaml: sprzet.Rożen.ceny`, `sprzet.Frytownica.ceny` |
+Wszystkie ceny i koszty utrzymania są w `dane/katalog.yaml` (`udogodnienia`, `wyposazenie`, `szkolenia`), `dane/sprzet.yaml`
+(sprzęt i poziomy ★) oraz `dane/mapa/reklama.yaml` (reklama); źródło każdej liczby jest w jej polu `zrodlo`.
+Tabeli nie powielamy tu, żeby nie rozjeżdżała się z danymi. Przykłady (stan 16.11.2026): kiosk do zamówień 9 000 zł
+(utrzymanie 150 zł), meble ogrodowe i parasole 6 000 zł, rożen ★★★ 10 000 zł.
 
 ## Czego uczy (do planu zajęć)
 - pojęcia: inwestycja a koszt bieżący, zwrot z inwestycji, nakład a koszt utrzymania, amortyzacja, segmentacja

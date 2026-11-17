@@ -364,7 +364,7 @@ Rekomendacja: **A.** Okienka zostają wyłącznie w Urzędach, gdzie pasują (z 
 
 ## (f) Proponowany podział na zadania dla agentów Sonnet
 
-Pliki rozłączne w obrębie fali. Ścieżki względem `gra/panel_gracza/static/`. Plik `swiat/sceny.js` trzeba najpierw
+Pliki rozłączne w obrębie fali. Ścieżki względem `panel_gracza/static/`. Plik `swiat/sceny.js` trzeba najpierw
 rozbić (fala 0), bo inaczej wszyscy agenci scen pracowaliby w jednym pliku.
 
 **Fala 0 (jeden agent, przed resztą)**

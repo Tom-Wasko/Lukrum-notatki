@@ -1,7 +1,7 @@
 # Biura rachunkowe – pakiety
 
 - **Stan:** w grze (PR #2 i #5, 14.11.2026); widok opłaty za zmianę biura od 16.11
-- **Gdzie w grze:** dziś Biurowiec przy Zana → biura rachunkowe; docelowo osobna kamienica z szyldami (decyzja 16.11)
+- **Gdzie w grze:** dziś Biurowiec przy Zana → biura rachunkowe; docelowo „Kamienica rachmistrzów”, osobna kamienica z szyldami biur (decyzja 16.11, seria `budynki`)
 
 ## Dla ucznia (do instrukcji)
 Firma może księgować sama albo oddać papiery biuru. Każde z czterech biur ma trzy pakiety: S, M i L. Pakiet to
@@ -10,7 +10,7 @@ L. Biura różnią się charakterem: jedno jest tanie, ale wszystko trwa, inne z
 i drogie.
 
 Zmiana biura kosztuje. Za przejście do nowego biura płaci się jednorazowo tyle, ile wynosi tydzień jego pakietu.
-Pierwszy wybór biura jest bez opłaty, a powrót do dawnego biura kosztuje tak samo jak każda zmiana.
+Pierwszy wybór biura jest bez opłaty, a powrót do dawnego biura zaraz po innym biurze kosztuje tak samo jak każda zmiana.
 
 ## Zasada działania
 - Opłata za tydzień = cena pakietu (przeliczona z miesiąca na tydzień) + dopłata za każdy dokument ponad limit
@@ -39,7 +39,7 @@ Pierwszy wybór biura jest bez opłaty, a powrót do dawnego biura kosztuje tak 
 | Parametr | Wartość | Pewność | Plik | Źródło |
 |---|---|---|---|---|
 | ceny pakietów | ok. 300 zł netto miesięcznie przy kilkunastu dokumentach, ok. 1 000 zł przy 90–100 | założenie | `dane/mapa/biura.yaml` | oferty biur z Lublina i okolic na 2026 rok |
-| dopłata Scrooge'a po święcie | 6 zł za dokument | założenie | `dane/mapa/biura.yaml` | decyzja autora 14.11.2026 |
+| dopłata Scrooge'a po święcie | 6 zł za dokument (`zamkniete_w_swieta.doplata`; wcześniej 3 zł; sprawdzone w danych 17.11) | założenie | `dane/mapa/biura.yaml` | decyzja autora 14.11.2026 |
 | opłata za zmianę biura | 1 tydzień pakietu nowego biura | założenie | `dane/mapa/biura.yaml` (`zmiana_biura`) | decyzja autora 14.11.2026 |
 | Asteroida 328 bez limitu | tak | decyzja | `dane/mapa/biura.yaml` (`bez_limitu`) | decyzja autora 14.11.2026 |
 
@@ -58,5 +58,4 @@ Pierwszy wybór biura jest bez opłaty, a powrót do dawnego biura kosztuje tak 
 J.K.Ś. – biuro z życzenia autora gry; Józef K. – Kafka, „Proces” (biurokracja bez końca); Scrooge – Dickens,
 „Opowieść wigilijna” (skąpiec, w święta zamknięte); Asteroida 328 – Saint-Exupéry, „Mały Książę” (Bankier liczący gwiazdy).
 
-## Otwarte
-Skoro Asteroida nie ma limitu, jej pakiety M i L nie mają sensu (zawsze wygrywa S). Sprawa jest w [[Do decyzji]].
+Otwarte sprawy (m.in. sens pakietów M i L Asteroidy): [[Do decyzji]].

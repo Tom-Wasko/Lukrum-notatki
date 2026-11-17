@@ -58,4 +58,4 @@ zasady użycia prawdziwych marek.
 
 ## Gdzie te wnioski weszły
 `Decyzje`, `Do decyzji`, `Plan` (§3), `Historia` oraz `Postęp` w głównych notatkach sejfu. Tabela źródeł liczb: pole
-`zrodlo` w `gra/dane/*.yaml`.
+`zrodlo` w `dane/*.yaml`.

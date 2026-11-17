@@ -12,7 +12,7 @@ włożysz coś do wózka. Kupione rzeczy zostają na zawsze, a między kupionymi
 Każdy styl ma listę grup klientów, którym się podoba (np. studencki: studenci, uczniowie, imprezowicze). Gra sumuje
 udziały tych grup w strefie lokalu. Co najmniej 40% daje pełny efekt, 20–40% połowę, mniej nie daje nic. Każda z czterech
 grup elementów w pełni dopasowana dodaje 0,8% klientów i 0,07 gwiazdki oceny tygodnia. Ceny: ściany 2 400 zł,
-szyld 1 800 zł, dodatki 900 zł, meble 3 200 zł (komplet 8 300 zł). Liczby: `dane/mapa/dekor.yaml`, wyłącznik `wlaczony`.
+szyld 1 800 zł, dodatki 900 zł, meble 3 200 zł (komplet 8 300 zł; zwrot kompletu ok. 10,9 tygodnia przy pełnej konwersji popytu, pomiar 17.11). Liczby: `dane/mapa/dekor.yaml`, wyłącznik `wlaczony`.
 
 ## Czego uczy (do planu zajęć)
 - pojęcie z WOS / przedsiębiorczości: grupa docelowa, segmentacja rynku, inwestycja i jej zwrot

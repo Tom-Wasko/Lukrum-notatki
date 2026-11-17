@@ -1,7 +1,7 @@
 # Wygląd LUKRUM
 
 Obowiązujący wygląd gry. Podstawa dla mapy (`[mapa]`) i wnętrz (`[mechaniki]`). Jak powstawał (podglądy 1–4):
-[[Historia]]. Sprawy otwarte: [[Do decyzji]], rozdz. 6. Co z tego już działa: [[Postęp]].
+[[Historia]]. Sprawy otwarte: [[Do decyzji]], §6. Co z tego już działa i co jeszcze nie: [[Postęp]].
 
 ## Charakter
 - **Ilustrowana plansza + czytelność nowoczesnej apki + sporo PRL-u.** Mapa wygląda jak plansza gry (papier, żetony,
@@ -16,15 +16,22 @@ Obowiązujący wygląd gry. Podstawa dla mapy (`[mapa]`) i wnętrz (`[mechaniki]
 | Wysoka widoczność | kontrast tekstu co najmniej 7:1, litery o 25% większe, grube ramki i fokus, krój Atkinson Hyperlegible, bez tekstur. Zob. [[Wysoka widoczność]] |
 | Nie tylko kolor | we wszystkich paletach: zysk ▲, strata ▼, uwaga !, wzory w wykresach (`dostepnosc.css`) |
 | Kroje | Oswald + PT Sans, gruby krój **Alfa Slab One** (szyld, nagłówki, ceny). Fonty w repozytorium (OFL), bez Google Fonts |
-| Zmienne | jeden plik `static/motywy/zmienne.css`; atrybuty `data-paleta` (`bar`, `pewex`, `wysoka`) i `data-tryb` (`jasny`, `ciemny`). Kolory tylko przez zmienne. Pełna lista zmiennych: [[WSPOLPRACA]], „Umowy na granicy” |
+| Zmienne | jeden plik `static/motywy/zmienne.css`; atrybuty `data-paleta` (`bar`, `pewex`, `wysoka`) i `data-tryb` (`jasny`, `ciemny`). Kolory tylko przez zmienne (lista niżej) |
 | Ruch | lekkie animacje (wejście postaci, para z kuchni, zegar, neony), wyłączane przy `prefers-reduced-motion` |
 
+## Zmienne wyglądu
+Ustawiane w `static/motywy/zmienne.css`; atrybuty na `<html>`: `data-paleta` = `bar` (domyślna) | `pewex` | `wysoka`
+i `data-tryb` = `jasny` | `ciemny`, ustawiane przez `lukrum.wyglad.ustaw({paleta, tryb})` (umowa z mapą:
+[[WSPOLPRACA]], „Umowy na granicy”). Zmienne: `--papier`, `--tusz`, `--akcent`, `--akcent-2`, `--ramka`, `--zysk`,
+`--strata`, `--uwaga`, `--font-tekst`, `--font-szyld`, `--font-gruby`, `--skala-tekstu`, `--ramka-grubosc`, `--ognisko`,
+`--tekstura` oraz `--g-*` dla grafik. Stan nigdy samym kolorem (▲ ▼ !, wzory). `data-motyw` zostaje dla starego wyboru
+układu panelu, nie używać go w mapie.
+
 ## Mapa i pulpit
-- Mapa płaska, widok z góry: dzielnice, Bystrzyca, zieleń, główne ulice, budynki jako żetony.
-- **Pulpit to mapa na cały ekran.** W rogach małe ikony: runda, kasa, „Wyślij decyzje”, lista wujka, ⚙, konto,
-  „Jak grać”. Wyniki rundy są w budynku Redakcji. (16.11, do zrobienia)
+- Mapa płaska, widok z góry: dzielnice, Bystrzyca, zieleń, główne ulice, budynki jako żetony. Spis i zasady: [[Mapa]].
+- Pulpit (mapa na cały ekran, ikony w rogach, portfel, lista wujka i zeszyt wujka) i układ wnętrz: obowiązująca
+  decyzja jest w [[Decyzje]], „Pulpit i wnętrza”; stan prac w [[Postęp]].
 - Kliknięcie budynku: **od razu jesteś w środku**, bez długiego przejścia. Wyjście tak samo szybkie („Wróć na mapę”).
-- Lista wujka: kliknięcie pozycji przesuwa i przybliża mapę do budynku, a ten pulsuje. (16.11, do zrobienia)
 - Mapa ma swój pasek skrótów (robi `[mapa]`), wnętrza swój (`[mechaniki]`). Pasek wnętrz pokazuje same ikony
   i rozwija się do pełnych nazw.
 
@@ -49,12 +56,7 @@ Cztery rodzaje: opinie o cenie i smaku, plotki z miasta, propozycje i kłopoty, 
 „Goście i dymki”. Opis funkcji: [[Dymki przy ladzie]].
 
 ## Jeszcze niewdrożone z ustalonego
-- **Dźwięk:** lekkie dźwięki domyślnie włączone (dzwonek nad drzwiami, skwierczenie, gwar, stempel w urzędzie),
-  łatwe wyciszenie, mistrz gry może wyciszyć całą klasę.
-- **Pora dnia** zgodna z prawdziwą godziną także we wnętrzu: za oknem rano jasno, wieczorem ciemno, w porze
-  obiadowej więcej ludzi. Niezależna od trybu jasny/ciemny. (Na mapie pora dnia już jest.)
-- Wizyty wujka przy ladzie.
-- Pełne wnętrza poza kebabem (dziś schematyczne).
+Lista (dźwięk, pora dnia we wnętrzach, wizyty wujka, pełne wnętrza poza kebabem) jest w [[Postęp]], etap 3.
 
 ## Grafiki
 Własne płaskie grafiki SVG bez wpisanych kolorów (zmienne CSS i `currentColor`). Spis i zasady użycia:

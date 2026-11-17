@@ -3,12 +3,12 @@
 Gałąź `mapa-osm`. Nowa mapa jest domyślna w zakładce „Mapa miasta”; przycisk „Stara mapa” wraca do mapy z kratką.
 
 ## Co weszło
-- **Adresy i współrzędne** (`gra/dane/mapa/budynki.yaml`): `geo` dla 31 samodzielnych budynków i obu zespołów,
+- **Adresy i współrzędne** (`dane/mapa/budynki.yaml`): `geo` dla 31 samodzielnych budynków i obu zespołów,
   `adres` dla 30 z nich. Źródło: OSM (Nominatim, Overpass).
-- **Dane terenu** (`narzedzia/mapa/pobierz_osm.py` → `gra/panel_gracza/static/mapa/lublin.json`, 340 kB): 27 dzielnic,
+- **Dane terenu** (`narzedzia/mapa/pobierz_osm.py` → `panel_gracza/static/mapa/lublin.json`, 340 kB): 27 dzielnic,
   woda, rzeki, zieleń, drogi w czterech klasach, ulice osiedlowe, kolej; położenia 38 lokali, 13 punktów
   orientacyjnych i „serc” trzech stref bez dzielnic. Współrzędne w metrach od placu Litewskiego.
-- **Silnik** (`gra/panel_gracza/static/mapa/`): `widok.js` (kółko, przeciąganie, dwa palce, dwuklik, klawisze, płynne
+- **Silnik** (`panel_gracza/static/mapa/`): `widok.js` (kółko, przeciąganie, dwa palce, dwuklik, klawisze, płynne
   dojście), `lublin.js` (rysunek, znaczniki, pasek skrótów, warstwy), `ikony.js`, `mapa.css`.
 - **Poziomy szczegółów**: miasto (strefy, główne drogi, małe znaki) → dzielnica (drogi zbiorcze, ikony, nazwy
   głównych ulic) → ulica (ulice osiedlowe, podpisy wszystkich znaków).

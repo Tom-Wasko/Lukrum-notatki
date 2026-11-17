@@ -60,6 +60,3 @@ z rzędu, co tydzień grozi kontrola Państwowej Inspekcji Pracy. Kontrola końc
 
 ## Nawiązanie literackie
 Brak.
-
-## Otwarte
-Zlecenie bez składek pracodawcy jako uproszczenie czy składki jak w prawie: [[Do decyzji]].

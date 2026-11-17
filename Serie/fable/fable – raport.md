@@ -1,8 +1,8 @@
 # Seria `fable` – raport zbiorczy (15–16.11.2026)
 
 Samodzielna praca agenta Fable na gałęzi `fable`, w 18 tematach (`fable-<temat>`). Całość jest w `main`
-(scalenia 4afdd60 i 9ee8192, 16.11.2026). Przegląd prawny: [[przegląd prawny]].
-Pomiary: `pomiary/`. Zrzuty z nocy: `zrzuty/`. Surowe dzienniki nocy: `archiwum/fable-noc-surowe/`.
+(scalenia 4afdd60 i 9ee8192, 16.11.2026). Przegląd prawny, pomiary i zrzuty z nocy leżą w `archiwum/notatki-wycofane/Analizy/Noc Fable 15-16.11/`
+(przegląd prawny, `pomiary/`, `zrzuty/`); jego otwarte sprawy są w [[Do decyzji]]. Surowe dzienniki nocy: `archiwum/fable-noc-surowe/`.
 
 **Przebieg.** Start 15.11 o 16:55. O 17:25 sesja stanęła na limicie użycia i wznowiła pracę 16.11 o 06:49.
 Koniec 16.11 o 12:47. Mapa majstra (`maciex`) weszła bez zmian w jego plikach.
@@ -62,12 +62,12 @@ komenda `manage.py zamykaj_rundy`, którą trzeba uruchamiać na serwerze z harm
 ## 3. Pomiary
 | Pomiar | Wynik | Plik |
 |---|---|---|
-| Ceny katalogów, 3 poziomy × 3 ziarna × 5 botów | średnia gotówka na poziomie łatwym −3,6%; premium traci najwięcej; bot agresywny bankrutuje przed i po | `pomiary/katalogi.md` |
-| Zwrot z wystroju, 24 rundy, 3 ziarna × 5 botów średnich | komplet 8 300 zł zwraca się średnio w 10,9 tyg. (tani 17,2, agresywny 7,5); w symulacji botów +112 zł na tydzień | `pomiary/dekor.md`; skrypt w repozytorium gry: `balans/dekor_pomiar.py` |
+| Ceny katalogów, 3 poziomy × 3 ziarna × 5 botów | średnia gotówka na poziomie łatwym −3,6%; premium traci najwięcej; bot agresywny bankrutuje przed i po | `archiwum/…/pomiary/katalogi.md` |
+| Zwrot z wystroju, 24 rundy, 3 ziarna × 5 botów średnich | komplet 8 300 zł zwraca się średnio w 10,9 tyg. (tani 17,2, agresywny 7,5); w symulacji botów +112 zł na tydzień | `archiwum/…/pomiary/dekor.md`; skrypt w repozytorium gry: `balans/dekor_pomiar.py` |
 | Czas pełnego pomiaru katalogów | ok. 1 minuta przed i po | – |
 
-Uwaga: pole `zrodlo` w `dane/mapa/dekor.yaml` podaje 9,8 tygodnia i starą ścieżkę pomiaru. Tabela pomiaru daje 10,9.
-Do wyjaśnienia i poprawienia w danych.
+Uwaga: pole `zrodlo` w `dane/mapa/dekor.yaml` podawało 9,8 tygodnia; pomiar z 17.11 daje 10,9 i jest już w danych.
+Ścieżka pomiaru w tym polu wskazuje teraz archiwum (do poprawy w repo gry).
 
 ## 4. Niedokończone
 - Telefon sprawdzony na kilku ekranach (Plan tygodnia, wnętrze, mapa, sklep, gazeta, zespół). Wysoka widoczność na trzech.

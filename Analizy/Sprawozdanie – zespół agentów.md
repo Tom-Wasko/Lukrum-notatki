@@ -1,7 +1,7 @@
 # Sprawozdanie: jak prowadzić zespół agentów (16.11.2026)
 
 Dla szefa. Research zrobił agent Sonnet (18 wyszukiwań, źródła pobrane 16.11), wnioski i decyzje opisał lider.
-Wynik: nowy `AGENTS.md`, protokół lidera `dokumentacja/zespol/LIDER.md` (repo gry) i definicje agentów w `lukrum/.claude/agents/`.
+Wynik: nowy `AGENTS.md`, protokół lidera `warsztat/LIDER.md` i definicje agentów w `lukrum/.claude/agents/` (kopia generowana z `warsztat/`).
 
 ## Najważniejsze wnioski ze źródeł
 1. **Agenci są drodzy.** Według Anthropic agent zużywa ok. 4 razy więcej tokenów niż zwykły czat, a system wieloagentowy
@@ -49,6 +49,17 @@ po jednym briefie → lider sprawdza dowody i diff, scala po akceptacji szefa �
 Gdy szef jest niedostępny, lider zapisuje pytania w [[Dziennik lidera]] i idzie dalej tylko tam, gdzie da się to łatwo cofnąć.
 
 Szczegóły (od 17.11): `warsztat/ZESPOL.md` i `gra/AGENTS.md` (dla każdego agenta), `warsztat/LIDER.md` (dla lidera).
+
+## Ocena sposobu pracy (recenzent Opus, 16.11) – najważniejsze wnioski
+Pełny tekst: `archiwum/notatki-wycofane/Analizy/Ocena sposobu pracy 16.11.md`. Nierozstrzygnięte propozycje są w [[Do decyzji]].
+1. Delegowanie jest dobre (pytania z opcjami, briefy z granicami, dowody, akceptacja szefa); problemem jest, że produkcja przegoniła sprawdzanie przez ludzi: ok. 525 commitów w trzy tygodnie, a nikt poza szefem nie zagrał.
+2. Konkurs ZwzT nagradza przeprowadzone zajęcia, nie jakość aplikacji: pierwsza lekcja z uczniami ważniejsza niż kolejne funkcje i porządki.
+3. Przerostem jest warstwa wokół trójki szef – lider – agenci (pliki o procesie), nie sama trójka. Test: czy rzecz przybliża pierwszą lekcję?
+4. Szef jest wąskim gardłem: za dużo stron do przeczytania naraz, więc pytania z opcjami tracą sens (budżet czytania: ok. 1 strona i 8 pytań dziennie).
+5. Koszt nie jest mierzony; zasady żyją w kilku miejscach i bywają sprzeczne: jedno źródło (pliki repo, nie pamięć).
+6. Szef musi umieć obronić grę przed jury: po serii 3 pytania sprawdzające, raz w tygodniu tłumaczenie jednej mechaniki.
+7. Jawność AI wobec kapitana i jury (notka „Jak powstał LUKRUM”, `METODA.md`, regulamin ZwzT) jest atutem, ukrywanie byłoby ryzykiem.
+8. Z majstrem ustalenia twarzą w twarz (kto rusza mapę, raporty, podpisy commitów).
 
 ## Do decyzji szefa
 Pytania są w [[Dziennik lidera]] → „Pytania do szefa”.

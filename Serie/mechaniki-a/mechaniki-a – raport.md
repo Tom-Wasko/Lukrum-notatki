@@ -1,7 +1,7 @@
 # Raport agenta M – nowe mechaniki, tor A (gałąź `mechaniki-a`)
 
 Worktree: kopia robocza `mechaniki-a` (gałąź `mechaniki-a`, katalog `gra/`; worktree był
-założony o poziom wyżej, przeniosłem go `git worktree move`). Pomiary: `pomiary/`. Narzędzia: `balans.symuluj`
+założony o poziom wyżej, przeniosłem go `git worktree move`). Pomiary: `pomiary/` (tabele przeniesione do `archiwum/notatki-wycofane/Serie/mechaniki-a/pomiary/`; pliki `.txt` w `archiwum/mechaniki-a-surowe/`, a wszystkie odwołania `pomiary/…` w tym raporcie czytaj względem tego folderu). Narzędzia: `balans.symuluj`
 (wynik w pkt) i nowy `balans.pomiar_punktow` (tabela strategii × poziom, działy, bankructwa).
 
 ## Pomiar bazowy (przed zmianami, main 895d423)
@@ -271,7 +271,7 @@ Wyniki o ok. 10–20 pkt niższe niż 13.11 (urlop 10%, nowe pozycje wyposażeni
 
 ## 14.11 po przeglądzie
 
-Poprawki według [[Przegląd toru A 14.11]], decyzji autora z 14.11 i dopisków (logotypy zostają; liczby z wcześniejszego projektu wymienione). Pomiar po: `pomiary/d14_po_przegladzie.md` (te same profile i ziarna co `d14_punkty.md`).
+Poprawki według przeglądu toru A z 14.11 (`archiwum/notatki-wycofane/Analizy/Przegląd toru A 14.11.md`), decyzji autora z 14.11 i dopisków (logotypy zostają; liczby z wcześniejszego projektu wymienione). Pomiar po: `pomiary/d14_po_przegladzie.md` (te same profile i ziarna co `d14_punkty.md`).
 
 **Co zmienione**
 1. **Debet.** Opłata i ocena salda tylko na koniec tygodnia: `wyrownaj_gotowke` przed `bank.koniec_rundy` spłaca cały debet z przychodów tygodnia (także ten z tego samego tygodnia); chwilowy minus nic nie kosztuje. Bez zgody banku na minusie na koniec tygodnia: stała opłata 120 zł (`oplata_debet_bez_zgody`) + odsetki karne 19%; alarm i blokada bez zmian. Stopa referencyjna NBP 4% to jedna stała w `banki.yaml`, z niej `silnik.dane sprawdz` liczy limity: debet za zgodą ≤ 15% (art. 359 § 2¹ KC), karne ≤ 19% (art. 481 § 2¹ KC). Stopy debetu: Kmicic 15%, Rzecki 15% (było 20%), Soplicowo 13%, Solaris 15%. Teksty w grze (lista błędów, panel Bank, wnioski) mówią „na koniec tygodnia”, „odsetki maksymalne”. Usunięty martwy `kredyt_odnawialny_automatyczny` i zmienna `odnawialny`.

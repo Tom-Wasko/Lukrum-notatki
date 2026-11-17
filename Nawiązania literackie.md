@@ -15,21 +15,18 @@ mistrza gry: `INSTRUKCJA.md` (repozytorium gry), „Klucz do nawiązań literack
 - Pomysł na zadanie dla klasy: „Znajdź 10 nawiązań literackich”.
 
 ## Banki, biura i media
+Nazwy banków, ich specjalizacje i nawiązania: [[Banki z lektur]] (w danych jeszcze sześć banków, decyzja: pięć, zob.
+[[Decyzje]]). Biura rachunkowe i media:
+
 | Nazwa | Specjalizacja | Dlaczego |
 |---|---|---|
-| Wokulski i S-ka | kredyt inwestycyjny | Prus, *Lalka*: kupiec, który rozkręca wielki interes |
-| Oszczędności Rzeckiego | najlepsze lokaty | *Lalka*: Rzecki, sumienny subiekt, liczy każdy grosz |
-| Soplicowo | tanie konto | *Pan Tadeusz*: gościnny dworek, gość nie płaci |
-| Kmicic | szybki kredyt na start, drogi | Sienkiewicz, *Potop*: porywczy, działa od razu |
-| Solaris | największy debet | Lem, *Solaris*: bezkresny ocean, nieprzewidywalny |
-| Ziemia Obiecana | leasing sprzętu | Reymont: „ja nie mam nic…”, fabryka bez własnych pieniędzy |
 | J.K.Ś. | biuro rachunkowe | życzenie autora, bez nawiązania |
 | Józef K. | biuro tanie, ale wszystko trwa | Kafka, *Proces*: biurokracja bez końca |
 | Scrooge | biuro najtańsze, zamknięte w święta | Dickens, *Opowieść wigilijna* |
 | Asteroida 328 | biuro dokładne i drogie | Saint-Exupéry, *Mały Książę*: Bankier liczący gwiazdy |
 | Gazeta Pana Cogito, Radio Tichy | kanały reklamy | Herbert; Lem, *Dzienniki gwiazdowe* |
 
-Do zrobienia kiedyś: krótkie opisy banków i biur z nawiązaniem do lektury.
+Szczegóły biur: [[Biura rachunkowe – pakiety]]. Do zrobienia kiedyś: krótkie opisy biur z nawiązaniem do lektury.
 
 ## Postacie i miejsca
 | Gdzie | Nawiązanie | Źródło | Stan |
@@ -51,12 +48,9 @@ Do zrobienia kiedyś: krótkie opisy banków i biur z nawiązaniem do lektury.
 
 Kolumna „Stan” jest wpisana z notatek, a nie z gry. Przy najbliższej pracy nad tekstami trzeba ją sprawdzić w danych.
 
-## Sprawdzone cytaty (14.11, z Wolnymi Lekturami)
-- Dulska: „Na to mamy cztery ściany i sufit, aby brudy swoje prać w domu”
-- Zagłoba: „Mości panowie! gdybym zaczął wszystko szczegółowie opowiadać, tedy i dziesięciu nocy by nie starczyło”
-- Zagłoba: „Zdechnę ja i pchły moje!”
-- Papkin: „Jeśli nie chcesz mojej zguby, krokodyla daj mi, luby” (w oryginale „Krrokodyla”; w źródłach też „kup mi”)
-- Rzecki: tylko aluzja do Napoleonów. Judym: cytat niepewny w brzmieniu, niewstawiony. Józio: bez cytatów.
+## Cytaty
+Cytaty bywalców są sprawdzone z Wolnymi Lekturami (14.11) i opisane przy zaczepkach: [[Dymki przy ladzie]]; w danych pole
+`cytat_zrodlo`. Judym: cytat niepewny w brzmieniu, niewstawiony; Rzecki: tylko aluzja do Napoleonów; Józio: bez cytatów.
 
 ## Ryzyka (otwarte w [[Do decyzji]])
 Józio (Gombrowicz) i bank „Solaris” (Lem) korzystają z utworów jeszcze chronionych: zostają jako aluzje, dopóki autor

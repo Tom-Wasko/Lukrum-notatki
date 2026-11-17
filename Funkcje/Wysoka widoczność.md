@@ -9,7 +9,8 @@ Gra ma wtedy mocny kontrast, większe litery, grube ramki i bardzo czytelny kró
 W każdej palecie zysk ma znak ▲, a strata ▼, więc nie musisz rozpoznawać ich po kolorze.
 
 ## Zasada działania
-- Plik `gra/panel_gracza/static/motywy/zmienne.css`, atrybut `data-paleta="wysoka"` i `data-tryb="jasny|ciemny"` na `<html>`.
+Ogólne zasady wyglądu (palety, tryby, stan nie samym kolorem): [[Wygląd]]. Tu szczegóły palety wysokiej widoczności.
+- Plik `panel_gracza/static/motywy/zmienne.css`, atrybut `data-paleta="wysoka"` i `data-tryb="jasny|ciemny"` na `<html>`.
   Ustawia go `lukrum.wyglad.ustaw({paleta: "wysoka", tryb})` z `static/lukrum.js`, a przeglądarka zapamiętuje wybór.
 - Jasna: białe tło, czarny tekst, ciemnoniebieski akcent. Ciemna: czarne tło, biały tekst, żółty akcent.
   Kontrast wszystkich kolorów tekstu do tła jest co najmniej 7:1 (WCAG 2.2, poziom AAA). Sprawdzone skryptem 14.11:

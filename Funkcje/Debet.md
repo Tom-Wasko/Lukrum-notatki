@@ -53,6 +53,3 @@ najmniejsza opłata za debet w ofercie banków. To uproszczenie względem prawdz
 
 ## Nawiązanie literackie
 Solaris (Lem, „Solaris”): bank z największym debetem, „bezkresny ocean” limitu, ale nieprzewidywalny koszt.
-
-## Otwarte
-Czy przejęcie debetu zostaje jako uproszczenie, czy debet trzeba spłacić przed zmianą banku: [[Do decyzji]].

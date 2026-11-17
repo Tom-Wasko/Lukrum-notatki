@@ -5,8 +5,8 @@
 
 ## Dla ucznia (do instrukcji)
 W grze chodzi się po mieście. Każdą sprawę załatwia się w konkretnym miejscu: konto w Kamienicy bankowej, księgi
-w Biurowcu przy Zana, towar w Hurtowniach, sprzęt i wystrój w Parku handlowym, ludzi w Miasteczku akademickim,
-lokal na Starym Mieście. Po wejściu widać wnętrze z klikalnymi punktami i listę „Co tu zrobisz”.
+w Kamienicy rachmistrzów (dziś Biurowiec przy Zana), towar w Hurtowniach, sprzęt i wystrój w Parku handlowym, ludzi w Miasteczku akademickim,
+lokal na Starym Mieście. Po wejściu widać wnętrze z klikalnymi punktami.
 
 ## Zasada działania
 Miejsce to obrazkowe menu budynku: kliknięcie punktu otwiera ten sam ekran decyzji co dawna zakładka. Kliknięcie

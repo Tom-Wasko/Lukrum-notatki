@@ -8,19 +8,19 @@ i majstra (mapa). Kod gry jest w repozytorium `Tom-Wasko/Lukrum` (lokalnie `../g
 
 | Notatka | Co w niej jest | Kto pisze |
 |---|---|---|
-| [[Plan]] | cel, etapy, role, czego jeszcze brakuje | lider |
-| [[Postęp]] | zadania i stan etapów (jedyna lista zadań projektu) | lider po każdej serii |
+| [[Plan]] | cel, etapy, role, folder projektu | lider |
+| [[Postęp]] | zadania, kolejność prac i stan etapów (jedyna lista zadań projektu) | lider po każdej serii |
 | [[Decyzje]] | obowiązujące decyzje autora, tematami | lider, po decyzji autora |
-| [[Do decyzji]] | **tylko** sprawy otwarte, z wariantami | lider i agenci (gdy brief każe) |
+| [[Do decyzji]] | **tylko** sprawy otwarte i pytania do szefa, z wariantami | lider i agenci (gdy brief każe) |
 | [[Wygląd]] | obowiązujący wygląd: styl, palety, kroje, wnętrza, pulpit | lider |
-| [[Mapa]] | strefy, zespoły budynków, spis elementów mapy | obie strony |
-| [[Nawiązania literackie]] | zasady, lista nawiązań, nazwy banków i biur | lider |
-| [[WSPOLPRACA]] | tablica mapa ↔ mechaniki: podział, umowy na granicy, pytania, dziennik | obie strony, **czytać przed pracą** |
-| `Funkcje/` | jedna notatka na funkcję gry wg [[_Szablon funkcji]]; baza do instrukcji, planów zajęć i promocji | agenci, gdy brief każe |
-| `Zespół/` | [[Dziennik lidera]] (decyzje dzień po dniu, pytania do szefa), [[Sprawozdanie – zespół agentów]] | lider |
-| `Analizy/` | oceny, research, krytyki i sprawozdania z datą; indeks [[Analizy]] | lider |
-| `Serie/` | plany i raporty serii prac, pomiary; indeks [[Serie]] | lider i agenci |
-| [[Historia]] | kronika prac i sprawy już rozstrzygnięte | lider, przy zamknięciu serii |
+| [[Mapa]] | strefy, zespoły budynków, spis elementów mapy (odświeżany z danych gry) | obie strony |
+| [[Nawiązania literackie]] | zasady i lista nawiązań; banki: [[Banki z lektur]] | lider |
+| [[WSPOLPRACA]] | tablica mapa ↔ mechaniki: zasady, umowy na granicy, dziennik | obie strony, **czytać przed pracą** |
+| `Funkcje/` | jedna notatka na funkcję gry wg szablonu `../warsztat/szablony/notatka-funkcji.md`; baza do instrukcji, planów zajęć i promocji | agenci, gdy brief każe |
+| `Zespół/` | [[Dziennik lidera]] (decyzje szefa dzień po dniu i „Stan prac”; pytania są w [[Do decyzji]]) | lider |
+| `Analizy/` | krytyki, sprawozdania i wnioski z datą, m.in. [[Sprawozdanie – zespół agentów]]; indeks [[Analizy]] | lider |
+| `Serie/` | plany i raporty serii prac; indeks [[Serie]] | lider i agenci |
+| [[Historia]] | kronika prac | lider, przy zamknięciu serii |
 
 ## Zasady tego repozytorium
 1. **Jeden temat, jedna notatka.** Zanim założysz nową, sprawdź spis. Nie zakładamy notatek z datą w nazwie
@@ -36,5 +36,5 @@ i majstra (mapa). Kod gry jest w repozytorium `Tom-Wasko/Lukrum` (lokalnie `../g
 
 ## Gdzie co jest poza notatkami
 - Kod gry, instrukcja dla graczy i mistrza gry, dokumentacja techniczna: `../gra/`.
-- Surowe materiały (briefy, logi, zrzuty, pliki z dawnych serii) leżą lokalnie w `../archiwum/`, poza gitem; spis w `LEGENDA.md`.
+- Surowe materiały (briefy, logi, zrzuty, pliki z dawnych serii) leżą lokalnie w `../archiwum/`, poza gitem; spis w `../archiwum/LEGENDA.md` (tam też pliki wycofane z tych notatek: `archiwum/notatki-wycofane/`).
 - Sposób pracy zespołu, szablony i definicje agentów: `../warsztat/` (osobne repozytorium szefa; majster ma własne narzędzia).
