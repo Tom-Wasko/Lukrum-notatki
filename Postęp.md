@@ -13,7 +13,7 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
 4. [ ] Gra etapami, bez terminu.
    - [ ] `balans-katalogi`: poprawki drobnych mechanik (decyzja 18.11): Asteroida 328, kasa/lada/tablica menu, szkolenia, lodówka, szafy
    - [ ] D1–D2 i higiena z przeglądu dziur: cena bota 1,05, okienko sanepidu, przycisk blokady klubu w panelu MG, sprzęt i dostawcy od tygodnia 1 Do gry trafia tylko to, co przejdzie testy. Kolejne serie:
-   - [ ] `pulpit` (krok 1 „powłoka” w toku od 18.11, gałąź `pulpit-powloka`): mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
+   - [x] `pulpit` kroki 1–5 zrobione 18.11 (gałąź `pulpit-ui2`, do `main` 19.11), krok 6 szablony kart w toku; zakres kroku 1: mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
      „Jak grać”); teczka na środku okienka decyzji; „Co tu zrobisz” ukryte; wyniki rundy w budynku Redakcji
    - [ ] `kebab-park`: sprzęt kupowany tylko w Parku handlowym, kebab pokazuje stan i odsyła
    - [ ] `zeszyt`: zeszyt wujka (lista zadań, gdzie co kupić, animacja stron, wystaje z brzegu) i odręczny krój

@@ -10,6 +10,26 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 `fable` w repo notatek i repo `warsztat` na GitHubie: §7). Tu ich nie powtarzamy.
 
 ## Stan prac
+### 18.11 noc – KONIEC DNIA: stan i plan na 19.11 (zacznij tutaj)
+**Gałęzie gry (wszystkie wypchnięte na GitHub; `main` = porządki 17.11, bez pulpitu):** `pulpit-ui2` (fa646a6) = pulpit + 33 wnętrza z makiet Fable
++ Kamienica rachmistrzów i Park handlowy + biurowiec Zana z windą + edytor mapy i nowe pozycje żetonów + list „List z decyzjami” + nowy zeszyt, 783 testy.
+Kopie robocze w `_robocze/pulpit-ui2`, `pulpit-ui`, `pulpit-mapa`, `pulpit-edytor`, `wnetrza-wdrozenie`, `pulpit-powloka` (po scaleniu usunąć: `git worktree remove`).
+Serwer podglądu: `manage.py graj --port 8791` z `_robocze/pulpit-ui2` (gra testowa `Pulpit1b`).
+**W toku:** agent Sonnet „krok 6” (jednolite szablony kart w 4 stylach, w `_robocze/pulpit-ui2`, BEZ commitu). Jeśli przerwany limitem: `git -C _robocze/pulpit-ui2 status`,
+raport `_robocze/pulpit-styl-raport.md`; dokończ tym samym briefem (plan: `Serie/pulpit/pulpit – okna do wyboru stylu.md`, wzorce: `_robocze/szablony-kart/index.html`).
+**Zrobione dziś (18.11):** panel postępu + rejestr agentów, prompty NotebookLM i wnioski z nich (`warsztat/LIDER.md` §11–12), pulpit kroki 1–5, wnętrza z makiet, edytor mapy,
+alternatywy szablonu kart, METODA.md (szkic), start gry na Pythonie 3.12+, decyzje szefa (Decyzje.md), usunięta gałąź `fable`.
+**Plan na 19.11 (kolejność szefa: 4, 2, 3 z pytaniami, 1):**
+1. **Merge:** po zakończeniu kroku 6 i zielonych testach scal `pulpit-ui2` do `main` (decyzja szefa), push, wpis dla majstra w `WSPOLPRACA` (zmiany w `mapa/lublin.js`, `mapa/ikony.js`, `dane/mapa/*`); sprzątnij worktree; przegeneruj `INSTRUKCJA.pdf`.
+2. **Reszta wnętrz (4):** teksty „Biurowiec przy Zana ▸ Biuro rachunkowe” (silnik/dane: `decyzje.py:716`, `biuro.py:422`, `wnioski.py:166`, `zalozenia.yaml`, `finanse.js`), „Dom reklamy” w README/INSTRUKCJA/`podglad_zetonow.html`,
+   kroki zeszytu do ekranów kebaba jako teczka (`wejdzDoKroku`), sprzęt tylko w Parku (ekran „Stanowiska i sprzęt” nie z kebaba), szyldy z danych zamiast tekstu z makiet, żeton `bazar`, Park handlowy: wybierz realny adres (szef: „sam se go postaw”), wersje `*_alt`, 12 żetonów bez `geo` (banki, sprzęt, market, agencje).
+3. **Zeszyt wujka (2):** podpiąć treść z `archiwum/fable-17.11/fable-zeszyt/` (48 zadań, odhaczanie w grze, „gdzie kupić” z cen: rozszerzyć widok `v`), samouczek.
+4. **Radio (3):** najpierw pytania do szefa (stacje: jazz, klasyczna, polska z PRL, „Lalka”, szum; prowadzący i wtrącenia o grze; nawiązanie do radia z gier postapokaliptycznych własnymi środkami), potem szukanie WYŁĄCZNIE nagrań z domeny publicznej / wolnych licencji (Internet Archive, Musopen, Wolne Lektury; adres źródła + licencja przy każdym; **bez syntezatora**; pliki do gry dopiero po akceptacji listy przez szefa).
+5. **Mechanika i gra testowa (1):** seria `balans-katalogi` (Asteroida 328, kasa/lada, szkolenia, lodówka, szafy), cena bota 1,05, potwierdzenie higieny, blokada klubu przez MG, sprzęt i dostawcy od tygodnia 1, `zeszyt-szkic.yaml` do danych; potem termin gry testowej z kapitanem.
+6. **Panel postępu i artefakty:** narzędzia claude.ai przestały działać po zmianie konta; po restarcie Claude Code poproś szefa o link i odśwież panel (`warsztat/panel/README.md`); opublikuj edytor mapy (`_robocze/edytor-mapy/index.html`) i szablony (`_robocze/szablony-kart/index.html`) lub zostaw jako pliki lokalne.
+7. **Niezałatwione:** regulamin ZwzT (wklejony tekst), rozmowa z kapitanem o AI, repo `warsztat` zostaje lokalne, adresy tymczasowe (biurowiec Zana, kamienica ustawiona przez szefa), 6 notatek NotebookLM do ponowienia po wgraniu plików z `_robocze/notebooklm/`.
+**Koszt dnia (tokeny agentów, tys.):** pulpit ok. 1 100, wnętrza 308, edytor 104, szablony 133, porządki ok. 1 400 (17.11); rejestr: `Zespół/Rejestr agentów.md`.
+
 ### 18.11 – decyzje szefa, pulpit, panel postępu
 - Zrobione: porządki (kroki 1–13, scalone do `main`), decyzje szefa z pytań w okienku zapisane w [[Decyzje]] (ekonomia po dziurach,
   tydzień 1, banki 6→5 bez Solarisa, zeszyt wujka, giełda u majstra, prawo bez zmian, mechaniki poprawiamy teraz), start gry na Pythonie 3.12+

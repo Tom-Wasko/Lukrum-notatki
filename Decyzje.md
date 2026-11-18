@@ -163,6 +163,9 @@ co obowiązuje.
 - **Wnętrza z makiet Fable wdrażamy do gry od razu** (polecenie 18.11): fundament i sceny na gałęzi `wnetrza-wdrozenie`.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
+## Ustalenia na 19.11 (szef, 18.11 noc)
+- Merge `pulpit-ui2` do `main` po zielonych testach, bez czekania na oglądanie. Park handlowy: lider wybiera realny adres. Kolejność prac: reszta wnętrz, zeszyt, radio (najpierw pytania), mechanika i gra testowa. Radio: tylko wolne nagrania (domena publiczna/wolne licencje), pliki dopiero po akceptacji listy.
+
 ## Pulpit – poprawki po obejrzeniu 4A/4B (18.11.2026, noc)
 - „Wyślij decyzje” zmienia nazwę na **„List z decyzjami”** (okno „Nadaj list z decyzjami”, stempel „NADANO”), **na dole paska po lewej**, wygląda jak **list** (koperta/list). **Decyzje i Wyniki** jako przełącznik w nagłówku każdej teczki, obok ✕.
 - **Biurowiec przy Zana** (z reklamami): wraca nazwa „Biurowiec przy Zana” i ikona wieżowca.
