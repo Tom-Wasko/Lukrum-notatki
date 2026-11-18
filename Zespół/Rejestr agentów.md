@@ -26,3 +26,6 @@ lider tylko wtedy, gdy agent prowadzi `STAN.md` albo raport cząstkowy (np. „3
 | Fable: dziury | Fable | szukanie dziur w ekonomii (90 prób) | gotowe | – | brak danych | ok. 2 h | 6 dziur, raport w `archiwum/fable-17.11/` |
 | Fable: zeszyt | Fable | treść zeszytu wujka (48 zadań) | gotowe | – | brak danych | ok. 5 h | szkic danych i treść w archiwum |
 | Fable: wnętrza | Fable | projekt 34 wnętrz, 39 makiet | gotowe | – | brak danych | ok. 14 h | makiety i specyfikacje w archiwum |
+| pulpit-ui2 (krok 5) | Sonnet | list „Wyślij decyzje”, Decyzje/Wyniki w nagłówku, artefakt nad kartą, biurowiec Zana, kategorie, wydarzenia 2 kolumny, nowy zeszyt | pracuje | – | – | – | gałąź `pulpit-ui2` |
+| szablony kart | Sonnet | 4 alternatywy szablonu kart + warianty bez powtórzeń (HTML na claude.ai) | pracuje | – | – | – | `_robocze/szablony-kart/index.html` |
+| edytor mapy | Sonnet | edytor przeciągania żetonów z ostrzeżeniami + skrypt zastosuj_pozycje | pracuje | – | – | – | gałąź `pulpit-edytor`, `_robocze/edytor-mapy/` |
