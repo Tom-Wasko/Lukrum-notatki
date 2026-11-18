@@ -15,7 +15,7 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 + Kamienica rachmistrzów i Park handlowy + biurowiec Zana z windą + edytor mapy i nowe pozycje żetonów + list „List z decyzjami” + nowy zeszyt, 783 testy.
 Kopie robocze w `_robocze/pulpit-ui2`, `pulpit-ui`, `pulpit-mapa`, `pulpit-edytor`, `wnetrza-wdrozenie`, `pulpit-powloka` (po scaleniu usunąć: `git worktree remove`).
 Serwer podglądu: `manage.py graj --port 8791` z `_robocze/pulpit-ui2` (gra testowa `Pulpit1b`).
-**W toku:** agent Sonnet „krok 6” (jednolite szablony kart w 4 stylach, w `_robocze/pulpit-ui2`, BEZ commitu). Jeśli przerwany limitem: `git -C _robocze/pulpit-ui2 status`,
+**W toku (WIP-commit zrobiony 18.11 w nocy, niedokończony, niezweryfikowany testami):** agent Sonnet „krok 6” (jednolite szablony kart w 4 stylach, w `_robocze/pulpit-ui2`, BEZ commitu). Jeśli przerwany limitem: `git -C _robocze/pulpit-ui2 status`,
 raport `_robocze/pulpit-styl-raport.md`; dokończ tym samym briefem (plan: `Serie/pulpit/pulpit – okna do wyboru stylu.md`, wzorce: `_robocze/szablony-kart/index.html`).
 **Zrobione dziś (18.11):** panel postępu + rejestr agentów, prompty NotebookLM i wnioski z nich (`warsztat/LIDER.md` §11–12), pulpit kroki 1–5, wnętrza z makiet, edytor mapy,
 alternatywy szablonu kart, METODA.md (szkic), start gry na Pythonie 3.12+, decyzje szefa (Decyzje.md), usunięta gałąź `fable`.
