@@ -169,7 +169,7 @@ co obowiązuje.
 - **„Jak grać”:** zakładki zamiast jednego bloku tekstu.
 - **Okienka w stylu PRL:** zakupy = długi **paragon**, wydarzenia = **tablica ogłoszeń** z przypiętymi kartkami, „Wyślij decyzje” = **koperta** ze stemplem „WYSŁANO”.
 - **Zeszyt:** stary, zniszczony, **skórzana okładka**, schowany **przechylony** (nie równoległy do krawędzi), **pobrana odręczna czcionka** na wolnej licencji (lokalnie w grze).
-- **Dom reklamy:** własny biurowiec **na Zana** (inny niż biurowiec KPiR), działa jak kamienica bankowa, ale widok **ze środka windy**; wybierasz piętro, każde ma własne wnętrze. **Drukarnia znika z mapy, zostaje jako piętro** (drukarnia, radio, eventy, internet).
+- **Reklama w istniejącym biurowcu przy Zana** (zmiana 18.11, **bez nowego budynku**): `biurowiec_zana` staje się domem reklamy z widokiem **ze środka windy**; wybierasz piętro, każde ma własne wnętrze: drukarnia, radio, eventy, internet; parter: portiernia, „Twoje kampanie” i pokój z księgą KPiR. Biura rachunkowe przechodzą do Kamienicy rachmistrzów. **Drukarnia znika z mapy jako osobny budynek, zostaje jako piętro.**
 - **Kamienica rachmistrzów** i **Park handlowy** dostają żeton na mapie; **miejsca wskaże szef** (adresy) – do tego czasu żetony tymczasowe, wpis dla majstra w WSPOLPRACA. Z kebaba **nie ma** bezpośredniego przejścia do Parku handlowego (tylko przez mapę); wnętrze Parku do naprawy.
 
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
