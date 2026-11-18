@@ -76,6 +76,7 @@ miejscu: [[Do decyzji]], §3. Odpowiedzi stron zapisujemy tam albo tu, w „Umow
 
 ## Dziennik
 <!-- Krótko: data, strona, co weszło (gałąź / PR / commit). Najnowsze na górze. Wpisy starsze niż tydzień przenosimy do [[Historia]]. -->
+- 18.11 [mechaniki]: **zmiany w obszarze mapy (gałąź `pulpit-mapa`, jeszcze nie w `main`):** nowe żetony `kamienica_rachmistrzow` (zastępuje `biura`) i `park_handlowy` (ukryte `sprzet_gastro`, `market_budowlany`) – **adresy tymczasowe, szef poda właściwe**; reklama jest w istniejącym `biurowiec_zana` (winda, piętra), żeton `drukarnia` znika z mapy; w `mapa/ikony.js` 3 wpisy WG_ID, `mapa/podglad_zetonow.html`; w `mapa/lublin.js` metody przelotu do znaku i dzielnicy (z kroku 3 pulpitu). Majster: sprawdź przed scaleniem.
 - 18.11 [mechaniki]: **giełda to działka majstra:** mechanika i kursy giełdy (uwaga: nazwa „S&P 500” w opisie `budynki.yaml` to znak towarowy – kursy
   najlepiej fikcyjne albo z jawnej licencji; zob. [[Do decyzji]] §1). Żeton `gielda` jest otwarty ze sceną bez decyzji (scena: `archiwum/fable-17.11/`).
 - 17.11 [mechaniki]: **repo gry spłaszczone** (w `main`): wszystko z `gra/` jest teraz
