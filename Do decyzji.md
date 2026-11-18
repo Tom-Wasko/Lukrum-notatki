@@ -150,7 +150,6 @@ na wszystkich ziarnach (szum pojedynczej gry ok. ±15 pkt). Jedna drużyna sama 
 
 ### 8b. Zeszyt wujka (`archiwum/fable-17.11/fable-zeszyt/raport.md`, treść w `zeszyt.md` i `zeszyt-szkic.yaml`)
 Szkic: 48 zadań w 18 tygodniach, 23 warunki odhaczania, rozdział „gdzie co najlepiej kupić” z cenami z `dostawcy.yaml`.
-- [ ] **Bazar** nie ma żetonu, a zadanie tygodnia 6 do niego prowadzi (zob. §8c, pyt. 7)
 - [ ] **Odhaczanie „wizytą”** jest po stronie przeglądarki (inny komputer = nieodhaczone). Wystarczy, czy zapisywać w grze?
 - [ ] **Pojęcie z WOS** przy zadaniu: pokazywać graczom (małym drukiem) czy tylko mistrzowi gry? Przyjęte: tylko mistrz gry
 - [ ] **Wujek poleca konkretne sklepy po nazwie** (Biedronka, Lidl…). Zgodne z decyzją o prawdziwych markach, ale to już
@@ -164,13 +163,7 @@ zamiast układu pływającego, Kamienica rachmistrzów jako klatka schodowa, Dom
   praw autorskich, Lem; najmniej „lubelski”). To zmienia ekonomię (znika debet 40 000 zł) i wymaga zmiany `banki.yaml`;
   w danych jest jeszcze 6, decyzja: 5. Co z dużym debetem: do Soplicowa, do Kmicica, czy znika? Jak wygląda rząd
   z Solarisem: makieta `pierzeja_alt`
-- [ ] **5. Urzędy skarbowe** (VAT, PIT) w ratuszu przy Szeligowskiego: zgoda? Sanepid osobno ma własny żeton i wnętrze
 - [ ] **6. „Wyślij decyzje”:** przycisk w boczku wysyła od razu, czy prowadzi na Pocztę (okienko nadawcze)?
-- [ ] **7. Bazar:** nie ma żetonu na mapie. Dodać (gdzie?), czy handel zostaje bez wnętrza?
-- [ ] **8. Parki:** siedem żetonów, jeden wzór sceny z jednym obiektem w tle. Wystarczy, czy parki zostają samą informacją
-  na mapie?
-- [ ] **9. Giełda:** w silniku nie ma jeszcze decyzji giełdy (budynek `gielda` jest). Scena jest gotowa „na zapas”;
-  czy żeton ma być czynny przed mechaniką?
 - [ ] **10. Nazwa sklepu ze sprzętem:** zostaje „Hurtownia sprzętu gastronomicznego”, czy „Konstruktorzy T&K” z planu
   nawiązań?
 - [ ] **12. Dozorczyni w Kamienicy rachmistrzów** stoi jako postać Dulskiej (zastępstwo): zostawić jako nawiązanie

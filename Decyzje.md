@@ -151,6 +151,8 @@ co obowiązuje.
 - **Tydzień 1:** sprzęt w Parku i dostawcy odblokowani od tygodnia 1 (zeszyt wujka prowadzi krok po kroku; 150 pkt „Zaopatrzenie” staje się osiągalne).
 - **Sprzęt:** sprzęt gastronomiczny tylko w Parku handlowym; stanowiska zostają w stolarni, udogodnienia w galerii.
 - **Dom reklamy:** wybór piętra **kabiną windy**. **Kamienica rachmistrzów:** klatka schodowa (zgodnie z wcześniejszą decyzją, nie pytać ponownie).
+- **Urzędy skarbowe (VAT, PIT):** okienko w ratuszu przy Szeligowskiego, bez nowego żetonu. **Bazar:** nowy żeton na mapie z wnętrzem (miejsce z majstrem). **Giełda:** żeton zamknięty „w budowie” do czasu mechaniki.
+- **Parki:** jeden wzór sceny: okienko i **postać, która mówi do gracza** (event rundy); formę dobieramy po swojemu, bez nawiązań do innych gier.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
