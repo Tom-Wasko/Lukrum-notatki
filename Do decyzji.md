@@ -150,10 +150,6 @@ na wszystkich ziarnach (szum pojedynczej gry ok. ±15 pkt). Jedna drużyna sama 
 
 ### 8b. Zeszyt wujka (`archiwum/fable-17.11/fable-zeszyt/raport.md`, treść w `zeszyt.md` i `zeszyt-szkic.yaml`)
 Szkic: 48 zadań w 18 tygodniach, 23 warunki odhaczania, rozdział „gdzie co najlepiej kupić” z cenami z `dostawcy.yaml`.
-- [ ] **Odhaczanie „wizytą”** jest po stronie przeglądarki (inny komputer = nieodhaczone). Wystarczy, czy zapisywać w grze?
-- [ ] **Pojęcie z WOS** przy zadaniu: pokazywać graczom (małym drukiem) czy tylko mistrzowi gry? Przyjęte: tylko mistrz gry
-- [ ] **Wujek poleca konkretne sklepy po nazwie** (Biedronka, Lidl…). Zgodne z decyzją o prawdziwych markach, ale to już
-  rekomendacja, nie tło: zostaje?
 - [ ] zadania tygodni 12–17 są przeglądowe (po jednym), bo harmonogram nie odblokowuje już nic po tygodniu 11. Wystarczy?
 
 ### 8c. Projekt wnętrz (`archiwum/fable-17.11/fable-wnetrza/raport.md`, `projekt.md`, makiety w `makiety/`)
@@ -164,8 +160,6 @@ zamiast układu pływającego, Kamienica rachmistrzów jako klatka schodowa, Dom
   w danych jest jeszcze 6, decyzja: 5. Co z dużym debetem: do Soplicowa, do Kmicica, czy znika? Jak wygląda rząd
   z Solarisem: makieta `pierzeja_alt`
 - [ ] **6. „Wyślij decyzje”:** przycisk w boczku wysyła od razu, czy prowadzi na Pocztę (okienko nadawcze)?
-- [ ] **10. Nazwa sklepu ze sprzętem:** zostaje „Hurtownia sprzętu gastronomicznego”, czy „Konstruktorzy T&K” z planu
-  nawiązań?
 - [ ] **12. Dozorczyni w Kamienicy rachmistrzów** stoi jako postać Dulskiej (zastępstwo): zostawić jako nawiązanie
   (kamieniczniczka) czy nowa postać?
 - [ ] przed wdrożeniem: etykiety w kilku makietach nachodzą na rysunek, w palecie wysokiej napisy na szyldach się

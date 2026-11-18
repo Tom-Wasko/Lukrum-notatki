@@ -153,6 +153,7 @@ co obowiązuje.
 - **Dom reklamy:** wybór piętra **kabiną windy**. **Kamienica rachmistrzów:** klatka schodowa (zgodnie z wcześniejszą decyzją, nie pytać ponownie).
 - **Urzędy skarbowe (VAT, PIT):** okienko w ratuszu przy Szeligowskiego, bez nowego żetonu. **Bazar:** nowy żeton na mapie z wnętrzem (miejsce z majstrem). **Giełda:** żeton zamknięty „w budowie” do czasu mechaniki.
 - **Parki:** jeden wzór sceny: okienko i **postać, która mówi do gracza** (event rundy); formę dobieramy po swojemu, bez nawiązań do innych gier.
+- **Zeszyt wujka:** odhaczanie zadań zapisywane w grze (nie w przeglądarce); **bez pojęć z WOS przy zadaniach** („nie ma potrzeby”); wujek poleca sklepy po nazwie. **Sklep ze sprzętem:** „Konstruktorzy T&K”.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
