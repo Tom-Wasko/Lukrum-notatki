@@ -144,6 +144,12 @@ co obowiązuje.
   (16.11 noc)
 - Szczegóły i spis elementów: [[Mapa]].
 
+## Ekonomia po przeglądzie dziur (18.11.2026)
+- **D1 zmowa na giełdzie handlu:** **bez limitu oferty** („doda trochę śmiechu”); zostaje jako znana ciekawostka, mistrz gry widzi transakcje.
+- **D2:** podnieść cenę bota `zrownowazony` (0,92 → 1,05), potem ponowny pomiar botów.
+- **Higiena „brak”:** okienko z potwierdzeniem w stylu „jeśli sanepid cię odwiedzi, to…” przed wyborem.
+- **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
+
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
 - **Mapa na cały ekran.** Lewy górny róg: ⚙ ustawienia nad pionowym paskiem ikon (na szkicu m.in. koszyk) z logiem „Ł”;
   pod paskiem napis „Tydzień N” to **tylko informacja o rundzie** (nic się nie rozwija).

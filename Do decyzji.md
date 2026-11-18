@@ -142,19 +142,10 @@ Trzy raporty Fable czekają na szefa. Pełne pytania, makiety i skrypty są w `a
 ### 8a. Dziury w ekonomii (`archiwum/fable-17.11/fable-dziury/raport.md`, tabela w `dziury.md`)
 Wzorzec: bot `zrownowazony` grający jako człowiek, 12 tygodni, 3 ziarna; za dziurę uznana różnica o tym samym znaku
 na wszystkich ziarnach (szum pojedynczej gry ok. ±15 pkt). Jedna drużyna sama gry nie złamie.
-- [ ] **D1 (gra złamana): zmowa na giełdzie handlu.** Oferta w licytacji nie ma górnej granicy: drużyna kupuje paczkę
-  tortilli za 20 000 zł i przelewa koledze gotówkę i punkty (+56 pkt, +41 tys. zł po trzech transakcjach). Propozycja:
-  limit oferty 2 × wartość (jak cena wywoławcza). Czy inny limit? Czy mistrz gry ma dostawać alarm o transakcji ponad
-  wartość? (test regresji: oferta 100 × wartość odrzucona)
-- [ ] **D2 (przewaga):** ceny o 20% wyższe niż u bota dają średnio +40 pkt i +17 tys. zł, bo boty wyceniają za nisko.
-  Podnieść cenę bota `zrownowazony` (0,92 → 1,05) czy zwiększyć elastyczność popytu? Oba wymagają ponownego pomiaru botów.
 - [ ] **D3–D5 (kosmetyka):** lokata obniża punkty; pożyczka w ostatnim tygodniu pompuje gotówkę; zdarzenia opłaca się
   ignorować. Poprawiać po grze testowej czy teraz?
 - [ ] **D6:** 150 pkt „Zaopatrzenie” w tygodniu otwarcia jest nie do zdobycia; odblokować dostawców w tygodniu 1
   (pasuje do zeszytu wujka, §8b)?
-- [ ] **Higiena „brak”** kończy grę drużynie jednym kliknięciem (113 pkt). Zostawić jako nauczkę czy dodać potwierdzenie?
-- [ ] **Hasło „koziol”** otwiera klub od tygodnia 1 każdemu, kto je zna; po pierwszej lekcji będzie je znać cała klasa.
-  Tak ma być? (zob. §1, „Nocna 13”)
 - [ ] pomiar szumu (ta sama strategia w dwóch firmach różni się o ±16 pkt) wziąć pod uwagę przy ocenianiu drużyn na lekcji
 
 ### 8b. Zeszyt wujka (`archiwum/fable-17.11/fable-zeszyt/raport.md`, treść w `zeszyt.md` i `zeszyt-szkic.yaml`)
