@@ -61,8 +61,6 @@ Zrobione bez pytania autora, są w `main`. Lista z uzasadnieniem: [[fable – ra
 
 ## 3. Mapa (zmiany majstra z 15.11, które odwracają decyzje z 14.11)
 Opis: [[etap2-mapa – raport]].
-- [ ] **Strefa = jedna prawdziwa dzielnica** (wcześniej strefy z kilku dzielnic albo wycinane kształty): zostaje?
-- [ ] **Siedem lokali ma nowe adresy i nazwy**, żeby stały w dzielnicy swojej strefy: zostaje?
 - [ ] dopisać do umów na granicy pole `e.detail.obsluzone` (dziś działa bez wpisu; [[WSPOLPRACA]])
 - [ ] położenia lokali: pole `geo` w `lokale.yaml` zamiast w `lublin.json`; odsyłacze dla twórców usunąć z opisów
   `budynki.yaml` (mapa dziś je wycina)
@@ -76,16 +74,7 @@ Opis: [[etap2-mapa – raport]].
 ## 4. Mechaniki i balans
 - [ ] stałe modelu popytu i reklamy: przeliczyć od zera, martwe usunąć
 - [ ] harmonogram odblokowań i limit dań: zmienić (kierunek z planu: odblokowania przez listy wujka, limit dań ze sprzętu)
-- [ ] Asteroida 328 bez limitu dokumentów: pakiety M i L nie mają sensu (zawsze wygrywa S). Różnicować czy usunąć?
-- [ ] czy biura rachunkowe mają mieć dodatkowe różnice
 - [ ] progi tabeli punktów i częstość pomyłek: ocena po grze testowej
-- [ ] **Kasa fiskalna, lada, tablica menu:** jakość ★ nie ma efektu na sprzedaż (tylko zadowolenie kasjera +0,02 za
-  gwiazdkę), więc ★★★ nigdy się nie zwraca. Dodać efekt w silniku (np. tempo obsługi kasy) czy zostawić jako komfort?
-- [ ] **Firmy szkoleniowe:** ocena firmy (`zadowoleni_klienci`) nie ma efektu mechanicznego, więc zawsze wygrywa
-  najtańsza (HACCP w Pięć Minut). Dylemat będzie prawdziwy, gdy ocena da np. większy procent oczekujących.
-- [ ] **Szafa chłodnicza i zamrażarka ★★★:** gwiazdki to tylko pojemność, opłaca się przy stałym nadmiarze towaru
-  ponad ok. 500 l; dla botów (premium) to czysty koszt.
-- [ ] **Lodówka na napoje ★★★:** zwrot ok. 18 tygodni, powyżej zakresu 10–14; zaakceptować albo obniżyć cenę do ok. 3 000.
 - [ ] **Bot agresywny** jest bliski bankructwa na poziomie łatwym już przed zmianą cen (balans botów, nie katalogów).
 - [ ] Zwroty dopłat ★★★ liczone z założonej marży na sztukę, a nie z pomiaru; przy mniejszym ruchu wydłużą się.
 - [ ] **Opłata za zmianę biura:** A→samodzielnie→A jest dziś bez opłaty (gra pamięta ostatnie biuro); jeśli ma być
@@ -145,11 +134,6 @@ Szkic: 48 zadań w 18 tygodniach, 23 warunki odhaczania, rozdział „gdzie co n
 ### 8c. Projekt wnętrz (`archiwum/fable-17.11/fable-wnetrza/raport.md`, `projekt.md`, makiety w `makiety/`)
 Makiety scen dla każdego żetonu mapy i warianty alternatywne. Fable zaproponował: Solaris znika (6 → 5 banków), boczek
 zamiast układu pływającego, Kamienica rachmistrzów jako klatka schodowa, Dom reklamy z numerami pięter przy szybie windy.
-- [ ] **1. Który bank znika (6 → 5)?** Decyzja szefa 16.11: 5 banków w pierzei. Propozycja Fable: **Solaris** (ryzyko
-  praw autorskich, Lem; najmniej „lubelski”). To zmienia ekonomię (znika debet 40 000 zł) i wymaga zmiany `banki.yaml`;
-  w danych jest jeszcze 6, decyzja: 5. Co z dużym debetem: do Soplicowa, do Kmicica, czy znika? Jak wygląda rząd
-  z Solarisem: makieta `pierzeja_alt`
-- [ ] **6. „Wyślij decyzje”:** przycisk w boczku wysyła od razu, czy prowadzi na Pocztę (okienko nadawcze)?
 - [ ] **12. Dozorczyni w Kamienicy rachmistrzów** stoi jako postać Dulskiej (zastępstwo): zostawić jako nawiązanie
   (kamieniczniczka) czy nowa postać?
 - [ ] przed wdrożeniem: etykiety w kilku makietach nachodzą na rysunek, w palecie wysokiej napisy na szyldach się

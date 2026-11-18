@@ -156,6 +156,9 @@ co obowiązuje.
 - **Zeszyt wujka:** odhaczanie zadań zapisywane w grze (nie w przeglądarce); **bez pojęć z WOS przy zadaniach** („nie ma potrzeby”); wujek poleca sklepy po nazwie. **Sklep ze sprzętem:** „Konstruktorzy T&K”.
 - **Wystrój:** obowiązuje zwrot kompletu **10,9 tygodnia** (pomiar 17.11, cel 8–12). **Serwer lekcji:** rundy zamyka mistrz gry ręcznie (rundy „na żywo” zamykają się też same po wysłaniu przez wszystkie drużyny). **Gra testowa:** termin ustala lider (propozycja: tydzień 23.11). **Historia gita (e-mail):** na razie nic; przepisanie tuż przed publikacją.
 - **Przenośność gry:** gra ma działać po pobraniu z GitHuba na dowolnym Pythonie 3.12+ i na Windows/macOS/Linux (zrobione 18.11: `start.bat`, `start.sh`; Python 3.12 i 3.11 niesprawdzone, bo nie są zainstalowane na komputerze autora).
+- **Banki 6 → 5:** znika **Solaris** (ryzyko autorskie); debet przejmuje Soplicowo albo znika (do ustalenia przy wdrożeniu serii `budynki`). **„Wyślij decyzje”:** ikona na pasku wysyła od razu po potwierdzeniu.
+- **Prawo:** znaki marek, opisy cen sieci, numery domów, „Pewex”, zlecenie bez składek, przejęcie debetu i Józio zostają jak w grze, z dopiskami edukacyjnymi w instrukcji; ostateczna ocena przy rozmowie z prawnikiem. **Mapa majstra** (strefa = dzielnica, 7 lokali z nowymi adresami) zostaje.
+- **Drobne mechaniki poprawiamy teraz** (przed grą testową): Asteroida 328, kasa/lada/tablica menu, firmy szkoleniowe, lodówka na napoje, szafy chłodnicze – seria `balans-katalogi`.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)

@@ -10,7 +10,9 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
    notatek do 41 plików, recenzja ([[porzadki – recenzja]]), scalenie do `main`. Zostaje `METODA.md` (jawność AI,
    [[Do decyzji]] §5): research regulaminu ZwzT w toku, szkic pisze lider
 3. [ ] Warsztat i panel zespołu na claude.ai
-4. [ ] Gra etapami, bez terminu. Do gry trafia tylko to, co przejdzie testy. Kolejne serie:
+4. [ ] Gra etapami, bez terminu.
+   - [ ] `balans-katalogi`: poprawki drobnych mechanik (decyzja 18.11): Asteroida 328, kasa/lada/tablica menu, szkolenia, lodówka, szafy
+   - [ ] D1–D2 i higiena z przeglądu dziur: cena bota 1,05, okienko sanepidu, przycisk blokady klubu w panelu MG, sprzęt i dostawcy od tygodnia 1 Do gry trafia tylko to, co przejdzie testy. Kolejne serie:
    - [ ] `pulpit`: mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
      „Jak grać”); teczka na środku okienka decyzji; „Co tu zrobisz” ukryte; wyniki rundy w budynku Redakcji
    - [ ] `kebab-park`: sprzęt kupowany tylko w Parku handlowym, kebab pokazuje stan i odsyła
