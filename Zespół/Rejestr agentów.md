@@ -6,7 +6,7 @@ lider tylko wtedy, gdy agent prowadzi `STAN.md` albo raport cząstkowy (np. „3
 
 | Agent | Model | Zlecenie | Stan | Postęp | Tokeny (tys.) | Czas (min) | Wynik |
 |---|---|---|---|---|---|---|---|
-| pulpit-powloka | Sonnet | seria pulpit, krok 1: powłoka ekranu (mapa na cały ekran, pasek, portfel, zeszyt) | pracuje | – | – | – | gałąź `pulpit-powloka`, raport `_robocze/pulpit-powloka-raport.md` |
+| pulpit-powloka | Sonnet | seria pulpit, krok 1: powłoka ekranu (mapa na cały ekran, pasek, portfel, zeszyt) | gotowe | – | 266 | 18 | 752 testy, gałąź `pulpit-powloka` 6b628c5 (do akceptacji szefa) |
 | research ZwzT | Sonnet | regulamin konkursu a AI | gotowe | – | 70 | 2 | `Analizy/Regulamin ZwzT a AI.md` (regulaminu 2026/27 nie udało się pobrać) |
 | porządki 13B | Sonnet | odchudzenie notatek: korzeń i Dziennik | gotowe | – | 206 | 7 | `notatki` 9107479 |
 | porządki 13A | Sonnet | odchudzenie notatek: Serie, Analizy, Funkcje | gotowe | – | 169 | 4 | `notatki` 9107479 |
