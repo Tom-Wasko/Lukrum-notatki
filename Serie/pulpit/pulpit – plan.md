@@ -21,3 +21,20 @@ Decyzje szefa: [[Decyzje]], sekcja „Pulpit – nawigacja i układ ekranu”. S
 2. `zeszyt` (strony, animacja przewracania, samouczek, odhaczanie w grze, treść z `archiwum/fable-17.11/fable-zeszyt/`)
 3. `budynki` i `wnetrza` według makiet Fable (`archiwum/fable-17.11/fable-wnetrza/makiety/`)
 4. lista wujka przesuwa i przybliża mapę do budynku
+
+## Krok 2: poprawki interfejsu i zeszyt (uwagi szefa 18.11, po obejrzeniu kroku 1)
+Interfejs:
+- usunąć sekcję „W parkach w tym tygodniu”; zamiast niej **wysuwana sekcja „Wydarzenia”** na pasku po lewej (tam parki itd.)
+- opcje wyglądu mapy (strefy / czynsze / popyt) przenieść gdzieś indziej (np. do ⚙ albo osobna mała ikona warstw)
+- „Tydzień N” na środku, u góry
+- okienko po kliknięciu budynku na mapie (np. Brama Grodzka) jest brzydkie: przerobić
+- prawy górny róg, wzdłuż górnej krawędzi: tylko ikonki podświetlające kategorie miejsc na mapie (filtr kategorii, jak w poprzedniej wersji mapy)
+
+Zeszyt:
+- w prawym dolnym rogu, szerokość ok. 0,33–0,25 ekranu; ma przypominać prawdziwy stary zeszyt (nie kartkę), pismo odręczne
+- trzy stany: (1) niekliknięty: wystaje górna część strony; (2) najechanie: wysuwa się i pokazuje listę zadań; (3) klik: na cały
+  ekran (pod nim widać mapę), strony można przewracać, są tam wszystkie omówione informacje (lista wujka, rozpiska funkcji, „gdzie kupić”)
+
+## Krok 3: radio (nowa funkcja, pasek po lewej) – szkic szefa
+Radio „w stylu” radia z gier postapokaliptycznych, ale z własnymi treściami (PRL, Lublin): stacja z muzyką/jinglami i prowadzącym.
+Pytania o źródło muzyki, stacje i komentarze: [[Do decyzji]].
