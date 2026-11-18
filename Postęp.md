@@ -6,8 +6,9 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
 
 ## Teraz (kolejność ustalona przez autora 16.11, mapa drogowa lidera z 17.11)
 1. [x] Sposób pracy zespołu: `AGENTS.md`, `warsztat/`, definicje agentów (do przeglądu autora)
-2. [ ] Porządki w całym folderze projektu (seria `porzadki`): zrobione spłaszczenie repo gry, kroki 1–8, kody serii
-   (4d) i odchudzenie notatek (13); zostały recenzja, scalenie i `METODA.md` (jawność AI, [[Do decyzji]] §5)
+2. [x] Porządki w całym folderze projektu (seria `porzadki`, zrobione 17.11): spłaszczenie repo gry, kody serii, odchudzenie
+   notatek do 41 plików, recenzja ([[porzadki – recenzja]]), scalenie do `main`. Zostaje `METODA.md` (jawność AI,
+   [[Do decyzji]] §5): research regulaminu ZwzT w toku, szkic pisze lider
 3. [ ] Warsztat i panel zespołu na claude.ai
 4. [ ] Gra etapami, bez terminu. Do gry trafia tylko to, co przejdzie testy. Kolejne serie:
    - [ ] `pulpit`: mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
