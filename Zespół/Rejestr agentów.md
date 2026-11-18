@@ -6,6 +6,8 @@ lider tylko wtedy, gdy agent prowadzi `STAN.md` albo raport cząstkowy (np. „3
 
 | Agent | Model | Zlecenie | Stan | Postęp | Tokeny (tys.) | Czas (min) | Wynik |
 |---|---|---|---|---|---|---|---|
+| wnetrza-wdrozenie | Sonnet | seria wnetrza: fundament + wdrożenie 34 scen z makiet Fable do gry | pracuje | `_robocze/wnetrza-wdrozenie-STAN.md` | – | – | gałąź `wnetrza-wdrozenie` (od `pulpit-powloka`) |
+| pulpit-powloka (krok 2) | Sonnet | pulpit krok 2: zeszyt (3 stany), Wydarzenia, filtr kategorii, karta budynku, tydzień na środku | pracuje | – | – | – | gałąź `pulpit-powloka` |
 | pulpit-powloka | Sonnet | seria pulpit, krok 1: powłoka ekranu (mapa na cały ekran, pasek, portfel, zeszyt) | gotowe | – | 568 (krok 1 + 1b) | 30 | 753 testy, gałąź `pulpit-powloka` (do akceptacji szefa) |
 | research ZwzT | Sonnet | regulamin konkursu a AI | gotowe | – | 70 | 2 | `Analizy/Regulamin ZwzT a AI.md` (regulaminu 2026/27 nie udało się pobrać) |
 | porządki 13B | Sonnet | odchudzenie notatek: korzeń i Dziennik | gotowe | – | 206 | 7 | `notatki` 9107479 |
