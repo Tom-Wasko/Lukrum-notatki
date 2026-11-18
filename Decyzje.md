@@ -164,10 +164,11 @@ co obowiązuje.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
 ## Pulpit – poprawki po obejrzeniu 4A/4B (18.11.2026, noc)
-- „Wyślij decyzje” **na dole paska po lewej**, wygląda jak **list** (koperta/list). **Decyzje i Wyniki** jako przełącznik w nagłówku każdej teczki, obok ✕.
+- „Wyślij decyzje” zmienia nazwę na **„List z decyzjami”** (okno „Nadaj list z decyzjami”, stempel „NADANO”), **na dole paska po lewej**, wygląda jak **list** (koperta/list). **Decyzje i Wyniki** jako przełącznik w nagłówku każdej teczki, obok ✕.
 - **Biurowiec przy Zana** (z reklamami): wraca nazwa „Biurowiec przy Zana” i ikona wieżowca.
 - **Górny rząd ikon kategorii:** bez „Miasto i rozrywka”, zamiast tego **„Kebab”** i **„Wydarzenia”**. **Wydarzenia** w dwóch kolumnach.
 - **Nazwa gry** (np. „testowa”) przy legendzie mapy.
+- **Style kart (18.11, noc):** szef **akceptuje propozycje stylów** z `Serie/pulpit/pulpit – okna do wyboru stylu.md` (1 teczka, 2 akta, 3 apka, 4 kartka) dla wszystkich okien; okna z własnym stylem: paragon, list, tablica, zeszyt, dymki. **Pozycje żetonów:** szef zmienił `kamienica_rachmistrzow`, `blonia`, `kamienica_bankowa`; reszta rozsunięta przez lidera (nieikoniczne mogą być przesuwane, ikony zostają: ratusz, parki, zalew, kamienica bankowa, uczelnia, giełda).
 - **Wszystkie karty (teczki) dostają jeden nowy, uniwersalny szablon** wybrany z alternatyw na claude.ai; w oknach z powtarzającymi się opcjami (np. Kamienica rachmistrzów) szef prosi o alternatywy układu.
 - **Zeszyt** po otwarciu: nowa, dopracowana wersja, płynniejsze animacje, bardziej jak prawdziwy zeszyt.
 - **Edytor mapy na claude.ai:** przeciąganie ikon, ostrzeżenie przy przenoszeniu budynków z **prawdziwym adresem** (zabytki, urzędy, banki, hurtownie i sklepy sieciowe, parki, uczelnie), swobodne: lokale gracza, kamienica rachmistrzów, park handlowy, biurowiec Zana i fikcyjne; z propozycją bardziej rozproszonego układu.
