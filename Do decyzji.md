@@ -114,7 +114,8 @@ Opis: [[etap2-mapa – raport]].
 - [ ] jedna strona „Cel i termin” uzgodniona z kapitanem: co i kiedy ocenia ZwzT, data pierwszej lekcji, lista ekranów
   „wersji na pierwszą lekcję” (dziś trzy sprzeczne terminy; termin zgłoszenia do konkursu 31.03.2027 niepotwierdzony)
 - [ ] **Jawność AI:** `METODA.md` w repo gry i sprawdzenie regulaminu ZwzT pod kątem AI (krok 11 porządków) oraz rozmowa
-  szefa z kapitanem
+  szefa z kapitanem. Stan 18.11: szkic `gra/METODA.md` jest; regulaminu 2026/27 nie udało się pobrać (strona organizatora blokuje boty),
+  szef lub kapitan wkleja tekst z platformy, wnioski i pytania: [[Regulamin ZwzT a AI]]
 - [ ] **Gra testowa z ludźmi** w 7–10 dni na obecnym `main` (kapitan + 4–8 uczniów, zestaw „Pierwsza gra”, 2–3 rundy,
   stoper, kartka „co było niejasne”). Szef 16.11: „może w przyszłym tygodniu, funkcji nie zamrażamy”. Z oceny sposobu
   pracy: do tego czasu bez nowych funkcji (szef tego nie przyjął)
