@@ -163,6 +163,15 @@ co obowiązuje.
 - **Wnętrza z makiet Fable wdrażamy do gry od razu** (polecenie 18.11): fundament i sceny na gałęzi `wnetrza-wdrozenie`.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
+## Pulpit – poprawki po kroku 3 (18.11.2026, wieczór)
+- **Kategorie mapy:** wracamy do **rzędu ikon wzdłuż górnej krawędzi** (jak w kroku 1), ale **6 grup**: Jedzenie i zaopatrzenie, Finanse, Urzędy i prawo, Praca i ludzie, Reklama i media, Miasto i rozrywka.
+- **Po wejściu do obiektu klik w opcję otwiera pop-up (teczkę), nigdy osobną kartę/ekran.**
+- **„Jak grać”:** zakładki zamiast jednego bloku tekstu.
+- **Okienka w stylu PRL:** zakupy = długi **paragon**, wydarzenia = **tablica ogłoszeń** z przypiętymi kartkami, „Wyślij decyzje” = **koperta** ze stemplem „WYSŁANO”.
+- **Zeszyt:** stary, zniszczony, **skórzana okładka**, schowany **przechylony** (nie równoległy do krawędzi), **pobrana odręczna czcionka** na wolnej licencji (lokalnie w grze).
+- **Dom reklamy:** własny biurowiec **na Zana** (inny niż biurowiec KPiR), działa jak kamienica bankowa, ale widok **ze środka windy**; wybierasz piętro, każde ma własne wnętrze. **Drukarnia znika z mapy, zostaje jako piętro** (drukarnia, radio, eventy, internet).
+- **Kamienica rachmistrzów** i **Park handlowy** dostają żeton na mapie; **miejsca wskaże szef** (adresy) – do tego czasu żetony tymczasowe, wpis dla majstra w WSPOLPRACA. Z kebaba **nie ma** bezpośredniego przejścia do Parku handlowego (tylko przez mapę); wnętrze Parku do naprawy.
+
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
 - **Mapa na cały ekran.** Lewy górny róg: ⚙ ustawienia nad pionowym paskiem ikon (na szkicu m.in. koszyk) z logiem „Ł”;
   pod paskiem napis „Tydzień N” to **tylko informacja o rundzie** (nic się nie rozwija).
