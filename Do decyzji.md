@@ -31,8 +31,6 @@ to, czego raport nocy ([[fable – raport]]) nie potwierdza.
   (`budynki.yaml`), nazwa „e-Księgi24.pl”; niesprawdzone w sieci. Sprawdzić wyszukiwarką, przy trafieniu zmienić.
 - [ ] **Instytucje publiczne w roli fikcyjnych firm:** „Pracownia Analiz UMCS” (zamiana na „Pracownia Analiz przy
   uniwersytecie”, bez adresu rektoratu). Domyślnie: opisy neutralne, nazwy zostają.
-- [ ] **Adresy e-mail w historii gita** (34 commity autora z prywatnym Gmailem, 1 commit drugiej osoby): przed
-  upublicznieniem repo albo przepisać historię z adresem `noreply` GitHuba, albo opublikować świadomie.
 - [ ] **Dopiski edukacyjne w instrukcji** (uproszczenia gry względem prawa): progi PIP (30 h, 4 tygodnie, 5%) to
   uproszczenie, inspektor ocenia sposób pracy (art. 22 § 1 KP) i dotyczy to też B2B; staż skrócony do 6 tygodni;
   ZUS co tydzień (naprawdę co miesiąc); „odsetki za opóźnienie”, nie „karne”; lichwa jest przestępstwem (art. 304 k.k.);
@@ -57,9 +55,6 @@ Zrobione bez pytania autora, są w `main`. Lista z uzasadnieniem: [[fable – ra
 - [ ] list od wujka tylko w tygodniach 1–4 (zeszyt wujka na kolejne tygodnie: §8b)
 - [ ] motyw „Grafik zmian” zdjęty z listy wyboru
 - [ ] księga gości: piąty wymiar to „wnętrze”, a nie „czystość”
-- [ ] wielkość efektu wystroju (+0,8% popytu i +0,07★ za dopasowaną grupę) i zwrot kompletu: w raporcie nocy było
-  9,8 tygodnia, nowy pomiar z 17.11 (3 ziarna × 5 botów średnich, 24 rundy, `dekor.yaml`) daje **10,9**, w celu 8–12.
-  Do potwierdzenia, że obowiązuje 10,9
 - [ ] nowe ceny katalogów: strategia premium traci najwięcej, do oceny w grze testowej
 - [ ] instrukcja gracza i mistrza gry do przeczytania
 - [ ] klikalne miejsca we wnętrzu: czy są dość spokojne i czy pasują postacie (wejdzie w krytykę wnętrz)
@@ -104,8 +99,6 @@ Opis: [[etap2-mapa – raport]].
   godzin (realnie działa umowa o pracę).
 
 ## 5. Lekcje, serwer i termin
-- [ ] kto uruchamia `manage.py zamykaj_rundy` na serwerze (bez tego tryb lekcyjny nie zamyka rund po terminie; rundy
-  „na żywo” zamykają się też same, gdy wyślą wszystkie drużyny). Serwer to dziś laptop autora i tunel
 - [ ] ile tygodni gry na cykl lekcji (wstępnie ok. 4, „ale się tym nie sugeruj”; scenariusze zakładają ok. 12)
 - [ ] gotowe zestawy funkcji pod lekcje
 - [ ] jedna strona „Cel i termin” uzgodniona z kapitanem: co i kiedy ocenia ZwzT, data pierwszej lekcji, lista ekranów
