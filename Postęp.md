@@ -9,11 +9,11 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
 2. [x] Porządki w całym folderze projektu (seria `porzadki`, zrobione 17.11): spłaszczenie repo gry, kody serii, odchudzenie
    notatek do 41 plików, recenzja ([[porzadki – recenzja]]), scalenie do `main`. Zostaje `METODA.md` (jawność AI,
    [[Do decyzji]] §5): research regulaminu ZwzT w toku, szkic pisze lider
-3. [ ] Warsztat i panel zespołu na claude.ai
+3. [x] Warsztat i panel postępu na claude.ai (18.11): generator `warsztat/panel/generuj.py`, strona prywatna; repo warsztatu zostaje lokalne
 4. [ ] Gra etapami, bez terminu.
    - [ ] `balans-katalogi`: poprawki drobnych mechanik (decyzja 18.11): Asteroida 328, kasa/lada/tablica menu, szkolenia, lodówka, szafy
    - [ ] D1–D2 i higiena z przeglądu dziur: cena bota 1,05, okienko sanepidu, przycisk blokady klubu w panelu MG, sprzęt i dostawcy od tygodnia 1 Do gry trafia tylko to, co przejdzie testy. Kolejne serie:
-   - [ ] `pulpit`: mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
+   - [ ] `pulpit` (krok 1 „powłoka” w toku od 18.11, gałąź `pulpit-powloka`): mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
      „Jak grać”); teczka na środku okienka decyzji; „Co tu zrobisz” ukryte; wyniki rundy w budynku Redakcji
    - [ ] `kebab-park`: sprzęt kupowany tylko w Parku handlowym, kebab pokazuje stan i odsyła
    - [ ] `zeszyt`: zeszyt wujka (lista zadań, gdzie co kupić, animacja stron, wystaje z brzegu) i odręczny krój

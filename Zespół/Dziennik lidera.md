@@ -10,6 +10,14 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 `fable` w repo notatek i repo `warsztat` na GitHubie: §7). Tu ich nie powtarzamy.
 
 ## Stan prac
+### 18.11 – decyzje szefa, pulpit, panel postępu
+- Zrobione: porządki (kroki 1–13, scalone do `main`), decyzje szefa z pytań w okienku zapisane w [[Decyzje]] (ekonomia po dziurach,
+  tydzień 1, banki 6→5 bez Solarisa, zeszyt wujka, giełda u majstra, prawo bez zmian, mechaniki poprawiamy teraz), start gry na Pythonie 3.12+
+  (`start.bat`, `start.sh`), `METODA.md` (szkic), regulamin ZwzT sprawdzony częściowo, panel postępu na claude.ai (`warsztat/panel/`).
+- W toku: seria `pulpit`, krok 1 „powłoka” (agent Sonnet, kopia `_robocze/pulpit-powloka`, plan [[pulpit – plan]]).
+- Dalej: `zeszyt`, `balans-katalogi` i poprawki dziur, `budynki`, `wnetrza`; szef: nawigacja i interfejs (pasek, układ paneli).
+- Czeka na szefa: pionowy napis LUKRUM i dodatkowe ikony paska, układ paneli we wnętrzach (szkic nie rozstrzyga), termin gry testowej.
+
 *(aktualizuje lider; po przerwaniu albo w nowej sesji zacznij stąd, zob. `warsztat/LIDER.md` §8 i `_robocze/porzadki/STAN.md`)*
 
 ### 17.11 – porządki, krok 13 (odchudzenie notatek)
