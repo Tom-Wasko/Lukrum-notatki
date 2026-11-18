@@ -27,9 +27,6 @@ to, czego raport nocy ([[fable – raport]]) nie potwierdza.
   (c) zamiana. Domyślnie: (a). Zob. też §8c: projekt wnętrz proponuje, by znikł właśnie Solaris (5 banków).
 - [ ] **Prawdziwe numery domów** przy lichwiarzu, detektywie i lombardzie: (a) zostają, (b) sama ulica. Domyślnie: (a).
 - [ ] **Paleta „Pewex”** (nazwa marki): (a) zostaje, (b) nazwa opisowa. Domyślnie: (a).
-- [ ] **Giełda „prawdziwe notowania S&P 500”** (opis giełdy w `budynki.yaml`, giełda w budowie): skąd dane i na jakiej
-  licencji; nazwa S&P 500 jest znakiem. Opcje: kursy spółek fikcyjnych albo dane z jawnej licencji; w instrukcji dopisek
-  „symulacja, nie porada inwestycyjna”. Domyślnie: kursy fikcyjne.
 - [ ] **Imiona i nazwiska, które mogą być prawdziwe:** „Jakub Klimek-Ślęzak” (`biura.yaml`, J.K.Ś.), „Zenon Lupa”
   (`budynki.yaml`), nazwa „e-Księgi24.pl”; niesprawdzone w sieci. Sprawdzić wyszukiwarką, przy trafieniu zmienić.
 - [ ] **Instytucje publiczne w roli fikcyjnych firm:** „Pracownia Analiz UMCS” (zamiana na „Pracownia Analiz przy
