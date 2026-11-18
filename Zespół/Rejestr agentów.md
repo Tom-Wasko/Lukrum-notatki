@@ -8,7 +8,7 @@ lider tylko wtedy, gdy agent prowadzi `STAN.md` albo raport cząstkowy (np. „3
 |---|---|---|---|---|---|---|---|
 | wnetrza-wdrozenie | Sonnet | seria wnetrza: fundament + wdrożenie 34 scen z makiet Fable do gry | gotowe | – | 308 | 26 | gałąź `wnetrza-wdrozenie` (od `pulpit-powloka`) |
 | pulpit-mapa (4B) | Sonnet | żetony Kamienica i Park handlowy, winda w biurowcu przy Zana, drukarnia jako piętro | gotowe | – | ok. 250 | 20 | 766 testów + poprawka, gałąź `pulpit-mapa` |
-| pulpit-ui (4A) | Sonnet | pop-upy, 6 kategorii, Jak grać w zakładkach, paragon/tablica/koperta, zeszyt skórzany i font | pracuje | – | – | – | gałąź `pulpit-ui` |
+| pulpit-ui (4A) | Sonnet | pop-upy, 6 kategorii, Jak grać w zakładkach, paragon/tablica/koperta, zeszyt skórzany i font | gotowe | – | 275 | 24 | 773 testy po scaleniu z 4B, gałąź `pulpit-ui` 627d0a7 (do akceptacji szefa) |
 | pulpit-powloka (krok 3, wznowiony po limicie) | Sonnet | pulpit krok 3: 7 uwag szefa (kategorie, zeszyt, wydarzenia, ustawienia, Wróć, korytarze) | gotowe | – | 477 (łącznie kroki 2–3: ok. 900) | 25 | 764 testy, gałąź `pulpit-powloka` (do akceptacji szefa) |
 | pulpit-powloka (krok 2) | Sonnet | pulpit krok 2: zeszyt (3 stany), Wydarzenia, filtr kategorii, karta budynku, tydzień na środku | gotowe | – | 120 | 16 | 759 testów, gałąź `pulpit-powloka` (do akceptacji szefa) |
 | pulpit-powloka | Sonnet | seria pulpit, krok 1: powłoka ekranu (mapa na cały ekran, pasek, portfel, zeszyt) | gotowe | – | 568 (krok 1 + 1b) | 30 | 753 testy, gałąź `pulpit-powloka` (do akceptacji szefa) |
