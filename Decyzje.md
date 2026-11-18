@@ -159,6 +159,8 @@ co obowiązuje.
 - **Banki 6 → 5:** znika **Solaris** (ryzyko autorskie); debet przejmuje Soplicowo albo znika (do ustalenia przy wdrożeniu serii `budynki`). **„Wyślij decyzje”:** ikona na pasku wysyła od razu po potwierdzeniu.
 - **Prawo:** znaki marek, opisy cen sieci, numery domów, „Pewex”, zlecenie bez składek, przejęcie debetu i Józio zostają jak w grze, z dopiskami edukacyjnymi w instrukcji; ostateczna ocena przy rozmowie z prawnikiem. **Mapa majstra** (strefa = dzielnica, 7 lokali z nowymi adresami) zostaje.
 - **Drobne mechaniki poprawiamy teraz** (przed grą testową): Asteroida 328, kasa/lada/tablica menu, firmy szkoleniowe, lodówka na napoje, szafy chłodnicze – seria `balans-katalogi`.
+- **Radio w grze** (pasek po lewej, 18.11): jedna stacja z **jazzem i audiobookiem „Lalki”** (muzyka i nagrania wyłącznie z wolnych źródeł: domena publiczna / wolne licencje, sprawdzone), jak w radiach postapokaliptycznych: audycję **czasem przerywa krótka informacja prowadzącego o grze**. Treści własne (PRL, Lublin), bez muzyki ani nagrań z innych gier. Mechanika: klimat i informacje, bez wpływu na ekonomię.
+- **Wnętrza z makiet Fable wdrażamy do gry od razu** (polecenie 18.11): fundament i sceny na gałęzi `wnetrza-wdrozenie`.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
