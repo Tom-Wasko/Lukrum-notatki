@@ -148,6 +148,9 @@ co obowiązuje.
 - **D1 zmowa na giełdzie handlu:** **bez limitu oferty** („doda trochę śmiechu”); zostaje jako znana ciekawostka, mistrz gry widzi transakcje.
 - **D2:** podnieść cenę bota `zrownowazony` (0,92 → 1,05), potem ponowny pomiar botów.
 - **Higiena „brak”:** okienko z potwierdzeniem w stylu „jeśli sanepid cię odwiedzi, to…” przed wyborem.
+- **Tydzień 1:** sprzęt w Parku i dostawcy odblokowani od tygodnia 1 (zeszyt wujka prowadzi krok po kroku; 150 pkt „Zaopatrzenie” staje się osiągalne).
+- **Sprzęt:** sprzęt gastronomiczny tylko w Parku handlowym; stanowiska zostają w stolarni, udogodnienia w galerii.
+- **Dom reklamy:** wybór piętra **kabiną windy**. **Kamienica rachmistrzów:** klatka schodowa (zgodnie z wcześniejszą decyzją, nie pytać ponownie).
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)

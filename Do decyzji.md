@@ -150,12 +150,6 @@ na wszystkich ziarnach (szum pojedynczej gry ok. ±15 pkt). Jedna drużyna sama 
 
 ### 8b. Zeszyt wujka (`archiwum/fable-17.11/fable-zeszyt/raport.md`, treść w `zeszyt.md` i `zeszyt-szkic.yaml`)
 Szkic: 48 zadań w 18 tygodniach, 23 warunki odhaczania, rozdział „gdzie co najlepiej kupić” z cenami z `dostawcy.yaml`.
-- [ ] **Sprzęt w tygodniu 1:** decyzja szefa 16.11 każe mieć krok „sprzęt w Parku” w tygodniu 1, a harmonogram
-  odblokowuje sprzęt w tygodniu 2 (`katalog.yaml: rundy.odblokowanie`). Przesunąć sprzęt na tydzień 1 (rekomendacja
-  Fable) czy w tygodniu 1 tylko „obejrzyjcie sprzęt” (w YAML jest `zastepstwo`)? To samo dotyczy **dostawców w tygodniu 1**
-  (D6, §8a)
-- [ ] **Stanowiska w stolarni:** krok 5 tygodnia 1 prowadzi do żetonu `stolarnia`. Jeśli stanowiska mają się kupować
-  razem ze sprzętem w Parku, kroki 5 i 6 łączą się w jeden (zob. §8c, pyt. 11)
 - [ ] **Bazar** nie ma żetonu, a zadanie tygodnia 6 do niego prowadzi (zob. §8c, pyt. 7)
 - [ ] **Odhaczanie „wizytą”** jest po stronie przeglądarki (inny komputer = nieodhaczone). Wystarczy, czy zapisywać w grze?
 - [ ] **Pojęcie z WOS** przy zadaniu: pokazywać graczom (małym drukiem) czy tylko mistrzowi gry? Przyjęte: tylko mistrz gry
@@ -170,8 +164,6 @@ zamiast układu pływającego, Kamienica rachmistrzów jako klatka schodowa, Dom
   praw autorskich, Lem; najmniej „lubelski”). To zmienia ekonomię (znika debet 40 000 zł) i wymaga zmiany `banki.yaml`;
   w danych jest jeszcze 6, decyzja: 5. Co z dużym debetem: do Soplicowa, do Kmicica, czy znika? Jak wygląda rząd
   z Solarisem: makieta `pierzeja_alt`
-- [ ] **3. Kamienica rachmistrzów:** klatka schodowa (makieta `kamienica_rachmistrzow`) czy fasada z szyldami
-  (`kamienica_alt`)?
 - [ ] **5. Urzędy skarbowe** (VAT, PIT) w ratuszu przy Szeligowskiego: zgoda? Sanepid osobno ma własny żeton i wnętrze
 - [ ] **6. „Wyślij decyzje”:** przycisk w boczku wysyła od razu, czy prowadzi na Pocztę (okienko nadawcze)?
 - [ ] **7. Bazar:** nie ma żetonu na mapie. Dodać (gdzie?), czy handel zostaje bez wnętrza?
@@ -181,11 +173,7 @@ zamiast układu pływającego, Kamienica rachmistrzów jako klatka schodowa, Dom
   czy żeton ma być czynny przed mechaniką?
 - [ ] **10. Nazwa sklepu ze sprzętem:** zostaje „Hurtownia sprzętu gastronomicznego”, czy „Konstruktorzy T&K” z planu
   nawiązań?
-- [ ] **11. Stolarnia i Galeria** mają żetony poza Parkiem handlowym. Decyzja mówi „sprzęt tylko w Parku”: czy stanowiska
-  (stolarnia) i udogodnienia (galeria) zostają u siebie, jak zaprojektowano?
 - [ ] **12. Dozorczyni w Kamienicy rachmistrzów** stoi jako postać Dulskiej (zastępstwo): zostawić jako nawiązanie
   (kamieniczniczka) czy nowa postać?
-- [ ] **13. Dom reklamy:** przekrój z pięcioma piętrami (`dom_reklamy`), kabina windy z jednym piętrem
-  (`dom_reklamy_alt`), czy oba (kabina jako krótkie przejście)?
 - [ ] przed wdrożeniem: etykiety w kilku makietach nachodzą na rysunek, w palecie wysokiej napisy na szyldach się
   zmniejszają, byk i koziołek na giełdzie wymagają prawdziwych symboli z generatora grafik (zob. raport)
