@@ -131,14 +131,8 @@ Opis: [[etap2-mapa – raport]].
 - [ ] układ na telefonie (wspólnie z majstrem; na razie tylko komputer)
 - [ ] kiedy znika stary wybór układu panelu („bok”, „grafik”)
 - [ ] kolejne nawiązania literackie (Zajdel, Winnetou, inne lektury)
-- [ ] **Układ „pływający” a „boczek”** we wnętrzach (z projektu wnętrz, §8c, pyt. 2): boczek 184 px z prawej (portfel,
-  „Mój kebab”, zeszyt, „Wyślij decyzje”) czy panele pływające nad sceną jak na mapie. Pływające dają scenie ok. 15% szerokości
-  więcej (1400 zamiast 1216 px), ale zasłaniają prawy górny róg, gdzie sceny mają punkty. Ocena Fable: boczek lepszy dla
-  wnętrz, pływające pasują do mapy. Wymaga decyzji szefa po obejrzeniu makiet (przełącznik „Boczek / Pływający”)
 
 ## 7. Porządki i repozytoria
-- [ ] gałąź `fable` w repozytorium notatek na GitHubie: scalona do `main`, do usunięcia (zgoda szefa)
-- [ ] założenie prywatnego repo `warsztat` na GitHubie (zgoda szefa; dziś tylko lokalnie)
 - [ ] dług w kodzie i dokumentacji: lista w [[Postęp]], „Dług w dokumentacji i kodzie”
 
 ## 8. Pytania po nocy Fable z 17.11
@@ -185,12 +179,8 @@ zamiast układu pływającego, Kamienica rachmistrzów jako klatka schodowa, Dom
   praw autorskich, Lem; najmniej „lubelski”). To zmienia ekonomię (znika debet 40 000 zł) i wymaga zmiany `banki.yaml`;
   w danych jest jeszcze 6, decyzja: 5. Co z dużym debetem: do Soplicowa, do Kmicica, czy znika? Jak wygląda rząd
   z Solarisem: makieta `pierzeja_alt`
-- [ ] **2. Układ ekranu we wnętrzach:** boczek z prawej czy panele pływające (zob. §6)
 - [ ] **3. Kamienica rachmistrzów:** klatka schodowa (makieta `kamienica_rachmistrzow`) czy fasada z szyldami
   (`kamienica_alt`)?
-- [ ] **4. Księga KPiR: biurowiec przy Zana czy kebab?** Decyzja 16.11 (noc, pkt 9): KPiR zostaje w biurowcu przy Zana.
-  Krytyka wnętrz (D2, [[Krytyka wnętrz 16.11]]) proponuje segregator w kebabie. Fable: biurowiec przy Zana to jeden pokój
-  z księgą; wariant z księgą na biurku w kebabie: `kebab_alt`. **Nie rozstrzygnięte**, czeka na szefa
 - [ ] **5. Urzędy skarbowe** (VAT, PIT) w ratuszu przy Szeligowskiego: zgoda? Sanepid osobno ma własny żeton i wnętrze
 - [ ] **6. „Wyślij decyzje”:** przycisk w boczku wysyła od razu, czy prowadzi na Pocztę (okienko nadawcze)?
 - [ ] **7. Bazar:** nie ma żetonu na mapie. Dodać (gdzie?), czy handel zostaje bez wnętrza?

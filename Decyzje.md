@@ -144,6 +144,20 @@ co obowiązuje.
   (16.11 noc)
 - Szczegóły i spis elementów: [[Mapa]].
 
+## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
+- **Mapa na cały ekran.** Lewy górny róg: ⚙ ustawienia nad pionowym paskiem ikon (na szkicu m.in. koszyk) z logiem „Ł”;
+  pod paskiem napis „Tydzień N” to **tylko informacja o rundzie** (nic się nie rozwija).
+- **Ikony paska:** ⚙ ustawienia, „Wyślij decyzje”, konto i „Jak grać”, koszyk (zakupy). Pomysł lidera na dalsze: do ustalenia.
+- **Zeszyt wujka** wystaje z krawędzi ekranu, na kartce widać następny krok („kup mięso”). Najechanie wysuwa listę zadań,
+  kliknięcie otwiera cały zeszyt. W środku **rzeczy podzielone na osobne strony i animacja przewracania stron**; w zeszycie
+  jest też krótki samouczek (tutorial).
+- **Portfel** to plik banknotów przy dolnej krawędzi; wygląda naturalnie. Najechanie pokazuje saldo i debet, kliknięcie
+  otwiera okno finansów (konto, płynność, zobowiązania).
+- **Wnętrza:** układ ekranu (boczek czy pływające panele) – według szkicu panele wystają z krawędzi jak na mapie; szczegóły
+  przy serii `pulpit`.
+- **KPiR:** księga zostaje w **biurowcu przy Zana** (potwierdzone 18.11, bez segregatora w kebabie).
+- **Gałąź `fable`** w repo notatek usunięta z GitHuba (18.11). **Repo `warsztat` zostaje lokalne** („na razie nie”).
+
 ## Pulpit i wnętrza (16.11, do zrobienia)
 Wygląd tych elementów: [[Wygląd]]. Kolejność prac: [[Postęp]].
 - **Pulpit:** mapa na cały ekran. W rogach małe ikony: runda, kasa, „Wyślij decyzje”, lista wujka, ⚙, konto, „Jak
