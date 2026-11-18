@@ -164,7 +164,9 @@ co obowiązuje.
 ## Pulpit – nawigacja i układ ekranu (18.11.2026, szkic szefa `archiwum/szkice-szefa/pulpit-nawigacja-18.11.jpg`)
 - **Mapa na cały ekran.** Lewy górny róg: ⚙ ustawienia nad pionowym paskiem ikon (na szkicu m.in. koszyk) z logiem „Ł”;
   pod paskiem napis „Tydzień N” to **tylko informacja o rundzie** (nic się nie rozwija).
-- **Ikony paska:** ⚙ ustawienia, „Wyślij decyzje”, konto i „Jak grać”, koszyk (zakupy). Pomysł lidera na dalsze: do ustalenia.
+- **Ikony paska:** ⚙ ustawienia, „Wyślij decyzje” (okno z podsumowaniem decyzji i przyciskiem Wyślij), konto i „Jak grać”, koszyk. Skróty mapy (lokal, banki, hurtownie, raport) **znikają**.
+- **Koszyk** na pasku **tylko pokazuje, co zamówiono i kupiono w tej rundzie**; niczego przez niego nie zamawia się. **Zeszyt wujka** dostaje też **rozpiskę wszystkich funkcjonalności gry** (spis: co jest gdzie na mapie).
+- Napis **LUKRUM pionowo** na pasku (szyld PRL).
 - **Zeszyt wujka** wystaje z krawędzi ekranu, na kartce widać następny krok („kup mięso”). Najechanie wysuwa listę zadań,
   kliknięcie otwiera cały zeszyt. W środku **rzeczy podzielone na osobne strony i animacja przewracania stron**; w zeszycie
   jest też krótki samouczek (tutorial).
