@@ -230,3 +230,4 @@ Wygląd tych elementów: [[Wygląd]]. Kolejność prac: [[Postęp]].
 - Zakrywanie funkcji zostaje ręczne. Gotowe zestawy pod lekcje później. (13.11)
 - Gra testowa z ludźmi: nie od razu, może w tygodniu 23.11; funkcji nie zamrażamy. (16.11 noc; zmienia „bez gry
   próbnej przed nowym wyglądem” z 14.11)
+- 19.11.2026: na starej mapie rysowanej (`?uklad=stary`) fasady banków pokazują fikcyjne banki gry (Kmicic, Wokulski, Ziemia Obiecana, Rzecki, Soplicowo) w kolorach niezwiązanych z markami, zamiast PKO BP, Pekao, ING, mBank, Santander i Crédit Agricole. Wdrożone (lider).
