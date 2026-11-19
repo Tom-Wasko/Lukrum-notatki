@@ -29,4 +29,4 @@ lider tylko wtedy, gdy agent prowadzi `STAN.md` albo raport cząstkowy (np. „3
 | pulpit-ui2 (krok 5) | Sonnet | list, Decyzje/Wyniki w nagłówku, artefakt, biurowiec Zana, kategorie, wydarzenia 2 kol., nowy zeszyt | gotowe | – | 296 | 25 | 783 testy, gałąź `pulpit-ui2` |
 | szablony kart | Sonnet | 4 alternatywy szablonu kart + warianty bez powtórzeń | gotowe | – | brak danych | – | `_robocze/szablony-kart/index.html` (plik lokalny) |
 | edytor mapy | Sonnet | edytor przeciągania żetonów z ostrzeżeniami + skrypt zastosuj_pozycje | gotowe | – | 104 | 5 | 5 testów, gałąź `pulpit-edytor` 89387b3, plik `_robocze/edytor-mapy/index.html` (publikacja na claude.ai wstrzymana: narzędzia artefaktów niedostępne po zmianie konta) |
-| pulpit-ui2 (krok 6) | Sonnet | migracja wszystkich okien do 4 stylów kart wg zaakceptowanej tabeli | pracuje | – | – | – | gałąź `pulpit-ui2` |
+| pulpit-ui2 (krok 6) | Sonnet | migracja wszystkich okien do 4 stylów kart wg zaakceptowanej tabeli | gotowe | – | 248 | 23 | 798 testów, commit 54d3ed2, scalone do `main` 19.11 (46cd10c) |

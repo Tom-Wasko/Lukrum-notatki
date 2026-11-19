@@ -17,6 +17,7 @@ Po zamknięciu serii lider dopisuje tutaj jeden wiersz. Nazwy plików są unikal
 | `fable` | 15–16.11 | Miejsca z wnętrzami, palety w całym panelu, list od wujka, sklep meblowy i wystrój lokalu, „Kurier rankingowy”, księga gości, podium, tryb lekcyjny, nowa instrukcja, ceny katalogów od zera, przegląd prawny | 4afdd60, 9ee8192 | [[fable – raport]]; przegląd prawny i pomiary w `archiwum/notatki-wycofane/Analizy/Noc Fable 15-16.11/` |
 | `porzadki` | 16–17.11 | Nowy układ `lukrum/` (`gra/`, `notatki/`, `warsztat/`, `archiwum/`), spłaszczenie repo gry, kody serii zastąpione realiami w danych (740 testów), odchudzenie notatek do 41 plików. Plan i stan: [[porzadki – plan]], [[porzadki – stan]], recenzja: [[porzadki – recenzja]]. |
 | `fable-wnetrza` | 16–17.11 | Noc Fable: projekt 34 wnętrz (makiety, specyfikacje), treść zeszytu wujka, dziury w ekonomii (zmowa na giełdzie handlu). Wyniki: `archiwum/fable-17.11/`, pytania w [[Do decyzji]] §8. |
+| `pulpit` | 17–19.11 | Mapa na cały ekran z ikonami w rogach, teczki decyzji nad wnętrzami, 33 wnętrza z makiet, Kamienica rachmistrzów, Park handlowy (al. Kraśnicka 128), biurowiec Zana z windą, edytor mapy, nowy zeszyt wujka, szablony kart w 4 stylach (798 testów) | gałąź `pulpit-ui2`, 46cd10c | [[pulpit – plan]] |
 
 ## Wyniki pomiarów, na które powołują się dane gry
 

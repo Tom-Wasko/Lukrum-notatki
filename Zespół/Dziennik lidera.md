@@ -10,6 +10,9 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 `fable` w repo notatek i repo `warsztat` na GitHubie: §7). Tu ich nie powtarzamy.
 
 ## Stan prac
+### 19.11 – stan (zacznij tutaj)
+**`main` gry** = pulpit + wnętrza scalone (46cd10c) + krok 4 (Park handlowy pod realnym adresem al. Kraśnicka 128, kebab odsyła sprzęt i wystrój do Parku, klientów do Pracowni Analiz, szkolenia do Akademii; kroki zeszytu otwierają teczkę we właściwym wnętrzu). Bazar: prośba do majstra w WSPOLPRACA. **Dalej:** seria `zeszyt` (brief `Serie/zeszyt/zeszyt – brief treść.md`), potem szyldy i cenniki z danych, warianty `*_alt`, radio (najpierw pytania), mechanika.
+
 ### 18.11 noc – KONIEC DNIA: stan i plan na 19.11 (zacznij tutaj)
 **Gałęzie gry (wszystkie wypchnięte na GitHub; `main` = porządki 17.11, bez pulpitu):** `pulpit-ui2` (fa646a6) = pulpit + 33 wnętrza z makiet Fable
 + Kamienica rachmistrzów i Park handlowy + biurowiec Zana z windą + edytor mapy i nowe pozycje żetonów + list „List z decyzjami” + nowy zeszyt, 783 testy.
