@@ -232,3 +232,7 @@ Wygląd tych elementów: [[Wygląd]]. Kolejność prac: [[Postęp]].
   próbnej przed nowym wyglądem” z 14.11)
 - 19.11.2026: na starej mapie rysowanej (`?uklad=stary`) fasady banków pokazują fikcyjne banki gry (Kmicic, Wokulski, Ziemia Obiecana, Rzecki, Soplicowo) w kolorach niezwiązanych z markami, zamiast PKO BP, Pekao, ING, mBank, Santander i Crédit Agricole. Wdrożone (lider).
 - **19.11.2026 (szef, okienko):** kolejność prac: 1) lista wolnych nagrań do radia, 2) szyldy i cenniki wnętrz z danych, 3) przygotowanie gry testowej – **lider najpierw powiadamia szefa**, 4) warianty wnętrz `*_alt`. Debet Soplicowa zostaje (20 000 zł, 80 zł/tydz., 15%). **Gra testowa: w niedzielę 22.11 grupa znajomych, potem klasa w szkole.**
+- **19.11.2026 (szef, okienko), radio:** lista [[radio – lista nagrań]] przyjęta (~3,5 h, ~68 MB w repo, mono MP3).
+  „Lalka” z Wolnych Lektur na Licencji Wolnej Sztuki 1.3 dopuszczona (warunki jak CC BY-SA). Nagrania ≤1925 bez
+  jawnego znaku PD (Great 78, „USA-Archives”) wchodzą z opisem podstawy domeny publicznej. Polskie pozycje z
+  niepotwierdzonym autorem: lider sprawdza, niepotwierdzone odpadają.
