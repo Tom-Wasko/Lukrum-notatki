@@ -231,3 +231,4 @@ Wygląd tych elementów: [[Wygląd]]. Kolejność prac: [[Postęp]].
 - Gra testowa z ludźmi: nie od razu, może w tygodniu 23.11; funkcji nie zamrażamy. (16.11 noc; zmienia „bez gry
   próbnej przed nowym wyglądem” z 14.11)
 - 19.11.2026: na starej mapie rysowanej (`?uklad=stary`) fasady banków pokazują fikcyjne banki gry (Kmicic, Wokulski, Ziemia Obiecana, Rzecki, Soplicowo) w kolorach niezwiązanych z markami, zamiast PKO BP, Pekao, ING, mBank, Santander i Crédit Agricole. Wdrożone (lider).
+- **19.11.2026 (szef, okienko):** kolejność prac: 1) lista wolnych nagrań do radia, 2) szyldy i cenniki wnętrz z danych, 3) przygotowanie gry testowej – **lider najpierw powiadamia szefa**, 4) warianty wnętrz `*_alt`. Debet Soplicowa zostaje (20 000 zł, 80 zł/tydz., 15%). **Gra testowa: w niedzielę 22.11 grupa znajomych, potem klasa w szkole.**
