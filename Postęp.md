@@ -11,8 +11,8 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
    [[Do decyzji]] §5): research regulaminu ZwzT w toku, szkic pisze lider
 3. [x] Warsztat i panel postępu na claude.ai (18.11): generator `warsztat/panel/generuj.py`, strona prywatna; repo warsztatu zostaje lokalne
 4. [ ] Gra etapami, bez terminu.
-   - [ ] `balans-katalogi`: poprawki drobnych mechanik (decyzja 18.11): Asteroida 328, kasa/lada/tablica menu, szkolenia, lodówka, szafy
-   - [ ] D1–D2 i higiena z przeglądu dziur: cena bota 1,05, okienko sanepidu, przycisk blokady klubu w panelu MG, sprzęt i dostawcy od tygodnia 1 Do gry trafia tylko to, co przejdzie testy. Kolejne serie:
+   - [x] `balans-katalogi` scalona do `main` 19.11 (e926923, 823 testy; [[balans-katalogi – raport]]): Asteroida taniej, kasa/lada/tablica menu, szkolenia, lodówka, szafy; cena bota 1,05, okienko sanepidu, blokada klubu w panelu MG, sprzęt i dostawcy od tygodnia 1, 5 banków (debet w Soplicowie)
+   - Do gry trafia tylko to, co przejdzie testy. Kolejne serie:
    - [x] `pulpit` kroki 1–6 zrobione 18–19.11, scalone do `main` 19.11 (46cd10c); zakres kroku 1: mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
      „Jak grać”); teczka na środku okienka decyzji; „Co tu zrobisz” ukryte; wyniki rundy w budynku Redakcji
    - [ ] `kebab-park`: sprzęt kupowany tylko w Parku handlowym, kebab pokazuje stan i odsyła
