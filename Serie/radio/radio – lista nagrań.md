@@ -1,6 +1,33 @@
-# radio – lista nagrań (do akceptacji szefa)
+# radio – lista nagrań
 
-Stan: 19.11.2026, lista kandydatów. **Plików jeszcze nie pobrano.** Pobieram dopiero po akceptacji (Decyzje.md, radio).
+Stan: 19.11.2026. Lista zaakceptowana przez szefa (Decyzje.md, radio), pliki pobrane i w grze.
+**Ostateczny spis z licencjami jest w `dane/radio.yaml`** (repo gry) i na stronie `/nagrania-w-radiu`.
+Niżej jest lista kandydatów z dnia akceptacji. Zmiany względem niej opisuje ramka „Wynik”.
+
+## Wynik (stan końcowy)
+| Stacja | Nagrań | Minut | MB |
+|---|---|---|---|
+| Program Polski (66,9) | 17 | 52 | 17,9 |
+| Synkopa – jazz (68,3) | 13 | 36 | 12,5 |
+| Filharmonia – klasyczna (70,1) | 13 | 65 | 22,3 |
+| Teatr przy mikrofonie – „Lalka”, rozdz. I–III (71,6) | 3 | 63 | 14,4 |
+| Między stacjami – szum (73,4) | 0 (generowany) | – | 0 |
+| **Razem** | **46** | **~3,6 h** | **~67 MB** |
+
+Zmiany względem listy kandydatów:
+- **Pozycje niepewne (sprawdził lider, decyzja szefa: „sprawdzę, odrzucę niepewne”):**
+  - zostają jako utwory anonimowe (art. 36 pkt 2 pr. aut.): „Polak nie sługa”, „Modlitwa przed bitwą”,
+    „Hej te góry”, „Idzie Maciek”;
+  - zostaje „Marsz Sokołów”;
+  - odpadają: „Krakowiak” (A.E. Brunner, nie udało się ustalić roku śmierci), „Hej mazury” (Schillo),
+    „Oj ten mazur” (Zalewski), „Wlazł kotek” (opracowanie Świerzyńskiego, zm. 1957).
+- **„Taniec polski” (Scharwenka) odpada**: plik w archiwum jest uszkodzony (3 s), a strona LoC blokuje pobieranie.
+- **Klasyka z Internet Archive zamiast Wikimedia Commons** (Commons blokowało pobieranie, błąd 429). Te same nagrania
+  Musopen:
+  - Chopin z „musopen-chopin-complete-works-flac” (CC0);
+  - Mozart, Bach, Beethoven i Brahms z „musopen-dvd-in-lossless-flac-format” (znak domeny publicznej 1.0);
+  - zamiast uwertury „Egmont” (brak w zbiorze) gra III Symfonia „Eroica”, cz. III;
+  - wykonawca Mazurka a-moll według IA to Luke Faulkner.
 
 ## Zasada prawna (krótko)
 - **Nagranie**: prawa wykonawców i producentów fonogramów do nagrań sprzed 1963 r. w Polsce wygasły. W USA nagrania

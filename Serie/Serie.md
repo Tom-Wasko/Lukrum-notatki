@@ -19,6 +19,7 @@ Po zamknięciu serii lider dopisuje tutaj jeden wiersz. Nazwy plików są unikal
 | `fable-wnetrza` | 16–17.11 | Noc Fable: projekt 34 wnętrz (makiety, specyfikacje), treść zeszytu wujka, dziury w ekonomii (zmowa na giełdzie handlu). Wyniki: `archiwum/fable-17.11/`, pytania w [[Do decyzji]] §8. |
 | `pulpit` | 17–19.11 | Mapa na cały ekran z ikonami w rogach, teczki decyzji nad wnętrzami, 33 wnętrza z makiet, Kamienica rachmistrzów, Park handlowy (al. Kraśnicka 128), biurowiec Zana z windą, edytor mapy, nowy zeszyt wujka, szablony kart w 4 stylach (798 testów) | gałąź `pulpit-ui2`, 46cd10c | [[pulpit – plan]] |
 | `balans-katalogi` | 19.11 | Drobne mechaniki katalogów (Asteroida, tempo kasy, szafa ★★★, szkolenia z oceny, lodówka), sprzęt i dostawcy od tygodnia 1, cena bota 1,05, okienko sanepidu, blokada klubu przez MG, 5 banków z debetem w Soplicowie (823 testy) | 3a90f1b, e926923 | [[balans-katalogi – raport]] |
+| `radio` | 19.11 | Radio „Fala Koziołka” na pasku pulpitu: 5 stacji (polska sprzed 1926, jazz, klasyka Musopen, „Lalka”, szum), 46 nagrań z opisem licencji w `dane/radio.yaml`, prowadzący z syntezatora mowy, strona `/nagrania-w-radiu`, odtwarzanie kawałkami (Range) (876 testów) | ab9e1fa | [[radio – lista nagrań]], [[Radio Fala Koziołka]] |
 
 ## Wyniki pomiarów, na które powołują się dane gry
 

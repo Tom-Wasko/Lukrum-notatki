@@ -53,6 +53,8 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
 - [ ] wnętrza poza kebabem są schematyczne (drzwi, okienka); pawilon na działce korzysta ze sceny budowy
 - [ ] strona startowa pokazuje „Nowe w tej rundzie” starymi nazwami („Zakładki”, „HR”)
 - [ ] kolejne nawiązania literackie, zdarzenia z lektur w parkach
+- [x] radio „Fala Koziołka” na pasku pulpitu: 5 stacji, 46 nagrań z domeny publicznej i wolnych licencji (~3,6 h, ~67 MB,
+  działa bez internetu), prowadzący z syntezatora mowy, strona `/nagrania-w-radiu` (19.11, [[Radio Fala Koziołka]])
 - [ ] dźwięk: lekkie dźwięki domyślnie włączone (dzwonek nad drzwiami, skwierczenie, gwar, stempel w urzędzie), łatwe
   wyciszenie, mistrz gry może wyciszyć całą klasę
 - [ ] pora dnia zgodna z prawdziwą godziną także we wnętrzu (za oknem rano jasno, wieczorem ciemno; niezależna od trybu

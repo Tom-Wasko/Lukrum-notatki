@@ -10,7 +10,19 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 `fable` w repo notatek i repo `warsztat` na GitHubie: §7). Tu ich nie powtarzamy.
 
 ## Stan prac
-### 19.11 – stan (zacznij tutaj)
+### 19.11 po południu – radio (zacznij tutaj)
+**Zrobione:** seria `radio`, radio „Fala Koziołka” na lewym pasku pulpitu:
+- 46 nagrań w 5 stacjach, ~67 MB w repo gry;
+- spis i licencje w `dane/radio.yaml`, test `test_radio.py`, strona `/nagrania-w-radiu`;
+- pozycje niepewne sprawdzone (4 anonimowe zostają, 4 odpadają), „Taniec polski” odpada (uszkodzony plik);
+- klasyka z Internet Archive, bo Wikimedia blokowało pobieranie.
+
+Szczegóły: [[radio – lista nagrań]], [[Radio Fala Koziołka]].
+**Dalej (kolejność szefa):** szyldy i cenniki wnętrz z danych (`/api/katalogi` zamiast cen wpisanych w scenach `bank.js`,
+`biuro_rachunkowe.js`, `kamienica_rachmistrzow.js`, `pierzeja_bankowa.js`, `harpagon.js`, `galeria.js`, `park_handlowy.js`…),
+potem przygotowanie gry testowej (najpierw powiadomić szefa), potem warianty `*_alt`.
+
+### 19.11 – stan
 **Zrobione dziś:** krok 6 pulpitu (szablony kart w 4 stylach) sprawdzony i scalony z całą serią `pulpit` do `main` (46cd10c, 798 testów); poprawione nazwy (Biurowiec przy Zana, biuro rachunkowe w Kamienicy rachmistrzów); Park handlowy pod realnym adresem al. Kraśnicka 128; kebab odsyła sprzęt i wystrój do Parku, klientów do Pracowni Analiz, szkolenia do Akademii; kroki zeszytu otwierają teczkę we właściwym wnętrzu (8410066); prośba do majstra o żeton bazaru; sprzątnięte kopie robocze; seria `zeszyt`: treść zeszytu wujka w `dane/zeszyt.yaml` (48 zadań, 23 warunki, „gdzie kupić” z bieżących cen, wizyty zapisywane w grze), scalona do `main` (b990329, 817 testów); decyzje szefa o radiu (Decyzje.md); audyt decyzji szefa i seria `balans-katalogi` (wszystkie brakujące decyzje z 18.11: drobne mechaniki, tydzień 1, D2, higiena, klub w panelu MG, 5 banków) scalona do `main` (e926923, 823 testy, [[balans-katalogi – raport]]).
 **Dalej:** lista wolnych nagrań do radia do akceptacji szefa; szyldy i cenniki wnętrz z danych; warianty `*_alt`; gra testowa (tydzień 23.11). Pytanie do szefa: prawdziwe marki banków na starej mapie (`mapa_budynki.js`).
 
