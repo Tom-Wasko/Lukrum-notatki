@@ -16,7 +16,7 @@ Cel i etapy: [[Plan]]. Decyzje: [[Decyzje]]. Sprawy otwarte: [[Do decyzji]]. His
    - [x] `pulpit` kroki 1–6 zrobione 18–19.11, scalone do `main` 19.11 (46cd10c); zakres kroku 1: mapa na cały ekran, w rogach małe ikony (runda, portfel, „Wyślij decyzje”, lista wujka, ⚙, konto,
      „Jak grać”); teczka na środku okienka decyzji; „Co tu zrobisz” ukryte; wyniki rundy w budynku Redakcji
    - [ ] `kebab-park`: sprzęt kupowany tylko w Parku handlowym, kebab pokazuje stan i odsyła
-   - [ ] `zeszyt`: (19.11 brief treści w danych: `Serie/zeszyt/`) zeszyt wujka (lista zadań, gdzie co kupić, animacja stron, wystaje z brzegu) i odręczny krój
+   - [x] `zeszyt`: treść w danych scalona do `main` 19.11 (b990329, 817 testów; `Serie/zeszyt/`); zeszyt wujka (lista zadań, gdzie co kupić, animacja stron, wystaje z brzegu) i odręczny krój
    - [ ] przygotowanie gry testowej i sama gra (może w tygodniu 23.11)
    - [ ] `budynki`: pierzeja 5 banków, giełda osobno, Kamienica rachmistrzów, Dom reklamy, redakcja
    - [ ] `wnetrza`: osobne wnętrze dla każdego żetonu, PRL w holach; krytyka wnętrz i poprawki wybrane przez autora

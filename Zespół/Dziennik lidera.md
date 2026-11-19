@@ -11,7 +11,8 @@ Wszystkie pytania, także z bieżącej pracy lidera, są w jednym miejscu: [[Do 
 
 ## Stan prac
 ### 19.11 – stan (zacznij tutaj)
-**`main` gry** = pulpit + wnętrza scalone (46cd10c) + krok 4 (Park handlowy pod realnym adresem al. Kraśnicka 128, kebab odsyła sprzęt i wystrój do Parku, klientów do Pracowni Analiz, szkolenia do Akademii; kroki zeszytu otwierają teczkę we właściwym wnętrzu). Bazar: prośba do majstra w WSPOLPRACA. **Dalej:** seria `zeszyt` (brief `Serie/zeszyt/zeszyt – brief treść.md`), potem szyldy i cenniki z danych, warianty `*_alt`, radio (najpierw pytania), mechanika.
+**Zrobione dziś:** krok 6 pulpitu (szablony kart w 4 stylach) sprawdzony i scalony z całą serią `pulpit` do `main` (46cd10c, 798 testów); poprawione nazwy (Biurowiec przy Zana, biuro rachunkowe w Kamienicy rachmistrzów); Park handlowy pod realnym adresem al. Kraśnicka 128; kebab odsyła sprzęt i wystrój do Parku, klientów do Pracowni Analiz, szkolenia do Akademii; kroki zeszytu otwierają teczkę we właściwym wnętrzu (8410066); prośba do majstra o żeton bazaru; sprzątnięte kopie robocze; seria `zeszyt`: treść zeszytu wujka w `dane/zeszyt.yaml` (48 zadań, 23 warunki, „gdzie kupić” z bieżących cen, wizyty zapisywane w grze), scalona do `main` (b990329, 817 testów); decyzje szefa o radiu (Decyzje.md).
+**Dalej:** lista wolnych nagrań do radia do akceptacji szefa; szyldy i cenniki wnętrz z danych; warianty `*_alt`; mechanika (`balans-katalogi`) i gra testowa.
 
 ### 18.11 noc – KONIEC DNIA: stan i plan na 19.11 (zacznij tutaj)
 **Gałęzie gry (wszystkie wypchnięte na GitHub; `main` = porządki 17.11, bez pulpitu):** `pulpit-ui2` (fa646a6) = pulpit + 33 wnętrza z makiet Fable

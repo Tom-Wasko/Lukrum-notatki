@@ -164,6 +164,7 @@ co obowiązuje.
 - **Klub „Nocna 13”:** mistrz gry dostaje w panelu opcję zablokowania kasyna (dziś tylko `LUKRUM_KASYNO=0` na serwerze); hasło zostaje.
 
 ## Ustalenia na 19.11 (szef, 18.11 noc)
+- **Radio (19.11):** stacja „PRL” → **polska muzyka sprzed 1956 r.** (nagrania przedwojenne i z początku lat 50. z archiwów cyfrowych, tylko z potwierdzonym statusem); informacje prowadzącego **głosem syntetycznym (TTS)**; dopuszczalne licencje: **domena publiczna, CC0, CC BY, CC BY-SA**, w grze strona „Nagrania w radiu” (autor, źródło, licencja każdego pliku); pliki **w repozytorium, mała paczka** (ok. 40–80 MB, mono, niska jakość), gra działa bez internetu.
 - Merge `pulpit-ui2` do `main` po zielonych testach, bez czekania na oglądanie. Park handlowy: lider wybiera realny adres. Kolejność prac: reszta wnętrz, zeszyt, radio (najpierw pytania), mechanika i gra testowa. Radio: tylko wolne nagrania (domena publiczna/wolne licencje), pliki dopiero po akceptacji listy.
 
 ## Pulpit – poprawki po obejrzeniu 4A/4B (18.11.2026, noc)
